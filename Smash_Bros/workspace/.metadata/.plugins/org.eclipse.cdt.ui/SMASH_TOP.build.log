@@ -1,12 +1,13 @@
-21:39:06 **** Build of project SMASH_TOP ****
-buildplatform.bat 56810 SMASH_TOP  
-XSDB Server Channel: tcfchan#8
+17:48:01 **** Build of project SMASH_TOP ****
+buildplatform.bat 60275 SMASH_TOP  
+XSDB Server Channel: tcfchan#2
+C:/Xilinx/Vitis/2022.2/gnu/microblaze/nt
 Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
 make --no-print-directory seq_libs
 
 'Finished building libraries sequentially.'
 
-make -j 6 --no-print-directory par_libs
+make -j 10 --no-print-directory par_libs
 
 "Running Make include in microblaze_0/libsrc/bram_v4_8/src"
 
@@ -38,19 +39,19 @@ make -C microblaze_0/libsrc/spi_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gc
 _FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COM
 PILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
 
+"Running Make include in microblaze_0/libsrc/uartlite_v3_7/src"
+
 "Running Make include in microblaze_0/libsrc/standalone_v8_0/src"
+
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_9/src"
 
 make -C microblaze_0/libsrc/standalone_v8_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
 OMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EX
 TRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
 
-"Running Make include in microblaze_0/libsrc/tmrctr_v4_9/src"
-
 make -C microblaze_0/libsrc/tmrctr_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
 LER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_
 COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-
-"Running Make include in microblaze_0/libsrc/uartlite_v3_7/src"
 
 make -C microblaze_0/libsrc/uartlite_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
 PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTR
@@ -144,5 +145,5 @@ mb-ar: creating microblaze_0/lib/libxil.a
 'Finished building libraries'
 
 
-21:39:13 Build Finished (took 7s.21ms)
+17:48:14 Build Finished (took 13s.407ms)
 

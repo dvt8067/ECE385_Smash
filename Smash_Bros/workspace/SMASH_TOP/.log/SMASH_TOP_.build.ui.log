@@ -1,12 +1,13 @@
-2023-11-07T21:39:06.62304800255-21:39:06 **** Build of project SMASH_TOP ****
-000-buildplatform.bat 56810 SMASH_TOP  
-000-XSDB Server Channel: tcfchan#8
+2023-11-08T17:48:01.140586700255-17:48:01 **** Build of project SMASH_TOP ****
+000-buildplatform.bat 60275 SMASH_TOP  
+000-XSDB Server Channel: tcfchan#2
+000-C:/Xilinx/Vitis/2022.2/gnu/microblaze/nt
 000-Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
 000-make --no-print-directory seq_libs
 000-
 000-'Finished building libraries sequentially.'
 000-
-000-make -j 6 --no-print-directory par_libs
+000-make -j 10 --no-print-directory par_libs
 000-
 000-"Running Make include in microblaze_0/libsrc/bram_v4_8/src"
 000-
@@ -38,19 +39,19 @@
 000-_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COM
 000-PILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
 000-
+000-"Running Make include in microblaze_0/libsrc/uartlite_v3_7/src"
+000-
 000-"Running Make include in microblaze_0/libsrc/standalone_v8_0/src"
+000-
+000-"Running Make include in microblaze_0/libsrc/tmrctr_v4_9/src"
 000-
 000-make -C microblaze_0/libsrc/standalone_v8_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
 000-OMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EX
 000-TRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
 000-
-000-"Running Make include in microblaze_0/libsrc/tmrctr_v4_9/src"
-000-
 000-make -C microblaze_0/libsrc/tmrctr_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
 000-LER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_
 000-COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-000-
-000-"Running Make include in microblaze_0/libsrc/uartlite_v3_7/src"
 000-
 000-make -C microblaze_0/libsrc/uartlite_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
 000-PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTR
@@ -144,5 +145,5 @@
 000-'Finished building libraries'
 000-
 00255-
-21:39:13 Build Finished (took 7s.21ms)
+17:48:14 Build Finished (took 13s.407ms)
 
