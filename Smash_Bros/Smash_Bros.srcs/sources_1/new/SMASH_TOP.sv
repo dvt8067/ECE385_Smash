@@ -53,7 +53,7 @@ module SMASH_TOP(
     logic [31:0] keycode0_gpio, keycode1_gpio;
     logic clk_25MHz, clk_125MHz, clk, clk_100MHz;
     logic locked;
-    logic [9:0] drawX, drawY, ballxsig, ballysig, ballsizesig;
+    logic [9:0] drawX, drawY, ballxsig, ballysig, ballsizesig_X, ballsizesig_Y;
 
     logic hsync, vsync, vde;
     logic [3:0] red, green, blue;
@@ -79,7 +79,7 @@ module SMASH_TOP(
         .hex_grid(hex_gridB)
     );
     
-    mb_ball mb_ball(
+    mb_ball mb_block_i(
         .clk_100MHz(Clk),
         .gpio_usb_int_i(gpio_usb_int_tri_i),
         .gpio_usb_keycode_0_tri_o(keycode0_gpio),
@@ -151,7 +151,8 @@ module SMASH_TOP(
         .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
         .BallX(ballxsig),
         .BallY(ballysig),
-        .BallS(ballsizesig)
+        .BallS_X(ballsizesig_X),
+        .BallS_Y(ballsizesig_Y)
     );
     
     //Color Mapper Module   
@@ -160,11 +161,11 @@ module SMASH_TOP(
         .BallY(ballysig),
         .DrawX(drawX),
         .DrawY(drawY),
-        .Ball_size(ballsizesig),
+        .Ball_size_X(ballsizesig_X),
+        .Ball_size_Y(ballsizesig_Y),
         .Red(red),
         .Green(green),
         .Blue(blue)
     );
     
 endmodule
-
