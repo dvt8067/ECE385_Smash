@@ -165,7 +165,8 @@ module SMASH_TOP(
         .Ball_size_Y(ballsizesig_Y),
         .Red(red),
         .Green(green),
-        .Blue(blue)
+        .Blue(blue),
+        .Clk
     );
     
 endmodule

@@ -1,0 +1,7 @@
++====================+====================+=======================================================+
+| Launch Setup Clock | Launch Hold Clock  | Pin                                                   |
++====================+====================+=======================================================+
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[10] |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[12] |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[13] |
++--------------------+--------------------+-------------------------------------------------------+
