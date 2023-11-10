@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Thu Nov  9 20:20:28 2023
-| Host         : DESKTOP-MTC1J3G running 64-bit major release  (build 9200)
+| Date         : Fri Nov 10 11:52:08 2023
+| Host         : Amadeus running 64-bit major release  (build 9200)
 | Command      : report_methodology -file SMASH_TOP_methodology_drc_routed.rpt -pb SMASH_TOP_methodology_drc_routed.pb -rpx SMASH_TOP_methodology_drc_routed.rpx
 | Design       : SMASH_TOP
 | Device       : xc7s50csga324-1
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 97
+             Violations found: 58
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
@@ -34,9 +34,7 @@ Table of Contents
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 2          |
 | LUTAR-1   | Warning          | LUT drives async reset alert                       | 4          |
 | TIMING-9  | Warning          | Unknown CDC Logic                                  | 1          |
-| TIMING-16 | Warning          | Large setup violation                              | 6          |
 | TIMING-18 | Warning          | Missing input or output delay                      | 33         |
-| TIMING-23 | Warning          | Combinational loop found                           | 33         |
 +-----------+------------------+----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -176,36 +174,6 @@ Related violations: <none>
 TIMING-9#1 Warning
 Unknown CDC Logic  
 One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
-Related violations: <none>
-
-TIMING-16#1 Warning
-Large setup violation  
-There is a large setup violation of -32.518 ns between Mario_State0/FSM_onehot_State_reg[5]/C (clocked by Clk) and Mario_State0/FSM_onehot_State_reg[5]/D (clocked by Clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#2 Warning
-Large setup violation  
-There is a large setup violation of -32.534 ns between Mario_State0/FSM_onehot_State_reg[5]/C (clocked by Clk) and Mario_State0/FSM_onehot_State_reg[1]/D (clocked by Clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#3 Warning
-Large setup violation  
-There is a large setup violation of -32.583 ns between Mario_State0/FSM_onehot_State_reg[5]/C (clocked by Clk) and Mario_State0/FSM_onehot_State_reg[3]/D (clocked by Clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#4 Warning
-Large setup violation  
-There is a large setup violation of -32.708 ns between Mario_State0/FSM_onehot_State_reg[5]/C (clocked by Clk) and Mario_State0/FSM_onehot_State_reg[6]/D (clocked by Clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#5 Warning
-Large setup violation  
-There is a large setup violation of -33.886 ns between Mario_State0/FSM_onehot_State_reg[5]/C (clocked by Clk) and Mario_State0/FSM_onehot_State_reg[2]/D (clocked by Clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#6 Warning
-Large setup violation  
-There is a large setup violation of -33.898 ns between Mario_State0/FSM_onehot_State_reg[5]/C (clocked by Clk) and Mario_State0/FSM_onehot_State_reg[7]/D (clocked by Clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
@@ -371,171 +339,6 @@ Related violations: <none>
 TIMING-18#33 Warning
 Missing input or output delay  
 An output delay is missing on usb_spi_ss relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-23#1 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__0_i_8/S[0] and Mario_State0/i__carry__0_i_8/O[0] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#2 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__0_i_8/S[1] and Mario_State0/i__carry__0_i_8/O[1] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#3 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__0_i_8/S[2] and Mario_State0/i__carry__0_i_8/O[2] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#4 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__0_i_8/S[3] and Mario_State0/i__carry__0_i_8/O[3] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#5 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__0_i_9/S[0] and Mario_State0/i__carry__0_i_9/O[0] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#6 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__0_i_9/S[1] and Mario_State0/i__carry__0_i_9/O[1] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#7 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__0_i_9/S[2] and Mario_State0/i__carry__0_i_9/O[2] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#8 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__0_i_9/S[3] and Mario_State0/i__carry__0_i_9/O[3] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#9 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__1_i_8/S[0] and Mario_State0/i__carry__1_i_8/O[0] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#10 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__1_i_8/S[1] and Mario_State0/i__carry__1_i_8/O[1] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#11 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__1_i_8/S[2] and Mario_State0/i__carry__1_i_8/O[2] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#12 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__1_i_8/S[3] and Mario_State0/i__carry__1_i_8/O[3] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#13 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__1_i_9/S[0] and Mario_State0/i__carry__1_i_9/O[0] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#14 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__1_i_9/S[1] and Mario_State0/i__carry__1_i_9/O[1] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#15 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__1_i_9/S[2] and Mario_State0/i__carry__1_i_9/O[2] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#16 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__1_i_9/S[3] and Mario_State0/i__carry__1_i_9/O[3] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#17 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__2_i_7/S[0] and Mario_State0/i__carry__2_i_7/O[0] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#18 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__2_i_7/S[1] and Mario_State0/i__carry__2_i_7/O[1] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#19 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__2_i_7/S[2] and Mario_State0/i__carry__2_i_7/O[2] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#20 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry__2_i_7/S[3] and Mario_State0/i__carry__2_i_7/O[3] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#21 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry_i_10__0/S[1] and Mario_State0/i__carry_i_10__0/O[1] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#22 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry_i_10__0/S[2] and Mario_State0/i__carry_i_10__0/O[2] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#23 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry_i_10__0/S[3] and Mario_State0/i__carry_i_10__0/O[3] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#24 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry_i_11/I0 and Mario_State0/i__carry_i_11/O to disable the timing loop
-Related violations: <none>
-
-TIMING-23#25 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry_i_12__0/S[0] and Mario_State0/i__carry_i_12__0/O[0] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#26 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry_i_12__0/S[1] and Mario_State0/i__carry_i_12__0/O[1] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#27 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry_i_12__0/S[2] and Mario_State0/i__carry_i_12__0/O[2] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#28 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry_i_12__0/S[3] and Mario_State0/i__carry_i_12__0/O[3] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#29 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry_i_13__0/S[0] and Mario_State0/i__carry_i_13__0/O[0] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#30 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry_i_13__0/S[1] and Mario_State0/i__carry_i_13__0/O[1] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#31 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry_i_13__0/S[2] and Mario_State0/i__carry_i_13__0/O[2] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#32 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry_i_13__0/S[3] and Mario_State0/i__carry_i_13__0/O[3] to disable the timing loop
-Related violations: <none>
-
-TIMING-23#33 Warning
-Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between Mario_State0/i__carry_i_29/I0 and Mario_State0/i__carry_i_29/O to disable the timing loop
 Related violations: <none>
 
 

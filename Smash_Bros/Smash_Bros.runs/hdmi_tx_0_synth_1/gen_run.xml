@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="hdmi_tx_0_synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1699406929">
+<GenRun Id="hdmi_tx_0_synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1699638241">
   <File Type="PA-TCL" Name="hdmi_tx_0.tcl"/>
   <File Type="REPORTS-TCL" Name="hdmi_tx_0_reports.tcl"/>
   <File Type="RDS-RDS" Name="hdmi_tx_0.vds"/>
@@ -34,6 +34,14 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/SMASH_TOP.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
