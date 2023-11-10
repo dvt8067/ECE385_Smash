@@ -1,5 +1,5 @@
-20:48:33 **** Build of project SMASH_TOP ****
-buildplatform.bat 56229 SMASH_TOP  
+20:32:55 **** Build of project SMASH_TOP ****
+buildplatform.bat 56050 SMASH_TOP  
 XSDB Server Channel: tcfchan#5
 C:/Xilinx/Vitis/2022.2/gnu/microblaze/nt
 Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
@@ -145,5 +145,5 @@ mb-ar: creating microblaze_0/lib/libxil.a
 'Finished building libraries'
 
 
-20:48:43 Build Finished (took 9s.748ms)
+20:33:07 Build Finished (took 11s.614ms)
 

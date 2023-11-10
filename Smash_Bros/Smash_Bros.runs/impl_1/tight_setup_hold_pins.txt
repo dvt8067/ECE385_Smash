@@ -1,7 +1,10 @@
-+====================+====================+=======================================================+
-| Launch Setup Clock | Launch Hold Clock  | Pin                                                   |
-+====================+====================+=======================================================+
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[10] |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[12] |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[13] |
-+--------------------+--------------------+-------------------------------------------------------+
++====================+==============================+========================================+
+| Launch Setup Clock | Launch Hold Clock            | Pin                                    |
++====================+==============================+========================================+
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Mario_State0/FSM_onehot_State_reg[1]/D |
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Mario_State0/FSM_onehot_State_reg[5]/D |
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Mario_State0/FSM_onehot_State_reg[6]/D |
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Mario_State0/FSM_onehot_State_reg[3]/D |
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Mario_State0/FSM_onehot_State_reg[7]/D |
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Mario_State0/FSM_onehot_State_reg[2]/D |
++--------------------+------------------------------+----------------------------------------+

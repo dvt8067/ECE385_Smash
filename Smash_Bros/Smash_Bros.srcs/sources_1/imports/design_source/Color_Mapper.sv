@@ -14,72 +14,101 @@
 //-------------------------------------------------------------------------
 
 
-module  color_mapper ( input  logic [9:0] BallX, BallY, DrawX, DrawY, Ball_size_X, Ball_size_Y,
+module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_size_X, Mario_size_Y,
                        input logic Clk,
+                       input logic [4:0] Mario_State_Out,
+                       input logic Mario_Invert_Left,
                        output logic [3:0]  Red, Green, Blue );
     
-    logic ball_on;
+    logic Mario_on;
     logic [12:0] Mario_address, ADDR0X_Mario, ADDR0Y_Mario, ADDR_X_OFFSET_Mario, ADDR_Y_OFFSET_Mario;
+    logic [1:0] Palette_Index_Stationary;
+    logic [1:0] Palette_Index_Walking1, Palette_Index_Walking2, Palette_Index_Walking3;
     logic [1:0] Palette_Index;
     logic [11:0] Palette_Output;
 	 
- /* Old Ball: Generated square box by checking if the current pixel is within a square of length
-    2*BallS, centered at (BallX, BallY).  Note that this requires unsigned comparisons.
-	 
-    if ((DrawX >= BallX - Ball_size) &&
-       (DrawX <= BallX + Ball_size) &&
-       (DrawY >= BallY - Ball_size) &&
-       (DrawY <= BallY + Ball_size))
-       )
-
-     New Ball: Generates (pixelated) circle by using the standard circle formula.  Note that while 
-     this single line is quite powerful descriptively, it causes the synthesis tool to use up three
-     of the 120 available multipliers on the chip!  Since the multiplicants are required to be signed,
-	  we have to first cast them from logic to int (signed by default) before they are multiplied). */
+ 
 	  
     int Size_X, Size_Y;
-    assign Size_X = Ball_size_X;
-    assign Size_Y = Ball_size_Y;
+    assign Size_X = Mario_size_X;
+    assign Size_Y = Mario_size_Y;
 
     int DistX_Mario, DistY_Mario, Mario_Rowsize;
     assign DistX_Mario = 30;
     assign DistY_Mario = 40;
     assign Mario_Rowsize = 60;
-    assign ADDR0X_Mario = BallX - DistX_Mario;
-    assign ADDR0Y_Mario = BallY - DistY_Mario;
+    assign ADDR0X_Mario = MarioX - DistX_Mario;
+    assign ADDR0Y_Mario = MarioY - DistY_Mario;
     always_comb begin
         ADDR_X_OFFSET_Mario = DrawX - ADDR0X_Mario;
         ADDR_Y_OFFSET_Mario = DrawY - ADDR0Y_Mario;
-
-        Mario_address = ADDR_X_OFFSET_Mario + ADDR_Y_OFFSET_Mario*Mario_Rowsize;
+        if(Mario_Invert_Left == 0) begin
+            Mario_address = ADDR_X_OFFSET_Mario + ADDR_Y_OFFSET_Mario*Mario_Rowsize; // mario is right 
+        end
+        else begin
+            Mario_address = (59-ADDR_X_OFFSET_Mario) + ADDR_Y_OFFSET_Mario*Mario_Rowsize;
+        end
     end
     
     
     
-    frameRAM Mario_ROM (
-    
+    Mario_Stationary_RAM Mario_Stationary_ROM (
 		.read_address(Mario_address),
 		.Clk(Clk),
-		.data_Out(Palette_Index)
-
+		.data_Out(Palette_Index_Stationary)
     );
+
+    Mario_Walking_RAM1 Mario_Walking1_ROM ( 
+		.read_address(Mario_address),
+		.Clk(Clk),
+		.data_Out(Palette_Index_Walking1)
+    );
+    Mario_Walking_RAM2 Mario_Walking2_ROM ( 
+		.read_address(Mario_address),
+		.Clk(Clk),
+		.data_Out(Palette_Index_Walking2)
+    );
+    Mario_Walking_RAM3 Mario_Walking3_ROM ( 
+		.read_address(Mario_address),
+		.Clk(Clk),
+		.data_Out(Palette_Index_Walking3)
+    );
+    
+    always_comb begin
+        if(Mario_State_Out == 0 || Mario_State_Out == 1)begin
+            Palette_Index = Palette_Index_Stationary;
+        end
+        else if(Mario_State_Out == 2 ||Mario_State_Out == 5) begin
+            Palette_Index = Palette_Index_Walking1;
+        end
+        else if(Mario_State_Out == 3 ||Mario_State_Out == 6) begin
+            Palette_Index = Palette_Index_Walking2;
+        end
+        else if(Mario_State_Out == 4 ||Mario_State_Out == 7) begin
+            Palette_Index = Palette_Index_Walking3;
+        end
+        else begin
+            Palette_Index = 2'b01;
+        end
+    end
+    Palette(.addr(Palette_Index), .data(Palette_Output));
   
     always_comb
-    begin:Ball_on_proc
-        if ((DrawX >= BallX - Ball_size_X) &&
-            (DrawX <= BallX + Ball_size_X) &&
-            (DrawY >= BallY - Ball_size_Y) &&
-            (DrawY <= BallY + Ball_size_Y)) begin
+    begin:Mario_on_proc
+        if ((DrawX >= MarioX - Mario_size_X) &&
+            (DrawX <= MarioX + Mario_size_X) &&
+            (DrawY >= MarioY - Mario_size_Y) &&
+            (DrawY <= MarioY + Mario_size_Y)) begin
        
-            ball_on = 1'b1;
+            Mario_on = 1'b1;
        end
         else 
-            ball_on = 1'b0;
+            Mario_on = 1'b0;
      end 
        
     always_comb
     begin:RGB_Display
-        if(ball_on && (Palette_Output != 12'h808)) begin
+        if(Mario_on && (Palette_Output != 12'h808)) begin
              Red = Palette_Output[11:8];
              Green = Palette_Output[7:4];
              Blue = Palette_Output[3:0];
@@ -98,6 +127,6 @@ module  color_mapper ( input  logic [9:0] BallX, BallY, DrawX, DrawY, Ball_size_
     end 
 
       
-   Palette(.addr(Palette_Index), .data(Palette_Output));
+   
     
 endmodule

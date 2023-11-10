@@ -53,11 +53,13 @@ module SMASH_TOP(
     logic [31:0] keycode0_gpio, keycode1_gpio;
     logic clk_25MHz, clk_125MHz, clk, clk_100MHz;
     logic locked;
-    logic [9:0] drawX, drawY, ballxsig, ballysig, ballsizesig_X, ballsizesig_Y;
+    logic [9:0] drawX, drawY, Marioxsig, Marioysig, Mariosizesig_X, Mariosizesig_Y;
 
     logic hsync, vsync, vde;
     logic [3:0] red, green, blue;
     logic reset_ah;
+    logic Mario_Invert_Left;
+    logic [4:0] Mario_State_Out;
     
     assign reset_ah = reset_rtl_0;
     
@@ -143,26 +145,35 @@ module SMASH_TOP(
         .TMDS_DATA_N(hdmi_tmds_data_n)          
     );
 
-    
-    //Ball Module
-    ball ball_instance(
+    Mario_State Mario_State0(
+        .Clk(Clk), 
+		.Reset(reset_ah),
+        .keycode(keycode0_gpio[7:0]),
+		.Mario_State_Out(Mario_State_Out),
+        .Mario_Invert_Left(Mario_Invert_Left)
+				);
+
+    //Mario Module
+    Mario mario_instance(
         .Reset(reset_ah),
-        .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
-        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
-        .BallX(ballxsig),
-        .BallY(ballysig),
-        .BallS_X(ballsizesig_X),
-        .BallS_Y(ballsizesig_Y)
+        .frame_clk(vsync),                    //Figure out what this should be so that the Mario will move
+        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to Mario by default
+        .MarioX(Marioxsig),
+        .MarioY(Marioysig),
+        .MarioS_X(Mariosizesig_X),
+        .MarioS_Y(Mariosizesig_Y)
     );
     
     //Color Mapper Module   
     color_mapper color_instance(
-        .BallX(ballxsig),
-        .BallY(ballysig),
+        .Mario_State_Out(Mario_State_Out),
+        .Mario_Invert_Left(Mario_Invert_Left),
+        .MarioX(Marioxsig),
+        .MarioY(Marioysig),
         .DrawX(drawX),
         .DrawY(drawY),
-        .Ball_size_X(ballsizesig_X),
-        .Ball_size_Y(ballsizesig_Y),
+        .Mario_size_X(Mariosizesig_X),
+        .Mario_size_Y(Mariosizesig_Y),
         .Red(red),
         .Green(green),
         .Blue(blue),

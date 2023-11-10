@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed Nov  8 20:44:32 2023
-# Process ID: 1068
+# Start of session at: Thu Nov  9 20:17:38 2023
+# Process ID: 13144
 # Current directory: C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/impl_1
 # Command line: vivado.exe -log SMASH_TOP.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source SMASH_TOP.tcl -notrace
 # Log file: C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/impl_1/SMASH_TOP.vdi
@@ -11,7 +11,7 @@
 # Running On: DESKTOP-MTC1J3G, OS: Windows, CPU Frequency: 1997 MHz, CPU Physical cores: 4, Host memory: 16972 MB
 #-----------------------------------------------------------
 source SMASH_TOP.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 372.184 ; gain = 63.949
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 372.652 ; gain = 50.105
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/IPrepo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
@@ -38,9 +38,9 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Git_Smash/ECE385_Smash
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_ilmb_bram_if_cntlr_0/mb_ball_ilmb_bram_if_cntlr_0.dcp' for cell 'mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_ilmb_v10_0/mb_ball_ilmb_v10_0.dcp' for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_lmb_bram_0/mb_ball_lmb_bram_0.dcp' for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.306 . Memory (MB): peak = 888.910 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 401 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.296 . Memory (MB): peak = 890.375 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 433 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2022.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Opt 31-35] Removing redundant IBUF, clk_wiz/inst/clkin1_ibufg, from the path connected to top-level port: Clk 
@@ -58,7 +58,7 @@ Finished Parsing XDC File [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros
 Parsing XDC File [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_clk_wiz_1_0/mb_ball_clk_wiz_1_0.xdc] for cell 'mb_block_i/clk_wiz_1/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_clk_wiz_1_0/mb_ball_clk_wiz_1_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_clk_wiz_1_0/mb_ball_clk_wiz_1_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1460.797 ; gain = 435.863
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1461.043 ; gain = 435.777
 Finished Parsing XDC File [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_clk_wiz_1_0/mb_ball_clk_wiz_1_0.xdc] for cell 'mb_block_i/clk_wiz_1/inst'
 Parsing XDC File [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_rst_clk_wiz_1_100M_0/mb_ball_rst_clk_wiz_1_100M_0_board.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M/U0'
 Finished Parsing XDC File [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_rst_clk_wiz_1_100M_0/mb_ball_rst_clk_wiz_1_100M_0_board.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M/U0'
@@ -152,7 +152,7 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 WARNING: [Constraints 18-5572] Instance mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
 Generating merged BMM file for the design top 'SMASH_TOP'...
 INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_microblaze_0_0/data/mb_bootloop_le.elf 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1460.797 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1461.043 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 247 instances were transformed.
   LUT6_2 => LUT6_2 (LUT5, LUT6): 145 instances
@@ -162,7 +162,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 34 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1460.797 ; gain = 1026.688
+link_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1461.043 ; gain = 1025.805
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
@@ -173,63 +173,69 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1460.797 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1461.043 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 2af942e4a
+Ending Cache Timing Information Task | Checksum: 2198019a9
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.412 . Memory (MB): peak = 1460.797 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.562 . Memory (MB): peak = 1461.043 ; gain = 0.000
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
+INFO: [Opt 31-1287] Pulled Inverter i__carry__1_i_1 into driver instance Mario_State0/i__carry__1_i_7, which resulted in an inversion of 1 pins
+INFO: [Opt 31-1287] Pulled Inverter i__carry__2_i_2 into driver instance Mario_State0/i__carry__2_i_8, which resulted in an inversion of 1 pins
+INFO: [Opt 31-1287] Pulled Inverter i__carry__2_i_3 into driver instance Mario_State0/i__carry__2_i_9, which resulted in an inversion of 1 pins
+INFO: [Opt 31-1287] Pulled Inverter i__carry_i_18 into driver instance Mario_State0/i__carry_i_29, which resulted in an inversion of 1 pins
+INFO: [Opt 31-1287] Pulled Inverter mario_instance/MarioX[4]_i_2 into driver instance Mario_State0/FSM_onehot_State[7]_i_4, which resulted in an inversion of 11 pins
 INFO: [Opt 31-1287] Pulled Inverter mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Use_Serial_Unified_Completion.Completion_Status_Register.sample_1[15]_i_1 into driver instance mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Use_Serial_Unified_Completion.Completion_Status_Register.sample_1[15]_i_2, which resulted in an inversion of 14 pins
 INFO: [Opt 31-1287] Pulled Inverter mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state[4]_i_1 into driver instance mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst//i_, which resulted in an inversion of 2 pins
 INFO: [Opt 31-1287] Pulled Inverter mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state[4]_i_1 into driver instance mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst//i_, which resulted in an inversion of 2 pins
 INFO: [Opt 31-1287] Pulled Inverter mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_i_1 into driver instance mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/SS_O[0]_i_2, which resulted in an inversion of 3 pins
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 2 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 13ff9e334
+Phase 1 Retarget | Checksum: 1bae84964
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.562 . Memory (MB): peak = 1794.312 ; gain = 0.000
-INFO: [Opt 31-389] Phase Retarget created 220 cells and removed 327 cells
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.896 . Memory (MB): peak = 1787.043 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 220 cells and removed 332 cells
 INFO: [Opt 31-1021] In phase Retarget, 4 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 8 inverter(s) to 14 load pin(s).
-Phase 2 Constant propagation | Checksum: 19c07e30b
+Phase 2 Constant propagation | Checksum: 217ba4943
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.707 . Memory (MB): peak = 1794.312 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1787.043 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 123 cells and removed 295 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 13cbf5920
+Phase 3 Sweep | Checksum: 1dbc371e4
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1794.312 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1787.043 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 274 cells
 INFO: [Opt 31-1021] In phase Sweep, 7 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG Clk_IBUF_BUFG_inst to drive 48 load(s) on clock net Clk_IBUF_BUFG
 INFO: [Opt 31-194] Inserted BUFG mb_block_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG_inst to drive 40 load(s) on clock net mb_block_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG
-INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
-Phase 4 BUFG optimization | Checksum: 1d3afc54e
+INFO: [Opt 31-193] Inserted 2 BUFG(s) on clock nets
+Phase 4 BUFG optimization | Checksum: 1f7b9f5b2
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1794.312 ; gain = 0.000
-INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1787.043 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 2 cells of which 2 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 1d3afc54e
+Phase 5 Shift Register Optimization | Checksum: 1f7b9f5b2
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1794.312 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1787.043 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 1ec77e0ba
+Phase 6 Post Processing Netlist | Checksum: 1ff021a3e
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1794.312 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1787.043 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
@@ -239,10 +245,10 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |             220  |             327  |                                              4  |
+|  Retarget                     |             220  |             332  |                                              4  |
 |  Constant propagation         |             123  |             295  |                                              2  |
 |  Sweep                        |               0  |             274  |                                              7  |
-|  BUFG optimization            |               1  |               0  |                                              0  |
+|  BUFG optimization            |               2  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
 |  Post Processing Netlist      |               0  |               0  |                                              2  |
 -------------------------------------------------------------------------------------------------------------------------
@@ -251,52 +257,52 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1794.312 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 24755deda
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1787.043 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 16030cb4c
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1794.312 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1787.043 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
-INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 9 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 12 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 18
-Ending PowerOpt Patch Enables Task | Checksum: 24755deda
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 24
+Ending PowerOpt Patch Enables Task | Checksum: 16030cb4c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 1946.164 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 24755deda
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 1932.648 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 16030cb4c
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 1946.164 ; gain = 151.852
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1932.648 ; gain = 145.605
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 24755deda
+Ending Final Cleanup Task | Checksum: 16030cb4c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1946.164 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 24755deda
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1932.648 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 16030cb4c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1932.648 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-66 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+72 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1946.164 ; gain = 485.367
+opt_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1932.648 ; gain = 471.605
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1932.648 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/impl_1/SMASH_TOP_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file SMASH_TOP_drc_opted.rpt -pb SMASH_TOP_drc_opted.pb -rpx SMASH_TOP_drc_opted.rpx
 Command: report_drc -file SMASH_TOP_drc_opted.rpt -pb SMASH_TOP_drc_opted.pb -rpx SMASH_TOP_drc_opted.rpx
@@ -321,58 +327,58 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1946.164 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1a394f05a
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1932.648 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 13aee60b2
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1946.164 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1932.648 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: a04fc9b3
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 14ac80a77
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.620 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.807 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: b4ff085b
+Phase 1.3 Build Placer Netlist Model | Checksum: 1ac0fddb5
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: b4ff085b
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1ac0fddb5
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1946.164 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: b4ff085b
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1932.648 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1ac0fddb5
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: ab8c010b
+Phase 2.1 Floorplanning | Checksum: 238dc23e2
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: e18fbc26
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1a4b92803
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: e18fbc26
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1a4b92803
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 UpdateTiming Before Physical Synthesis
-Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 1dd4529ff
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 1cace0d85
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 2.4.2 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 1 LUTNM shape to break, 249 LUT instances to create LUTNM shape
-INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 1, total 1, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 88 nets or LUTs. Breaked 1 LUT, combined 87 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1035] Found 8 LUTNM shape to break, 240 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 5, two critical 3, total 8, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 94 nets or LUTs. Breaked 8 LUTs, combined 86 existing LUTs and moved 0 existing LUT
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -380,15 +386,15 @@ INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-INFO: [Physopt 32-775] End 1 Pass. Optimized 11 nets or cells. Created 11 new cells, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1946.164 ; gain = 0.000
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -397,78 +403,78 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            1  |             87  |                    88  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            8  |             86  |                    94  |           0  |           1  |  00:00:00  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Shift Register                                   |           11  |              0  |                    11  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |           12  |             87  |                    99  |           0  |           9  |  00:00:00  |
+|  Total                                            |            8  |             86  |                    94  |           0  |           9  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.4.2 Physical Synthesis In Placer | Checksum: 14f432849
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 1a9e7e5bb
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1946.164 ; gain = 0.000
-Phase 2.4 Global Placement Core | Checksum: 11928fde7
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 1932.648 ; gain = 0.000
+Phase 2.4 Global Placement Core | Checksum: 107638f8e
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1946.164 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 11928fde7
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 1932.648 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 107638f8e
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: bf438e54
+Phase 3.1 Commit Multi Column Macros | Checksum: 1f8ffe377
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 10fd3edd3
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 11c2b83dc
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 16fec96f8
+Phase 3.3 Area Swap Optimization | Checksum: 14a57239b
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 15c042382
+Phase 3.4 Pipeline Register Optimization | Checksum: 11154caff
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: c6b5c346
+Phase 3.5 Fast Optimization | Checksum: fa56dc5f
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 19062070
+Phase 3.6 Small Shape Detail Placement | Checksum: 9ed332ba
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:19 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 34650a57
+Phase 3.7 Re-assign LUT pins | Checksum: b3158e68
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: b06d7596
+Phase 3.8 Pipeline Register Optimization | Checksum: aa8bdbe7
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 13739243a
+Phase 3.9 Fast Optimization | Checksum: 14aab3650
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 1946.164 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 13739243a
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 1932.648 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 14aab3650
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -476,7 +482,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: bc9cc8d7
+Post Placement Optimization Initialization | Checksum: 2138dd4da
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -484,33 +490,33 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.623 | TNS=-2.130 |
-Phase 1 Physical Synthesis Initialization | Checksum: da44e76c
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-37.827 | TNS=-224.593 |
+Phase 1 Physical Synthesis Initialization | Checksum: 147d1790f
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.251 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.339 . Memory (MB): peak = 1932.648 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 171c17924
+Ending Physical Synthesis Task | Checksum: 14bd90bb7
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.293 . Memory (MB): peak = 1946.164 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: bc9cc8d7
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.390 . Memory (MB): peak = 1932.648 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 2138dd4da
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:25 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.588. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: ee61afd9
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-37.606. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: e14fb546
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:34 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 1946.164 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: ee61afd9
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:34 . Memory (MB): peak = 1932.648 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: e14fb546
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:34 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: ee61afd9
+Phase 4.2 Post Placement Cleanup | Checksum: e14fb546
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:34 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
 
@@ -524,110 +530,500 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |___________|___________________|___________________|
 |      South|                1x1|                1x1|
 |___________|___________________|___________________|
-|       East|                1x1|                2x2|
+|       East|                1x1|                1x1|
 |___________|___________________|___________________|
 |       West|                1x1|                1x1|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: ee61afd9
+Phase 4.3.1 Print Estimated Congestion | Checksum: e14fb546
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 1946.164 ; gain = 0.000
-Phase 4.3 Placer Reporting | Checksum: ee61afd9
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:34 . Memory (MB): peak = 1932.648 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: e14fb546
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:34 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 1946.164 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1359372ec
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:34 . Memory (MB): peak = 1932.648 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1611f974c
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 1946.164 ; gain = 0.000
-Ending Placer Task | Checksum: ed529fd6
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:34 . Memory (MB): peak = 1932.648 ; gain = 0.000
+Ending Placer Task | Checksum: 114c45541
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:22 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:34 . Memory (MB): peak = 1932.648 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-105 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+112 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:23 . Memory (MB): peak = 1946.164 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1932.648 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.698 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.869 . Memory (MB): peak = 1932.648 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/impl_1/SMASH_TOP_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file SMASH_TOP_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 1946.164 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 1932.648 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file SMASH_TOP_utilization_placed.rpt -pb SMASH_TOP_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file SMASH_TOP_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1946.164 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1932.648 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
 
 Starting Initial Update Timing Task
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.831 . Memory (MB): peak = 1946.164 ; gain = 0.000
-INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 1.00s |  WALL: 0.87s
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1932.648 ; gain = 0.000
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 2.00s |  WALL: 1.06s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.588 | TNS=-1.984 |
-Phase 1 Physical Synthesis Initialization | Checksum: 1cd6c28b0
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-37.606 | TNS=-223.020 |
+Phase 1 Physical Synthesis Initialization | Checksum: 14c0207f2
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.607 . Memory (MB): peak = 1946.164 ; gain = 0.000
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.588 | TNS=-1.984 |
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.744 . Memory (MB): peak = 1932.648 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-37.606 | TNS=-223.020 |
 
 Phase 2 DSP Register Optimization
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 2 DSP Register Optimization | Checksum: 1cd6c28b0
+Phase 2 DSP Register Optimization | Checksum: 14c0207f2
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.662 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.815 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 3 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.588 | TNS=-1.984 |
-INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_2. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Mario_ROM/data_Out_reg' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net color_instance/Mario_ROM/data_Out_reg[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net color_instance/Mario_ROM/green[0].  Re-placed instance color_instance/Mario_ROM/vga_to_hdmi_i_5
-INFO: [Physopt 32-735] Processed net color_instance/Mario_ROM/green[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.582 | TNS=-1.960 |
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Mario_ROM/data_Out_reg' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net color_instance/Mario_ROM/data_Out_reg[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-710] Processed net color_instance/Mario_ROM/blue[0]. Critical path length was reduced through logic transformation on cell color_instance/Mario_ROM/vga_to_hdmi_i_6_comp.
-INFO: [Physopt 32-735] Processed net color_instance/Mario_ROM/green[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.041 | TNS=-0.075 |
-INFO: [Physopt 32-663] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_6.  Re-placed instance vga_to_hdmi/inst/srldly_0/srl[20].srl16_i_srlopt
-INFO: [Physopt 32-735] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_6. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.034 | TNS=-0.064 |
-INFO: [Physopt 32-663] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_4.  Re-placed instance vga_to_hdmi/inst/srldly_0/srl[21].srl16_i_srlopt
-INFO: [Physopt 32-735] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_4. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.030 | TNS=-0.040 |
-INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_6. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net color_instance/Mario_ROM/red[0].  Re-placed instance color_instance/Mario_ROM/vga_to_hdmi_i_1
-INFO: [Physopt 32-735] Processed net color_instance/Mario_ROM/red[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.010 | TNS=-0.010 |
-INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-37.606 | TNS=-223.020 |
+INFO: [Physopt 32-702] Processed net Mario_State0/FSM_onehot_State_reg_n_0_[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net Mario_State0/FSM_onehot_State_reg_n_0_[7].  Re-placed instance Mario_State0/FSM_onehot_State_reg[7]
+INFO: [Physopt 32-735] Processed net Mario_State0/FSM_onehot_State_reg_n_0_[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-37.538 | TNS=-223.135 |
+INFO: [Physopt 32-663] Processed net Mario_State0/FSM_onehot_State_reg_n_0_[2].  Re-placed instance Mario_State0/FSM_onehot_State_reg[2]
+INFO: [Physopt 32-735] Processed net Mario_State0/FSM_onehot_State_reg_n_0_[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-37.527 | TNS=-223.573 |
+INFO: [Physopt 32-702] Processed net Mario_State0/FSM_onehot_State_reg_n_0_[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net Mario_State0/FSM_onehot_State[1]_i_2_n_0.  Re-placed instance Mario_State0/FSM_onehot_State[1]_i_2
+INFO: [Physopt 32-735] Processed net Mario_State0/FSM_onehot_State[1]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-37.519 | TNS=-223.565 |
+INFO: [Physopt 32-710] Processed net Mario_State0/FSM_onehot_State[1]_i_1_n_0. Critical path length was reduced through logic transformation on cell Mario_State0/FSM_onehot_State[1]_i_1_comp.
+INFO: [Physopt 32-735] Processed net Mario_State0/FSM_onehot_State[1]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-37.508 | TNS=-222.881 |
+INFO: [Physopt 32-702] Processed net Mario_State0/FSM_onehot_State_reg_n_0_[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net Mario_State0/FSM_onehot_State[5]_i_1_n_0. Critical path length was reduced through logic transformation on cell Mario_State0/FSM_onehot_State[5]_i_1_comp.
+INFO: [Physopt 32-735] Processed net Mario_State0/FSM_onehot_State[5]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-37.449 | TNS=-222.221 |
+INFO: [Physopt 32-702] Processed net Mario_State0/FSM_onehot_State[7]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/Next_state1_inferred__0/i__carry__2_n_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 14 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__2_i_1_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-37.388 | TNS=-221.855 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__2_i_11_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-37.267 | TNS=-221.129 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__2_i_12_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-37.193 | TNS=-220.685 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__2_i_13_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-36.934 | TNS=-219.131 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__1_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-36.680 | TNS=-217.607 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__1_i_15_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-36.559 | TNS=-216.881 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__1_i_16_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-36.485 | TNS=-216.437 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__1_i_17_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-36.226 | TNS=-214.883 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__1_i_10_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.972 | TNS=-213.359 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__1_i_11_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.851 | TNS=-212.633 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__1_i_12_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.777 | TNS=-212.189 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__1_i_13_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.518 | TNS=-210.635 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__0_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.264 | TNS=-209.111 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__0_i_15_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.143 | TNS=-208.385 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__0_i_16_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.069 | TNS=-207.941 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__0_i_17_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.810 | TNS=-206.387 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__0_i_10_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.556 | TNS=-204.863 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__0_i_11_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.435 | TNS=-204.137 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__0_i_12_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.361 | TNS=-203.693 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry__0_i_13_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.102 | TNS=-202.139 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry_i_21_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.848 | TNS=-200.615 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_21_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry_i_22_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.727 | TNS=-199.889 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_22_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry_i_23_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.653 | TNS=-199.445 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry_i_24_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.394 | TNS=-197.891 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_24_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
-INFO: [Physopt 32-735] Processed net color_instance/Mario_ROM/green[1]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.028 | TNS=0.000 |
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.028 | TNS=0.000 |
-Phase 3 Critical Path Optimization | Checksum: 1cd6c28b0
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry_i_25_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.140 | TNS=-196.367 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_25_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry_i_26_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.019 | TNS=-195.641 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_26_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry_i_27_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.947 | TNS=-195.209 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_27_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry_i_28_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.581 | TNS=-193.013 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_28_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 13 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry_i_15_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.327 | TNS=-191.489 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 13 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry_i_16_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.206 | TNS=-190.763 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 13 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry_i_17_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.132 | TNS=-190.319 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 11 pins.
+INFO: [Physopt 32-735] Processed net Mario_State0/i__carry_i_14__0_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.024 | TNS=-189.671 |
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_14__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_11_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Clk_IBUF. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Clk. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/FSM_onehot_State_reg_n_0_[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/FSM_onehot_State[7]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/Next_state1_inferred__0/i__carry__2_n_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_21_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_22_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_24_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_25_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_26_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_27_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_28_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_14__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_11_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Clk_IBUF. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Clk. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.024 | TNS=-189.671 |
+Phase 3 Critical Path Optimization | Checksum: 14c0207f2
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 4 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.028 | TNS=0.000 |
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.028 | TNS=0.000 |
-Phase 4 Critical Path Optimization | Checksum: 1cd6c28b0
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.024 | TNS=-189.671 |
+INFO: [Physopt 32-702] Processed net Mario_State0/FSM_onehot_State_reg_n_0_[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/FSM_onehot_State[7]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/Next_state1_inferred__0/i__carry__2_n_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_21_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_22_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_24_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_25_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_26_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_27_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_28_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_14__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_11_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Clk_IBUF. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Clk. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/FSM_onehot_State_reg_n_0_[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/FSM_onehot_State[7]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/Next_state1_inferred__0/i__carry__2_n_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__2_i_7_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_9_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__1_i_8_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_9_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry__0_i_8_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_21_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_22_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_24_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_12__0_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_25_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_26_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_27_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_28_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_13__0_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_14__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_10__0_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_11_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Mario_State0/i__carry_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Clk_IBUF. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Clk. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.024 | TNS=-189.671 |
+Phase 4 Critical Path Optimization | Checksum: 14c0207f2
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1946.164 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1946.164 ; gain = 0.000
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=0.028 | TNS=0.000 |
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1932.648 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1932.648 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-32.024 | TNS=-189.671 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -637,23 +1033,24 @@ Summary of Physical Synthesis Optimizations
 |  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Critical Path  |          0.616  |          1.984  |            0  |              0  |                     6  |           0  |           2  |  00:00:01  |
-|  Total          |          0.616  |          1.984  |            0  |              0  |                     6  |           0  |           3  |  00:00:01  |
+|  Critical Path  |          5.582  |         33.349  |            0  |              0  |                    37  |           0  |           2  |  00:00:05  |
+|  Total          |          5.582  |         33.349  |            0  |              0  |                    37  |           0  |           3  |  00:00:05  |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1946.164 ; gain = 0.000
-Ending Physical Synthesis Task | Checksum: 1f5b78282
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1932.648 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 19bd2c384
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1932.648 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-148 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+545 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1932.648 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.751 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.910 . Memory (MB): peak = 1932.648 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/impl_1/SMASH_TOP_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
@@ -671,68 +1068,70 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: db4078ab ConstDB: 0 ShapeSum: 43c926ff RouteDB: 0
-Post Restoration Checksum: NetGraph: 6a68eccd NumContArr: fc8157d5 Constraints: 0 Timing: 0
-Phase 1 Build RT Design | Checksum: 166ea44a2
+Checksum: PlaceDB: 850c2a05 ConstDB: 0 ShapeSum: c6c43f6f RouteDB: 0
+Post Restoration Checksum: NetGraph: 704bf5c0 NumContArr: 9768e5eb Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 107b4dbab
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 166ea44a2
+Phase 2.1 Fix Topology Constraints | Checksum: 107b4dbab
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 1932.648 ; gain = 0.000
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 166ea44a2
+Phase 2.2 Pre Route Cleanup | Checksum: 107b4dbab
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 1946.164 ; gain = 0.000
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:28 . Memory (MB): peak = 1932.648 ; gain = 0.000
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
-Phase 2.3 Update Timing | Checksum: 1d07330be
+Phase 2.3 Update Timing | Checksum: 2763795ca
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 1946.164 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.123  | TNS=0.000  | WHS=-0.966 | THS=-102.525|
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 1943.461 ; gain = 10.812
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-31.256| TNS=-185.037| WHS=-1.012 | THS=-112.036|
 
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.00892928 %
-  Global Horizontal Routing Utilization  = 0.00507548 %
+  Global Vertical Routing Utilization    = 0.00765367 %
+  Global Horizontal Routing Utilization  = 0.00351379 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 4752
+  Number of Failed Nets               = 4878
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 4751
+  Number of Unrouted Nets             = 4877
   Number of Partially Routed Nets     = 1
-  Number of Node Overlaps             = 1
+  Number of Node Overlaps             = 0
 
-Phase 2 Router Initialization | Checksum: 1c962ab53
+Phase 2 Router Initialization | Checksum: 244610fed
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 1960.434 ; gain = 14.270
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:32 . Memory (MB): peak = 1964.566 ; gain = 31.918
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 1c962ab53
+Phase 3.1 Global Routing | Checksum: 244610fed
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 1960.434 ; gain = 14.270
-Phase 3 Initial Routing | Checksum: 1994807d7
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:32 . Memory (MB): peak = 1964.566 ; gain = 31.918
+Phase 3 Initial Routing | Checksum: b4abb4d0
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:29 . Memory (MB): peak = 1963.922 ; gain = 17.758
-INFO: [Route 35-580] Design has 3 pins with tight setup and hold constraints.
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:36 . Memory (MB): peak = 2014.281 ; gain = 81.633
+INFO: [Route 35-580] Design has 6 pins with tight setup and hold constraints.
 
 The top 5 pins with tight setup and hold constraints:
 
-+====================+====================+=======================================================+
-| Launch Setup Clock | Launch Hold Clock  | Pin                                                   |
-+====================+====================+=======================================================+
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[10] |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[12] |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[13] |
-+--------------------+--------------------+-------------------------------------------------------+
++====================+==============================+========================================+
+| Launch Setup Clock | Launch Hold Clock            | Pin                                    |
++====================+==============================+========================================+
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Mario_State0/FSM_onehot_State_reg[1]/D |
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Mario_State0/FSM_onehot_State_reg[5]/D |
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Mario_State0/FSM_onehot_State_reg[6]/D |
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Mario_State0/FSM_onehot_State_reg[3]/D |
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Mario_State0/FSM_onehot_State_reg[7]/D |
++--------------------+------------------------------+----------------------------------------+
 
 File with complete list of pins: tight_setup_hold_pins.txt
 
@@ -740,87 +1139,77 @@ File with complete list of pins: tight_setup_hold_pins.txt
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 425
+ Number of Nodes with overlaps = 471
+ Number of Nodes with overlaps = 44
  Number of Nodes with overlaps = 15
  Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.924 | TNS=-4.011 | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-33.939| TNS=-204.856| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: ae99b24b
+Phase 4.1 Global Iteration 0 | Checksum: 1b2a032f7
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:34 . Memory (MB): peak = 1970.148 ; gain = 23.984
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:55 . Memory (MB): peak = 2023.762 ; gain = 91.113
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 7
  Number of Nodes with overlaps = 2
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.765 | TNS=-2.417 | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-34.187| TNS=-200.723| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 99143e1b
+Phase 4.2 Global Iteration 1 | Checksum: 16e9add36
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:42 . Memory (MB): peak = 1995.855 ; gain = 49.691
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:55 . Memory (MB): peak = 2023.762 ; gain = 91.113
+Phase 4 Rip-up And Reroute | Checksum: 16e9add36
 
-Phase 4.3 Global Iteration 2
- Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 5
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.007 | TNS=-0.007 | WHS=N/A    | THS=N/A    |
-
-Phase 4.3 Global Iteration 2 | Checksum: 174adaa20
-
-Time (s): cpu = 00:00:57 ; elapsed = 00:00:48 . Memory (MB): peak = 1995.855 ; gain = 49.691
-Phase 4 Rip-up And Reroute | Checksum: 174adaa20
-
-Time (s): cpu = 00:00:57 ; elapsed = 00:00:48 . Memory (MB): peak = 1995.855 ; gain = 49.691
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:55 . Memory (MB): peak = 2023.762 ; gain = 91.113
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 1b99b5bf1
+Phase 5.1.1 Update Timing | Checksum: 1639c0ef4
 
-Time (s): cpu = 00:00:57 ; elapsed = 00:00:49 . Memory (MB): peak = 1995.855 ; gain = 49.691
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.007 | TNS=-0.007 | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:55 . Memory (MB): peak = 2023.762 ; gain = 91.113
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-33.860| TNS=-204.354| WHS=N/A    | THS=N/A    |
 
-Phase 5.1 Delay CleanUp | Checksum: 1b99b5bf1
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 13091f379
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:49 . Memory (MB): peak = 1995.855 ; gain = 49.691
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:56 . Memory (MB): peak = 2023.762 ; gain = 91.113
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1b99b5bf1
+Phase 5.2 Clock Skew Optimization | Checksum: 13091f379
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:49 . Memory (MB): peak = 1995.855 ; gain = 49.691
-Phase 5 Delay and Skew Optimization | Checksum: 1b99b5bf1
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:56 . Memory (MB): peak = 2023.762 ; gain = 91.113
+Phase 5 Delay and Skew Optimization | Checksum: 13091f379
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:49 . Memory (MB): peak = 1995.855 ; gain = 49.691
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:56 . Memory (MB): peak = 2023.762 ; gain = 91.113
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 20841f44f
+Phase 6.1.1 Update Timing | Checksum: 18bea579a
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:49 . Memory (MB): peak = 1995.855 ; gain = 49.691
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.007 | TNS=-0.007 | WHS=-0.765 | THS=-7.399 |
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:56 . Memory (MB): peak = 2023.762 ; gain = 91.113
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-33.860| TNS=-198.867| WHS=0.045  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 1b7f90f0f
+Phase 6.1 Hold Fix Iter | Checksum: 124206e4d
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:52 . Memory (MB): peak = 2008.484 ; gain = 62.320
-WARNING: [Route 35-468] The router encountered 2 pins that are both setup-critical and hold-critical and tried to fix hold violations at the expense of setup slack. Such pins are:
-	ball_instance/read_address0_carry_i_4/I1
-	color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[12]
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:56 . Memory (MB): peak = 2023.762 ; gain = 91.113
+Phase 6 Post Hold Fix | Checksum: 124206e4d
 
-Phase 6 Post Hold Fix | Checksum: 1a9bbb0d4
-
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:52 . Memory (MB): peak = 2008.484 ; gain = 62.320
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:56 . Memory (MB): peak = 2023.762 ; gain = 91.113
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.54772 %
-  Global Horizontal Routing Utilization  = 1.97762 %
+  Global Vertical Routing Utilization    = 1.54421 %
+  Global Horizontal Routing Utilization  = 2.10528 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -831,10 +1220,10 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 61.2613%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 49.5495%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 58.8235%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 60.2941%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 43.2432%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 43.2432%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 67.6471%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 70.5882%, No Congested Regions.
 
 ------------------------------
 Reporting congestion hotspots
@@ -856,49 +1245,44 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: 189f50d74
+Phase 7 Route finalize | Checksum: 1b7d9908e
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:52 . Memory (MB): peak = 2008.484 ; gain = 62.320
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:56 . Memory (MB): peak = 2023.762 ; gain = 91.113
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 189f50d74
+Phase 8 Verifying routed nets | Checksum: 1b7d9908e
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:52 . Memory (MB): peak = 2008.484 ; gain = 62.320
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:56 . Memory (MB): peak = 2023.762 ; gain = 91.113
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 24417bd86
+Phase 9 Depositing Routes | Checksum: eb86eb2f
 
-Time (s): cpu = 00:01:04 ; elapsed = 00:00:53 . Memory (MB): peak = 2008.484 ; gain = 62.320
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:57 . Memory (MB): peak = 2023.762 ; gain = 91.113
 
 Phase 10 Post Router Timing
-
-Phase 10.1 Update Timing
-Phase 10.1 Update Timing | Checksum: 29a8339be
-
-Time (s): cpu = 00:01:04 ; elapsed = 00:00:54 . Memory (MB): peak = 2008.484 ; gain = 62.320
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-1.322 | TNS=-10.249| WHS=0.051  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-33.860| TNS=-198.867| WHS=0.045  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 29a8339be
+Phase 10 Post Router Timing | Checksum: eb86eb2f
 
-Time (s): cpu = 00:01:04 ; elapsed = 00:00:54 . Memory (MB): peak = 2008.484 ; gain = 62.320
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:57 . Memory (MB): peak = 2023.762 ; gain = 91.113
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:01:05 ; elapsed = 00:00:54 . Memory (MB): peak = 2008.484 ; gain = 62.320
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:57 . Memory (MB): peak = 2023.762 ; gain = 91.113
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-168 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+564 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:01:07 ; elapsed = 00:00:55 . Memory (MB): peak = 2008.484 ; gain = 62.320
+route_design: Time (s): cpu = 00:01:17 ; elapsed = 00:00:59 . Memory (MB): peak = 2023.762 ; gain = 91.113
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.812 . Memory (MB): peak = 2008.484 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 2023.762 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/impl_1/SMASH_TOP_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file SMASH_TOP_drc_routed.rpt -pb SMASH_TOP_drc_routed.pb -rpx SMASH_TOP_drc_routed.rpx
 Command: report_drc -file SMASH_TOP_drc_routed.rpt -pb SMASH_TOP_drc_routed.pb -rpx SMASH_TOP_drc_routed.rpx
@@ -920,7 +1304,7 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-180 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+576 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file SMASH_TOP_route_status.rpt -pb SMASH_TOP_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file SMASH_TOP_timing_summary_routed.rpt -pb SMASH_TOP_timing_summary_routed.pb -rpx SMASH_TOP_timing_summary_routed.rpx -warn_on_violation 
@@ -951,29 +1335,30 @@ WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Nei
 
 Refer to the device configuration user guide for more information.
 WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
-WARNING: [DRC DPIP-1] Input pipelining: DSP color_instance/read_address0 input color_instance/read_address0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP color_instance/read_address1 input color_instance/read_address1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[12] (net: color_instance/Mario_ROM/ADDRARDADDR[11]) which is driven by a register (ball_instance/BallX_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[12] (net: color_instance/Mario_ROM/ADDRARDADDR[11]) which is driven by a register (ball_instance/BallX_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[12] (net: color_instance/Mario_ROM/ADDRARDADDR[11]) which is driven by a register (ball_instance/BallX_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[12] (net: color_instance/Mario_ROM/ADDRARDADDR[11]) which is driven by a register (ball_instance/BallX_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[12] (net: color_instance/Mario_ROM/ADDRARDADDR[11]) which is driven by a register (ball_instance/BallX_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[12] (net: color_instance/Mario_ROM/ADDRARDADDR[11]) which is driven by a register (ball_instance/BallX_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[12] (net: color_instance/Mario_ROM/ADDRARDADDR[11]) which is driven by a register (ball_instance/BallX_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[12] (net: color_instance/Mario_ROM/ADDRARDADDR[11]) which is driven by a register (ball_instance/BallX_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[12] (net: color_instance/Mario_ROM/ADDRARDADDR[11]) which is driven by a register (ball_instance/BallX_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[12] (net: color_instance/Mario_ROM/ADDRARDADDR[11]) which is driven by a register (ball_instance/BallX_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_ROM/ADDRARDADDR[12]) which is driven by a register (ball_instance/BallX_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_ROM/ADDRARDADDR[12]) which is driven by a register (ball_instance/BallX_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_ROM/ADDRARDADDR[12]) which is driven by a register (ball_instance/BallX_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_ROM/ADDRARDADDR[12]) which is driven by a register (ball_instance/BallX_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_ROM/ADDRARDADDR[12]) which is driven by a register (ball_instance/BallX_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_ROM/ADDRARDADDR[12]) which is driven by a register (ball_instance/BallX_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_ROM/ADDRARDADDR[12]) which is driven by a register (ball_instance/BallX_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_ROM/ADDRARDADDR[12]) which is driven by a register (ball_instance/BallX_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_ROM/ADDRARDADDR[12]) which is driven by a register (ball_instance/BallX_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_ROM/data_Out_reg has an input control pin color_instance/Mario_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_ROM/ADDRARDADDR[12]) which is driven by a register (ball_instance/BallX_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 24 Warnings
+WARNING: [DRC DPIP-1] Input pipelining: DSP color_instance/Mario_address0 input color_instance/Mario_address0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP color_instance/Mario_address0__0 input color_instance/Mario_address0__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP color_instance/Mario_address0__0 input color_instance/Mario_address0__0/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (mario_instance/MarioX_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (mario_instance/MarioX_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (mario_instance/MarioX_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (mario_instance/MarioX_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (mario_instance/MarioX_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (mario_instance/MarioX_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (mario_instance/MarioX_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (mario_instance/MarioX_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (mario_instance/MarioX_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (mario_instance/MarioX_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (vga/hc_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (vga/hc_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (vga/hc_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (vga/hc_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (vga/hc_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (vga/hc_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (vga/hc_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (vga/hc_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (vga/hc_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 color_instance/Mario_Stationary_ROM/data_Out_reg has an input control pin color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] (net: color_instance/Mario_Stationary_ROM/ADDRARDADDR[12]) which is driven by a register (vga/hc_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 25 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
 Loading data files...
@@ -986,7 +1371,7 @@ Writing bitstream ./SMASH_TOP.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-83] Releasing license: Implementation
-14 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
+14 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 2434.176 ; gain = 425.691
-INFO: [Common 17-206] Exiting Vivado at Wed Nov  8 20:47:17 2023...
+write_bitstream: Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2446.922 ; gain = 423.160
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  9 20:20:46 2023...

@@ -4,7 +4,7 @@
  *
  */
 
-module  frameRAM
+module  Mario_Stationary_RAM
 (
 
 		input [12:0] read_address,
