@@ -1,6 +1,6 @@
-18:06:31 **** Build of project SMASH_TOP ****
-buildplatform.bat 50033 SMASH_TOP  
-XSDB Server Channel: tcfchan#48
+11:02:38 **** Build of project SMASH_TOP ****
+buildplatform.bat 49381 SMASH_TOP  
+XSDB Server Channel: tcfchan#6
 C:/Xilinx/Vitis/2022.2/gnu/microblaze/nt
 Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
 make --no-print-directory seq_libs
@@ -77,11 +77,11 @@ LER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-di
 
 "Running Make libs in microblaze_0/libsrc/intc_v3_15/src"
 
-"Running Make libs in microblaze_0/libsrc/spi_v4_9/src"
-
 make -C microblaze_0/libsrc/intc_v3_15/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
 FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMP
 ILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in microblaze_0/libsrc/spi_v4_9/src"
 
 make -C microblaze_0/libsrc/spi_v4_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_FL
 AGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPIL
@@ -145,5 +145,5 @@ mb-ar: creating microblaze_0/lib/libxil.a
 'Finished building libraries'
 
 
-18:06:45 Build Finished (took 13s.632ms)
+11:02:45 Build Finished (took 7s.795ms)
 
