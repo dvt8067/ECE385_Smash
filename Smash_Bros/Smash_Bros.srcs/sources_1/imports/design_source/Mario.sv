@@ -79,7 +79,7 @@ module  Mario ( input logic Reset, frame_clk,
                     // Ball_X_Motion <= 10'd0;
                     end             
 				 if (keycode == 8'h04) begin
-				   MarioX <= MarioX - 10'd1;
+				   MarioX <= MarioX - 10'd3;
                    
                     // if(BallX - BallS > Ball_X_Min) begin
 				 
@@ -89,7 +89,7 @@ module  Mario ( input logic Reset, frame_clk,
                     // Ball_Y_Motion <= 10'd0;
                     end 
 				 if (keycode == 8'h07) begin
-				    MarioX <= MarioX + 10'd1;
+				    MarioX <= MarioX + 10'd3;
                     // if(BallX +BallS <= Ball_X_Max) begin
 				 
                     //     Ball_X_Motion <= 10'd1;

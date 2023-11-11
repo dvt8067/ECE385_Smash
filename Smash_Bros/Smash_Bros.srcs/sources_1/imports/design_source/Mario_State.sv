@@ -41,7 +41,7 @@ module Mario_State (   input logic  Clk,
 			State <= Next_State;
 	end
    
-	int Mario_Walk_Delay = 16000;
+	int Mario_Walk_Delay = 500000;
     logic Mario_Walk_Counter_Tracker;
     logic Mario_Walk_Counter_Reset;
     logic [18:0] Mario_Walk_Counter;
@@ -130,7 +130,7 @@ module Mario_State (   input logic  Clk,
                     Mario_Walk_Counter_Reset = 1;
                 end
                 else begin
-                    Next_State = Mario_Walk_Right2;
+                    Next_State = Mario_Walk_Right3;
                     Mario_Walk_Counter_Tracker = 1;
                 end 
             end

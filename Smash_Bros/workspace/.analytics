@@ -156,3 +156,117 @@ timestamp=[2023-11-10 11:54:47], mode=BUILD, duration=0:00:00.298, duration_ms=2
 timestamp=[2023-11-10 16:11:48], mode=WORKBENCH_START, duration=0:00:12.148, duration_ms=12148, data={}
 timestamp=[2023-11-10 16:11:49], mode=WORKBENCH_UI_INIT, duration=0:00:01.130, duration_ms=1130, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,SMASH_TOP,Smash_Bros,Smash_Bros_system}
 timestamp=[2023-11-10 16:11:52], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.152, duration_ms=2152, data={}
+timestamp=[2023-11-10 16:30:18], mode=WORKBENCH_START, duration=0:00:10.300, duration_ms=10300, data={}
+timestamp=[2023-11-10 16:30:19], mode=WORKBENCH_UI_INIT, duration=0:00:01.108, duration_ms=1108, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,SMASH_TOP,Smash_Bros,Smash_Bros_system}
+timestamp=[2023-11-10 16:30:19], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.573, duration_ms=573, data={}
+timestamp=[2023-11-10 16:31:17], mode=PLATFORM_GENERATION, duration=0:00:14.345, duration_ms=14345, data={name=SMASH_TOP}
+timestamp=[2023-11-10 16:31:20], mode=BUILD, duration=0:00:02.102, duration_ms=2102, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 16:31:20], mode=BUILD, duration=0:00:00.188, duration_ms=188, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 16:31:55], mode=PLATFORM_GENERATION, duration=0:00:03.759, duration_ms=3759, data={name=SMASH_TOP}
+timestamp=[2023-11-10 16:31:55], mode=BUILD, duration=0:00:00.214, duration_ms=214, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 16:31:56], mode=BUILD, duration=0:00:00.210, duration_ms=210, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 16:32:04], mode=PLATFORM_GENERATION, duration=0:00:08.115, duration_ms=8115, data={name=SMASH_TOP}
+timestamp=[2023-11-10 16:32:07], mode=BUILD, duration=0:00:02.765, duration_ms=2765, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 16:32:07], mode=BUILD, duration=0:00:00.132, duration_ms=132, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 16:32:14], mode=BUILD, duration=0:00:00.208, duration_ms=208, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 16:32:14], mode=BUILD, duration=0:00:00.140, duration_ms=140, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 16:53:25], mode=PLATFORM_GENERATION, duration=0:00:04.334, duration_ms=4334, data={name=SMASH_TOP}
+timestamp=[2023-11-10 16:53:26], mode=BUILD, duration=0:00:00.299, duration_ms=299, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 16:53:26], mode=BUILD, duration=0:00:00.243, duration_ms=243, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 16:53:38], mode=PLATFORM_GENERATION, duration=0:00:12.230, duration_ms=12230, data={name=SMASH_TOP}
+timestamp=[2023-11-10 16:53:41], mode=BUILD, duration=0:00:02.037, duration_ms=2037, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 16:53:42], mode=BUILD, duration=0:00:00.145, duration_ms=145, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 16:53:48], mode=BUILD, duration=0:00:00.210, duration_ms=210, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 16:53:49], mode=BUILD, duration=0:00:00.152, duration_ms=152, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 16:59:37], mode=PLATFORM_GENERATION, duration=0:00:03.900, duration_ms=3900, data={name=SMASH_TOP}
+timestamp=[2023-11-10 16:59:38], mode=BUILD, duration=0:00:00.278, duration_ms=278, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 16:59:38], mode=BUILD, duration=0:00:00.226, duration_ms=226, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 16:59:50], mode=PLATFORM_GENERATION, duration=0:00:11.899, duration_ms=11899, data={name=SMASH_TOP}
+timestamp=[2023-11-10 16:59:52], mode=BUILD, duration=0:00:01.927, duration_ms=1927, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 16:59:53], mode=BUILD, duration=0:00:00.155, duration_ms=155, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:00:01], mode=BUILD, duration=0:00:00.238, duration_ms=238, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:00:01], mode=BUILD, duration=0:00:00.159, duration_ms=159, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:06:27], mode=PLATFORM_GENERATION, duration=0:00:04.267, duration_ms=4267, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:06:27], mode=BUILD, duration=0:00:00.236, duration_ms=236, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:06:27], mode=BUILD, duration=0:00:00.201, duration_ms=201, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:06:39], mode=PLATFORM_GENERATION, duration=0:00:11.985, duration_ms=11985, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:06:41], mode=BUILD, duration=0:00:01.884, duration_ms=1884, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:06:42], mode=BUILD, duration=0:00:00.196, duration_ms=196, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:14:57], mode=PLATFORM_GENERATION, duration=0:00:04.392, duration_ms=4392, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:14:57], mode=BUILD, duration=0:00:00.289, duration_ms=289, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:14:58], mode=BUILD, duration=0:00:00.199, duration_ms=199, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:15:12], mode=PLATFORM_GENERATION, duration=0:00:14.227, duration_ms=14227, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:15:15], mode=BUILD, duration=0:00:02.085, duration_ms=2085, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:15:15], mode=BUILD, duration=0:00:00.160, duration_ms=160, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:22:08], mode=PLATFORM_GENERATION, duration=0:00:04.281, duration_ms=4281, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:22:08], mode=BUILD, duration=0:00:00.291, duration_ms=291, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:22:08], mode=BUILD, duration=0:00:00.206, duration_ms=206, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:22:18], mode=PLATFORM_GENERATION, duration=0:00:09.796, duration_ms=9796, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:22:21], mode=BUILD, duration=0:00:02.711, duration_ms=2711, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:22:22], mode=BUILD, duration=0:00:00.148, duration_ms=148, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:23:46], mode=PLATFORM_GENERATION, duration=0:00:04.041, duration_ms=4041, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:23:46], mode=BUILD, duration=0:00:00.240, duration_ms=240, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:23:46], mode=BUILD, duration=0:00:00.227, duration_ms=227, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:24:00], mode=PLATFORM_GENERATION, duration=0:00:13.728, duration_ms=13728, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:24:03], mode=BUILD, duration=0:00:02.035, duration_ms=2035, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:24:03], mode=BUILD, duration=0:00:00.162, duration_ms=162, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:31:23], mode=PLATFORM_GENERATION, duration=0:00:04.789, duration_ms=4789, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:31:23], mode=BUILD, duration=0:00:00.295, duration_ms=295, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:31:24], mode=BUILD, duration=0:00:00.205, duration_ms=205, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:31:38], mode=PLATFORM_GENERATION, duration=0:00:13.779, duration_ms=13779, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:31:40], mode=BUILD, duration=0:00:02.135, duration_ms=2135, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:31:41], mode=BUILD, duration=0:00:00.148, duration_ms=148, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:32:00], mode=PLATFORM_GENERATION, duration=0:00:04.256, duration_ms=4256, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:32:00], mode=BUILD, duration=0:00:00.289, duration_ms=289, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:32:00], mode=BUILD, duration=0:00:00.225, duration_ms=225, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:32:15], mode=PLATFORM_GENERATION, duration=0:00:14.242, duration_ms=14242, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:32:17], mode=BUILD, duration=0:00:02.057, duration_ms=2057, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:32:17], mode=BUILD, duration=0:00:00.156, duration_ms=156, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:39:37], mode=PLATFORM_GENERATION, duration=0:00:04.232, duration_ms=4232, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:39:38], mode=BUILD, duration=0:00:00.304, duration_ms=304, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:39:38], mode=BUILD, duration=0:00:00.209, duration_ms=209, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:39:52], mode=PLATFORM_GENERATION, duration=0:00:13.792, duration_ms=13792, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:39:54], mode=BUILD, duration=0:00:02.022, duration_ms=2022, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:39:55], mode=BUILD, duration=0:00:00.213, duration_ms=213, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:40:22], mode=PLATFORM_GENERATION, duration=0:00:03.966, duration_ms=3966, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:40:23], mode=BUILD, duration=0:00:00.286, duration_ms=286, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:40:23], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:40:36], mode=PLATFORM_GENERATION, duration=0:00:13.411, duration_ms=13411, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:40:39], mode=BUILD, duration=0:00:02.141, duration_ms=2141, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:40:39], mode=BUILD, duration=0:00:00.155, duration_ms=155, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:49:13], mode=PLATFORM_GENERATION, duration=0:00:04.371, duration_ms=4371, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:49:14], mode=BUILD, duration=0:00:00.264, duration_ms=264, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:49:14], mode=BUILD, duration=0:00:00.200, duration_ms=200, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:49:28], mode=PLATFORM_GENERATION, duration=0:00:14.051, duration_ms=14051, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:49:31], mode=BUILD, duration=0:00:02.152, duration_ms=2152, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:49:31], mode=BUILD, duration=0:00:00.176, duration_ms=176, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:50:21], mode=PLATFORM_GENERATION, duration=0:00:04.132, duration_ms=4132, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:50:21], mode=BUILD, duration=0:00:00.233, duration_ms=233, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:50:21], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:50:35], mode=PLATFORM_GENERATION, duration=0:00:13.652, duration_ms=13652, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:50:38], mode=BUILD, duration=0:00:02.119, duration_ms=2119, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:50:38], mode=BUILD, duration=0:00:00.153, duration_ms=153, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:58:22], mode=PLATFORM_GENERATION, duration=0:00:04.534, duration_ms=4534, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:58:22], mode=BUILD, duration=0:00:00.281, duration_ms=281, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:58:22], mode=BUILD, duration=0:00:00.226, duration_ms=226, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:58:35], mode=PLATFORM_GENERATION, duration=0:00:12.404, duration_ms=12404, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:58:37], mode=BUILD, duration=0:00:01.854, duration_ms=1854, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:58:38], mode=BUILD, duration=0:00:00.132, duration_ms=132, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:58:56], mode=PLATFORM_GENERATION, duration=0:00:04.114, duration_ms=4114, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:58:57], mode=BUILD, duration=0:00:00.243, duration_ms=243, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:58:57], mode=BUILD, duration=0:00:00.210, duration_ms=210, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 17:59:10], mode=PLATFORM_GENERATION, duration=0:00:13.450, duration_ms=13450, data={name=SMASH_TOP}
+timestamp=[2023-11-10 17:59:13], mode=BUILD, duration=0:00:02.122, duration_ms=2122, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 17:59:13], mode=BUILD, duration=0:00:00.142, duration_ms=142, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 18:00:19], mode=PLATFORM_GENERATION, duration=0:00:04.099, duration_ms=4099, data={name=SMASH_TOP}
+timestamp=[2023-11-10 18:00:19], mode=BUILD, duration=0:00:00.201, duration_ms=201, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 18:00:20], mode=BUILD, duration=0:00:00.194, duration_ms=194, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 18:00:31], mode=PLATFORM_GENERATION, duration=0:00:11.505, duration_ms=11505, data={name=SMASH_TOP}
+timestamp=[2023-11-10 18:00:33], mode=BUILD, duration=0:00:01.840, duration_ms=1840, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 18:00:34], mode=BUILD, duration=0:00:00.133, duration_ms=133, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 18:06:30], mode=PLATFORM_GENERATION, duration=0:00:04.021, duration_ms=4021, data={name=SMASH_TOP}
+timestamp=[2023-11-10 18:06:31], mode=BUILD, duration=0:00:00.245, duration_ms=245, data={name=Smash_Bros, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 18:06:31], mode=BUILD, duration=0:00:00.201, duration_ms=201, data={name=Smash_Bros_system, configuration=Debug, clean_build=true}
+timestamp=[2023-11-10 18:06:45], mode=PLATFORM_GENERATION, duration=0:00:13.812, duration_ms=13812, data={name=SMASH_TOP}
+timestamp=[2023-11-10 18:06:47], mode=BUILD, duration=0:00:01.965, duration_ms=1965, data={name=Smash_Bros, configuration=Debug, clean_build=false}
+timestamp=[2023-11-10 18:06:48], mode=BUILD, duration=0:00:00.158, duration_ms=158, data={name=Smash_Bros_system, configuration=Debug, clean_build=false}
