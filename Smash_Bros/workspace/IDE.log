@@ -2140,3 +2140,11 @@ con
 ----------------End of Script----------------
 
 21:37:29 INFO  : Disconnected from the channel tcfchan#19.
+17:25:57 DEBUG : Logs will be stored at 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/IDE.log'.
+17:25:58 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\temp_xsdb_launch_script.tcl
+17:26:02 INFO  : XSCT server has started successfully.
+17:26:02 INFO  : plnx-install-location is set to ''
+17:26:02 INFO  : Successfully done setting XSCT server connection channel  
+17:26:02 INFO  : Successfully done setting workspace for the tool. 
+17:26:03 INFO  : Registering command handlers for Vitis TCF services
+17:26:04 INFO  : Platform repository initialization has completed.
