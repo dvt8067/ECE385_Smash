@@ -49,6 +49,8 @@ module SMASH_TOP(
     output logic [7:0] hex_segB,
     output logic [3:0] hex_gridB
     );
+
+    logic[9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min;
     
     logic [31:0] keycode0_gpio, keycode1_gpio;
     logic clk_25MHz, clk_125MHz, clk, clk_100MHz;
@@ -177,7 +179,11 @@ module SMASH_TOP(
         .Red(red),
         .Green(green),
         .Blue(blue),
-        .Clk
+        .Clk,
+        .Stage_X_Max, 
+        .Stage_X_Min, 
+        .Stage_Y_Max, 
+        .Stage_Y_Min
     );
     
 endmodule

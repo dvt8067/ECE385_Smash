@@ -156,3 +156,21 @@ platform active {SMASH_TOP}
 platform config -updatehw {C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/SMASH_TOP.xsa}
 platform clean
 platform generate
+platform active {SMASH_TOP}
+platform config -updatehw {C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/SMASH_TOP.xsa}
+platform clean
+platform generate
+platform clean
+platform generate
+platform config -updatehw {C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/SMASH_TOP.xsa}
+platform clean
+platform generate
+platform config -updatehw {C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/SMASH_TOP.xsa}
+platform clean
+platform generate
+platform config -updatehw {C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/SMASH_TOP.xsa}
+platform clean
+platform generate
+platform config -updatehw {C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/SMASH_TOP.xsa}
+platform clean
+platform generate

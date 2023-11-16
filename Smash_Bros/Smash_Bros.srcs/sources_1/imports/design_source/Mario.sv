@@ -16,12 +16,14 @@
 
 module  Mario ( input logic Reset, frame_clk,
 			   input logic [7:0] keycode,
-               output logic [9:0] MarioX, MarioY, MarioS_X, MarioS_Y); //CHANGE THESE TO MARIO EQUIVALENTS
+         input logic [9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min,
+               output logic [9:0] MarioX, MarioY, MarioS_X, MarioS_Y,
+               output logic edge_below); //CHANGE THESE TO MARIO EQUIVALENTS
     
-    logic [9:0] Mario_X_Motion, Mario_Y_Motion;
-	 
+    logic [9:0] Mario_X_Motion, Mario_Y_Motion, Mario_Bottom_Edge_LX, Mario_Bottom_Edge_RX, Mario_Bottom_Edge_Y;
+    //logic edge;
     parameter [9:0] Mario_X_Center=320;  // Center position on the X axis
-    parameter [9:0] Mario_Y_Center=360;  // Center position on the Y axis
+    parameter [9:0] Mario_Y_Center=200;  // Center position on the Y axis
     parameter [9:0] Mario_X_Min=0;       // Leftmost point on the X axis
     parameter [9:0] Mario_X_Max=639;     // Rightmost point on the X axis
     parameter [9:0] Mario_Y_Min=0;       // Topmost point on the Y axis
@@ -31,7 +33,22 @@ module  Mario ( input logic Reset, frame_clk,
 
     assign MarioS_X = 30;  // default Mario sizes 
     assign MarioS_Y = 40;
+    assign Mario_Bottom_Edge_LX = Mario_X_Center - MarioS_X;
+    assign Mario_Bottom_Edge_RX = Mario_X_Center + MarioS_X;
+    assign Mario_Bottom_Edge_Y = Mario_Y_Center + MarioS_Y + 1;
    
+  always_comb begin
+    edge_below = 0;
+      if((Mario_Bottom_Edge_Y < Stage_Y_Max) && (Mario_Bottom_Edge_Y > Stage_Y_Min))begin
+        if(((Mario_Bottom_Edge_LX> Stage_X_Min)&&(Mario_Bottom_Edge_LX<Stage_X_Max))||((Mario_Bottom_Edge_RX>Stage_X_Min)&&(Mario_Bottom_Edge_RX<Stage_X_Max)))begin
+          edge_below = 1;
+          end
+      end
+      else begin
+        edge_below = 0;
+      end
+  end
+ 
     
 
     always_ff @ (posedge frame_clk or posedge Reset) //make sure the frame clock is instantiated correctly
@@ -59,6 +76,9 @@ module  Mario ( input logic Reset, frame_clk,
 				// 	  Ball_X_Motion <= Ball_X_Step;
 					  
 				//  else 
+        if(edge_below == 0)begin
+          MarioY <= MarioY + 10'd1;
+        end
 				Mario_Y_Motion <= Mario_Y_Motion;  // Ball is somewhere in the middle, don't bounce, just keep moving
 					  
 				 //modify to control ball motion with the keycode
