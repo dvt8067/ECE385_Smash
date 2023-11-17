@@ -1,6 +1,6 @@
-18:19:52 **** Build of configuration Debug for project Smash_Bros_system ****
+18:35:12 **** Build of configuration Debug for project Smash_Bros_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
 
-18:19:52 Build Finished (took 186ms)
+18:35:12 Build Finished (took 160ms)
 

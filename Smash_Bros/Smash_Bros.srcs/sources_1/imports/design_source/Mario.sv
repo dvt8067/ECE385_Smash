@@ -85,9 +85,9 @@ module  Mario ( input logic Reset, frame_clk,
 				// 	  Ball_X_Motion <= Ball_X_Step;
 					  
 				//  else 
-                if(edge_below == 0)begin
-                    MarioY <= MarioY + 10'd1;
-                end
+          if(edge_below == 0)begin
+              MarioY <= MarioY + 10'd1;
+          end
         
 				Mario_Y_Motion <= Mario_Y_Motion;  // Ball is somewhere in the middle, don't bounce, just keep moving
 					  
