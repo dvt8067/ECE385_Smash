@@ -1,7 +1,6 @@
-18:34:56 **** Build of project SMASH_TOP ****
-buildplatform.bat 60467 SMASH_TOP  
-XSDB Server Channel: tcfchan#5
-C:/Xilinx/Vitis/2022.2/gnu/microblaze/nt
+19:31:22 **** Build of project SMASH_TOP ****
+buildplatform.bat 62630 SMASH_TOP  
+XSDB Server Channel: tcfchan#3
 Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
 make --no-print-directory seq_libs
 
@@ -11,11 +10,11 @@ make -j 10 --no-print-directory par_libs
 
 "Running Make include in microblaze_0/libsrc/bram_v4_8/src"
 
-"Running Make include in microblaze_0/libsrc/cpu_v2_16/src"
-
 make -C microblaze_0/libsrc/bram_v4_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
 R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
 MPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in microblaze_0/libsrc/cpu_v2_16/src"
 
 make -C microblaze_0/libsrc/cpu_v2_16/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
 R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
@@ -145,5 +144,5 @@ mb-ar: creating microblaze_0/lib/libxil.a
 'Finished building libraries'
 
 
-18:35:07 Build Finished (took 11s.372ms)
+19:31:27 Build Finished (took 4s.993ms)
 

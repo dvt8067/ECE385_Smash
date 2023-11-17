@@ -154,7 +154,6 @@ module SMASH_TOP(
 		.Mario_State_Out(Mario_State_Out),
         .Mario_Invert_Left(Mario_Invert_Left)
 				);
-
     //Mario Module
     Mario mario_instance(
         .Reset(reset_ah),

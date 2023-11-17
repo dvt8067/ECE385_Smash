@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Thu Nov 16 18:33:46 2023
+| Date             : Thu Nov 16 19:18:20 2023
 | Host             : Amadeus running 64-bit major release  (build 9200)
 | Command          : report_power -file SMASH_TOP_power_routed.rpt -pb SMASH_TOP_power_summary_routed.pb -rpx SMASH_TOP_power_routed.rpx
 | Design           : SMASH_TOP
@@ -52,16 +52,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.014 |       12 |       --- |             --- |
-| Slice Logic              |     0.006 |     7056 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     2522 |     32600 |            7.74 |
+| Clocks                   |     0.013 |       12 |       --- |             --- |
+| Slice Logic              |     0.006 |     7061 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     2521 |     32600 |            7.73 |
 |   LUT as Distributed RAM |    <0.001 |      172 |      9600 |            1.79 |
-|   Register               |    <0.001 |     2616 |     65200 |            4.01 |
+|   Register               |    <0.001 |     2621 |     65200 |            4.02 |
 |   CARRY4                 |    <0.001 |      112 |      8150 |            1.37 |
 |   F7/F8 Muxes            |    <0.001 |       36 |     32600 |            0.11 |
 |   LUT as Shift Register  |    <0.001 |      112 |      9600 |            1.17 |
 |   Others                 |     0.000 |      789 |       --- |             --- |
-| Signals                  |     0.007 |     4858 |       --- |             --- |
+| Signals                  |     0.008 |     4858 |       --- |             --- |
 | Block RAM                |     0.004 |       10 |        75 |           13.33 |
 | MMCM                     |     0.212 |        2 |         5 |           40.00 |
 | DSPs                     |     0.003 |        5 |       120 |            4.17 |
@@ -77,10 +77,10 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.045 |       0.035 |      0.011 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.045 |       0.034 |      0.011 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.130 |       0.118 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.042 |       0.041 |      0.001 |       NA    | Unspecified | NA         |
-| Vcco25    |       2.500 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.005 |       0.004 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -156,11 +156,9 @@ Table of Contents
 |   clk_wiz                   |     0.106 |
 |     inst                    |     0.106 |
 |   color_instance            |     0.004 |
-|   mb_block_i                |     0.132 |
+|   mb_block_i                |     0.131 |
 |     clk_wiz_1               |     0.106 |
 |       inst                  |     0.106 |
-|     gpio_usb_keycode        |     0.001 |
-|       U0                    |     0.001 |
 |     microblaze_0            |     0.013 |
 |       U0                    |     0.013 |
 |     microblaze_0_axi_intc   |     0.001 |

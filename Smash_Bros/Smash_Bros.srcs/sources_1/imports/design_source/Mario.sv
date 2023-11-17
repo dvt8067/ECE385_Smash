@@ -88,12 +88,16 @@ module  Mario ( input logic Reset, frame_clk,
           if(edge_below == 0)begin
               MarioY <= MarioY + 10'd1;
           end
+          else begin
+          MarioY <= MarioY;
+          end
         
-				Mario_Y_Motion <= Mario_Y_Motion;  // Ball is somewhere in the middle, don't bounce, just keep moving
+				//Mario_Y_Motion <= Mario_Y_Motion;  // Ball is somewhere in the middle, don't bounce, just keep moving
 					  
 				 //modify to control ball motion with the keycode
 				 if (keycode == 8'h1A) begin
 				    // if(BallY - BallS > Ball_Y_Min) begin
+             MarioX <= MarioX; // Continue to Reset MarioX
 				 
                     //     Ball_Y_Motion <= -10'd1;
                     //     Ball_X_Motion <= 10'd0;
@@ -102,7 +106,7 @@ module  Mario ( input logic Reset, frame_clk,
                     end
 				 if (keycode == 8'h16) begin
 				    // if(BallY + BallS <=Ball_Y_Max) begin
-				 
+                  MarioX <= MarioX; // continue to reset marioX
                     //     Ball_Y_Motion <= 10'd1;
                     //     Ball_X_Motion <= 10'd0;
                     //     end
@@ -130,8 +134,11 @@ module  Mario ( input logic Reset, frame_clk,
 				 
 				//  BallY <= (BallY + Ball_Y_Motion);  // Update ball position
 				//  BallX <= (BallX + Ball_X_Motion);
-			
-		end  
-    end
+        if(keycode !=8'h07 &&keycode !=8'h04 && keycode != 8'h16 && keycode != 8'h1A) begin
+            MarioX<=MarioX; ///  continue to reset MarioX
+         end
+         end
+         
+      end
       
 endmodule
