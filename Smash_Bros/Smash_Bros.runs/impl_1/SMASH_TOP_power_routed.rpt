@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Wed Nov 15 21:35:56 2023
+| Date             : Thu Nov 16 18:15:45 2023
 | Host             : Amadeus running 64-bit major release  (build 9200)
 | Command          : report_power -file SMASH_TOP_power_routed.rpt -pb SMASH_TOP_power_summary_routed.pb -rpx SMASH_TOP_power_routed.rpx
 | Design           : SMASH_TOP
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.013 |       12 |       --- |             --- |
-| Slice Logic              |     0.006 |     7049 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     2506 |     32600 |            7.69 |
+| Slice Logic              |     0.006 |     7064 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     2517 |     32600 |            7.72 |
 |   LUT as Distributed RAM |    <0.001 |      172 |      9600 |            1.79 |
-|   Register               |    <0.001 |     2623 |     65200 |            4.02 |
-|   CARRY4                 |    <0.001 |      112 |      8150 |            1.37 |
+|   Register               |    <0.001 |     2621 |     65200 |            4.02 |
+|   CARRY4                 |    <0.001 |      115 |      8150 |            1.41 |
 |   F7/F8 Muxes            |    <0.001 |       36 |     32600 |            0.11 |
 |   LUT as Shift Register  |    <0.001 |      112 |      9600 |            1.17 |
 |   Others                 |     0.000 |      788 |       --- |             --- |
-| Signals                  |     0.008 |     4849 |       --- |             --- |
+| Signals                  |     0.008 |     4853 |       --- |             --- |
 | Block RAM                |     0.004 |       10 |        75 |           13.33 |
 | MMCM                     |     0.212 |        2 |         5 |           40.00 |
 | DSPs                     |     0.003 |        5 |       120 |            4.17 |
@@ -156,7 +156,7 @@ Table of Contents
 |   clk_wiz                   |     0.106 |
 |     inst                    |     0.106 |
 |   color_instance            |     0.005 |
-|   mb_block_i                |     0.132 |
+|   mb_block_i                |     0.131 |
 |     clk_wiz_1               |     0.106 |
 |       inst                  |     0.106 |
 |     microblaze_0            |     0.013 |

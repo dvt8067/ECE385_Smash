@@ -163,7 +163,11 @@ module SMASH_TOP(
         .MarioX(Marioxsig),
         .MarioY(Marioysig),
         .MarioS_X(Mariosizesig_X),
-        .MarioS_Y(Mariosizesig_Y)
+        .MarioS_Y(Mariosizesig_Y),
+        .Stage_X_Max(Stage_X_Max),
+        .Stage_X_Min(Stage_X_Min),
+        .Stage_Y_Max(Stage_Y_Max),
+        .Stage_Y_Min(Stage_Y_Min)
     );
     
     //Color Mapper Module   
@@ -180,10 +184,10 @@ module SMASH_TOP(
         .Green(green),
         .Blue(blue),
         .Clk,
-        .Stage_X_Max, 
-        .Stage_X_Min, 
-        .Stage_Y_Max, 
-        .Stage_Y_Min
+        .Stage_X_Max(Stage_X_Max), 
+        .Stage_X_Min(Stage_X_Min), 
+        .Stage_Y_Max(Stage_Y_Max), 
+        .Stage_Y_Min(Stage_Y_Min)
     );
     
 endmodule

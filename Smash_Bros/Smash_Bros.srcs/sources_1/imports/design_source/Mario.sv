@@ -22,31 +22,40 @@ module  Mario ( input logic Reset, frame_clk,
     
     logic [9:0] Mario_X_Motion, Mario_Y_Motion, Mario_Bottom_Edge_LX, Mario_Bottom_Edge_RX, Mario_Bottom_Edge_Y;
     //logic edge;
-    parameter [9:0] Mario_X_Center=320;  // Center position on the X axis
-    parameter [9:0] Mario_Y_Center=200;  // Center position on the Y axis
-    parameter [9:0] Mario_X_Min=0;       // Leftmost point on the X axis
-    parameter [9:0] Mario_X_Max=639;     // Rightmost point on the X axis
-    parameter [9:0] Mario_Y_Min=0;       // Topmost point on the Y axis
-    parameter [9:0] Mario_Y_Max=479;     // Bottommost point on the Y axis
-    parameter [9:0] Mario_X_Step=1;      // Step size on the X axis
-    parameter [9:0] Mario_Y_Step=1;      // Step size on the Y axis
+    parameter [9:0] Mario_X_Initial=320;  // Center position on the X axis
+    parameter [9:0] Mario_Y_Initial=200;  // Center position on the Y axis
+    //parameter [9:0] Mario_X_Min=0;       // Leftmost point on the X axis
+    //parameter [9:0] Mario_X_Max=639;     // Rightmost point on the X axis
+    //parameter [9:0] Mario_Y_Min=0;       // Topmost point on the Y axis
+    //parameter [9:0] Mario_Y_Max=479;     // Bottommost point on the Y axis
+    //parameter [9:0] Mario_X_Step=1;      // Step size on the X axis
+    //parameter [9:0] Mario_Y_Step=1;      // Step size on the Y axis
 
     assign MarioS_X = 30;  // default Mario sizes 
     assign MarioS_Y = 40;
-    assign Mario_Bottom_Edge_LX = Mario_X_Center - MarioS_X;
-    assign Mario_Bottom_Edge_RX = Mario_X_Center + MarioS_X;
-    assign Mario_Bottom_Edge_Y = Mario_Y_Center + MarioS_Y + 1;
+    assign Mario_Bottom_Edge_LX = MarioX - MarioS_X;
+    assign Mario_Bottom_Edge_RX = MarioX + MarioS_X;
+    assign Mario_Bottom_Edge_Y = MarioY + MarioS_Y + 1;
    
   always_comb begin
-    edge_below = 0;
-      if((Mario_Bottom_Edge_Y < Stage_Y_Max) && (Mario_Bottom_Edge_Y > Stage_Y_Min))begin
-        if(((Mario_Bottom_Edge_LX> Stage_X_Min)&&(Mario_Bottom_Edge_LX<Stage_X_Max))||((Mario_Bottom_Edge_RX>Stage_X_Min)&&(Mario_Bottom_Edge_RX<Stage_X_Max)))begin
+      Mario_X_Motion = 0;
+      Mario_Y_Motion = 0;
+      // 
+      if( (Mario_Bottom_Edge_Y <= Stage_Y_Max) && (Mario_Bottom_Edge_Y >= Stage_Y_Min))begin
+        // Mario_X_Motion = 10'b0000000010;
+        // edge_below = 1;
+        if(((Mario_Bottom_Edge_LX> Stage_X_Min)&&(Mario_Bottom_Edge_LX<Stage_X_Max))
+        ||((Mario_Bottom_Edge_RX>Stage_X_Min)&&(Mario_Bottom_Edge_RX<Stage_X_Max)))begin
           edge_below = 1;
           end
-      end
+      
       else begin
         edge_below = 0;
       end
+      end
+  
+  
+  
   end
  
     
@@ -55,10 +64,10 @@ module  Mario ( input logic Reset, frame_clk,
     begin: Move_Mario
         if (Reset)  // asynchronous Reset
         begin 
-      Mario_Y_Motion <= 10'd0; //Mario_Y_Step;
-			Mario_X_Motion <= 10'd0; //Mario_X_Step;
-			MarioY <= Mario_Y_Center;
-			MarioX <= Mario_X_Center;
+            //Mario_Y_Motion <= 10'd0; //Mario_Y_Step;
+			//Mario_X_Motion <= 10'd0; //Mario_X_Step;
+			MarioY <= Mario_Y_Initial;
+			MarioX <= Mario_X_Initial;
         end
            
         else 
@@ -76,9 +85,10 @@ module  Mario ( input logic Reset, frame_clk,
 				// 	  Ball_X_Motion <= Ball_X_Step;
 					  
 				//  else 
-        if(edge_below == 0)begin
-          MarioY <= MarioY + 10'd1;
-        end
+                if(edge_below == 0)begin
+                    MarioY <= MarioY + 10'd1;
+                end
+        
 				Mario_Y_Motion <= Mario_Y_Motion;  // Ball is somewhere in the middle, don't bounce, just keep moving
 					  
 				 //modify to control ball motion with the keycode
