@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1700183789">
+<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1700325774">
   <File Type="ROUTE-PWR" Name="SMASH_TOP_power_routed.rpt"/>
   <File Type="PA-TCL" Name="SMASH_TOP.tcl"/>
   <File Type="BITSTR-MMI" Name="SMASH_TOP.mmi"/>
@@ -134,7 +134,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/design_source/Palette.sv">
+    <File Path="$PSRCDIR/sources_1/imports/design_source/Palette_Mario.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design_source/Smash_Background.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

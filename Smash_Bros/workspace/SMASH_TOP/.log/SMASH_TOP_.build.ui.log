@@ -1,6 +1,7 @@
-2023-11-16T19:31:22.802709700255-19:31:22 **** Build of project SMASH_TOP ****
-000-buildplatform.bat 62630 SMASH_TOP  
-000-XSDB Server Channel: tcfchan#3
+2023-11-17T10:54:40.550808100255-10:54:40 **** Build of project SMASH_TOP ****
+000-buildplatform.bat 50933 SMASH_TOP  
+000-XSDB Server Channel: tcfchan#17
+000-C:/Xilinx/Vitis/2022.2/gnu/microblaze/nt
 000-Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
 000-make --no-print-directory seq_libs
 000-
@@ -22,11 +23,11 @@
 000-
 000-"Running Make include in microblaze_0/libsrc/gpio_v4_9/src"
 000-
+000-"Running Make include in microblaze_0/libsrc/intc_v3_15/src"
+000-
 000-make -C microblaze_0/libsrc/gpio_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
 000-R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
 000-MPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-000-
-000-"Running Make include in microblaze_0/libsrc/intc_v3_15/src"
 000-
 000-make -C microblaze_0/libsrc/intc_v3_15/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
 000-ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_C
@@ -58,17 +59,17 @@
 000-
 000-"Running Make libs in microblaze_0/libsrc/bram_v4_8/src"
 000-
+000-"Running Make libs in microblaze_0/libsrc/cpu_v2_16/src"
+000-
 000-make -C microblaze_0/libsrc/bram_v4_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
 000-LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
 000-LER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
 000-
-000-"Running Make libs in microblaze_0/libsrc/cpu_v2_16/src"
+000-"Running Make libs in microblaze_0/libsrc/gpio_v4_9/src"
 000-
 000-make -C microblaze_0/libsrc/cpu_v2_16/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
 000-LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
 000-LER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-000-
-000-"Running Make libs in microblaze_0/libsrc/gpio_v4_9/src"
 000-
 000-make -C microblaze_0/libsrc/gpio_v4_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
 000-LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
@@ -144,5 +145,5 @@
 000-'Finished building libraries'
 000-
 00255-
-19:31:27 Build Finished (took 4s.993ms)
+10:54:50 Build Finished (took 9s.487ms)
 

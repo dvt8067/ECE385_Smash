@@ -23,13 +23,14 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
 
     logic Mario_on;
     logic [12:0] Mario_address, ADDR0X_Mario, ADDR0Y_Mario, ADDR_X_OFFSET_Mario, ADDR_Y_OFFSET_Mario;
-    logic [3:0] Palette_Index_Stationary;
-    logic [3:0] Palette_Index_Walking1, Palette_Index_Walking2, Palette_Index_Walking3;
-    logic [3:0] Palette_Index;
-    logic[3:0] Background_palette index;
-    logic [11:0] Palette_Output;
-    logic [18:0] background_address;
-    logic on_background;
+    logic [3:0] Palette_Index_Stationary_Mario;
+    logic [3:0] Palette_Index_Walking1_Mario, Palette_Index_Walking2_Mario, Palette_Index_Walking3_Mario;
+    logic [3:0] Palette_Index_Mario;
+    logic[3:0] Palette_Index_Background;
+    logic [11:0] Palette_Output_Mario;
+    logic [11:0] Palette_Output_Background;
+    logic [18:0] Background_address;
+    logic Background_on;
     //logic [9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min;
 
 
@@ -48,8 +49,8 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
     assign Mario_Rowsize = 60;
     assign ADDR0X_Mario = MarioX - DistX_Mario;
     assign ADDR0Y_Mario = MarioY - DistY_Mario;
-    assign background_address = (DrawY*640) + DrawX;
-    assign on_background = 0;
+    assign Background_address = (DrawY*640) + DrawX;
+    //assign on_background = 0;
     always_comb begin
         ADDR_X_OFFSET_Mario = DrawX - ADDR0X_Mario;
         ADDR_Y_OFFSET_Mario = DrawY - ADDR0Y_Mario;
@@ -66,50 +67,54 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
     Mario_Stationary_RAM Mario_Stationary_ROM (
 		.read_address(Mario_address),
 		.Clk(Clk),
-		.data_Out(Palette_Index_Stationary)
+		.data_Out(Palette_Index_Stationary_Mario)
     );
 
     Mario_Walking_RAM1 Mario_Walking1_ROM (
 		.read_address(Mario_address),
 		.Clk(Clk),
-		.data_Out(Palette_Index_Walking1)
+		.data_Out(Palette_Index_Walking1_Mario)
     );
     Mario_Walking_RAM2 Mario_Walking2_ROM (
 		.read_address(Mario_address),
 		.Clk(Clk),
-		.data_Out(Palette_Index_Walking2)
+		.data_Out(Palette_Index_Walking2_Mario)
     );
     Mario_Walking_RAM3 Mario_Walking3_ROM (
 		.read_address(Mario_address),
 		.Clk(Clk),
-		.data_Out(Palette_Index_Walking3)
+		.data_Out(Palette_Index_Walking3_Mario)
     );
-    Background Smash_Background(read_address(background_address), .Clk, .data_Out(Background_palette));
+    Smash_Background Smash_Background0(.read_address(Background_address), .Clk, .data_Out(Palette_Index_Background));
+    //REDOINK THIS KUD TI HAVE 0-7 PALETTE INDEXES
 
     always_comb begin
+    // if(Background_on) begin // check background first
+    // Palette_Index = Palette_Index_Background; //// FIX FIX FIX FIX
+    // end
+    // else begin // else do mario
+    
         if(Mario_State_Out == 0 || Mario_State_Out == 1 || Mario_State_Out == 8 || Mario_State_Out == 9)begin
-            Palette_Index = Palette_Index_Stationary;
+            Palette_Index_Mario = Palette_Index_Stationary_Mario;
         end
         else if(Mario_State_Out == 2 ||Mario_State_Out == 5) begin
-            Palette_Index = Palette_Index_Walking1;
+            Palette_Index_Mario = Palette_Index_Walking1_Mario;
         end
         else if(Mario_State_Out == 3 ||Mario_State_Out == 6) begin
-            Palette_Index = Palette_Index_Walking2;
+            Palette_Index_Mario = Palette_Index_Walking2_Mario;
         end
         else if(Mario_State_Out == 4 ||Mario_State_Out == 7) begin
-            Palette_Index = Palette_Index_Walking3;
+            Palette_Index_Mario = Palette_Index_Walking3_Mario;
         end
         else begin
-            Palette_Index = 2'b01; // if for some reason we are not in one of the defined states, print red
+            Palette_Index_Mario = 2'b01; // if for some reason we are not in one of the defined states, print red
         end
     end
-    if(on_background) begin
-    Palette_Index = Background_palette;
-    end
-    else begin
-    Palette_Index = Palette_Index;
-    end
-    Palette(.addr(Palette_Index), .data(Palette_Output));
+    //end
+    
+    Palette_Mario(.addr(Palette_Index_Mario), .data(Palette_Output_Mario));
+    // NEED TO CREATE A NEW PALETTE FOR ONLY BACKGROUND AND PUT IT HERE
+    //Palette_Background(.addr(Palette_Index_Background), .data(Palette_Output_Background));
 
     always_comb
     begin:Mario_on_proc
@@ -119,33 +124,37 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
             (DrawY <= MarioY + Mario_size_Y)) begin
 
             Mario_on = 1'b1;
+            //Background_on = 1'b0;
        end
         else
             Mario_on = 1'b0;
+            //Background_on = 1'b1;
      end
 
     always_comb
     begin:RGB_Display
-        if(Mario_on && (Palette_Output != 12'h808)) begin
-             Red = Palette_Output[11:8];
-             Green = Palette_Output[7:4];
-             Blue = Palette_Output[3:0];
+        if(Mario_on && (Palette_Output_Mario != 12'h808)) begin
+             Red = Palette_Output_Mario[11:8];
+             Green = Palette_Output_Mario[7:4];
+             Blue = Palette_Output_Mario[3:0];
+             //on_background = 0;
         end
         else if ((DrawY>Stage_Y_Min) && (DrawY<Stage_Y_Max)&& (DrawX<Stage_X_Max) && (DrawX>Stage_X_Min)) begin
             Red = 4'hf;
             Green = 4'h7;
             Blue = 4'h0;
+            //on_background = 0;
         end
 
         else begin
-            on_background = 1;
-            Red = Palette_Output[11:8];
-            Green = Palette_Output[7:4];
-            Blue = Palette_Output[3:0];
+            //on_background = 1;
+            Red = 4'hf; /// FIX FIX FIX FIX FIX
+            Green = 4'hf; // PUT THE BACKGROUND COLOR OUTPUT HERE
+            Blue = 4'hf; // SWITCH TO THE COMMENTED VERSION BELOW ONCE NEW PALETTE IS MADE
+
+            // Red = Palette_Output_Background[11:8]; 
+            // Green = Palette_Output_Background[7:4];
+            // Blue = Palette_Output_Background[3:0];
         end
     end
-
-
-
-
 endmodule
