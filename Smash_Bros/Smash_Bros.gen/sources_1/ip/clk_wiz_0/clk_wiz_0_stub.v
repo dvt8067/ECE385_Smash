@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Tue Nov  7 19:16:17 2023
+// Date        : Tue Nov  7 19:16:16 2023
 // Host        : DESKTOP-MTC1J3G running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top clk_wiz_0 -prefix
+//               clk_wiz_0_ clk_wiz_0_stub.v
 // Design      : clk_wiz_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7s50csga324-1

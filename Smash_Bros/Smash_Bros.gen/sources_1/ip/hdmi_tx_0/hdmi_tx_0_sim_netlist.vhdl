@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 -- Date        : Tue Nov  7 19:29:46 2023
 -- Host        : DESKTOP-MTC1J3G running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top hdmi_tx_0 -prefix
+--               hdmi_tx_0_ hdmi_tx_0_sim_netlist.vhdl
 -- Design      : hdmi_tx_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -41,8 +41,6 @@ entity hdmi_tx_0_encode is
     \dout_reg[4]_3\ : in STD_LOGIC;
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_tx_0_encode : entity is "encode";
 end hdmi_tx_0_encode;
 
 architecture STRUCTURE of hdmi_tx_0_encode is
@@ -5186,8 +5184,6 @@ entity hdmi_tx_0_serdes_10_to_1 is
     datain : in STD_LOGIC_VECTOR ( 9 downto 0 );
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_tx_0_serdes_10_to_1 : entity is "serdes_10_to_1";
 end hdmi_tx_0_serdes_10_to_1;
 
 architecture STRUCTURE of hdmi_tx_0_serdes_10_to_1 is
@@ -5779,8 +5775,6 @@ entity hdmi_tx_0_srldelay is
     data_i : in STD_LOGIC_VECTOR ( 25 downto 0 );
     pix_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_tx_0_srldelay : entity is "srldelay";
 end hdmi_tx_0_srldelay;
 
 architecture STRUCTURE of hdmi_tx_0_srldelay is
@@ -6489,8 +6483,6 @@ entity hdmi_tx_0_hdmi_tx_v1_0 is
     rst : in STD_LOGIC;
     pix_clk_locked : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_tx_0_hdmi_tx_v1_0 : entity is "hdmi_tx_v1_0";
 end hdmi_tx_0_hdmi_tx_v1_0;
 
 architecture STRUCTURE of hdmi_tx_0_hdmi_tx_v1_0 is

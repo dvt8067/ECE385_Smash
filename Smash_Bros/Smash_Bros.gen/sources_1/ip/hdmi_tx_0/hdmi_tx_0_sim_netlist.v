@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 // Date        : Tue Nov  7 19:29:46 2023
 // Host        : DESKTOP-MTC1J3G running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top hdmi_tx_0 -prefix
+//               hdmi_tx_0_ hdmi_tx_0_sim_netlist.v
 // Design      : hdmi_tx_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,79 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "hdmi_tx_0,hdmi_tx_v1_0,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "package_project" *) 
-(* X_CORE_INFO = "hdmi_tx_v1_0,Vivado 2022.2" *) 
-(* NotValidForBitStream *)
-module hdmi_tx_0
-   (pix_clk,
-    pix_clkx5,
-    pix_clk_locked,
-    rst,
-    red,
-    green,
-    blue,
-    hsync,
-    vsync,
-    vde,
-    aux0_din,
-    aux1_din,
-    aux2_din,
-    ade,
-    TMDS_CLK_P,
-    TMDS_CLK_N,
-    TMDS_DATA_P,
-    TMDS_DATA_N);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 pix_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pix_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *) input pix_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 pix_clkx5 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pix_clkx5, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *) input pix_clkx5;
-  input pix_clk_locked;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rst;
-  input [3:0]red;
-  input [3:0]green;
-  input [3:0]blue;
-  input hsync;
-  input vsync;
-  input vde;
-  input [3:0]aux0_din;
-  input [3:0]aux1_din;
-  input [3:0]aux2_din;
-  input ade;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 hdmi_tx TMDS_CLK_P" *) output TMDS_CLK_P;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 hdmi_tx TMDS_CLK_N" *) output TMDS_CLK_N;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 hdmi_tx TMDS_DATA_P" *) output [2:0]TMDS_DATA_P;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 hdmi_tx TMDS_DATA_N" *) output [2:0]TMDS_DATA_N;
-
-  (* IOSTANDARD = "TMDS_33" *) (* SLEW = "SLOW" *) wire TMDS_CLK_N;
-  (* IOSTANDARD = "TMDS_33" *) (* SLEW = "SLOW" *) wire TMDS_CLK_P;
-  (* IOSTANDARD = "TMDS_33" *) (* SLEW = "SLOW" *) wire [2:0]TMDS_DATA_N;
-  (* IOSTANDARD = "TMDS_33" *) (* SLEW = "SLOW" *) wire [2:0]TMDS_DATA_P;
-  wire ade;
-  wire [3:0]aux0_din;
-  wire [3:0]aux1_din;
-  wire [3:0]aux2_din;
-  wire [3:0]blue;
-  wire [3:0]green;
-  wire hsync;
-  wire pix_clk;
-  wire pix_clk_locked;
-  wire pix_clkx5;
-  wire [3:0]red;
-  wire rst;
-  wire vde;
-  wire vsync;
-
-  hdmi_tx_0_hdmi_tx_v1_0 inst
-       (.TMDS_CLK_N(TMDS_CLK_N),
-        .TMDS_CLK_P(TMDS_CLK_P),
-        .TMDS_DATA_N(TMDS_DATA_N),
-        .TMDS_DATA_P(TMDS_DATA_P),
-        .data_i({blue,green,red,aux0_din[3:2],aux1_din,aux2_din,hsync,vsync,vde,ade}),
-        .pix_clk(pix_clk),
-        .pix_clk_locked(pix_clk_locked),
-        .pix_clkx5(pix_clkx5),
-        .rst(rst));
-endmodule
-
-(* ORIG_REF_NAME = "encode" *) 
 module hdmi_tx_0_encode
    (vde_reg,
     ade_reg,
@@ -4163,7 +4090,78 @@ module hdmi_tx_0_encode__parameterized1
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "hdmi_tx_v1_0" *) 
+(* CHECK_LICENSE_TYPE = "hdmi_tx_0,hdmi_tx_v1_0,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "package_project" *) 
+(* X_CORE_INFO = "hdmi_tx_v1_0,Vivado 2022.2" *) 
+(* NotValidForBitStream *)
+module hdmi_tx_0
+   (pix_clk,
+    pix_clkx5,
+    pix_clk_locked,
+    rst,
+    red,
+    green,
+    blue,
+    hsync,
+    vsync,
+    vde,
+    aux0_din,
+    aux1_din,
+    aux2_din,
+    ade,
+    TMDS_CLK_P,
+    TMDS_CLK_N,
+    TMDS_DATA_P,
+    TMDS_DATA_N);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 pix_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pix_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *) input pix_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 pix_clkx5 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pix_clkx5, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, INSERT_VIP 0" *) input pix_clkx5;
+  input pix_clk_locked;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rst;
+  input [3:0]red;
+  input [3:0]green;
+  input [3:0]blue;
+  input hsync;
+  input vsync;
+  input vde;
+  input [3:0]aux0_din;
+  input [3:0]aux1_din;
+  input [3:0]aux2_din;
+  input ade;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 hdmi_tx TMDS_CLK_P" *) output TMDS_CLK_P;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 hdmi_tx TMDS_CLK_N" *) output TMDS_CLK_N;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 hdmi_tx TMDS_DATA_P" *) output [2:0]TMDS_DATA_P;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:hdmi:2.0 hdmi_tx TMDS_DATA_N" *) output [2:0]TMDS_DATA_N;
+
+  (* IOSTANDARD = "TMDS_33" *) (* SLEW = "SLOW" *) wire TMDS_CLK_N;
+  (* IOSTANDARD = "TMDS_33" *) (* SLEW = "SLOW" *) wire TMDS_CLK_P;
+  (* IOSTANDARD = "TMDS_33" *) (* SLEW = "SLOW" *) wire [2:0]TMDS_DATA_N;
+  (* IOSTANDARD = "TMDS_33" *) (* SLEW = "SLOW" *) wire [2:0]TMDS_DATA_P;
+  wire ade;
+  wire [3:0]aux0_din;
+  wire [3:0]aux1_din;
+  wire [3:0]aux2_din;
+  wire [3:0]blue;
+  wire [3:0]green;
+  wire hsync;
+  wire pix_clk;
+  wire pix_clk_locked;
+  wire pix_clkx5;
+  wire [3:0]red;
+  wire rst;
+  wire vde;
+  wire vsync;
+
+  hdmi_tx_0_hdmi_tx_v1_0 inst
+       (.TMDS_CLK_N(TMDS_CLK_N),
+        .TMDS_CLK_P(TMDS_CLK_P),
+        .TMDS_DATA_N(TMDS_DATA_N),
+        .TMDS_DATA_P(TMDS_DATA_P),
+        .data_i({blue,green,red,aux0_din[3:2],aux1_din,aux2_din,hsync,vsync,vde,ade}),
+        .pix_clk(pix_clk),
+        .pix_clk_locked(pix_clk_locked),
+        .pix_clkx5(pix_clkx5),
+        .rst(rst));
+endmodule
+
 module hdmi_tx_0_hdmi_tx_v1_0
    (TMDS_DATA_P,
     TMDS_DATA_N,
@@ -4347,7 +4345,6 @@ module hdmi_tx_0_hdmi_tx_v1_0
         .pix_clk(pix_clk));
 endmodule
 
-(* ORIG_REF_NAME = "serdes_10_to_1" *) 
 module hdmi_tx_0_serdes_10_to_1
    (iob_data_out,
     pix_clkx5,
@@ -4920,7 +4917,6 @@ module hdmi_tx_0_serdes_10_to_1_2
         .TQ(NLW_oserdes_s_TQ_UNCONNECTED));
 endmodule
 
-(* ORIG_REF_NAME = "srldelay" *) 
 module hdmi_tx_0_srldelay
    (data_o,
     data_i,

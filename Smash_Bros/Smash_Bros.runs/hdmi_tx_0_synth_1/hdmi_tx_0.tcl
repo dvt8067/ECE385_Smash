@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "hdmi_tx_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
@@ -80,7 +81,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.cache/wt [current_project]
 set_property parent.project_path C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.xpr [current_project]
-set_property XPM_LIBRARIES XPM_CDC [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/IPrepo [current_project]
@@ -89,7 +90,7 @@ set_property ip_output_repo c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bro
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
+read_ip -quiet C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
