@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Checkpoint Version="19" Minor="0">
+	<BUILD_NUMBER Name="3671981"/>
+	<FULL_BUILD Name="SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022"/>
+	<PRODUCT Name="Vivado v2022.2 (64-bit)"/>
+	<Part Name="xc7s50csga324-1"/>
+	<Top Name="SMASH_TOP"/>
+	<DisableAutoIOBuffers Name="0"/>
+	<OutOfContext Name="0"/>
+	<RunGenerated Name="1"/>
+	<HDPlatform Name="0"/>
+	<XPMLIBRARY Name="XPM_CDC"/>
+	<XPMLIBRARY Name="XPM_FIFO"/>
+	<XPMLIBRARY Name="XPM_MEMORY"/>
+	<File Type="VERILOG_STUB" Name="SMASH_TOP_stub.v" ModTime="1700324901"/>
+	<File Type="VHDL_STUB" Name="SMASH_TOP_stub.vhdl" ModTime="1700324901"/>
+	<File Type="SHAPE" Name="SMASH_TOP.shape" ModTime="1700324901"/>
+	<File Type="EDIF" Name="SMASH_TOP.edf" ModTime="1700324901"/>
+	<File Type="XN" Name="SMASH_TOP.xn" ModTime="1700324901"/>
+	<File Type="INCR" Name="SMASH_TOP.incr" ModTime="1700324901"/>
+	<File Type="RDA" Name="SMASH_TOP.rda" ModTime="1700324901"/>
+	<File Type="JSON_RDA" Name="SMASH_TOP_rda.json" ModTime="1700324901"/>
+	<File Type="WDF" Name="SMASH_TOP.wdf" ModTime="1700324901"/>
+	<File Type="SYNTH" Name="SMASH_TOP.synth" ModTime="1700324901"/>
+	<File Type="HWDEF" Name="SMASH_TOP.hwdef" ModTime="1700324901"/>
+	<File Type="HWDEF" Name="SMASH_TOP.hwdef" ModTime="1700324901"/>
+</Checkpoint>
+

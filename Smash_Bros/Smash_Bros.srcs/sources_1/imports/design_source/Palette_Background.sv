@@ -16,7 +16,7 @@ module Palette_Background ( input logic [2:0]	addr,
         data = 12'hEEF; // white
 	3'b100:
         data = 12'hC50; // brown
-    3'b101
+    3'b101:
        data = 12'h000;  // black
 
 	// 4'b0100:

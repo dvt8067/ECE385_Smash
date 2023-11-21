@@ -95,6 +95,7 @@ read_verilog -library xil_defaultlib -sv {
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario_running_1ROM.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario_running_2ROM.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario_running_3ROM.sv
+  C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Palette_Background.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Palette_Mario.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Smash_Background.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/VGA_controller.sv

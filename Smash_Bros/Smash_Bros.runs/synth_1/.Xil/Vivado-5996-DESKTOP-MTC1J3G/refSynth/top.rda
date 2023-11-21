@@ -1,0 +1,211 @@
+Data_For_RDAFlowver5.0
+	top levelÁf
+	SMASH_TOP½
+LinkDesign_Blackboxes=
+mb_block_i/rst_clk_wiz_1_100Mmb_ball_rst_clk_wiz_1_100M_0
+vga_to_hdmi	hdmi_tx_09
+'mb_block_i/microblaze_0_axi_periph/xbarmb_ball_xbar_0/
+mb_block_i/gpio_usb_rstmb_ball_axi_gpio_0_0W
+7mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlrmb_ball_dlmb_bram_if_cntlr_0#
+mb_block_i/mdm_1mb_ball_mdm_1_0.
+mb_block_i/spi_usbmb_ball_axi_quad_spi_0_0/
+mb_block_i/gpio_usb_intmb_ball_axi_gpio_0_11
+mb_block_i/timer_usb_aximb_ball_axi_timer_0_0
+clk_wiz	clk_wiz_01
+mb_block_i/microblaze_0mb_ball_microblaze_0_0C
+-mb_block_i/microblaze_0_local_memory/lmb_brammb_ball_lmb_bram_0C
+ mb_block_i/microblaze_0_axi_intcmb_ball_microblaze_0_axi_intc_0+
+mb_block_i/clk_wiz_1mb_ball_clk_wiz_1_05
+mb_block_i/axi_uartlite_0mb_ball_axi_uartlite_0_0C
+-mb_block_i/microblaze_0_local_memory/dlmb_v10mb_ball_dlmb_v10_0C
+-mb_block_i/microblaze_0_local_memory/ilmb_v10mb_ball_ilmb_v10_03
+mb_block_i/gpio_usb_keycodemb_ball_axi_gpio_0_2W
+7mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlrmb_ball_ilmb_bram_if_cntlr_0ë=
+synthFileNamesJ
+10DC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhdG
+11AC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/BRAM_TDP_MACRO.vhdK
+12EC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/COUNTER_LOAD_MACRO.vhdI
+13CC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/COUNTER_TC_MACRO.vhdI
+14CC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/EQ_COMPARE_MACRO.vhdF
+20@C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/ADDSUB_MACRO.vM
+15GC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhdH
+21BC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SDP_MACRO.vH
+16BC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhdK
+22EC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.vC
+17=C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/MACC_MACRO.vhdC
+18=C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/MULT_MACRO.vhdH
+23BC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_TDP_MACRO.vG
+19AC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/ADDMACC_MACRO.vL
+24FC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/COUNTER_LOAD_MACRO.vJ
+25DC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/COUNTER_TC_MACRO.vD
+30>C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/MULT_MACRO.v
+NumFileNames81J
+26DC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/EQ_COMPARE_MACRO.vJ
+31DC:/Xilinx/Vivado/2022.2/data/vhdl/src/unisims/retarget/MULT18X18.vhd=
+18C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_VCOMP.vhdN
+27HC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/FIFO_DUALCLOCK_MACRO.vK
+32EC:/Xilinx/Vivado/2022.2/data/vhdl/src/unisims/retarget/MULT18X18S.vhd<
+27C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_VPKG.vhdI
+28CC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/FIFO_SYNC_MACRO.v@
+33:C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:
+35C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.vD
+29>C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/MACC_MACRO.vB
+34<C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv=
+48C:/Xilinx/Vivado/2022.2/scripts/rt/data/internal_cells.vF
+35@C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.svv
+40pC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario_running_2ROM.sv3
+5.C:/Xilinx/Vivado/2022.2/scripts/rt/data/BUFT.vp
+36jC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Color_Mapper.svv
+41pC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario_running_3ROM.svF
+6AC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/unimacro_VCOMP.vhdi
+37cC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario.svq
+42kC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Palette_Mario.svE
+7@C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/ADDMACC_MACRO.vhdo
+38iC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario_State.svt
+43nC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Smash_Background.svD
+8?C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhdv
+39pC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario_running_1ROM.svr
+44lC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/VGA_controller.sv…
+50C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_ilmb_v10_0_stub.vF
+9AC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/BRAM_SDP_MACRO.vhdg
+45aC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/hex.sv
+51‰C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_dlmb_bram_if_cntlr_0_stub.vg
+46aC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/ram.sv
+52‰C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_ilmb_bram_if_cntlr_0_stub.v[
+47UC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv…
+53C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_lmb_bram_0_stub.vŠ
+48ƒC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_microblaze_0_0_stub.v
+54{C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_xbar_0_stub.v…
+49C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_dlmb_v10_0_stub.vˆ
+60C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_axi_gpio_0_0_stub.v“
+55ŒC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_microblaze_0_axi_intc_0_stub.vˆ
+61C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_axi_gpio_0_1_stub.v‚
+56|C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_mdm_1_0_stub.vˆ
+62C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_axi_gpio_0_2_stub.v‡
+57€C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_clk_wiz_1_0_stub.v‰
+63‚C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_axi_timer_0_0_stub.v
+58‰C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_rst_clk_wiz_1_100M_0_stub.vŒ
+64…C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_axi_quad_spi_0_0_stub.vŒ
+59…C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/mb_ball_axi_uartlite_0_0_stub.v7
+701C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd|
+65vC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/clk_wiz_0_stub.v^
+71XC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/1993/src/std_1164.vhd|
+66vC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-36348-Amadeus/realtime/hdmi_tx_0_stub.v^
+72XC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/1993/src/standard.vhdd
+67^c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.va
+73[C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/1993/src/numeric_std.vhd}
+68wc:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v\
+74VC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/1993/src/textio.vhdŠ
+69ƒc:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_xlconcat_0_0/synth/mb_ball_xlconcat_0_0.v^
+80XC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/1993/src/syn_unsi.vhd^
+75XC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/1993/src/timing_p.vhd^
+76XC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/1993/src/timing_b.vhd^
+77XC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/1993/src/prmtvs_p.vhd^
+78XC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/1993/src/prmtvs_b.vhd^
+79XC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/1993/src/syn_arit.vhdñ
+
+synthStatsA
+caseNotFullNoDefault
+L8
+Mnullname
+F42	
+Oaddrh
+BRAMNoOutReg
+L26
+Mnullname
+F397
+O2\color_instance/Mario_Stationary_ROM/data_Out_reg f
+BRAMNoOutReg
+L26
+Mnullname
+F395
+O0\color_instance/Mario_Walking1_ROM/data_Out_reg f
+BRAMNoOutReg
+L26
+Mnullname
+F395
+O0\color_instance/Mario_Walking2_ROM/data_Out_reg f
+BRAMNoOutReg
+L26
+Mnullname
+F395
+O0\color_instance/Mario_Walking3_ROM/data_Out_reg Ô
+ElaboratedNamesForRQSº
+DSP_RAM3
+147480) {mario_instance/Mario_Bottom_Edge_LX_i} 0
+241687& {Mario_State0/Mario_Walk_Counter0_i} +
+204825! {color_instance/ADDR0X_Mario_i} 
+274454 {vga/vc0_i} &
+499737 {color_instance/Red6_i__0} „
+65537{ {HexA/hex_i} {HexA/hex_i__0} {HexA/hex_i__1} {HexA/hex_i__2} {HexB/hex_i} {HexB/hex_i__0} {HexB/hex_i__1} {HexB/hex_i__2} +
+208921! {color_instance/ADDR0Y_Mario_i} ]
+32799T {color_instance/nolabel_line115/data_i} {color_instance/nolabel_line115/data_i__0} U
+249881K {color_instance/Mario_address0_i__0} {color_instance/Mario_address1_i__1} 
+249878 {vga/vc_i__0} (
+471064 {mario_instance/MarioX_i__0} &
+516120 {mario_instance/MarioX0_i} 3
+151576) {mario_instance/Mario_Bottom_Edge_RX_i} -
+225305# {color_instance/Mario_address1_i} :
+696601 {color_instance/Mario_Walking2_ROM/data_Out0_i} :
+696611 {color_instance/Mario_Walking3_ROM/data_Out0_i} 9
+696620 {color_instance/Smash_Background0/data_Out0_i} <
+696583 {color_instance/Mario_Stationary_ROM/data_Out0_i} )
+475160 {mario_instance/MarioX0_i__0} :
+696591 {color_instance/Mario_Walking1_ROM/data_Out0_i} j
+323607` {Mario_State0/Next_State_i__0} {Mario_State0/Next_State_i__15} {Mario_State0/Next_State_i__20} R
+237593H {color_instance/Mario_address0_i} {color_instance/Mario_address1_i__0} Z
+155672P {mario_instance/Mario_Bottom_Edge_Y0_i} {mario_instance/Mario_Bottom_Edge_Y_i} -
+229401# {color_instance/Mario_address2_i} 
+393238 {vga/vs3_i} /
+225281% {HexA/counter0_i} {HexB/counter0_i} &
+503833 {color_instance/Red5_i__1} &
+364568 {mario_instance/MarioY0_i} f
+335895\ {Mario_State0/Next_State_i} {Mario_State0/Next_State_i__22} {Mario_State0/Next_State_i__7} K
+213017A {color_instance/Background_address_i} {color_instance/RTL_MULT} 
+339990 {vga/hs3_i} 
+286742 {vga/hc0_i} .
+311319$ {Mario_State0/Mario_Invert_Left_i} &
+507929 {color_instance/Red4_i__1} #
+495641 {color_instance/Red6_i} ´
+blackBoxInfo=
+mb_block_i/rst_clk_wiz_1_100Mmb_ball_rst_clk_wiz_1_100M_0
+vga_to_hdmi	hdmi_tx_09
+'mb_block_i/microblaze_0_axi_periph/xbarmb_ball_xbar_0/
+mb_block_i/gpio_usb_rstmb_ball_axi_gpio_0_0W
+7mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlrmb_ball_dlmb_bram_if_cntlr_0#
+mb_block_i/mdm_1mb_ball_mdm_1_0.
+mb_block_i/spi_usbmb_ball_axi_quad_spi_0_0/
+mb_block_i/gpio_usb_intmb_ball_axi_gpio_0_11
+mb_block_i/timer_usb_aximb_ball_axi_timer_0_0
+clk_wiz	clk_wiz_01
+mb_block_i/microblaze_0mb_ball_microblaze_0_0C
+-mb_block_i/microblaze_0_local_memory/lmb_brammb_ball_lmb_bram_0C
+ mb_block_i/microblaze_0_axi_intcmb_ball_microblaze_0_axi_intc_0+
+mb_block_i/clk_wiz_1mb_ball_clk_wiz_1_05
+mb_block_i/axi_uartlite_0mb_ball_axi_uartlite_0_0C
+-mb_block_i/microblaze_0_local_memory/dlmb_v10mb_ball_dlmb_v10_0C
+-mb_block_i/microblaze_0_local_memory/ilmb_v10mb_ball_ilmb_v10_03
+mb_block_i/gpio_usb_keycodemb_ball_axi_gpio_0_2W
+7mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlrmb_ball_ilmb_bram_if_cntlr_0ƒ
+synth_design
+isIncremental0
+Runtime0
+Threads used2X
+argsP-verilog_define default::[not_specified] -top  SMASH_TOP -part  xc7s50csga324-1 
+resynthPerc0.00
+Cputime0
+blackBoxPercinf
+	directive œ
+synth_design_metrics$
+mismatchedAddSubOperatorWidths-1
+lowMaxFanout-1
+NumUnregisteredPorts0
+caseNotFullNoDefault1
+	smallSrls-1
+srlsWithResetLogic-1
+shallowRAMWithAttribute-1
+hierMFO0
+bigRAMs-1
+NetsWithMixedFanouts-1
+DSPsWithKeep0
+RQS_Results
