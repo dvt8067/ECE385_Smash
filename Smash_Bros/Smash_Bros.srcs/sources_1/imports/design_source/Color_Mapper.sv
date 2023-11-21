@@ -114,7 +114,7 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
     
     Palette_Mario(.addr(Palette_Index_Mario), .data(Palette_Output_Mario));
     // NEED TO CREATE A NEW PALETTE FOR ONLY BACKGROUND AND PUT IT HERE
-    //Palette_Background(.addr(Palette_Index_Background), .data(Palette_Output_Background));
+    Palette_Background(.addr(Palette_Index_Background), .data(Palette_Output_Background));
 
     always_comb
     begin:Mario_on_proc
@@ -148,13 +148,13 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
 
         else begin
             //on_background = 1;
-            Red = 4'hf; /// FIX FIX FIX FIX FIX
-            Green = 4'hf; // PUT THE BACKGROUND COLOR OUTPUT HERE
-            Blue = 4'hf; // SWITCH TO THE COMMENTED VERSION BELOW ONCE NEW PALETTE IS MADE
+            // Red = 4'hf; /// FIX FIX FIX FIX FIX
+            // Green = 4'hf; // PUT THE BACKGROUND COLOR OUTPUT HERE
+            // Blue = 4'hf; // SWITCH TO THE COMMENTED VERSION BELOW ONCE NEW PALETTE IS MADE
 
-            // Red = Palette_Output_Background[11:8]; 
-            // Green = Palette_Output_Background[7:4];
-            // Blue = Palette_Output_Background[3:0];
+            Red = Palette_Output_Background[11:8]; 
+            Green = Palette_Output_Background[7:4];
+            Blue = Palette_Output_Background[3:0];
         end
     end
 endmodule

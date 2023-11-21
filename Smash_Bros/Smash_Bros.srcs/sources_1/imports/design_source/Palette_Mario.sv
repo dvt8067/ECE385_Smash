@@ -1,4 +1,4 @@
-module Palette_Mario ( input logic [3:0]	addr,
+module Palette_Mario ( input logic [1:0]	addr,
 						output logic [11:0]	data
 					 );
 
@@ -6,13 +6,13 @@ module Palette_Mario ( input logic [3:0]	addr,
 
 	always_comb begin
 	case(addr)
-	4'b0000:
+	2'b00:
         data = 12'h808; // background
-	4'b0001:
+	2'b01:
         data = 12'hD00;   //red
-	4'b0010:
+	2'b10:
         data = 12'hFA0;  // yellow
-	4'b0011:
+	2'b11:
         data = 12'h660;  // green
 
 	// 4'b0100:
