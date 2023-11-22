@@ -18,7 +18,7 @@ logic [3:0] mem [0:307199];
 
 initial
 begin
-	 $readmemh("Smash_bros_background_2_final.txt", mem);
+	 $readmemh("smash_bros_background_2_final.txt", mem);
 end
 
 

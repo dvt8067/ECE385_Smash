@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="Smash_Bros" location="C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros" platform="C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/SMASH_TOP.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="Smash_Bros_system" sysConfig="SMASH_TOP" runtime="cpp" cpu="standalone_microblaze_0" cpuInstance="microblaze_0" os="standalone" mssSignature="6fdf276950d9f1c8a0a0b0c3ba2c360f">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.1901817904">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.1043413187" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

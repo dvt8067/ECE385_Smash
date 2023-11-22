@@ -231,3 +231,14 @@ platform generate
 platform config -updatehw {C:/Users/dvt80/OneDrive/Desktop/SMASH_TOP.xsa}
 platform clean
 platform generate
+platform active {SMASH_TOP}
+platform config -updatehw {C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/SMASH_TOP.xsa}
+platform clean
+platform generate
+platform active {SMASH_TOP}
+platform config -updatehw {C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/SMASH_TOP.xsa}
+platform generate -domains 
+platform active {SMASH_TOP}
+platform config -updatehw {C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/SMASH_TOP.xsa}
+platform clean
+platform generate

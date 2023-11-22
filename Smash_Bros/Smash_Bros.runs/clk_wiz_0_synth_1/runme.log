@@ -10,7 +10,7 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source clk_wiz_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 372.613 ; gain = 63.191
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 372.473 ; gain = 62.414
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/IPrepo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
@@ -22,4 +22,4 @@ INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Git_Smash/ECE385_Sm
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.cache/ip/2022.2/0/7/07ca9a3a690a525e/clk_wiz_0_stub.v to C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/clk_wiz_0_synth_1/clk_wiz_0_stub.v.
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.cache/ip/2022.2/0/7/07ca9a3a690a525e/clk_wiz_0_stub.vhdl to C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/clk_wiz_0_synth_1/clk_wiz_0_stub.vhdl.
 INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP clk_wiz_0, cache-ID = 07ca9a3a690a525e.
-INFO: [Common 17-206] Exiting Vivado at Tue Nov 21 16:21:47 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 21 19:29:42 2023...
