@@ -89,7 +89,7 @@ module SMASH_TOP(
         .gpio_usb_keycode_0_tri_o(keycode0_gpio),
         .gpio_usb_keycode_1_tri_o(keycode1_gpio),
         .gpio_usb_rst_tri_o(gpio_usb_rst_tri_o),
-        .reset_rtl_0(~reset_ah), //Block designs expect active low reset, all other modules are active high
+        .reset_rtl_0(1'b1), //Block designs expect active low reset, all other modules are active high
         .uart_rtl_0_rxd(uart_rtl_0_rxd),
         .uart_rtl_0_txd(uart_rtl_0_txd),
         .usb_spi_miso(usb_spi_miso),
