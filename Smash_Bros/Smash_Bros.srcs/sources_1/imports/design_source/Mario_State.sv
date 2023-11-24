@@ -82,6 +82,9 @@ module Mario_State (   input logic  Clk,
                 if(keycode == 8'h07) begin
                     Next_State = Mario_Walk_Right1;
                 end
+                if(edge_below == 0) begin
+                    Next_State = Mario_Fall_Right;
+                end
                 Mario_Walk_Counter_Reset = 1;
             end
 			Mario_Walk_Right1 :  begin
@@ -102,6 +105,9 @@ module Mario_State (   input logic  Clk,
                     Next_State = Mario_Walk_Right1;
                     Mario_Walk_Counter_Tracker = 1;
                 end
+                if(edge_below == 0) begin
+                    Next_State = Mario_Fall_Right;
+                end
             end
 			Mario_Walk_Right2 : begin               //e.g. S_33_2, etc. How many? As a hint, note that the BRAM is synchronous, in addition, 
 				if(keycode != 8'h07)  begin
@@ -121,6 +127,9 @@ module Mario_State (   input logic  Clk,
                     Next_State = Mario_Walk_Right2;
                     Mario_Walk_Counter_Tracker = 1;
                 end 
+                if(edge_below == 0) begin
+                    Next_State = Mario_Fall_Right;
+                end
             end
 			Mario_Walk_Right3 : begin
 				if(keycode != 8'h07)  begin
@@ -140,6 +149,9 @@ module Mario_State (   input logic  Clk,
                     Next_State = Mario_Walk_Right3;
                     Mario_Walk_Counter_Tracker = 1;
                 end 
+                if(edge_below == 0) begin
+                    Next_State = Mario_Fall_Right;
+                end
             end
 			Mario_Stationary_Left :	begin
                 Mario_Invert_Left = 1;			
@@ -148,6 +160,9 @@ module Mario_State (   input logic  Clk,
                 end
                 if(keycode == 8'h07) begin
                     Next_State = Mario_Walk_Right1;
+                end
+                if(edge_below == 0) begin
+                    Next_State = Mario_Fall_Left;
                 end
                 Mario_Walk_Counter_Reset = 1;
             end
@@ -172,6 +187,9 @@ module Mario_State (   input logic  Clk,
                     Next_State = Mario_Walk_Left1;
                     Mario_Walk_Counter_Tracker = 1;
                 end
+                if(edge_below == 0) begin
+                    Next_State = Mario_Fall_Left;
+                end
             end
             Mario_Walk_Left2 : begin
                 Mario_Invert_Left = 1;
@@ -191,6 +209,9 @@ module Mario_State (   input logic  Clk,
                 else begin
                     Next_State = Mario_Walk_Left2;
                     Mario_Walk_Counter_Tracker = 1;
+                end
+                if(edge_below == 0) begin
+                    Next_State = Mario_Fall_Left;
                 end
             end
             Mario_Walk_Left3 : begin
@@ -212,6 +233,9 @@ module Mario_State (   input logic  Clk,
                     Next_State = Mario_Walk_Left3;
                     Mario_Walk_Counter_Tracker = 1;
                 end
+                if(edge_below == 0) begin
+                    Next_State = Mario_Fall_Left;
+                end
                 Mario_Invert_Left = 1;
             end
             Mario_Fall_Left: begin /// CAN ADD FRAME HERE LATER FOR FALLING ANIMATION
@@ -226,6 +250,7 @@ module Mario_State (   input logic  Clk,
                 begin
                     Next_State = Mario_Stationary_Left;
                 end
+                Mario_Walk_Counter_Reset = 1;
             end
             Mario_Fall_Right: begin /// CAN ADD FRAME HERE FOR FALLING ANIMATION
                 Mario_Walk_Counter_Reset = 1;
@@ -241,19 +266,21 @@ module Mario_State (   input logic  Clk,
                 begin
                     Next_State = Mario_Stationary_Right;
                 end
+                Mario_Walk_Counter_Reset = 0;
             end
 
 		endcase
         //edge_below_previous == 1 && 
-        if(edge_below == 0) begin
-            if((State == Mario_Stationary_Right) || (State == Mario_Walk_Right1)
-            || (State == Mario_Walk_Right2) || (State == Mario_Walk_Right3)) begin
-                Next_State = Mario_Fall_Right;
-            end
-        end
-        else begin
-            Next_State = Mario_Fall_Left;
-        end
+        // if(edge_below == 0) begin
+        //     if((State == Mario_Stationary_Right) || (State == Mario_Walk_Right1)
+        //     || (State == Mario_Walk_Right2) || (State == Mario_Walk_Right3)) begin
+        //         Next_State = Mario_Fall_Right;
+        //     end
+        //     else begin
+        //     Next_State = Mario_Fall_Left;
+        //     end
+        // end
+        
     end
 		// Assign control signals based on current state
 		

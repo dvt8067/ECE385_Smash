@@ -5,6 +5,7 @@ module Palette_Background ( input logic [2:0]	addr,
 
 
 	always_comb begin
+	data = 12'h000; //Protecting against an inferred latch
 	case(addr)
     3'b000:
         data = 12'h808; 

@@ -62,6 +62,7 @@ module SMASH_TOP(
     logic reset_ah;
     logic Mario_Invert_Left;
     logic [4:0] Mario_State_Out;
+    logic edge_below;
     
     assign reset_ah = reset_rtl_0;
     
@@ -151,14 +152,17 @@ module SMASH_TOP(
         .Clk(Clk), 
 		.Reset(reset_ah),
         .keycode(keycode0_gpio[7:0]),
+        .edge_below(edge_below),
 		.Mario_State_Out(Mario_State_Out),
         .Mario_Invert_Left(Mario_Invert_Left)
+        
 				);
     //Mario Module
     Mario mario_instance(
         .Reset(reset_ah),
         .frame_clk(vsync),                    //Figure out what this should be so that the Mario will move
         .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to Mario by default
+        .edge_below(edge_below),
         .MarioX(Marioxsig),
         .MarioY(Marioysig),
         .MarioS_X(Mariosizesig_X),

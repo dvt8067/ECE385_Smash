@@ -14,7 +14,7 @@ module Smash_Background
 );
 
 // mem has width of 2 bits and a total of 4800 addresses
-logic [3:0] mem [0:307199];
+logic [2:0] mem [0:307199];
 
 initial
 begin

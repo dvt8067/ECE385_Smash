@@ -23,7 +23,7 @@ module  Mario ( input logic Reset, frame_clk,
     logic [9:0] Mario_X_Motion, Mario_Y_Motion, Mario_Bottom_Edge_LX, Mario_Bottom_Edge_RX, Mario_Bottom_Edge_Y;
     //logic edge;
     parameter [9:0] Mario_X_Initial=320;  // Center position on the X axis
-    parameter [9:0] Mario_Y_Initial=200;  // Center position on the Y axis
+    parameter [9:0] Mario_Y_Initial=100;  // Center position on the Y axis
     //parameter [9:0] Mario_X_Min=0;       // Leftmost point on the X axis
     //parameter [9:0] Mario_X_Max=639;     // Rightmost point on the X axis
     //parameter [9:0] Mario_Y_Min=0;       // Topmost point on the Y axis
@@ -41,17 +41,17 @@ module  Mario ( input logic Reset, frame_clk,
       Mario_X_Motion = 0;
       Mario_Y_Motion = 0;
       // 
+      edge_below = 1'b0;
       if( (Mario_Bottom_Edge_Y <= Stage_Y_Max) && (Mario_Bottom_Edge_Y >= Stage_Y_Min))begin
-        // Mario_X_Motion = 10'b0000000010;
-        // edge_below = 1;
+
         if(((Mario_Bottom_Edge_LX> Stage_X_Min)&&(Mario_Bottom_Edge_LX<Stage_X_Max))
         ||((Mario_Bottom_Edge_RX>Stage_X_Min)&&(Mario_Bottom_Edge_RX<Stage_X_Max)))begin
-          edge_below = 1;
+          edge_below = 1'b1;
           end
       
-      else begin
-        edge_below = 0;
-      end
+        // else begin
+        //   edge_below = 0;
+        // end
       end
   
   
@@ -85,7 +85,7 @@ module  Mario ( input logic Reset, frame_clk,
 				// 	  Ball_X_Motion <= Ball_X_Step;
 					  
 				//  else 
-          if(edge_below == 0)begin
+          if(edge_below == 1'b0)begin
               MarioY <= MarioY + 10'd1;
           end
           else begin

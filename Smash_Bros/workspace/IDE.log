@@ -3316,3 +3316,437 @@ dow C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_
 14:45:10 INFO  : The file 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream\SMASH_TOP.bit' stored in project is removed.
 14:45:10 INFO  : The file 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream\SMASH_TOP.mmi' stored in project is removed.
 14:45:10 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream' in project 'Smash_Bros'.
+21:31:45 DEBUG : Logs will be stored at 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/IDE.log'.
+21:31:48 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\temp_xsdb_launch_script.tcl
+21:31:58 INFO  : XSCT server has started successfully.
+21:31:58 INFO  : plnx-install-location is set to ''
+21:31:58 INFO  : Successfully done setting XSCT server connection channel  
+21:31:58 INFO  : Successfully done setting workspace for the tool. 
+21:32:00 INFO  : Registering command handlers for Vitis TCF services
+21:32:07 INFO  : Platform repository initialization has completed.
+21:32:10 INFO  : Successfully done query RDI_DATADIR 
+21:34:04 INFO  : Hardware specification for platform project 'SMASH_TOP' is updated.
+21:34:15 INFO  : Result from executing command 'removePlatformRepo': 
+21:34:30 INFO  : Result from executing command 'getProjects': SMASH_TOP
+21:34:30 INFO  : Result from executing command 'getPlatforms': SMASH_TOP|C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/SMASH_TOP.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+21:34:31 INFO  : Checking for BSP changes to sync application flags for project 'Smash_Bros'...
+21:34:36 INFO  : The hardware specification used by project 'Smash_Bros' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:34:36 INFO  : The file 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream\SMASH_TOP.bit' stored in project is removed.
+21:34:36 INFO  : The file 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream\SMASH_TOP.mmi' stored in project is removed.
+21:34:36 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream' in project 'Smash_Bros'.
+21:35:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:36:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+21:36:08 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+21:36:46 INFO  : Hardware specification for platform project 'SMASH_TOP' is updated.
+21:36:58 INFO  : Result from executing command 'removePlatformRepo': 
+21:37:05 INFO  : Result from executing command 'getProjects': SMASH_TOP
+21:37:05 INFO  : Result from executing command 'getPlatforms': SMASH_TOP|C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/SMASH_TOP.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+21:37:06 INFO  : Checking for BSP changes to sync application flags for project 'Smash_Bros'...
+21:37:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:37:22 INFO  : Jtag cable 'RealDigital Boo 887429230299A' is selected.
+21:37:22 INFO  : 'jtag frequency' command is executed.
+21:37:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:37:23 INFO  : Device configured successfully with "C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit"
+21:37:23 INFO  : Context for processor 'microblaze_0' is selected.
+21:37:24 INFO  : Hardware design and registers information is loaded from 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa'.
+21:37:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:37:24 INFO  : Context for processor 'microblaze_0' is selected.
+21:37:24 INFO  : System reset is completed.
+21:37:27 INFO  : 'after 3000' command is executed.
+21:37:27 INFO  : Context for processor 'microblaze_0' is selected.
+21:37:27 INFO  : The application 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf' is downloaded to processor 'microblaze_0'.
+21:37:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf
+----------------End of Script----------------
+
+21:37:27 INFO  : Context for processor 'microblaze_0' is selected.
+21:37:27 INFO  : 'con' command is executed.
+21:37:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:37:27 INFO  : Disconnected from the channel tcfchan#3.
+21:45:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:45:26 INFO  : Jtag cable 'RealDigital Boo 887429230299A' is selected.
+21:45:26 INFO  : 'jtag frequency' command is executed.
+21:45:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:45:28 INFO  : Device configured successfully with "C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit"
+21:45:28 INFO  : Context for processor 'microblaze_0' is selected.
+21:45:28 INFO  : Hardware design and registers information is loaded from 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa'.
+21:45:28 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:45:28 INFO  : Context for processor 'microblaze_0' is selected.
+21:45:28 INFO  : System reset is completed.
+21:45:31 INFO  : 'after 3000' command is executed.
+21:45:31 INFO  : Context for processor 'microblaze_0' is selected.
+21:45:31 INFO  : The application 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf' is downloaded to processor 'microblaze_0'.
+21:45:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf
+----------------End of Script----------------
+
+21:45:31 INFO  : Context for processor 'microblaze_0' is selected.
+21:45:31 INFO  : 'con' command is executed.
+21:45:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:45:31 INFO  : Disconnected from the channel tcfchan#6.
+21:46:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:46:47 INFO  : Jtag cable 'RealDigital Boo 887429230299A' is selected.
+21:46:47 INFO  : 'jtag frequency' command is executed.
+21:46:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:46:49 INFO  : Device configured successfully with "C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit"
+21:46:49 INFO  : Context for processor 'microblaze_0' is selected.
+21:46:49 INFO  : Hardware design and registers information is loaded from 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa'.
+21:46:49 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:46:49 INFO  : Context for processor 'microblaze_0' is selected.
+21:46:49 INFO  : System reset is completed.
+21:46:52 INFO  : 'after 3000' command is executed.
+21:46:52 INFO  : Context for processor 'microblaze_0' is selected.
+21:46:52 INFO  : The application 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf' is downloaded to processor 'microblaze_0'.
+21:46:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf
+----------------End of Script----------------
+
+21:46:52 INFO  : Context for processor 'microblaze_0' is selected.
+21:46:52 INFO  : 'con' command is executed.
+21:46:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:46:52 INFO  : Disconnected from the channel tcfchan#7.
+22:07:19 DEBUG : Logs will be stored at 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/IDE.log'.
+22:07:24 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\temp_xsdb_launch_script.tcl
+22:07:40 INFO  : XSCT server has started successfully.
+22:07:40 INFO  : plnx-install-location is set to ''
+22:07:40 INFO  : Successfully done setting XSCT server connection channel  
+22:07:40 INFO  : Successfully done setting workspace for the tool. 
+22:07:45 INFO  : Registering command handlers for Vitis TCF services
+22:07:50 INFO  : Platform repository initialization has completed.
+22:07:58 INFO  : Successfully done query RDI_DATADIR 
+22:26:42 INFO  : Hardware specification for platform project 'SMASH_TOP' is updated.
+22:26:56 INFO  : Result from executing command 'removePlatformRepo': 
+22:27:10 INFO  : Result from executing command 'getProjects': SMASH_TOP
+22:27:10 INFO  : Result from executing command 'getPlatforms': SMASH_TOP|C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/SMASH_TOP.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+22:27:11 INFO  : Checking for BSP changes to sync application flags for project 'Smash_Bros'...
+22:27:17 INFO  : The hardware specification used by project 'Smash_Bros' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:27:17 INFO  : The file 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream\SMASH_TOP.bit' stored in project is removed.
+22:27:17 INFO  : The file 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream\SMASH_TOP.mmi' stored in project is removed.
+22:27:17 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream' in project 'Smash_Bros'.
+22:27:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:27:24 INFO  : Jtag cable 'RealDigital Boo 887429230299A' is selected.
+22:27:24 INFO  : 'jtag frequency' command is executed.
+22:27:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:27:26 INFO  : Device configured successfully with "C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit"
+22:27:26 INFO  : Context for processor 'microblaze_0' is selected.
+22:27:26 INFO  : Hardware design and registers information is loaded from 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa'.
+22:27:26 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:27:26 INFO  : Context for processor 'microblaze_0' is selected.
+22:27:26 INFO  : System reset is completed.
+22:27:29 INFO  : 'after 3000' command is executed.
+22:27:29 INFO  : Context for processor 'microblaze_0' is selected.
+22:27:29 INFO  : The application 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf' is downloaded to processor 'microblaze_0'.
+22:27:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf
+----------------End of Script----------------
+
+22:27:29 INFO  : Context for processor 'microblaze_0' is selected.
+22:27:29 INFO  : 'con' command is executed.
+22:27:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:27:29 INFO  : Disconnected from the channel tcfchan#3.
+22:51:22 INFO  : Hardware specification for platform project 'SMASH_TOP' is updated.
+22:51:40 INFO  : Result from executing command 'removePlatformRepo': 
+22:51:50 INFO  : Result from executing command 'getProjects': SMASH_TOP
+22:51:50 INFO  : Result from executing command 'getPlatforms': SMASH_TOP|C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/SMASH_TOP.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+22:51:51 INFO  : Checking for BSP changes to sync application flags for project 'Smash_Bros'...
+22:51:55 INFO  : The hardware specification used by project 'Smash_Bros' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:51:55 INFO  : The file 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream\SMASH_TOP.bit' stored in project is removed.
+22:51:55 INFO  : The file 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream\SMASH_TOP.mmi' stored in project is removed.
+22:51:55 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream' in project 'Smash_Bros'.
+22:52:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:52:11 INFO  : Jtag cable 'RealDigital Boo 887429230299A' is selected.
+22:52:11 INFO  : 'jtag frequency' command is executed.
+22:52:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:52:13 INFO  : Device configured successfully with "C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit"
+22:52:13 INFO  : Context for processor 'microblaze_0' is selected.
+22:52:13 INFO  : Hardware design and registers information is loaded from 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa'.
+22:52:13 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:52:13 INFO  : Context for processor 'microblaze_0' is selected.
+22:52:13 INFO  : System reset is completed.
+22:52:16 INFO  : 'after 3000' command is executed.
+22:52:16 INFO  : Context for processor 'microblaze_0' is selected.
+22:52:16 INFO  : The application 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf' is downloaded to processor 'microblaze_0'.
+22:52:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf
+----------------End of Script----------------
+
+22:52:16 INFO  : Context for processor 'microblaze_0' is selected.
+22:52:16 INFO  : 'con' command is executed.
+22:52:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:52:16 INFO  : Disconnected from the channel tcfchan#6.
+23:12:56 INFO  : Result from executing command 'removePlatformRepo': 
+23:13:02 INFO  : Result from executing command 'getProjects': SMASH_TOP
+23:13:02 INFO  : Result from executing command 'getPlatforms': SMASH_TOP|C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/SMASH_TOP.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+23:13:03 INFO  : Checking for BSP changes to sync application flags for project 'Smash_Bros'...
+23:13:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:13:14 INFO  : Jtag cable 'RealDigital Boo 887429230299A' is selected.
+23:13:14 INFO  : 'jtag frequency' command is executed.
+23:13:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:13:15 INFO  : Device configured successfully with "C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit"
+23:13:15 INFO  : Context for processor 'microblaze_0' is selected.
+23:13:15 INFO  : Hardware design and registers information is loaded from 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa'.
+23:13:15 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:13:15 INFO  : Context for processor 'microblaze_0' is selected.
+23:13:16 INFO  : System reset is completed.
+23:13:19 INFO  : 'after 3000' command is executed.
+23:13:19 INFO  : Context for processor 'microblaze_0' is selected.
+23:13:19 INFO  : The application 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf' is downloaded to processor 'microblaze_0'.
+23:13:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf
+----------------End of Script----------------
+
+23:13:19 INFO  : Context for processor 'microblaze_0' is selected.
+23:13:19 INFO  : 'con' command is executed.
+23:13:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:13:19 INFO  : Disconnected from the channel tcfchan#9.
+23:24:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:24:47 INFO  : Jtag cable 'RealDigital Boo 887429230299A' is selected.
+23:24:47 INFO  : 'jtag frequency' command is executed.
+23:24:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:24:48 INFO  : Device configured successfully with "C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit"
+23:24:48 INFO  : Context for processor 'microblaze_0' is selected.
+23:24:48 INFO  : Hardware design and registers information is loaded from 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa'.
+23:24:48 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:24:48 INFO  : Context for processor 'microblaze_0' is selected.
+23:24:48 INFO  : System reset is completed.
+23:24:51 INFO  : 'after 3000' command is executed.
+23:24:51 INFO  : Context for processor 'microblaze_0' is selected.
+23:24:51 INFO  : The application 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf' is downloaded to processor 'microblaze_0'.
+23:24:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf
+----------------End of Script----------------
+
+23:24:51 INFO  : Context for processor 'microblaze_0' is selected.
+23:24:52 INFO  : 'con' command is executed.
+23:24:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:24:52 INFO  : Disconnected from the channel tcfchan#10.
+23:33:46 INFO  : Hardware specification for platform project 'SMASH_TOP' is updated.
+23:33:56 INFO  : Result from executing command 'removePlatformRepo': 
+23:34:08 INFO  : Result from executing command 'getProjects': SMASH_TOP
+23:34:08 INFO  : Result from executing command 'getPlatforms': SMASH_TOP|C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/SMASH_TOP.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+23:34:09 INFO  : Checking for BSP changes to sync application flags for project 'Smash_Bros'...
+23:34:13 INFO  : The hardware specification used by project 'Smash_Bros' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+23:34:13 INFO  : The file 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream\SMASH_TOP.bit' stored in project is removed.
+23:34:13 INFO  : The file 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream\SMASH_TOP.mmi' stored in project is removed.
+23:34:13 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream' in project 'Smash_Bros'.
+23:34:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:34:45 INFO  : Jtag cable 'RealDigital Boo 887429230299A' is selected.
+23:34:45 INFO  : 'jtag frequency' command is executed.
+23:34:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:34:46 INFO  : Device configured successfully with "C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit"
+23:34:46 INFO  : Context for processor 'microblaze_0' is selected.
+23:34:46 INFO  : Hardware design and registers information is loaded from 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa'.
+23:34:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:34:46 INFO  : Context for processor 'microblaze_0' is selected.
+23:34:46 INFO  : System reset is completed.
+23:34:49 INFO  : 'after 3000' command is executed.
+23:34:49 INFO  : Context for processor 'microblaze_0' is selected.
+23:34:50 INFO  : The application 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf' is downloaded to processor 'microblaze_0'.
+23:34:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf
+----------------End of Script----------------
+
+23:34:50 INFO  : Context for processor 'microblaze_0' is selected.
+23:34:50 INFO  : 'con' command is executed.
+23:34:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:34:50 INFO  : Disconnected from the channel tcfchan#13.
+23:54:20 INFO  : Hardware specification for platform project 'SMASH_TOP' is updated.
+23:54:31 INFO  : Result from executing command 'removePlatformRepo': 
+23:54:41 INFO  : Result from executing command 'getProjects': SMASH_TOP
+23:54:41 INFO  : Result from executing command 'getPlatforms': SMASH_TOP|C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/SMASH_TOP.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+23:54:42 INFO  : Checking for BSP changes to sync application flags for project 'Smash_Bros'...
+23:54:47 INFO  : The hardware specification used by project 'Smash_Bros' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+23:54:47 INFO  : The file 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream\SMASH_TOP.bit' stored in project is removed.
+23:54:47 INFO  : The file 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream\SMASH_TOP.mmi' stored in project is removed.
+23:54:47 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream' in project 'Smash_Bros'.
+23:56:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:56:29 INFO  : Jtag cable 'RealDigital Boo 887429230299A' is selected.
+23:56:29 INFO  : 'jtag frequency' command is executed.
+23:56:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:56:30 INFO  : Device configured successfully with "C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit"
+23:56:30 INFO  : Context for processor 'microblaze_0' is selected.
+23:56:30 INFO  : Hardware design and registers information is loaded from 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa'.
+23:56:30 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:56:30 INFO  : Context for processor 'microblaze_0' is selected.
+23:56:30 INFO  : System reset is completed.
+23:56:33 INFO  : 'after 3000' command is executed.
+23:56:33 INFO  : Context for processor 'microblaze_0' is selected.
+23:56:33 INFO  : The application 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf' is downloaded to processor 'microblaze_0'.
+23:56:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf
+----------------End of Script----------------
+
+23:56:33 INFO  : Context for processor 'microblaze_0' is selected.
+23:56:33 INFO  : 'con' command is executed.
+23:56:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:56:33 INFO  : Disconnected from the channel tcfchan#16.
+23:57:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:57:41 INFO  : Jtag cable 'RealDigital Boo 887429230299A' is selected.
+23:57:41 INFO  : 'jtag frequency' command is executed.
+23:57:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:57:42 INFO  : Device configured successfully with "C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit"
+23:57:42 INFO  : Context for processor 'microblaze_0' is selected.
+23:57:42 INFO  : Hardware design and registers information is loaded from 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa'.
+23:57:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:57:42 INFO  : Context for processor 'microblaze_0' is selected.
+23:57:42 INFO  : System reset is completed.
+23:57:45 INFO  : 'after 3000' command is executed.
+23:57:45 INFO  : Context for processor 'microblaze_0' is selected.
+23:57:45 INFO  : The application 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf' is downloaded to processor 'microblaze_0'.
+23:57:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf
+----------------End of Script----------------
+
+23:57:45 INFO  : Context for processor 'microblaze_0' is selected.
+23:57:45 INFO  : 'con' command is executed.
+23:57:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:57:45 INFO  : Disconnected from the channel tcfchan#17.
