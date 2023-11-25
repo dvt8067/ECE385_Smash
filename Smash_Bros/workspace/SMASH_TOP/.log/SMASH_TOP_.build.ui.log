@@ -1,6 +1,6 @@
-2023-11-24T21:13:52.302441500255-21:13:52 **** Build of project SMASH_TOP ****
+2023-11-25T00:22:37.189907200255-00:22:37 **** Build of project SMASH_TOP ****
 000-buildplatform.bat 49327 SMASH_TOP  
-000-XSDB Server Channel: tcfchan#2
+000-XSDB Server Channel: tcfchan#8
 000-C:/Xilinx/Vitis/2022.2/gnu/microblaze/nt
 000-Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
 000-make --no-print-directory seq_libs
@@ -145,5 +145,5 @@
 000-'Finished building libraries'
 000-
 00255-
-21:14:04 Build Finished (took 12s.366ms)
+00:22:49 Build Finished (took 12s.40ms)
 

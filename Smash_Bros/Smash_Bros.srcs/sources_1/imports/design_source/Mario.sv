@@ -113,8 +113,15 @@ module  Mario ( input logic Reset, frame_clk,
                     // Ball_X_Motion <= 10'd0;
                     end             
 				 if (keycode == 8'h04) begin
-          if(Mario_Bottom_Edge_LX < Stage_X_Max || Mario_Bottom_Edge_Y<Stage_Y_Min+2) begin
+          if(Mario_Bottom_Edge_Y<Stage_Y_Min+2) begin
 				   MarioX <= MarioX - 10'd3;
+          end
+          else if(Mario_Bottom_Edge_LX == Stage_X_Max || Mario_Bottom_Edge_LX == Stage_X_Max+1
+          || Mario_Bottom_Edge_LX == Stage_X_Max+2 || Mario_Bottom_Edge_LX == Stage_X_Max-1 || Mario_Bottom_Edge_LX == Stage_X_Max-2)begin
+            MarioX <= MarioX;
+          end
+          else begin
+            MarioX <= MarioX - 10'd3;
           end
                     // if(BallX - BallS > Ball_X_Min) begin
 				 
@@ -124,15 +131,16 @@ module  Mario ( input logic Reset, frame_clk,
                     // Ball_Y_Motion <= 10'd0;
                     end 
 				 if (keycode == 8'h07) begin
-          if(Mario_Bottom_Edge_RX > Stage_X_Min || Mario_Bottom_Edge_Y<Stage_Y_Min+2) begin
-				    MarioX <= MarioX + 10'd3;
+          if(Mario_Bottom_Edge_Y<Stage_Y_Min+2) begin
+				   MarioX <= MarioX + 10'd3;
           end
-                    // if(BallX +BallS <= Ball_X_Max) begin
-				 
-                    //     Ball_X_Motion <= 10'd1;
-                    //     Ball_Y_Motion <= 10'd0;
-                    //     end
-                    // Ball_Y_Motion <= 10'd0;
+          else if(Mario_Bottom_Edge_RX == Stage_X_Min || Mario_Bottom_Edge_RX == Stage_X_Min+1
+          || Mario_Bottom_Edge_RX == Stage_X_Min+2 || Mario_Bottom_Edge_RX == Stage_X_Min-1 || Mario_Bottom_Edge_RX == Stage_X_Min-2)begin
+            MarioX <= MarioX;
+          end
+          else begin
+            MarioX <= MarioX + 10'd3;
+          end
                     end                   
 				 
 				//  BallY <= (BallY + Ball_Y_Motion);  // Update ball position
