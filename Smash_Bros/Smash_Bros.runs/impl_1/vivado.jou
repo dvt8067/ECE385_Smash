@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Nov 23 23:44:59 2023
-# Process ID: 17204
+# Start of session at: Fri Nov 24 21:08:21 2023
+# Process ID: 25228
 # Current directory: C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/impl_1
 # Command line: vivado.exe -log SMASH_TOP.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source SMASH_TOP.tcl -notrace
 # Log file: C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/impl_1/SMASH_TOP.vdi

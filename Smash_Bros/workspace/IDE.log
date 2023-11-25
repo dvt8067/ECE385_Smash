@@ -3750,3 +3750,21 @@ con
 ----------------End of Script----------------
 
 23:57:45 INFO  : Disconnected from the channel tcfchan#17.
+21:13:11 DEBUG : Logs will be stored at 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/IDE.log'.
+21:13:12 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\temp_xsdb_launch_script.tcl
+21:13:19 INFO  : XSCT server has started successfully.
+21:13:19 INFO  : plnx-install-location is set to ''
+21:13:19 INFO  : Successfully done setting XSCT server connection channel  
+21:13:19 INFO  : Successfully done setting workspace for the tool. 
+21:13:21 INFO  : Registering command handlers for Vitis TCF services
+21:13:22 INFO  : Platform repository initialization has completed.
+21:13:25 INFO  : Successfully done query RDI_DATADIR 
+21:13:37 INFO  : Hardware specification for platform project 'SMASH_TOP' is updated.
+21:13:47 INFO  : Result from executing command 'removePlatformRepo': 
+21:14:03 INFO  : Result from executing command 'getProjects': SMASH_TOP
+21:14:03 INFO  : Result from executing command 'getPlatforms': SMASH_TOP|C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/SMASH_TOP.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+21:14:04 INFO  : Checking for BSP changes to sync application flags for project 'Smash_Bros'...
+21:14:09 INFO  : The hardware specification used by project 'Smash_Bros' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:14:09 INFO  : The file 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream\SMASH_TOP.bit' stored in project is removed.
+21:14:09 INFO  : The file 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream\SMASH_TOP.mmi' stored in project is removed.
+21:14:09 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\Git_Smash\ECE385_Smash\Smash_Bros\workspace\Smash_Bros\_ide\bitstream' in project 'Smash_Bros'.
