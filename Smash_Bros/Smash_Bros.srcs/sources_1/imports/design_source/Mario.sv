@@ -59,7 +59,7 @@ module  Mario ( input logic Reset, frame_clk,
   
   
   end
-    int Mario_Jump_Delay = 120;
+    int Mario_Jump_Delay = 60;
     logic Mario_Jump_Counter_Tracker;
     logic Mario_Jump_Counter_Reset;
     logic [25:0] Mario_Jump_Counter;
@@ -78,7 +78,7 @@ module  Mario ( input logic Reset, frame_clk,
       if((Mario_Jump_Counter <= Mario_Jump_Delay) && (Mario_Jump_Counter >= 1)) begin
         jump_on = 1;
       end
-      if(edge_below == 1 && Mario_Jump_Counter_Tracker == 0) begin
+      if(Mario_Jump_Counter> Mario_Jump_Delay) begin
         Mario_Jump_Counter_Reset = 1;
       end
       //if(keycode != 8'h1A)begin
@@ -111,14 +111,18 @@ module  Mario ( input logic Reset, frame_clk,
 				// 	  Ball_X_Motion <= Ball_X_Step;
 					  
 				//  else 
-          if(edge_below == 1'b0)begin
+          if(edge_below == 1'b0 || jump_on == 1'b1)begin
               if(jump_on == 1'b0) begin
               MarioY <= MarioY + 10'd1;
+              end 
+              else begin
+                MarioY <= MarioY - 10'd2;
+              end
+          
           end
+          else begin
+          MarioY <= MarioY;
           end
-          // else begin
-          // MarioY <= MarioY;
-          // end
         
 				//Mario_Y_Motion <= Mario_Y_Motion;  // Ball is somewhere in the middle, don't bounce, just keep moving
 					  
@@ -132,7 +136,7 @@ module  Mario ( input logic Reset, frame_clk,
               //     MarioY <= MarioY - 10'd1;
               //     Mario_Jump_Counter_Tracker <= 1;
               // end
-              else if(jump_on == 0) begin
+              else if(jump_on == 0 || Mario_Jump_Counter_Reset == 1) begin
                 Mario_Jump_Counter_Tracker <= 0;
 
               end
@@ -188,9 +192,9 @@ module  Mario ( input logic Reset, frame_clk,
             MarioX<=MarioX; ///  continue to reset MarioX
             //MarioY<=MarioY;
          end
-         if(jump_on)begin
-          MarioY <= MarioY - 10'd1;
-         end
+        //  if(jump_on)begin
+        //   MarioY <= MarioY - 10'd1;
+        //  end
          end
          
       end

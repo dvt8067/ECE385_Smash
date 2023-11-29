@@ -23,10 +23,10 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
 
     logic Mario_on;
     logic [12:0] Mario_address, ADDR0X_Mario, ADDR0Y_Mario, ADDR_X_OFFSET_Mario, ADDR_Y_OFFSET_Mario;
-    logic [3:0] Palette_Index_Stationary_Mario;
-    logic [3:0] Palette_Index_Walking1_Mario, Palette_Index_Walking2_Mario, Palette_Index_Walking3_Mario;
-    logic [3:0] Palette_Index_Mario;
-    logic[3:0] Palette_Index_Background;
+    logic [1:0] Palette_Index_Stationary_Mario;
+    logic [1:0] Palette_Index_Walking1_Mario, Palette_Index_Walking2_Mario, Palette_Index_Walking3_Mario;
+    logic [1:0] Palette_Index_Mario;
+    logic [2:0] Palette_Index_Background;
     logic [11:0] Palette_Output_Mario;
     logic [11:0] Palette_Output_Background;
     logic [18:0] Background_address;
