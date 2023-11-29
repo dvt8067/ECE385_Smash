@@ -63,7 +63,7 @@ module SMASH_TOP(
     logic Mario_Invert_Left;
     logic [4:0] Mario_State_Out;
     logic edge_below;
-    
+    logic jump_on;
     assign reset_ah = reset_rtl_0;
     
     
@@ -170,7 +170,8 @@ module SMASH_TOP(
         .Stage_X_Max(Stage_X_Max),
         .Stage_X_Min(Stage_X_Min),
         .Stage_Y_Max(Stage_Y_Max),
-        .Stage_Y_Min(Stage_Y_Min)
+        .Stage_Y_Min(Stage_Y_Min),
+        .jump_on(jump_on)
     );
     
     //Color Mapper Module   

@@ -22,6 +22,7 @@ module Mario_State (   input logic  Clk,
 									Reset,
                             input logic [7:0] keycode,
                             input logic edge_below,
+                            input logic jump_on,
                             output logic [4:0] Mario_State_Out,
                             output logic Mario_Invert_Left
 									
