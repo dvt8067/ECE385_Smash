@@ -18,6 +18,7 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
                        input logic Clk,
                        input logic [4:0] Mario_State_Out,
                        input logic Mario_Invert_Left,
+                       input logic [25:0] Mario_Fall_Counter,
                        output logic [3:0]  Red, Green, Blue,
                        output logic[9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min);
 
@@ -142,6 +143,30 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
 
     always_comb
     begin:RGB_Display
+    // if(DrawX < 50 && DrawY < 50) begin
+    //     if(Mario_Fall_Counter < 10) begin
+    //         Red = 4'hf;
+    //          Green = 4'hf;
+    //          Blue = 4'hf;
+    //     end
+    //     else if(Mario_Fall_Counter < 20 && Mario_Fall_Counter >= 10) begin
+    //         Red = 4'hB;
+    //          Green = 4'hB;
+    //          Blue = 4'hB;
+    //     end
+    //     else if(Mario_Fall_Counter < 30 && Mario_Fall_Counter >=20) begin
+    //         Red = 4'h7;
+    //          Green = 4'h7;
+    //          Blue = 4'h7;
+    //     end
+        
+    //      else if(Mario_Fall_Counter > 30 ) begin
+    //         Red = 4'h0;
+    //          Green = 4'h0;
+    //          Blue = 4'h0;
+    //     end
+    // end
+    // else begin /// need to comment this out when not testing
         if(Mario_on && (Palette_Output_Mario != 12'h808)) begin
              Red = Palette_Output_Mario[11:8];
              Green = Palette_Output_Mario[7:4];
@@ -166,4 +191,5 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
             Blue = Palette_Output_Background[3:0];
         end
     end
+    //end // need to comment this out when not testing
 endmodule

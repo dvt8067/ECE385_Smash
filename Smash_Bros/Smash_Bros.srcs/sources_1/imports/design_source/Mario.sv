@@ -19,7 +19,8 @@ module  Mario ( input logic Reset, frame_clk,
          input logic [9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min,
                output logic [9:0] MarioX, MarioY, MarioS_X, MarioS_Y,
                output logic edge_below,
-               output logic jump_on); //CHANGE THESE TO MARIO EQUIVALENTS
+               output logic jump_on,
+               output logic [25:0] Mario_Fall_Counter); //CHANGE THESE TO MARIO EQUIVALENTS
     
     logic [9:0] Mario_X_Motion, Mario_Y_Motion, Mario_Bottom_Edge_LX, Mario_Bottom_Edge_RX, Mario_Bottom_Edge_Y;
     logic [9:0] jumping_factor;
@@ -72,7 +73,7 @@ module  Mario ( input logic Reset, frame_clk,
     int Mario_Fall_Delay = Mario_Jump_Delay;
     logic Mario_Fall_Counter_Tracker;
     logic Mario_Fall_Counter_Reset;
-    logic [25:0] Mario_Fall_Counter; // CHANGED THIS TO AN INT, IF IT 
+     // CHANGED THIS TO AN INT, IF IT 
     int Mario_Fall_Counter_ = Mario_Fall_Counter;
     always_ff @ (posedge frame_clk) begin
         if(Mario_Fall_Counter_Reset)begin
@@ -176,33 +177,45 @@ module  Mario ( input logic Reset, frame_clk,
           if(edge_below == 1'b0 || jump_on == 1'b1)begin
               if(jump_on == 1'b0) begin
              // MarioY <= MarioY + 10'd1;
-                 if(Mario_Fall_Counter_  < 10)begin
-                    MarioY <= MarioY + 10'd2;
+                 if(Mario_Fall_Counter_  < 6)begin
+                    MarioY <= MarioY + 10'd1;
     
                 end
-                else if(((Mario_Fall_Counter_  >= 10) && (Mario_Fall_Counter_  < 20)))  begin
+                else if(((Mario_Fall_Counter_  >= 6) && (Mario_Fall_Counter_  < 12)))  begin
+                    MarioY <= MarioY + 10'd2;
+                end
+                else if(((Mario_Fall_Counter_  >= 12) && (Mario_Fall_Counter_  < 18)))  begin
                     MarioY <= MarioY + 10'd3;
                 end
-                else if(((Mario_Fall_Counter_  >= 20) ))begin
+                else if(((Mario_Fall_Counter_  >= 18) && (Mario_Fall_Counter_  < 24)))  begin
+                    MarioY <= MarioY + 10'd4;
+                end
+                else if(((Mario_Fall_Counter_  >= 24) ))begin
                   MarioY <= MarioY + 10'd5;
                 end
+                
                 else begin
-                  MarioY <= MarioY + 10'd15;
+                  MarioY <= MarioY;
                 end
               end 
               else begin
-                if(Mario_Jump_Counter_  < 10)begin
+                if(Mario_Jump_Counter_  < 6)begin
                     MarioY <= MarioY - 10'd5;
-    
                 end
-                else if(((Mario_Jump_Counter_  >= 10) && (Mario_Jump_Counter_  < 20)))begin
-                    MarioY <= MarioY - 10'd3;
+                else if(((Mario_Jump_Counter_  >= 6) && (Mario_Jump_Counter_  < 12)))begin
+                    MarioY <= MarioY - 10'd4;
                 end
-                else if(((Mario_Fall_Counter_  >= 20) && (Mario_Fall_Counter_  < 30)))begin
-                  MarioY <= MarioY - 10'd2;
+                else if(((Mario_Jump_Counter_  >= 12) && (Mario_Jump_Counter_  < 18)))begin
+                  MarioY <= MarioY - 10'd3;
+                end
+                else if(((Mario_Jump_Counter_  >= 18) && (Mario_Jump_Counter_  < 24)))begin
+                    MarioY <= MarioY - 10'd2;
+                end
+                else if(((Mario_Jump_Counter_  >= 24) && (Mario_Jump_Counter_  <= 30)))begin
+                  MarioY <= MarioY - 10'd1;
                 end
                 else begin
-                  MarioY <= MarioY + 10'd15;
+                  MarioY <= MarioY;
                 end
   
                 
