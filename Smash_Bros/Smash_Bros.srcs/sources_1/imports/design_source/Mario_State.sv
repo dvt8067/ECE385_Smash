@@ -30,7 +30,8 @@ module Mario_State (   input logic  Clk,
 
 	enum logic [4:0] {  Mario_Stationary_Right, Mario_Stationary_Left, 
                         Mario_Walk_Right1, Mario_Walk_Right2, Mario_Walk_Right3, 
-                        Mario_Walk_Left1, Mario_Walk_Left2, Mario_Walk_Left3, Mario_Fall_Left, Mario_Fall_Right, Mario_Jump_Right, Mario_Jump_Left}   State, Next_State;   // Internal state logic
+                        Mario_Walk_Left1, Mario_Walk_Left2, Mario_Walk_Left3, Mario_Fall_Left,
+                         Mario_Fall_Right, Mario_Jump_Right, Mario_Jump_Left, Mario_Punch1, Mario_Punch2}   State, Next_State;   // Internal state logic
     //logic edge_below_previous;
     always_comb begin
         Mario_State_Out = State; 
@@ -50,7 +51,20 @@ module Mario_State (   input logic  Clk,
     logic Mario_Walk_Counter_Tracker;
     logic Mario_Walk_Counter_Reset;
     logic [22:0] Mario_Walk_Counter;
+    int Mario_Punch_Delay = 50000000;
+    logic Mario_Punch_Counter_Tracker;
+    logic Mario_Punch_Counter_Reset;
+    logic [25:0] Mario_Punch_Counter;
     
+    always_ff @ (posedge Clk) begin
+            if(Mario_Punch_Counter_Reset)begin
+                Mario_Punch_Counter <= 0;
+            end
+            else begin
+                Mario_Punch_Counter <= Mario_Punch_Counter + Mario_Punch_Counter_Tracker;
+            end
+                //update the register counter value
+        end
 
     always_ff @ (posedge Clk) begin
         if(Mario_Walk_Counter_Reset)begin
@@ -69,7 +83,8 @@ module Mario_State (   input logic  Clk,
     always_comb
 	begin 
 		Mario_Walk_Counter_Tracker = 0;
-        Mario_Walk_Counter_Reset = 0;
+        Mario_Walk_Counter_Reset = 0; // This really should be 1, but I already went through the trouble of putting it to 1 everywhere else
+        Mario_Punch_Counter_Reset = 1;
 //		Statetest = State;
 		// Default next state is staying at current state
 		Next_State = State;
@@ -312,7 +327,7 @@ module Mario_State (   input logic  Clk,
                 end
             end
             Mario_Jump_Left: begin
-             Mario_Invert_Left = 1;
+                 Mario_Invert_Left = 1;
                 Mario_Walk_Counter_Reset = 1;
                 if(jump_on == 1) begin
                     if(keycode == 8'h07) begin
@@ -329,6 +344,84 @@ module Mario_State (   input logic  Clk,
                 else begin
                     Next_State = Mario_Stationary_Left;
                 end
+            end
+            Mario_Punch1_Right: begin
+                Mario_Punch_Counter_Reset = 0;
+                if(keycode != 8'h04)begin
+                    if(Mario_Punch_Counter > Mario_Punch_Delay)begin
+                        Next_State = Mario_Punch2_Right;
+                        Mario_Punch_Counter_Reset = 1;
+                    end
+                    else begin
+                        Mario_Punch_Counter_Tracker = 1;
+                        Next_State = Mario_Punch1_Right;
+                    end
+                end
+                else begin
+                    if(Mario_Punch_Counter > Mario_Punch_Delay)begin
+                        Next_State = Mario_Punch2_Left;
+                        Mario_Punch_Counter_Reset = 1;
+                    end
+                    else begin
+                        Mario_Punch_Counter_Tracker = 1;
+                        Next_State = Mario_Punch1_Left;
+                    end
+                end
+            end
+            Mario_Punch2_Right: begin
+                Mario_Punch_Counter_Reset = 0;
+                if(keycode != 8'h04)begin
+                    if(Mario_Punch_Counter > Mario_Punch_Delay)begin
+                        
+                        // Need Exit logic
+                        
+                        Mario_Punch_Counter_Reset = 1;
+                    end
+                    else begin
+                        Mario_Punch_Counter_Tracker = 1;
+                        Next_State = Mario_Punch2_Right;
+                    end
+                end
+                else begin
+                    if(Mario_Punch_Counter > Mario_Punch_Delay)begin
+
+                        // Need Exit Logic
+
+                        Mario_Punch_Counter_Reset = 1;
+                    end
+                    else begin
+                        Mario_Punch_Counter_Tracker = 1;
+                        Next_State = Mario_Punch2_Left;
+                    end
+                end
+            end
+            Mario_Punch1_Left: begin
+                Mario_Punch_Counter_Reset = 0;
+                Mario_Invert_Left = 1;
+                if(keycode != 8'h07)begin
+                    if(Mario_Punch_Counter > Mario_Punch_Delay)begin
+                        Next_State = Mario_Punch2_Left;
+                        Mario_Punch_Counter_Reset = 1;
+                    end
+                    else begin
+                        Mario_Punch_Counter_Tracker = 1;
+                        Next_State = Mario_Punch1_Left;
+                    end
+                end
+                else begin
+                    if(Mario_Punch_Counter > Mario_Punch_Delay)begin
+                        Next_State = Mario_Punch2_Right;
+                        Mario_Punch_Counter_Reset = 1;
+                    end
+                    else begin
+                        Mario_Punch_Counter_Tracker = 1;
+                        Next_State = Mario_Punch1_Right;
+                    end
+                end
+            end
+            Mario_Punch2_Left: begin
+                Mario_Punch_Counter_Reset = 0;
+                Mario_Invert_Left = 1;
             end
 
 		endcase
