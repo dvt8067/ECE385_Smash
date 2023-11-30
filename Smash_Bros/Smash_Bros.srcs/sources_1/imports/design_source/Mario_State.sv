@@ -30,7 +30,7 @@ module Mario_State (   input logic  Clk,
 
 	enum logic [4:0] {  Mario_Stationary_Right, Mario_Stationary_Left, 
                         Mario_Walk_Right1, Mario_Walk_Right2, Mario_Walk_Right3, 
-                        Mario_Walk_Left1, Mario_Walk_Left2, Mario_Walk_Left3, Mario_Fall_Left, Mario_Fall_Right}   State, Next_State;   // Internal state logic
+                        Mario_Walk_Left1, Mario_Walk_Left2, Mario_Walk_Left3, Mario_Fall_Left, Mario_Fall_Right, Mario_Jump_Right, Mario_Jump_Left}   State, Next_State;   // Internal state logic
     //logic edge_below_previous;
     always_comb begin
         Mario_State_Out = State; 
@@ -83,7 +83,10 @@ module Mario_State (   input logic  Clk,
                 if(keycode == 8'h07) begin
                     Next_State = Mario_Walk_Right1;
                 end
-                if(edge_below == 0) begin
+                if(edge_below == 0 && jump_on == 1) begin
+                    Next_State = Mario_Jump_Right;
+                end
+                if(edge_below == 0 && jump_on == 0) begin
                     Next_State = Mario_Fall_Right;
                 end
                 Mario_Walk_Counter_Reset = 1;
@@ -106,7 +109,10 @@ module Mario_State (   input logic  Clk,
                     Next_State = Mario_Walk_Right1;
                     Mario_Walk_Counter_Tracker = 1;
                 end
-                if(edge_below == 0) begin
+                if(edge_below == 0 && jump_on == 1) begin
+                    Next_State = Mario_Jump_Right;
+                end
+                if(edge_below == 0 && jump_on == 0) begin
                     Next_State = Mario_Fall_Right;
                 end
             end
@@ -128,7 +134,10 @@ module Mario_State (   input logic  Clk,
                     Next_State = Mario_Walk_Right2;
                     Mario_Walk_Counter_Tracker = 1;
                 end 
-                if(edge_below == 0) begin
+                if(edge_below == 0 && jump_on == 1) begin
+                    Next_State = Mario_Jump_Right;
+                end
+                if(edge_below == 0 && jump_on == 0) begin
                     Next_State = Mario_Fall_Right;
                 end
             end
@@ -150,7 +159,10 @@ module Mario_State (   input logic  Clk,
                     Next_State = Mario_Walk_Right3;
                     Mario_Walk_Counter_Tracker = 1;
                 end 
-                if(edge_below == 0) begin
+                if(edge_below == 0 && jump_on == 1) begin
+                    Next_State = Mario_Jump_Right;
+                end
+                if(edge_below == 0 && jump_on == 0) begin
                     Next_State = Mario_Fall_Right;
                 end
             end
@@ -162,7 +174,10 @@ module Mario_State (   input logic  Clk,
                 if(keycode == 8'h07) begin
                     Next_State = Mario_Walk_Right1;
                 end
-                if(edge_below == 0) begin
+                if(edge_below == 0 && jump_on == 1) begin
+                    Next_State = Mario_Jump_Left;
+                end
+                if(edge_below == 0 && jump_on == 0) begin
                     Next_State = Mario_Fall_Left;
                 end
                 Mario_Walk_Counter_Reset = 1;
@@ -188,7 +203,10 @@ module Mario_State (   input logic  Clk,
                     Next_State = Mario_Walk_Left1;
                     Mario_Walk_Counter_Tracker = 1;
                 end
-                if(edge_below == 0) begin
+                if(edge_below == 0 && jump_on == 1) begin
+                    Next_State = Mario_Jump_Left;
+                end
+                if(edge_below == 0 && jump_on == 0) begin
                     Next_State = Mario_Fall_Left;
                 end
             end
@@ -211,7 +229,10 @@ module Mario_State (   input logic  Clk,
                     Next_State = Mario_Walk_Left2;
                     Mario_Walk_Counter_Tracker = 1;
                 end
-                if(edge_below == 0) begin
+                if(edge_below == 0 && jump_on == 1) begin
+                    Next_State = Mario_Jump_Left;
+                end
+                if(edge_below == 0 && jump_on == 0) begin
                     Next_State = Mario_Fall_Left;
                 end
             end
@@ -234,7 +255,10 @@ module Mario_State (   input logic  Clk,
                     Next_State = Mario_Walk_Left3;
                     Mario_Walk_Counter_Tracker = 1;
                 end
-                if(edge_below == 0) begin
+                if(edge_below == 0 && jump_on == 1) begin
+                    Next_State = Mario_Jump_Left;
+                end
+                if(edge_below == 0 && jump_on == 0) begin
                     Next_State = Mario_Fall_Left;
                 end
                 Mario_Invert_Left = 1;
@@ -251,7 +275,7 @@ module Mario_State (   input logic  Clk,
                 begin
                     Next_State = Mario_Stationary_Left;
                 end
-                Mario_Walk_Counter_Reset = 1;
+                //Mario_Walk_Counter_Reset = 1;
             end
             Mario_Fall_Right: begin /// CAN ADD FRAME HERE FOR FALLING ANIMATION
                 Mario_Walk_Counter_Reset = 1;
@@ -267,7 +291,44 @@ module Mario_State (   input logic  Clk,
                 begin
                     Next_State = Mario_Stationary_Right;
                 end
-                Mario_Walk_Counter_Reset = 0;
+                //Mario_Walk_Counter_Reset = 0;
+            end
+            Mario_Jump_Right: begin
+                Mario_Walk_Counter_Reset = 1;
+                if(jump_on == 1) begin
+                    if(keycode == 8'h04) begin
+                        Next_State = Mario_Jump_Left;
+                    end
+                    else begin
+                        Next_State = Mario_Jump_Right;
+                    end
+                end
+                else if(edge_below == 0 && jump_on == 0)
+                begin
+                    Next_State = Mario_Fall_Right;
+                end
+                else begin
+                    Next_State = Mario_Stationary_Right;
+                end
+            end
+            Mario_Jump_Left: begin
+             Mario_Invert_Left = 1;
+                Mario_Walk_Counter_Reset = 1;
+                if(jump_on == 1) begin
+                    if(keycode == 8'h07) begin
+                        Next_State = Mario_Jump_Right;
+                    end
+                    else begin
+                        Next_State = Mario_Jump_Left;
+                    end
+                end
+                else if(edge_below == 0 && jump_on == 0)
+                begin
+                    Next_State = Mario_Fall_Left;
+                end
+                else begin
+                    Next_State = Mario_Stationary_Left;
+                end
             end
 
 		endcase
