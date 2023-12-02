@@ -72,7 +72,7 @@ module SMASH_TOP(
     HexDriver HexA (
         .clk(Clk),
         .reset(reset_ah),
-        .in({keycode0_gpio[31:28], keycode0_gpio[27:24], keycode0_gpio[23:20], keycode0_gpio[19:16]}),
+        .in({keycode1_gpio[31:28], keycode1_gpio[27:24], keycode1_gpio[23:20], keycode1_gpio[19:16]}),
         .hex_seg(hex_segA),
         .hex_grid(hex_gridA)
     );

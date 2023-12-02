@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Wed Nov 29 21:05:05 2023
+| Date         : Thu Nov 30 18:13:49 2023
 | Host         : Amadeus running 64-bit major release  (build 9200)
 | Command      : report_methodology -file SMASH_TOP_methodology_drc_routed.rpt -pb SMASH_TOP_methodology_drc_routed.pb -rpx SMASH_TOP_methodology_drc_routed.rpx
 | Design       : SMASH_TOP
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 123
+             Violations found: 124
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
@@ -35,6 +35,7 @@ Table of Contents
 | DPIR-1    | Warning          | Asynchronous driver check                          | 20         |
 | LUTAR-1   | Warning          | LUT drives async reset alert                       | 4          |
 | TIMING-9  | Warning          | Unknown CDC Logic                                  | 1          |
+| TIMING-16 | Warning          | Large setup violation                              | 1          |
 | TIMING-18 | Warning          | Missing input or output delay                      | 33         |
 +-----------+------------------+----------------------------------------------------+------------+
 
@@ -500,6 +501,11 @@ Related violations: <none>
 TIMING-9#1 Warning
 Unknown CDC Logic  
 One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.101 ns between color_instance/Smash_Background0/data_Out_reg_6_2/CLKARDCLK (clocked by Clk) and vga_to_hdmi/inst/srldly_0/srl[22].srl16_i_srlopt/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning

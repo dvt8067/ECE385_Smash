@@ -25,7 +25,8 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
     logic Mario_on;
     logic [12:0] Mario_address, ADDR0X_Mario, ADDR0Y_Mario, ADDR_X_OFFSET_Mario, ADDR_Y_OFFSET_Mario;
     logic [1:0] Palette_Index_Stationary_Mario;
-    logic [1:0] Palette_Index_Walking1_Mario, Palette_Index_Walking2_Mario, Palette_Index_Walking3_Mario, Pallete_Index_Jumping_Mario;
+    logic [1:0] Palette_Index_Walking1_Mario, Palette_Index_Walking2_Mario, Palette_Index_Walking3_Mario, Palette_Index_Jumping_Mario,
+     Palette_Index_Punching1_Mario, Palette_Index_Punching2_Mario;
     logic [1:0] Palette_Index_Mario;
     logic [2:0] Palette_Index_Background;
     logic [11:0] Palette_Output_Mario;
@@ -59,7 +60,7 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
             Mario_address = ADDR_X_OFFSET_Mario + ADDR_Y_OFFSET_Mario*Mario_Rowsize; // mario is right
         end
         else begin
-            Mario_address = (59-ADDR_X_OFFSET_Mario) + ADDR_Y_OFFSET_Mario*Mario_Rowsize;
+            Mario_address = (60-ADDR_X_OFFSET_Mario) + ADDR_Y_OFFSET_Mario*Mario_Rowsize;
         end
     end
 
@@ -91,7 +92,19 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
     Mario_Jumping_RAM1 Mario_Jumping_ROM (
 		.read_address(Mario_address),
 		.Clk(Clk),
-		.data_Out(Pallete_Index_Jumping_Mario)
+		.data_Out(Palette_Index_Jumping_Mario)
+    );
+
+    Mario_Punching_1_RAM1 Mario_Punching1_ROM (
+		.read_address(Mario_address),
+		.Clk(Clk),
+		.data_Out(Palette_Index_Punching1_Mario)
+    );
+
+    Mario_Punching_2_RAM1 Mario_Punching2_ROM (
+		.read_address(Mario_address),
+		.Clk(Clk),
+		.data_Out(Palette_Index_Punching2_Mario)
     );
     //REDOINK THIS KUD TI HAVE 0-7 PALETTE INDEXES
 
@@ -114,7 +127,13 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
             Palette_Index_Mario = Palette_Index_Walking3_Mario;
         end
         else if(Mario_State_Out == 8 || Mario_State_Out == 9 || Mario_State_Out == 10 || Mario_State_Out == 11)begin
-            Palette_Index_Mario = Pallete_Index_Jumping_Mario;
+            Palette_Index_Mario = Palette_Index_Jumping_Mario;
+        end
+        else if(Mario_State_Out == 12 || Mario_State_Out == 14)begin
+            Palette_Index_Mario = Palette_Index_Punching1_Mario;
+        end
+        else if(Mario_State_Out == 13 || Mario_State_Out == 15)begin
+            Palette_Index_Mario = Palette_Index_Punching2_Mario;
         end
         else begin
             Palette_Index_Mario = 2'b01; // if for some reason we are not in one of the defined states, print red
