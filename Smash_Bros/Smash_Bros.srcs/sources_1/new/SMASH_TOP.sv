@@ -69,6 +69,9 @@ module SMASH_TOP(
     logic jump_on_luigi;
     logic [25:0]Mario_Fall_Counter;
     logic [25:0]Luigi_Fall_Counter;
+    logic [7:0] Mario_Priority_1, Luigi_Priority_1;
+    logic punch_on_mario, punch_on_luigi;
+    //logic [7:0] Mario_Priority_2;
     assign reset_ah = reset_rtl_0;
     
     
@@ -156,26 +159,28 @@ module SMASH_TOP(
     Mario_State Mario_State0(
         .Clk(Clk), 
 		.Reset(reset_ah),
-        .keycode(keycode0_gpio[7:0]),
+        .keycode(Mario_Priority_1),
         .edge_below_mario(edge_below_mario),
 		.Mario_State_Out(Mario_State_Out),
-        .Mario_Invert_Left(Mario_Invert_Left)
+        .Mario_Invert_Left(Mario_Invert_Left),
+        .punch_on_mario(punch_on_mario)
 				);
     Luigi_State Luigi_State0 (
                 .Clk(Clk), 
                 .Reset(reset_ah),
-                .keycode(keycode0_gpio[7:0]),
+                .keycode(Luigi_Priority_1),
                 .edge_below_luigi(edge_below_luigi),
                 .jump_on_luigi(jump_on_luigi),
                 .Luigi_State_Out(Luigi_State_Out),
-                .Luigi_Invert_Left(Luigi_Invert_Left)
+                .Luigi_Invert_Left(Luigi_Invert_Left),
+                .punch_on_luigi(punch_on_luigi)
                         
     );
     //Mario Module
     Mario mario_instance(
         .Reset(reset_ah),
         .frame_clk(vsync),                    //Figure out what this should be so that the Mario will move
-        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to Mario by default
+        .keycode(Mario_Priority_1),    //Notice: only one keycode connected to Mario by default
         .edge_below_mario(edge_below_mario),
         .MarioX(Marioxsig),
         .MarioY(Marioysig),
@@ -191,7 +196,7 @@ module SMASH_TOP(
     Luigi  luigi_instance ( 
         .Reset(reset_ah), 
         .frame_clk(vsync),
-		.keycode(keycode0_gpio[7:0]),
+		.keycode(Luigi_Priority_1),
         .Stage_X_Max(Stage_X_Max), 
         .Stage_X_Min(Stage_X_Min), 
         .Stage_Y_Max(Stage_Y_Max), 
@@ -230,6 +235,19 @@ module SMASH_TOP(
         .Stage_Y_Min(Stage_Y_Min),
         .Mario_Fall_Counter,
         .Luigi_Fall_Counter
+    );
+    Key_Hierarchy_Mario KHM0(
+        .Full_Keycodes({keycode1_gpio[15:0], keycode0_gpio}),
+        .edge_below_mario(edge_below_mario),
+        .Mario_Priority_1(Mario_Priority_1),
+        .punch_on_mario(punch_on_mario)
+    );
+
+     Key_Hierarchy_Luigi KHL0(
+        .Full_Keycodes({keycode1_gpio[15:0], keycode0_gpio}),
+        .edge_below_luigi(edge_below_luigi),
+        .Luigi_Priority_1(Luigi_Priority_1),
+        .punch_on_luigi(punch_on_luigi)
     );
     
 endmodule

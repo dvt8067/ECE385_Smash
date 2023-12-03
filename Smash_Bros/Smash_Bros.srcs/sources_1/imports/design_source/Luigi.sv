@@ -4,8 +4,8 @@
 //    Spring 2005                                                        --
 //                                                                       --
 //    Modified by Stephen Kempf 03-01-2006                               --
-//                              03-12-2007                               --
-//    Translated by Joe Meng    07-07-2013                               --
+//                              03-12-204f                               --
+//    Translated by Joe Meng    4f-4f-2013                               --
 //    Modified by Zuofu Cheng   08-19-2023                               --
 //    Fall 2023 Distribution                                             --
 //                                                                       --
@@ -230,7 +230,7 @@ always_comb begin
 				//Luigi_Y_Motion <= Luigi_Y_Motion;  // Ball is somewhere in the middle, don't bounce, just keep moving
 					  
 				 //modify to control ball motion with the keycode
-				 if (keycode == 8'h1A) begin
+				 if (keycode == 8'h52) begin
 				    // if(BallY - BallS > Ball_Y_Min) begin
               if(edge_below_luigi == 1) begin
                 Luigi_Jump_Counter_Tracker <=1;
@@ -273,7 +273,7 @@ always_comb begin
                     //     end
                     // Ball_X_Motion <= 10'd0;
                     end             
-				 if (keycode == 8'h04) begin
+				 if (keycode == 8'h50) begin
           if(Luigi_Bottom_Edge_Y<Stage_Y_Min+2) begin
 				   LuigiX <= LuigiX - 10'd4;
           end
@@ -291,7 +291,7 @@ always_comb begin
                     //     end
                     // Ball_Y_Motion <= 10'd0;
                     end 
-				 if (keycode == 8'h07) begin
+				 if (keycode == 8'h4f) begin
           if(Luigi_Bottom_Edge_Y<Stage_Y_Min+2) begin
 				   LuigiX <= LuigiX + 10'd5;
           end
@@ -306,9 +306,9 @@ always_comb begin
 				 
 				//  BallY <= (BallY + Ball_Y_Motion);  // Update ball position
 				//  BallX <= (BallX + Ball_X_Motion);
-        if(keycode !=8'h07 &&keycode !=8'h04) begin
+        if(keycode !=8'h4f &&keycode !=8'h50) begin
         
-        //&& keycode != 8'h16 && keycode != 8'h1A) begin
+        //&& keycode != 8'h16 && keycode != 8'h52) begin
             LuigiX<=LuigiX; ///  continue to reset LuigiX
             //LuigiY<=LuigiY;
          end

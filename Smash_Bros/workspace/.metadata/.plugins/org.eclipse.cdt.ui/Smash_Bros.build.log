@@ -1,4 +1,4 @@
-14:02:01 **** Build of configuration Debug for project Smash_Bros ****
+17:31:08 **** Build of configuration Debug for project Smash_Bros ****
 make all 
 'Building file: ../src/lw_usb/HID.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -83,5 +83,5 @@ mb-size Smash_Bros.elf  |tee "Smash_Bros.elf.size"
 'Finished building: Smash_Bros.elf.size'
 ' '
 
-14:02:04 Build Finished (took 2s.858ms)
+17:31:11 Build Finished (took 2s.810ms)
 

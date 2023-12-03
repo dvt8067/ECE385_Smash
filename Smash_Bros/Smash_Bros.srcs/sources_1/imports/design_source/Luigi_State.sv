@@ -7,13 +7,13 @@
 // Module Name:    ISDU - Behavioral
 //
 // Comments:
-//    Revised 03-22-2007
-//    Spring 2007 Distribution
-//    Revised 07-26-2013
+//    Revised 03-22-204f
+//    Spring 204f Distribution
+//    Revised 4f-26-2013
 //    Spring 2015 Distribution
 //    Revised 02-13-2017
 //    Spring 2017 Distribution
-//    Revised 07-25-2023
+//    Revised 4f-25-2023
 //    Xilinx Vivado
 //------------------------------------------------------------------------------
 
@@ -24,7 +24,8 @@ module Luigi_State (   input logic  Clk,
                             input logic edge_below_luigi,
                             input logic jump_on_luigi,
                             output logic [4:0] Luigi_State_Out,
-                            output logic Luigi_Invert_Left
+                            output logic Luigi_Invert_Left,
+                            output logic punch_on_luigi
 									
 				);
 
@@ -86,6 +87,8 @@ module Luigi_State (   input logic  Clk,
 		Luigi_Walk_Counter_Tracker = 0;
         Luigi_Walk_Counter_Reset = 0; // This really should be 1, but I already went through the trouble of putting it to 1 everywhere else
         Luigi_Punch_Counter_Reset = 1;
+        Luigi_Punch_Counter_Tracker = 0;
+        punch_on_luigi = 0;
 //		Statetest = State;
 		// Default next state is staying at current state
 		Next_State = State;
@@ -93,10 +96,10 @@ module Luigi_State (   input logic  Clk,
 		unique case (State)
 			
             Luigi_Stationary_Right : begin
-                if((keycode == 8'h04)) begin
+                if((keycode == 8'h50)) begin
                     Next_State = Luigi_Walk_Left1;
                 end
-                if(keycode == 8'h07) begin
+                if(keycode == 8'h4f) begin
                     Next_State = Luigi_Walk_Right1;
                 end
                 if(edge_below_luigi == 0 && jump_on_luigi == 1) begin
@@ -105,14 +108,14 @@ module Luigi_State (   input logic  Clk,
                 if(edge_below_luigi == 0 && jump_on_luigi == 0) begin
                     Next_State = Luigi_Fall_Right;
                 end
-                if(keycode == 8'h0A)begin
+                if(keycode == 8'h62)begin
                     Next_State = Luigi_Punch1_Right;
                 end
                 Luigi_Walk_Counter_Reset = 1;
             end
 			Luigi_Walk_Right1 :  begin
-				if(keycode != 8'h07)  begin
-                    if(keycode == 8'h04)begin
+				if(keycode != 8'h4f)  begin
+                    if(keycode == 8'h50)begin
                         Next_State = Luigi_Walk_Left1;
                     end
                     else begin
@@ -134,13 +137,13 @@ module Luigi_State (   input logic  Clk,
                 if(edge_below_luigi == 0 && jump_on_luigi == 0) begin
                     Next_State = Luigi_Fall_Right;
                 end
-                if(keycode == 8'h0A)begin
+                if(keycode == 8'h62)begin
                     Next_State = Luigi_Punch1_Right;
                 end
             end
 			Luigi_Walk_Right2 : begin               //e.g. S_33_2, etc. How many? As a hint, note that the BRAM is synchronous, in addition, 
-				if(keycode != 8'h07)  begin
-                    if(keycode == 8'h04)begin
+				if(keycode != 8'h4f)  begin
+                    if(keycode == 8'h50)begin
                         Next_State = Luigi_Walk_Left1;
                     end
                     else begin
@@ -162,13 +165,13 @@ module Luigi_State (   input logic  Clk,
                 if(edge_below_luigi == 0 && jump_on_luigi == 0) begin
                     Next_State = Luigi_Fall_Right;
                 end
-                if(keycode == 8'h0A)begin
+                if(keycode == 8'h62)begin
                     Next_State = Luigi_Punch1_Right;
                 end
             end
 			Luigi_Walk_Right3 : begin
-				if(keycode != 8'h07)  begin
-                    if(keycode == 8'h04)begin
+				if(keycode != 8'h4f)  begin
+                    if(keycode == 8'h50)begin
                         Next_State = Luigi_Walk_Left1;
                     end
                     else begin
@@ -190,16 +193,16 @@ module Luigi_State (   input logic  Clk,
                 if(edge_below_luigi == 0 && jump_on_luigi == 0) begin
                     Next_State = Luigi_Fall_Right;
                 end
-                if(keycode == 8'h0A)begin
+                if(keycode == 8'h62)begin
                     Next_State = Luigi_Punch1_Right;
                 end
             end
 			Luigi_Stationary_Left :	begin
                 Luigi_Invert_Left = 1;			
-				if((keycode == 8'h04)) begin
+				if((keycode == 8'h50)) begin
                     Next_State = Luigi_Walk_Left1;
                 end
-                if(keycode == 8'h07) begin
+                if(keycode == 8'h4f) begin
                     Next_State = Luigi_Walk_Right1;
                 end
                 if(edge_below_luigi == 0 && jump_on_luigi == 1) begin
@@ -208,15 +211,15 @@ module Luigi_State (   input logic  Clk,
                 if(edge_below_luigi == 0 && jump_on_luigi == 0) begin
                     Next_State = Luigi_Fall_Left;
                 end
-                if(keycode == 8'h0A)begin
+                if(keycode == 8'h62)begin
                     Next_State = Luigi_Punch1_Left;
                 end
                 Luigi_Walk_Counter_Reset = 1;
             end
 			Luigi_Walk_Left1 : begin
                 Luigi_Invert_Left = 1;
-				if(keycode != 8'h04)  begin
-                    if(keycode == 8'h07)begin
+				if(keycode != 8'h50)  begin
+                    if(keycode == 8'h4f)begin
                         Next_State = Luigi_Walk_Right1;
                     end
                     else begin
@@ -240,14 +243,14 @@ module Luigi_State (   input logic  Clk,
                 if(edge_below_luigi == 0 && jump_on_luigi == 0) begin
                     Next_State = Luigi_Fall_Left;
                 end
-                if(keycode == 8'h0A)begin
+                if(keycode == 8'h62)begin
                     Next_State = Luigi_Punch1_Left;
                 end
             end
             Luigi_Walk_Left2 : begin
                 Luigi_Invert_Left = 1;
-                if(keycode != 8'h04)  begin
-                    if(keycode == 8'h07)begin
+                if(keycode != 8'h50)  begin
+                    if(keycode == 8'h4f)begin
                         Next_State = Luigi_Walk_Right1;
                     end
                     else begin
@@ -269,14 +272,14 @@ module Luigi_State (   input logic  Clk,
                 if(edge_below_luigi == 0 && jump_on_luigi == 0) begin
                     Next_State = Luigi_Fall_Left;
                 end
-                if(keycode == 8'h0A)begin
+                if(keycode == 8'h62)begin
                     Next_State = Luigi_Punch1_Left;
                 end
             end
             Luigi_Walk_Left3 : begin
                 Luigi_Invert_Left = 1;
-                if(keycode != 8'h04)  begin
-                    if(keycode == 8'h07)begin
+                if(keycode != 8'h50)  begin
+                    if(keycode == 8'h4f)begin
                         Next_State = Luigi_Walk_Right1;
                     end
                     else begin
@@ -298,7 +301,7 @@ module Luigi_State (   input logic  Clk,
                 if(edge_below_luigi == 0 && jump_on_luigi == 0) begin
                     Next_State = Luigi_Fall_Left;
                 end
-                if(keycode == 8'h0A)begin
+                if(keycode == 8'h62)begin
                     Next_State = Luigi_Punch1_Left;
                 end
                 Luigi_Invert_Left = 1;
@@ -307,7 +310,7 @@ module Luigi_State (   input logic  Clk,
                 Luigi_Invert_Left = 1;
                 Luigi_Walk_Counter_Reset = 1;
                 if(edge_below_luigi == 0) begin
-                    if(keycode == 8'h07) begin
+                    if(keycode == 8'h4f) begin
                         Next_State = Luigi_Fall_Right;
                     end
                 end
@@ -315,7 +318,7 @@ module Luigi_State (   input logic  Clk,
                 begin
                     Next_State = Luigi_Stationary_Left;
                 end
-                if(keycode == 8'h0A)begin
+                if(keycode == 8'h62)begin
                     Next_State = Luigi_Punch1_Left;
                 end
                 //Luigi_Walk_Counter_Reset = 1;
@@ -323,7 +326,7 @@ module Luigi_State (   input logic  Clk,
             Luigi_Fall_Right: begin /// CAN ADD FRAME HERE FOR FALLING ANIMATION
                 Luigi_Walk_Counter_Reset = 1;
                 if(edge_below_luigi == 0) begin
-                    if(keycode == 8'h04) begin
+                    if(keycode == 8'h50) begin
                         Next_State = Luigi_Fall_Left;
                     end
                     else begin
@@ -334,7 +337,7 @@ module Luigi_State (   input logic  Clk,
                 begin
                     Next_State = Luigi_Stationary_Right;
                 end
-                if(keycode == 8'h0A)begin
+                if(keycode == 8'h62)begin
                     Next_State = Luigi_Punch1_Right;
                 end
                 //Luigi_Walk_Counter_Reset = 0;
@@ -342,7 +345,7 @@ module Luigi_State (   input logic  Clk,
             Luigi_Jump_Right: begin
                 Luigi_Walk_Counter_Reset = 1;
                 if(jump_on_luigi == 1) begin
-                    if(keycode == 8'h04) begin
+                    if(keycode == 8'h50) begin
                         Next_State = Luigi_Jump_Left;
                     end
                     else begin
@@ -356,7 +359,7 @@ module Luigi_State (   input logic  Clk,
                 else begin
                     Next_State = Luigi_Stationary_Right;
                 end
-                if(keycode == 8'h0A)begin
+                if(keycode == 8'h62)begin
                     Next_State = Luigi_Punch1_Right;
                 end
             end
@@ -364,7 +367,7 @@ module Luigi_State (   input logic  Clk,
                  Luigi_Invert_Left = 1;
                 Luigi_Walk_Counter_Reset = 1;
                 if(jump_on_luigi == 1) begin
-                    if(keycode == 8'h07) begin
+                    if(keycode == 8'h4f) begin
                         Next_State = Luigi_Jump_Right;
                     end
                     else begin
@@ -378,13 +381,14 @@ module Luigi_State (   input logic  Clk,
                 else begin
                     Next_State = Luigi_Stationary_Left;
                 end
-                if(keycode == 8'h0A)begin
+                if(keycode == 8'h62)begin
                     Next_State = Luigi_Punch1_Left;
                 end
             end
             Luigi_Punch1_Right: begin
                 Luigi_Punch_Counter_Reset = 0;
-                if(keycode != 8'h04)begin
+                punch_on_luigi = 1;
+                if(keycode != 8'h50)begin
                     if(Luigi_Punch_Counter > Luigi_Punch_Delay)begin
                         Next_State = Luigi_Punch2_Right;
                         Luigi_Punch_Counter_Reset = 1;
@@ -407,16 +411,17 @@ module Luigi_State (   input logic  Clk,
             end
             Luigi_Punch2_Right: begin
                 Luigi_Punch_Counter_Reset = 0;
+                punch_on_luigi = 1;
                 if(Luigi_Punch_Counter > Luigi_Punch_Delay) begin
                     //Next State Logic
-                    if(keycode != 8'h04) begin
+                    if(keycode != 8'h50) begin
                         if(jump_on_luigi) begin
                             Next_State = Luigi_Jump_Right;
                         end
                         else if(edge_below_luigi == 0) begin
                                 Next_State = Luigi_Fall_Right;
                             end
-                        else if(keycode == 8'h07) begin
+                        else if(keycode == 8'h4f) begin
                             Next_State = Luigi_Walk_Right1;
                         end
                         else begin
@@ -439,7 +444,8 @@ module Luigi_State (   input logic  Clk,
                     end
                 end
                 else begin
-                    if(keycode == 8'h04) begin
+                    Luigi_Punch_Counter_Tracker = 1;
+                    if(keycode == 8'h50) begin
                         Next_State = Luigi_Punch2_Left;
                     end
                     else begin
@@ -450,8 +456,9 @@ module Luigi_State (   input logic  Clk,
             end
             Luigi_Punch1_Left: begin
                 Luigi_Punch_Counter_Reset = 0;
+                punch_on_luigi = 1;
                 Luigi_Invert_Left = 1;
-                if(keycode != 8'h07)begin
+                if(keycode != 8'h4f)begin
                     if(Luigi_Punch_Counter > Luigi_Punch_Delay)begin
                         Next_State = Luigi_Punch2_Left;
                         Luigi_Punch_Counter_Reset = 1;
@@ -475,16 +482,17 @@ module Luigi_State (   input logic  Clk,
             Luigi_Punch2_Left: begin
                 Luigi_Punch_Counter_Reset = 0;
                 Luigi_Invert_Left = 1;
+                punch_on_luigi = 1;
                 if(Luigi_Punch_Counter > Luigi_Punch_Delay) begin
                     //Next State Logic
-                    if(keycode != 8'h07) begin
+                    if(keycode != 8'h4f) begin
                         if(jump_on_luigi) begin
                             Next_State = Luigi_Jump_Left;
                         end
                         else if (edge_below_luigi == 0) begin
                                 Next_State = Luigi_Fall_Left;
                         end
-                        else if(keycode == 8'h04) begin
+                        else if(keycode == 8'h50) begin
                             Next_State = Luigi_Walk_Left1;
                         end
                         else begin
@@ -507,7 +515,8 @@ module Luigi_State (   input logic  Clk,
                     end
                 end
                 else begin
-                    if(keycode == 8'h07) begin
+                    Luigi_Punch_Counter_Tracker =1;
+                    if(keycode == 8'h4f) begin
                         Next_State = Luigi_Punch2_Right;
                     end
                     else begin

@@ -24,7 +24,8 @@ module Mario_State (   input logic  Clk,
                             input logic edge_below_mario,
                             input logic jump_on_mario,
                             output logic [4:0] Mario_State_Out,
-                            output logic Mario_Invert_Left
+                            output logic Mario_Invert_Left,
+                            output logic punch_on_mario
 									
 				);
 
@@ -86,6 +87,8 @@ module Mario_State (   input logic  Clk,
 		Mario_Walk_Counter_Tracker = 0;
         Mario_Walk_Counter_Reset = 0; // This really should be 1, but I already went through the trouble of putting it to 1 everywhere else
         Mario_Punch_Counter_Reset = 1;
+        Mario_Punch_Counter_Tracker = 0;
+        punch_on_mario = 0;
 //		Statetest = State;
 		// Default next state is staying at current state
 		Next_State = State;
@@ -383,6 +386,7 @@ module Mario_State (   input logic  Clk,
                 end
             end
             Mario_Punch1_Right: begin
+                punch_on_mario = 1;
                 Mario_Punch_Counter_Reset = 0;
                 if(keycode != 8'h04)begin
                     if(Mario_Punch_Counter > Mario_Punch_Delay)begin
@@ -407,6 +411,7 @@ module Mario_State (   input logic  Clk,
             end
             Mario_Punch2_Right: begin
                 Mario_Punch_Counter_Reset = 0;
+                punch_on_mario = 1;
                 if(Mario_Punch_Counter > Mario_Punch_Delay) begin
                     //Next State Logic
                     if(keycode != 8'h04) begin
@@ -439,6 +444,7 @@ module Mario_State (   input logic  Clk,
                     end
                 end
                 else begin
+                    Mario_Punch_Counter_Tracker = 1;
                     if(keycode == 8'h04) begin
                         Next_State = Mario_Punch2_Left;
                     end
@@ -449,6 +455,7 @@ module Mario_State (   input logic  Clk,
                 end
             end
             Mario_Punch1_Left: begin
+                punch_on_mario = 1;
                 Mario_Punch_Counter_Reset = 0;
                 Mario_Invert_Left = 1;
                 if(keycode != 8'h07)begin
@@ -473,6 +480,7 @@ module Mario_State (   input logic  Clk,
                 end
             end
             Mario_Punch2_Left: begin
+                punch_on_mario = 1;
                 Mario_Punch_Counter_Reset = 0;
                 Mario_Invert_Left = 1;
                 if(Mario_Punch_Counter > Mario_Punch_Delay) begin
@@ -507,6 +515,7 @@ module Mario_State (   input logic  Clk,
                     end
                 end
                 else begin
+                    Mario_Punch_Counter_Tracker = 1;
                     if(keycode == 8'h07) begin
                         Next_State = Mario_Punch2_Right;
                     end
