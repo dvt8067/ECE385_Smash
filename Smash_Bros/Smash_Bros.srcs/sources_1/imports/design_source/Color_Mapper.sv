@@ -15,21 +15,30 @@
 
 
 module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_size_X, Mario_size_Y,
+                       input  logic [9:0] LuigiX, LuigiY, Luigi_size_X, Luigi_size_Y,
                        input logic Clk,
                        input logic [4:0] Mario_State_Out,
+                       input logic [4:0] Luigi_State_Out,
                        input logic Mario_Invert_Left,
+                       input logic Luigi_Invert_Left,
                        input logic [25:0] Mario_Fall_Counter,
+                       input logic [25:0] Luigi_Fall_Counter,
                        output logic [3:0]  Red, Green, Blue,
                        output logic[9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min);
 
     logic Mario_on;
     logic [12:0] Mario_address, ADDR0X_Mario, ADDR0Y_Mario, ADDR_X_OFFSET_Mario, ADDR_Y_OFFSET_Mario;
+    logic [12:0] Character_address;
+    logic Luigi_on;
+    logic [12:0] Luigi_address, ADDR0X_Luigi, ADDR0Y_Luigi, ADDR_X_OFFSET_Luigi, ADDR_Y_OFFSET_Luigi;
     logic [1:0] Palette_Index_Stationary_Mario;
     logic [1:0] Palette_Index_Walking1_Mario, Palette_Index_Walking2_Mario, Palette_Index_Walking3_Mario, Palette_Index_Jumping_Mario,
      Palette_Index_Punching1_Mario, Palette_Index_Punching2_Mario;
     logic [1:0] Palette_Index_Mario;
+    logic [1:0] Palette_Index_Luigi;
     logic [2:0] Palette_Index_Background;
     logic [11:0] Palette_Output_Mario;
+    logic [11:0] Palette_Output_Luigi;
     logic [11:0] Palette_Output_Background;
     logic [18:0] Background_address;
     logic Background_on;
@@ -37,9 +46,9 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
 
 
 
-    int Size_X, Size_Y;
-    assign Size_X = Mario_size_X;
-    assign Size_Y = Mario_size_Y;
+    // int Size_X_Mario, Size_Y_Mario;
+    // assign Size_X_Mario = Mario_size_X;
+    // assign Size_Y_Mario = Mario_size_Y;
     assign Stage_X_Max = 540;
     assign Stage_X_Min = 100;
     assign Stage_Y_Max = 430;
@@ -52,6 +61,15 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
     assign ADDR0X_Mario = MarioX - DistX_Mario;
     assign ADDR0Y_Mario = MarioY - DistY_Mario;
     assign Background_address = (DrawY*640) + DrawX;
+
+    int DistX_Luigi, DistY_Luigi, Luigi_Rowsize;
+    assign DistX_Luigi = 30;
+    assign DistY_Luigi = 40;
+    assign Luigi_Rowsize = 60;
+    assign ADDR0X_Luigi = LuigiX - DistX_Luigi;
+    assign ADDR0Y_Luigi = LuigiY - DistY_Luigi;
+    //assign Background_address = (DrawY*640) + DrawX;
+
     //assign on_background = 0;
     always_comb begin
         ADDR_X_OFFSET_Mario = DrawX - ADDR0X_Mario;
@@ -64,45 +82,61 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
         end
     end
 
-
+    always_comb begin
+        ADDR_X_OFFSET_Luigi = DrawX - ADDR0X_Luigi;
+        ADDR_Y_OFFSET_Luigi = DrawY - ADDR0Y_Luigi;
+        if(Luigi_Invert_Left == 0) begin
+            Luigi_address = ADDR_X_OFFSET_Luigi + ADDR_Y_OFFSET_Luigi*Luigi_Rowsize; // mario is right
+        end
+        else begin
+            Luigi_address = (60-ADDR_X_OFFSET_Luigi) + ADDR_Y_OFFSET_Luigi*Luigi_Rowsize;
+        end
+    
+    if(Luigi_on) begin
+        Character_address = Luigi_address;
+    end
+    else begin
+        Character_address = Mario_address;
+    end
+    end
 
     Mario_Stationary_RAM Mario_Stationary_ROM (
-		.read_address(Mario_address),
+		.read_address(Character_address),
 		.Clk(Clk),
 		.data_Out(Palette_Index_Stationary_Mario)
     );
 
     Mario_Walking_RAM1 Mario_Walking1_ROM (
-		.read_address(Mario_address),
+		.read_address(Character_address),
 		.Clk(Clk),
 		.data_Out(Palette_Index_Walking1_Mario)
     );
     Mario_Walking_RAM2 Mario_Walking2_ROM (
-		.read_address(Mario_address),
+		.read_address(Character_address),
 		.Clk(Clk),
 		.data_Out(Palette_Index_Walking2_Mario)
     );
     Mario_Walking_RAM3 Mario_Walking3_ROM (
-		.read_address(Mario_address),
+		.read_address(Character_address),
 		.Clk(Clk),
 		.data_Out(Palette_Index_Walking3_Mario)
     );
     Smash_Background Smash_Background0(.read_address(Background_address), .Clk, .data_Out(Palette_Index_Background));
 
     Mario_Jumping_RAM1 Mario_Jumping_ROM (
-		.read_address(Mario_address),
+		.read_address(Character_address),
 		.Clk(Clk),
 		.data_Out(Palette_Index_Jumping_Mario)
     );
 
     Mario_Punching_1_RAM1 Mario_Punching1_ROM (
-		.read_address(Mario_address),
+		.read_address(Character_address),
 		.Clk(Clk),
 		.data_Out(Palette_Index_Punching1_Mario)
     );
 
     Mario_Punching_2_RAM1 Mario_Punching2_ROM (
-		.read_address(Mario_address),
+		.read_address(Character_address),
 		.Clk(Clk),
 		.data_Out(Palette_Index_Punching2_Mario)
     );
@@ -138,10 +172,38 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
         else begin
             Palette_Index_Mario = 2'b01; // if for some reason we are not in one of the defined states, print red
         end
+        //// LUIGI STATES
+
+        if(Luigi_State_Out == 0 || Luigi_State_Out == 1)begin
+            Palette_Index_Luigi = Palette_Index_Stationary_Mario;
+        end
+        else if(Luigi_State_Out == 2 ||Luigi_State_Out == 5) begin
+            Palette_Index_Luigi = Palette_Index_Walking1_Mario;
+        end
+        else if(Luigi_State_Out == 3 ||Luigi_State_Out == 6) begin
+            Palette_Index_Luigi = Palette_Index_Walking2_Mario;
+        end
+        else if(Luigi_State_Out == 4 ||Luigi_State_Out == 7) begin
+            Palette_Index_Luigi = Palette_Index_Walking3_Mario;
+        end
+        else if(Luigi_State_Out == 8 || Luigi_State_Out == 9 || Luigi_State_Out == 10 || Luigi_State_Out == 11)begin
+            Palette_Index_Luigi = Palette_Index_Jumping_Mario;
+        end
+        else if(Luigi_State_Out == 12 || Luigi_State_Out == 14)begin
+            Palette_Index_Luigi = Palette_Index_Punching1_Mario;
+        end
+        else if(Luigi_State_Out == 13 || Luigi_State_Out == 15)begin
+            Palette_Index_Luigi = Palette_Index_Punching2_Mario;
+        end
+        else begin
+            Palette_Index_Luigi = 2'b01; // if for some reason we are not in one of the defined states, print red
+        end
     end
     //end
     
-    Palette_Mario(.addr(Palette_Index_Mario), .data(Palette_Output_Mario));
+    Palette_Mario Palette_Mario0(.addr(Palette_Index_Mario), .data(Palette_Output_Mario));
+
+    Palette_Mario Palette_Luigi0(.addr(Palette_Index_Luigi), .data(Palette_Output_Luigi)); // NEED TO CHANGE THIS MODULE TO LUIGI COLORS AFTER
     // NEED TO CREATE A NEW PALETTE FOR ONLY BACKGROUND AND PUT IT HERE
     Palette_Background(.addr(Palette_Index_Background), .data(Palette_Output_Background));
 
@@ -158,6 +220,16 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
         else
             Mario_on = 1'b0;
             //Background_on = 1'b1;
+
+        if ((DrawX >= LuigiX - Luigi_size_X) &&
+            (DrawX <= LuigiX + Luigi_size_X) &&
+            (DrawY >= LuigiY - Luigi_size_Y) &&
+            (DrawY <= LuigiY + Luigi_size_Y)) begin
+
+            Luigi_on = 1'b1;
+       end
+        else
+            Luigi_on = 1'b0;
      end
 
     always_comb
@@ -191,6 +263,11 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
              Green = Palette_Output_Mario[7:4];
              Blue = Palette_Output_Mario[3:0];
              //on_background = 0;
+        end
+        else if(Luigi_on && (Palette_Output_Luigi != 12'h808)) begin
+             Red = Palette_Output_Luigi[11:8];
+             Green = Palette_Output_Luigi[7:4];
+             Blue = Palette_Output_Luigi[3:0];
         end
         else if ((DrawY>Stage_Y_Min) && (DrawY<Stage_Y_Max)&& (DrawX<Stage_X_Max) && (DrawX>Stage_X_Min)) begin
             Red = 4'hf;

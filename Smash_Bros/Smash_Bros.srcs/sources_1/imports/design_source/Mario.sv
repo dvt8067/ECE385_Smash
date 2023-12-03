@@ -18,8 +18,8 @@ module  Mario ( input logic Reset, frame_clk,
 			   input logic [7:0] keycode,
          input logic [9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min,
                output logic [9:0] MarioX, MarioY, MarioS_X, MarioS_Y,
-               output logic edge_below,
-               output logic jump_on,
+               output logic edge_below_mario,
+               output logic jump_on_mario,
                output logic [25:0] Mario_Fall_Counter); //CHANGE THESE TO MARIO EQUIVALENTS
     
     logic [9:0] Mario_X_Motion, Mario_Y_Motion, Mario_Bottom_Edge_LX, Mario_Bottom_Edge_RX, Mario_Bottom_Edge_Y;
@@ -48,16 +48,16 @@ module  Mario ( input logic Reset, frame_clk,
       Mario_X_Motion = 0;
       Mario_Y_Motion = 0;
       // 
-      edge_below = 1'b0;
+      edge_below_mario = 1'b0;
       if( (Mario_Bottom_Edge_Y <= Stage_Y_Max) && (Mario_Bottom_Edge_Y >= Stage_Y_Min))begin
 
         if(((Mario_Bottom_Edge_LX> Stage_X_Min)&&(Mario_Bottom_Edge_LX<Stage_X_Max))
         ||((Mario_Bottom_Edge_RX>Stage_X_Min)&&(Mario_Bottom_Edge_RX<Stage_X_Max)))begin
-          edge_below = 1'b1;
+          edge_below_mario = 1'b1;
           end
       
         // else begin
-        //   edge_below = 0;
+        //   edge_below_mario = 0;
         // end
             end
             
@@ -87,10 +87,10 @@ module  Mario ( input logic Reset, frame_clk,
     always_comb begin
       Mario_Fall_Counter_Tracker = 0;
       Mario_Fall_Counter_Reset = 0;
-      if(edge_below == 0 && jump_on == 0) begin
+      if(edge_below_mario == 0 && jump_on_mario == 0) begin
         Mario_Fall_Counter_Tracker = 1;
       end
-      if(edge_below == 1)begin
+      if(edge_below_mario == 1)begin
         Mario_Fall_Counter_Reset = 1;
       end
     end
@@ -114,10 +114,10 @@ module  Mario ( input logic Reset, frame_clk,
         end
       end
     always_comb begin
-      jump_on = 0;
+      jump_on_mario = 0;
       //Mario_Jump_Counter_Reset = 0;
       if((Mario_Jump_Counter <= Mario_Jump_Delay) && (Mario_Jump_Counter >= 1)) begin
-        jump_on = 1;
+        jump_on_mario = 1;
       end
       // if(Mario_Jump_Counter> Mario_Jump_Delay) begin
       //   Mario_Jump_Counter_Reset = 1;
@@ -140,8 +140,8 @@ module  Mario ( input logic Reset, frame_clk,
         begin 
 				
 				//  else 
-          // if(edge_below == 1'b0 || jump_on == 1'b1)begin
-          //     if(jump_on == 1'b0) begin
+          // if(edge_below_mario == 1'b0 || jump_on_mario == 1'b1)begin
+          //     if(jump_on_mario == 1'b0) begin
           //    // MarioY <= MarioY + 10'd1;
           //        if((Mario_Fall_Counter_/jumping_factor) <1)begin
           //           MarioY <= MarioY + 10'd2;
@@ -174,8 +174,8 @@ module  Mario ( input logic Reset, frame_clk,
   
                 
           //     end
-          if(edge_below == 1'b0 || jump_on == 1'b1)begin
-              if(jump_on == 1'b0) begin
+          if(edge_below_mario == 1'b0 || jump_on_mario == 1'b1)begin
+              if(jump_on_mario == 1'b0) begin
              // MarioY <= MarioY + 10'd1;
                  if(Mario_Fall_Counter_  < 6)begin
                     MarioY <= MarioY + 10'd1;
@@ -231,21 +231,21 @@ module  Mario ( input logic Reset, frame_clk,
 				 //modify to control ball motion with the keycode
 				 if (keycode == 8'h1A) begin
 				    // if(BallY - BallS > Ball_Y_Min) begin
-              if(edge_below == 1) begin
+              if(edge_below_mario == 1) begin
                 Mario_Jump_Counter_Tracker <=1;
                 // Mario_Jump_Counter_Reset <= 0
               end
-              else if(jump_on == 0) begin
+              else if(jump_on_mario == 0) begin
                   Mario_Jump_Counter_Tracker <= 0;
               end
               else begin
                   Mario_Jump_Counter_Tracker <= Mario_Jump_Counter_Tracker;
               end
-              // else if(jump_on) begin
+              // else if(jump_on_mario) begin
               //     MarioY <= MarioY - 10'd1;
               //     Mario_Jump_Counter_Tracker <= 1;
               // end
-              // else if(jump_on == 0 ) begin
+              // else if(jump_on_mario == 0 ) begin
               //   Mario_Jump_Counter_Tracker <= 0;
               //   // Mario_Jump_Counter_Reset <= 1
 
@@ -257,13 +257,13 @@ module  Mario ( input logic Reset, frame_clk,
                     //     end
                     // Ball_X_Motion <= 10'd0;
                     end
-          else if(jump_on == 0) begin
+          else if(jump_on_mario == 0) begin
                 Mario_Jump_Counter_Tracker <= 0;
           end
           else begin
                 Mario_Jump_Counter_Tracker <= Mario_Jump_Counter_Tracker;
           end
-        //if(edge_below == 0 )
+        //if(edge_below_mario == 0 )
 				 if (keycode == 8'h16) begin
 				    // if(BallY + BallS <=Ball_Y_Max) begin
                   MarioX <= MarioX; // continue to reset marioX
@@ -311,7 +311,7 @@ module  Mario ( input logic Reset, frame_clk,
             MarioX<=MarioX; ///  continue to reset MarioX
             //MarioY<=MarioY;
          end
-        //  if(jump_on)begin
+        //  if(jump_on_mario)begin
         //   MarioY <= MarioY - 10'd1;
         //  end
          end

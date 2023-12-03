@@ -56,15 +56,19 @@ module SMASH_TOP(
     logic clk_25MHz, clk_125MHz, clk, clk_100MHz;
     logic locked;
     logic [9:0] drawX, drawY, Marioxsig, Marioysig, Mariosizesig_X, Mariosizesig_Y;
-
+    logic [9:0] Luigixsig, Luigiysig, Luigisizesig_X, Luigisizesig_Y;
     logic hsync, vsync, vde;
     logic [3:0] red, green, blue;
     logic reset_ah;
     logic Mario_Invert_Left;
     logic [4:0] Mario_State_Out;
-    logic edge_below;
-    logic jump_on;
+    logic [4:0] Luigi_State_Out;
+    logic edge_below_mario;
+    logic jump_on_mario;
+    logic edge_below_luigi;
+    logic jump_on_luigi;
     logic [25:0]Mario_Fall_Counter;
+    logic [25:0]Luigi_Fall_Counter;
     assign reset_ah = reset_rtl_0;
     
     
@@ -153,17 +157,26 @@ module SMASH_TOP(
         .Clk(Clk), 
 		.Reset(reset_ah),
         .keycode(keycode0_gpio[7:0]),
-        .edge_below(edge_below),
+        .edge_below_mario(edge_below_mario),
 		.Mario_State_Out(Mario_State_Out),
         .Mario_Invert_Left(Mario_Invert_Left)
-        
 				);
+    Luigi_State Luigi_State0 (
+                .Clk(Clk), 
+                .Reset(reset_ah),
+                .keycode(keycode0_gpio[7:0]),
+                .edge_below_luigi(edge_below_luigi),
+                .jump_on_luigi(jump_on_luigi),
+                .Luigi_State_Out(Luigi_State_Out),
+                .Luigi_Invert_Left(Luigi_Invert_Left)
+                        
+    );
     //Mario Module
     Mario mario_instance(
         .Reset(reset_ah),
         .frame_clk(vsync),                    //Figure out what this should be so that the Mario will move
         .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to Mario by default
-        .edge_below(edge_below),
+        .edge_below_mario(edge_below_mario),
         .MarioX(Marioxsig),
         .MarioY(Marioysig),
         .MarioS_X(Mariosizesig_X),
@@ -172,16 +185,37 @@ module SMASH_TOP(
         .Stage_X_Min(Stage_X_Min),
         .Stage_Y_Max(Stage_Y_Max),
         .Stage_Y_Min(Stage_Y_Min),
-        .jump_on(jump_on),
+        .jump_on_mario(jump_on_mario),
         .Mario_Fall_Counter
     );
+    Luigi  luigi_instance ( 
+        .Reset(reset_ah), 
+        .frame_clk(vsync),
+		.keycode(keycode0_gpio[7:0]),
+        .Stage_X_Max(Stage_X_Max), 
+        .Stage_X_Min(Stage_X_Min), 
+        .Stage_Y_Max(Stage_Y_Max), 
+        .Stage_Y_Min(Stage_Y_Min),
+        .LuigiX(Luigixsig), 
+        .LuigiY(Luigiysig), 
+        .LuigiS_X(Luigisizesig_X), 
+        .LuigiS_Y(Luigisizesig_Y),
+        .edge_below_luigi(edge_below_luigi),
+        .jump_on_luigi(jump_on_luigi),
+        .Luigi_Fall_Counter(Luigi_Fall_Counter));
     
     //Color Mapper Module   
     color_mapper color_instance(
         .Mario_State_Out(Mario_State_Out),
+        .Luigi_State_Out(Luigi_State_Out),
         .Mario_Invert_Left(Mario_Invert_Left),
+        .Luigi_Invert_Left(Luigi_Invert_Left),
         .MarioX(Marioxsig),
         .MarioY(Marioysig),
+        .LuigiX(Luigixsig), 
+        .LuigiY(Luigiysig), 
+        .Luigi_size_X(Luigisizesig_X), 
+        .Luigi_size_Y(Luigisizesig_Y),
         .DrawX(drawX),
         .DrawY(drawY),
         .Mario_size_X(Mariosizesig_X),
@@ -194,7 +228,8 @@ module SMASH_TOP(
         .Stage_X_Min(Stage_X_Min), 
         .Stage_Y_Max(Stage_Y_Max), 
         .Stage_Y_Min(Stage_Y_Min),
-        .Mario_Fall_Counter
+        .Mario_Fall_Counter,
+        .Luigi_Fall_Counter
     );
     
 endmodule

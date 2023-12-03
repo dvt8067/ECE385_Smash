@@ -91,6 +91,8 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Color_Mapper.sv
+  C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Luigi.sv
+  C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Luigi_State.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario_State.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario_jumpingROM.sv
