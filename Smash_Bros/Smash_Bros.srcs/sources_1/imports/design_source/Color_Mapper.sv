@@ -203,7 +203,7 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
     
     Palette_Mario Palette_Mario0(.addr(Palette_Index_Mario), .data(Palette_Output_Mario));
 
-    Palette_Mario Palette_Luigi0(.addr(Palette_Index_Luigi), .data(Palette_Output_Luigi)); // NEED TO CHANGE THIS MODULE TO LUIGI COLORS AFTER
+    Palette_Luigi Palette_Luigi0(.addr(Palette_Index_Luigi), .data(Palette_Output_Luigi)); // NEED TO CHANGE THIS MODULE TO LUIGI COLORS AFTER
     // NEED TO CREATE A NEW PALETTE FOR ONLY BACKGROUND AND PUT IT HERE
     Palette_Background(.addr(Palette_Index_Background), .data(Palette_Output_Background));
 
