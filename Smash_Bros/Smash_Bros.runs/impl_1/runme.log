@@ -10,6 +10,7 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source SMASH_TOP.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1001.441 ; gain = 117.043
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/IPrepo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
@@ -36,8 +37,8 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Git_Smash/ECE385_Smash
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_ilmb_bram_if_cntlr_0/mb_ball_ilmb_bram_if_cntlr_0.dcp' for cell 'mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_ilmb_v10_0/mb_ball_ilmb_v10_0.dcp' for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_lmb_bram_0/mb_ball_lmb_bram_0.dcp' for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.202 . Memory (MB): peak = 1525.309 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 640 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.565 . Memory (MB): peak = 1524.586 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 654 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2022.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -56,7 +57,7 @@ Finished Parsing XDC File [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros
 Parsing XDC File [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_clk_wiz_1_0/mb_ball_clk_wiz_1_0.xdc] for cell 'mb_block_i/clk_wiz_1/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_clk_wiz_1_0/mb_ball_clk_wiz_1_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_clk_wiz_1_0/mb_ball_clk_wiz_1_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2125.324 ; gain = 463.414
+get_clocks: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.195 ; gain = 463.430
 Finished Parsing XDC File [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_clk_wiz_1_0/mb_ball_clk_wiz_1_0.xdc] for cell 'mb_block_i/clk_wiz_1/inst'
 Parsing XDC File [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_rst_clk_wiz_1_100M_0/mb_ball_rst_clk_wiz_1_100M_0_board.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M/U0'
 Finished Parsing XDC File [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_rst_clk_wiz_1_100M_0/mb_ball_rst_clk_wiz_1_100M_0_board.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M/U0'
@@ -150,7 +151,7 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 WARNING: [Constraints 18-5572] Instance mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
 Generating merged BMM file for the design top 'SMASH_TOP'...
 INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_microblaze_0_0/data/mb_bootloop_le.elf 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2125.324 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2127.195 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 247 instances were transformed.
   LUT6_2 => LUT6_2 (LUT5, LUT6): 145 instances
@@ -160,7 +161,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 34 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 2125.324 ; gain = 1058.027
+link_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:31 . Memory (MB): peak = 2127.195 ; gain = 1061.020
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
@@ -171,13 +172,13 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.958 . Memory (MB): peak = 2125.324 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.943 . Memory (MB): peak = 2127.195 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 246e1a795
+Ending Cache Timing Information Task | Checksum: 2443066fa
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.395 . Memory (MB): peak = 2125.324 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.370 . Memory (MB): peak = 2127.195 ; gain = 0.000
 
 Starting Logic Optimization Task
 
@@ -188,24 +189,24 @@ INFO: [Opt 31-1287] Pulled Inverter mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI
 INFO: [Opt 31-1287] Pulled Inverter mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_i_1 into driver instance mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/SS_O[0]_i_2, which resulted in an inversion of 3 pins
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 14fa9d4b2
+Phase 1 Retarget | Checksum: 1999422bf
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.436 . Memory (MB): peak = 2449.496 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.700 . Memory (MB): peak = 2451.754 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 221 cells and removed 327 cells
 INFO: [Opt 31-1021] In phase Retarget, 6 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 8 inverter(s) to 14 load pin(s).
-Phase 2 Constant propagation | Checksum: fb342a70
+Phase 2 Constant propagation | Checksum: 174bfda1e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.542 . Memory (MB): peak = 2449.496 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.858 . Memory (MB): peak = 2451.754 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 123 cells and removed 296 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 19c81caac
+Phase 3 Sweep | Checksum: 24cc39607
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.799 . Memory (MB): peak = 2449.496 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2451.754 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 274 cells
 INFO: [Opt 31-1021] In phase Sweep, 7 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
@@ -213,22 +214,22 @@ Phase 4 BUFG optimization
 INFO: [Opt 31-194] Inserted BUFG Clk_IBUF_BUFG_inst to drive 204 load(s) on clock net Clk_IBUF_BUFG
 INFO: [Opt 31-194] Inserted BUFG mb_block_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG_inst to drive 40 load(s) on clock net mb_block_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG
 INFO: [Opt 31-193] Inserted 2 BUFG(s) on clock nets
-Phase 4 BUFG optimization | Checksum: 1a4478408
+Phase 4 BUFG optimization | Checksum: 1992024b8
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.924 . Memory (MB): peak = 2449.496 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2451.754 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 2 cells of which 2 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 1a4478408
+Phase 5 Shift Register Optimization | Checksum: 1992024b8
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.947 . Memory (MB): peak = 2449.496 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2451.754 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 1aba7046c
+Phase 6 Post Processing Netlist | Checksum: 1afbfa754
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.994 . Memory (MB): peak = 2449.496 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2451.754 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
@@ -250,10 +251,10 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2449.496 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 241c669b6
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2451.754 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 242770e72
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 2449.496 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2451.754 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -271,39 +272,39 @@ INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 15 newly gated: 0 Total Ports: 90
 Number of Flops added for Enable Generation: 5
 
-Ending PowerOpt Patch Enables Task | Checksum: 215ff658d
+Ending PowerOpt Patch Enables Task | Checksum: 1ef5565a2
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.168 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 215ff658d
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.248 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1ef5565a2
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2615.770 ; gain = 166.273
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2617.230 ; gain = 165.477
 
 Starting Final Cleanup Task
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: 15d73de76
+Ending Logic Optimization Task | Checksum: 13bf260a1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.709 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Ending Final Cleanup Task | Checksum: 15d73de76
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.783 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 13bf260a1
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 15d73de76
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 13bf260a1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2617.230 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 68 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2615.770 ; gain = 490.445
+opt_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2617.230 ; gain = 490.035
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.051 . Memory (MB): peak = 2617.230 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/impl_1/SMASH_TOP_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file SMASH_TOP_drc_opted.rpt -pb SMASH_TOP_drc_opted.pb -rpx SMASH_TOP_drc_opted.rpx
 Command: report_drc -file SMASH_TOP_drc_opted.rpt -pb SMASH_TOP_drc_opted.pb -rpx SMASH_TOP_drc_opted.rpx
@@ -328,58 +329,58 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1121a7d5f
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 11e400235
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 125ddaffe
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 12529993a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.727 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.546 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 19518fce1
+Phase 1.3 Build Placer Netlist Model | Checksum: 1cff1a4e1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 19518fce1
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1cff1a4e1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 19518fce1
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1cff1a4e1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 13385f04c
+Phase 2.1 Floorplanning | Checksum: 1dc91cad4
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 159d11125
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1c6cae2a2
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 1f85a9ec6
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 12f9a48dd
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 UpdateTiming Before Physical Synthesis
-Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 1c3cf44e1
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 1399765b2
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 2.4.2 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 13 LUTNM shape to break, 266 LUT instances to create LUTNM shape
-INFO: [Physopt 32-1044] Break lutnm for timing: one critical 7, two critical 6, total 13, new lutff created 0
-INFO: [Physopt 32-1138] End 1 Pass. Optimized 107 nets or LUTs. Breaked 13 LUTs, combined 94 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1035] Found 16 LUTNM shape to break, 285 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 7, two critical 9, total 16, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 117 nets or LUTs. Breaked 16 LUTs, combined 101 existing LUTs and moved 0 existing LUT
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -387,15 +388,15 @@ INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-INFO: [Physopt 32-775] End 1 Pass. Optimized 10 nets or cells. Created 10 new cells, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2615.770 ; gain = 0.000
+INFO: [Physopt 32-775] End 1 Pass. Optimized 4 nets or cells. Created 4 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2617.230 ; gain = 0.000
 INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -404,78 +405,78 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |           13  |             94  |                   107  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |           16  |            101  |                   117  |           0  |           1  |  00:00:00  |
 |  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Shift Register                                   |           10  |              0  |                    10  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            4  |              0  |                     4  |           0  |           1  |  00:00:00  |
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |           23  |             94  |                   117  |           0  |           9  |  00:00:00  |
+|  Total                                            |           20  |            101  |                   121  |           0  |           9  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.4.2 Physical Synthesis In Placer | Checksum: 2a64ab01a
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 179d935e1
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Phase 2.4 Global Placement Core | Checksum: 1e12cbe11
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Phase 2.4 Global Placement Core | Checksum: 16bfa093d
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 1e12cbe11
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 16bfa093d
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 13dc6df3e
+Phase 3.1 Commit Multi Column Macros | Checksum: 1b82dbb36
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1b8b6899c
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 238cf6f4e
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1ff366ef0
+Phase 3.3 Area Swap Optimization | Checksum: 25bbbd047
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 146553eea
+Phase 3.4 Pipeline Register Optimization | Checksum: 2719b353d
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 1abe40379
+Phase 3.5 Fast Optimization | Checksum: 202964b78
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 21f76c6a0
+Phase 3.6 Small Shape Detail Placement | Checksum: 1a0d74a44
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 2713964a8
+Phase 3.7 Re-assign LUT pins | Checksum: 1e7f0b5f2
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 1be6bac45
+Phase 3.8 Pipeline Register Optimization | Checksum: 254de00b0
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 200864160
+Phase 3.9 Fast Optimization | Checksum: 1b3fe4071
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 200864160
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1b3fe4071
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -483,7 +484,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 17ae24123
+Post Placement Optimization Initialization | Checksum: 1c5e8ff0c
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -491,33 +492,33 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.559 | TNS=-20.814 |
-Phase 1 Physical Synthesis Initialization | Checksum: 1a59888ce
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.070 | TNS=-28.784 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1474ea262
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.263 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.379 . Memory (MB): peak = 2617.230 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 1ab0a19de
+Ending Physical Synthesis Task | Checksum: 153de6a76
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.311 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 17ae24123
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.430 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1c5e8ff0c
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 4.1.1.2 Post Placement Timing Optimization
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-2.005. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1c9e19728
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-2.659. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 182c26e39
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:37 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:37 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 1c9e19728
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 182c26e39
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:37 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1c9e19728
+Phase 4.2 Post Placement Cleanup | Checksum: 182c26e39
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:37 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
 
@@ -536,235 +537,264 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |       West|                1x1|                1x1|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 1c9e19728
+Phase 4.3.1 Print Estimated Congestion | Checksum: 182c26e39
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:37 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Phase 4.3 Placer Reporting | Checksum: 1c9e19728
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 182c26e39
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:38 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:38 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1b5bbca9c
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 173cd3a18
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:38 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Ending Placer Task | Checksum: bf04d790
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Ending Placer Task | Checksum: 141fcca15
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:38 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:36 . Memory (MB): peak = 2617.230 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 107 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:39 . Memory (MB): peak = 2615.770 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:37 . Memory (MB): peak = 2617.230 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.949 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.566 . Memory (MB): peak = 2617.230 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/impl_1/SMASH_TOP_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file SMASH_TOP_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2615.770 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2617.230 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file SMASH_TOP_utilization_placed.rpt -pb SMASH_TOP_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file SMASH_TOP_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2615.770 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2617.230 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
 
 Starting Initial Update Timing Task
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.983 . Memory (MB): peak = 2615.770 ; gain = 0.000
-INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 1.00s |  WALL: 1.02s
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.681 . Memory (MB): peak = 2617.230 ; gain = 0.000
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 1.00s |  WALL: 0.71s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.005 | TNS=-16.558 |
-Phase 1 Physical Synthesis Initialization | Checksum: 1d428720d
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.659 | TNS=-25.249 |
+Phase 1 Physical Synthesis Initialization | Checksum: 17e3568db
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.721 . Memory (MB): peak = 2615.770 ; gain = 0.000
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.005 | TNS=-16.558 |
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.590 . Memory (MB): peak = 2617.230 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.659 | TNS=-25.249 |
 
 Phase 2 DSP Register Optimization
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 2 DSP Register Optimization | Checksum: 1d428720d
+Phase 2 DSP Register Optimization | Checksum: 17e3568db
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.783 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.639 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 3 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.005 | TNS=-16.558 |
-INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/data_o[29]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Smash_Background0/data_Out_reg_4_0' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_4_0_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/hc_reg[8]_0.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_28
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/hc_reg[8]_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.941 | TNS=-16.494 |
-INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/hc_reg[8]_0.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_28
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/hc_reg[8]_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.851 | TNS=-16.404 |
-INFO: [Physopt 32-710] Processed net color_instance/Mario_Stationary_ROM/green[1]. Critical path length was reduced through logic transformation on cell color_instance/Mario_Stationary_ROM/vga_to_hdmi_i_5_comp.
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/hc_reg[8]_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.841 | TNS=-15.902 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.659 | TNS=-25.249 |
 INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-710] Processed net Luigi_State0/red[0]. Critical path length was reduced through logic transformation on cell Luigi_State0/vga_to_hdmi_i_3_comp.
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.820 | TNS=-15.237 |
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Smash_Background0/data_Out_reg_6_2' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_6_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net vga/green[2]. Critical path length was reduced through logic transformation on cell vga/vga_to_hdmi_i_6_comp.
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_5. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.642 | TNS=-25.003 |
 INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_1. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_20
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Smash_Background0/data_Out_reg_6_0' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_6_0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_26
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.635 | TNS=-24.596 |
+INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/data_o[26]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_5.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_20
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_5. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.572 | TNS=-24.706 |
+INFO: [Physopt 32-710] Processed net vga/green[0]. Critical path length was reduced through logic transformation on cell vga/vga_to_hdmi_i_8_comp.
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_5. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.412 | TNS=-24.152 |
+INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/data_o[19]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net vga/red[1]. Critical path length was reduced through logic transformation on cell vga/vga_to_hdmi_i_3_comp.
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_4. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.399 | TNS=-23.624 |
+INFO: [Physopt 32-710] Processed net vga/green[2]. Critical path length was reduced through logic transformation on cell vga/vga_to_hdmi_i_6_comp_1.
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.331 | TNS=-22.965 |
+INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/data_o[21]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_0. Critical path length was reduced through logic transformation on cell color_instance/Smash_Background0/vga_to_hdmi_i_18_comp.
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.269 | TNS=-22.922 |
+INFO: [Physopt 32-81] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1. Replicated 1 times.
 INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.730 | TNS=-15.147 |
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Smash_Background0/data_Out_reg_2_2' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_2_2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_17
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.242 | TNS=-21.924 |
+INFO: [Physopt 32-710] Processed net color_instance/Mario_Stationary_ROM/green[0]. Critical path length was reduced through logic transformation on cell color_instance/Mario_Stationary_ROM/vga_to_hdmi_i_5_comp.
 INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.699 | TNS=-14.973 |
-INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_4. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_0.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_15
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.696 | TNS=-14.792 |
-INFO: [Physopt 32-710] Processed net color_instance/Smash_Background0/red[0]. Critical path length was reduced through logic transformation on cell color_instance/Smash_Background0/vga_to_hdmi_i_2_comp.
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.671 | TNS=-14.532 |
-INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_2. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/hc_reg[8].  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_29
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/hc_reg[8]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.518 | TNS=-14.353 |
-INFO: [Physopt 32-710] Processed net color_instance/Mario_Stationary_ROM/red[1]. Critical path length was reduced through logic transformation on cell color_instance/Mario_Stationary_ROM/vga_to_hdmi_i_1_comp.
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.492 | TNS=-13.843 |
-INFO: [Physopt 32-710] Processed net color_instance/Mario_Stationary_ROM/green[0]. Critical path length was reduced through logic transformation on cell color_instance/Mario_Stationary_ROM/vga_to_hdmi_i_6_comp.
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/hc_reg[8]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.436 | TNS=-13.312 |
-INFO: [Physopt 32-710] Processed net color_instance/Smash_Background0/red[0]. Critical path length was reduced through logic transformation on cell color_instance/Smash_Background0/vga_to_hdmi_i_2_comp_1.
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.352 | TNS=-12.998 |
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Smash_Background0/data_Out_reg_6_1' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_6_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_2.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_30
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_2. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.314 | TNS=-12.892 |
-INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_3. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_17
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.285 | TNS=-12.863 |
-INFO: [Physopt 32-710] Processed net Luigi_State0/green[0]. Critical path length was reduced through logic transformation on cell Luigi_State0/vga_to_hdmi_i_8_comp.
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.246 | TNS=-12.541 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.140 | TNS=-21.742 |
+INFO: [Physopt 32-710] Processed net color_instance/Smash_Background0/red[0]. Critical path length was reduced through logic transformation on cell color_instance/Smash_Background0/vga_to_hdmi_i_1_comp.
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_17_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.069 | TNS=-21.660 |
+INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/data_o[20]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_5.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_20
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_5. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.060 | TNS=-21.651 |
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_4.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_19
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_4. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.060 | TNS=-21.612 |
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_52_n_0.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_52
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_52_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.058 | TNS=-21.537 |
+INFO: [Physopt 32-710] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_0. Critical path length was reduced through logic transformation on cell color_instance/Smash_Background0/vga_to_hdmi_i_18_comp_1.
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.028 | TNS=-21.511 |
+INFO: [Physopt 32-1134] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_5. Created 1 instance.
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_5. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.016 | TNS=-21.127 |
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_3.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_31
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.015 | TNS=-21.874 |
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_55_n_0.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_55
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_55_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.941 | TNS=-20.174 |
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Mario_Walking2_ROM/data_Out_reg' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net color_instance/Mario_Walking2_ROM/data_Out_reg_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_17_n_0.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_17_comp
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_17_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.924 | TNS=-20.157 |
 INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Smash_Background0/data_Out_reg_8_1' Port 'B' is 0. Skip BRAM Register Optimization on the port
 INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_8_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_2.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_30
+INFO: [Physopt 32-710] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_0. Critical path length was reduced through logic transformation on cell color_instance/Smash_Background0/vga_to_hdmi_i_18_comp.
 INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_2. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.224 | TNS=-12.514 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 5 pins.
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_2. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.211 | TNS=-12.459 |
-INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_7. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-601] Processed net color_instance/Smash_Background0/Palette_Index_Background[0]. Net driver color_instance/Smash_Background0/vga_to_hdmi_i_32 was replaced.
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/Palette_Index_Background[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.195 | TNS=-11.727 |
-INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-710] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_0. Critical path length was reduced through logic transformation on cell color_instance/Smash_Background0/vga_to_hdmi_i_31_comp.
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_62_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.182 | TNS=-11.622 |
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Smash_Background0/data_Out_reg_4_2' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_4_2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_62_n_0.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_62_comp
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_62_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.019 | TNS=-10.170 |
-INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_2. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-710] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_2. Critical path length was reduced through logic transformation on cell color_instance/Smash_Background0/vga_to_hdmi_i_30_comp.
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_61_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.018 | TNS=-10.137 |
-INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_6. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-710] Processed net color_instance/Smash_Background0/blue[0]. Critical path length was reduced through logic transformation on cell color_instance/Smash_Background0/vga_to_hdmi_i_11_comp.
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/Palette_Index_Background[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.987 | TNS=-10.018 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 6 pins.
-INFO: [Physopt 32-735] Processed net color_instance/Mario_Stationary_ROM/green[1]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.959 | TNS=-9.947 |
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Mario_Punching1_ROM/data_Out_reg' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net color_instance/Mario_Punching1_ROM/data_Out_reg__0[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/hc_reg[8].  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_29_comp
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/hc_reg[8]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.916 | TNS=-9.685 |
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Mario_Punching2_ROM/data_Out_reg' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net color_instance/Mario_Punching2_ROM/DOADO[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/hc_reg[8]_0_repN.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_28_comp
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/hc_reg[8]_0_repN. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.900 | TNS=-9.666 |
-INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/Palette_Index_Background[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-710] Processed net color_instance/Smash_Background0/Palette_Index_Background[0]. Critical path length was reduced through logic transformation on cell color_instance/Smash_Background0/vga_to_hdmi_i_32_comp_2.
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_63_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.898 | TNS=-9.238 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.870 | TNS=-20.016 |
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_28
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.819 | TNS=-19.986 |
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_52_n_0.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_52
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_52_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.805 | TNS=-19.882 |
+INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_5.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_20
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_5. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.783 | TNS=-19.618 |
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net vga/data_Out_reg_1.  Re-placed instance vga/vga_to_hdmi_i_16
+INFO: [Physopt 32-735] Processed net vga/data_Out_reg_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.748 | TNS=-19.583 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_55_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.747 | TNS=-19.376 |
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Mario_Walking3_ROM/data_Out_reg' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net color_instance/Mario_Walking3_ROM/data_Out_reg_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net vga/data_Out_reg_0.  Re-placed instance vga/vga_to_hdmi_i_15
+INFO: [Physopt 32-735] Processed net vga/data_Out_reg_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.745 | TNS=-19.349 |
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_53_n_0.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_53
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_53_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.735 | TNS=-19.432 |
 INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Smash_Background0/data_Out_reg_0_2' Port 'B' is 0. Skip BRAM Register Optimization on the port
 INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_0_2_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
-INFO: [Physopt 32-735] Processed net Luigi_State0/red[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.897 | TNS=-8.881 |
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Mario_Jumping_ROM/data_Out_reg' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net color_instance/Mario_Jumping_ROM/data_Out_reg__0[1]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/hc_reg[8]_0.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_28_comp_1
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/hc_reg[8]_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.877 | TNS=-8.758 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 9 pins.
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/blue[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.865 | TNS=-8.610 |
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_28
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.708 | TNS=-19.272 |
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Smash_Background0/data_Out_reg_0_0' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_0_0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_55_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/red[0].  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_1_comp
 INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/red[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.861 | TNS=-8.533 |
-INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_17_comp_1
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.839 | TNS=-8.390 |
-INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_8. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-608] Optimized 1 net.  Swapped 6 pins.
-INFO: [Physopt 32-735] Processed net vga/green[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.807 | TNS=-8.004 |
-INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_0.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_15_comp
-INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.788 | TNS=-7.971 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.689 | TNS=-19.081 |
+INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/data_o[34]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_3.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_31
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.677 | TNS=-18.902 |
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1_repN.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_28_replica
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.673 | TNS=-18.469 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 5 pins.
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_52_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.672 | TNS=-18.301 |
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Mario_Walking3_ROM/data_Out_reg' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-1134] Processed net color_instance/Mario_Walking3_ROM/data_Out_reg_0[1]. Created 1 instance.
+INFO: [Physopt 32-735] Processed net color_instance/Mario_Walking3_ROM/data_Out_reg_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.665 | TNS=-17.866 |
+INFO: [Physopt 32-1134] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1_repN. Created 1 instance.
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.662 | TNS=-17.442 |
+INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/data_o[35]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-1134] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1_repN. Created 1 instance.
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.654 | TNS=-17.434 |
+INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1_repN. Critical path length was reduced through logic transformation on cell color_instance/Smash_Background0/vga_to_hdmi_i_28_replica_comp_1.
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_53_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.607 | TNS=-17.226 |
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_3.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_31
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.552 | TNS=-17.211 |
+INFO: [Physopt 32-1134] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_3. Created 1 instance.
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.517 | TNS=-16.944 |
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Mario_Walking3_ROM/data_Out_reg' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net color_instance/Mario_Walking3_ROM/data_Out_reg_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net vga/data_Out_reg.  Re-placed instance vga/vga_to_hdmi_i_14
+INFO: [Physopt 32-735] Processed net vga/data_Out_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.509 | TNS=-17.076 |
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_1. Critical path length was reduced through logic transformation on cell color_instance/Smash_Background0/vga_to_hdmi_i_28_comp.
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_53_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.508 | TNS=-16.734 |
+INFO: [Physopt 32-663] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_5.  Re-placed instance color_instance/Smash_Background0/vga_to_hdmi_i_20
+INFO: [Physopt 32-735] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_5. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.496 | TNS=-16.676 |
+INFO: [Physopt 32-663] Processed net vga_to_hdmi/inst/srldly_0/data_o[18].  Re-placed instance vga_to_hdmi/inst/srldly_0/srl[20].srl16_i
+INFO: [Physopt 32-735] Processed net vga_to_hdmi/inst/srldly_0/data_o[18]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.485 | TNS=-15.990 |
 INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/red[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Smash_Background0/data_Out_reg_9_1' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_9_1_n_35. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Smash_Background0/data_Out_reg_1_0' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_1_0_n_35. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net Clk_IBUF. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net Clk. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_1. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/data_o[21]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_55_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/red[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_9_1_n_35. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_1_0_n_35. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net Clk_IBUF. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net Clk. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.788 | TNS=-7.971 |
-Phase 3 Critical Path Optimization | Checksum: 1d428720d
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.485 | TNS=-15.990 |
+Phase 3 Critical Path Optimization | Checksum: 17e3568db
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2617.230 ; gain = 0.000
 
 Phase 4 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.788 | TNS=-7.971 |
-INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_1. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Smash_Background0/data_Out_reg_8_1' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_8_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.485 | TNS=-15.990 |
+INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/data_o[21]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Smash_Background0/data_Out_reg_0_0' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_0_0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_55_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/red[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Smash_Background0/data_Out_reg_9_1' Port 'B' is 0. Skip BRAM Register Optimization on the port
-INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_9_1_n_35. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-614] Property 'READ_WIDTH_B' on BRAM cell 'color_instance/Smash_Background0/data_Out_reg_1_0' Port 'B' is 0. Skip BRAM Register Optimization on the port
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_1_0_n_35. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net Clk_IBUF. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net Clk. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/srlopt_n_1. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net vga_to_hdmi/inst/srldly_0/data_o[21]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_mux_sel_a_pos_2_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/vga_to_hdmi_i_55_n_0. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/red[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_9_1_n_35. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net color_instance/Smash_Background0/data_Out_reg_1_0_n_35. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net Clk_IBUF. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net Clk. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.788 | TNS=-7.971 |
-Phase 4 Critical Path Optimization | Checksum: 1d428720d
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.485 | TNS=-15.990 |
+Phase 4 Critical Path Optimization | Checksum: 17e3568db
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 2615.770 ; gain = 0.000
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-0.788 | TNS=-7.971 |
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2617.230 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-1.485 | TNS=-15.990 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -774,24 +804,24 @@ Summary of Physical Synthesis Optimizations
 |  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Critical Path  |          1.217  |          8.587  |            0  |              0  |                    33  |           0  |           2  |  00:00:04  |
-|  Total          |          1.217  |          8.587  |            0  |              0  |                    33  |           0  |           3  |  00:00:04  |
+|  Critical Path  |          1.174  |          9.259  |            6  |              0  |                    41  |           0  |           2  |  00:00:08  |
+|  Total          |          1.174  |          9.259  |            6  |              0  |                    41  |           0  |           3  |  00:00:08  |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2615.770 ; gain = 0.000
-Ending Physical Synthesis Task | Checksum: 1f78b0f8e
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2617.230 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 249b2d071
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 2617.230 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-280 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+309 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-phys_opt_design: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2615.770 ; gain = 0.000
+phys_opt_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2617.230 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.771 . Memory (MB): peak = 2615.770 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.897 . Memory (MB): peak = 2617.230 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/impl_1/SMASH_TOP_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
@@ -809,30 +839,30 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: e556a5c4 ConstDB: 0 ShapeSum: 64d48d06 RouteDB: 0
-Post Restoration Checksum: NetGraph: 41c8810d NumContArr: 2e6da67e Constraints: 0 Timing: 0
-Phase 1 Build RT Design | Checksum: 7036278b
+Checksum: PlaceDB: da467c03 ConstDB: 0 ShapeSum: 73c1f332 RouteDB: 0
+Post Restoration Checksum: NetGraph: c5eb7c9a NumContArr: d5d8ab9a Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 19bc42834
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2628.027 ; gain = 12.258
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 2626.945 ; gain = 9.715
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 7036278b
+Phase 2.1 Fix Topology Constraints | Checksum: 19bc42834
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2635.215 ; gain = 19.445
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 2634.195 ; gain = 16.965
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 7036278b
+Phase 2.2 Pre Route Cleanup | Checksum: 19bc42834
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 2635.215 ; gain = 19.445
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 2634.195 ; gain = 16.965
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
-Phase 2.3 Update Timing | Checksum: 12b633978
+Phase 2.3 Update Timing | Checksum: 1d3901b16
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2644.141 ; gain = 28.371
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.756 | TNS=-7.460 | WHS=-0.831 | THS=-286.830|
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 2643.375 ; gain = 26.145
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.470 | TNS=-15.329| WHS=-0.647 | THS=-199.881|
 
 
 Router Utilization Summary
@@ -841,37 +871,37 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 5770
+  Number of Failed Nets               = 5830
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 5770
+  Number of Unrouted Nets             = 5830
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 2 Router Initialization | Checksum: d8232d29
+Phase 2 Router Initialization | Checksum: 1fdba785d
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 2666.078 ; gain = 50.309
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 2669.141 ; gain = 51.910
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: d8232d29
+Phase 3.1 Global Routing | Checksum: 1fdba785d
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 2666.078 ; gain = 50.309
-Phase 3 Initial Routing | Checksum: 1b5ceef06
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 2669.141 ; gain = 51.910
+Phase 3 Initial Routing | Checksum: 115139905
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 2688.852 ; gain = 73.082
-INFO: [Route 35-580] Design has 42 pins with tight setup and hold constraints.
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 2704.293 ; gain = 87.062
+INFO: [Route 35-580] Design has 91 pins with tight setup and hold constraints.
 
 The top 5 pins with tight setup and hold constraints:
 
 +====================+====================+==================================================================+
 | Launch Setup Clock | Launch Hold Clock  | Pin                                                              |
 +====================+====================+==================================================================+
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_Punching2_ROM/data_Out_reg/ADDRARDADDR[8]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_Walking1_ROM/data_Out_reg/ADDRARDADDR[8]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_Punching2_ROM/data_Out_reg/ADDRARDADDR[13]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_Walking1_ROM/data_Out_reg/ADDRARDADDR[13]   |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_Walking2_ROM/data_Out_reg/ADDRARDADDR[10]   |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_Walking3_ROM/data_Out_reg/ADDRARDADDR[10]   |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[10] |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_Punching2_ROM/data_Out_reg/ADDRARDADDR[10]  |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | color_instance/Mario_Walking1_ROM/data_Out_reg/ADDRARDADDR[10]   |
 +--------------------+--------------------+------------------------------------------------------------------+
 
 File with complete list of pins: tight_setup_hold_pins.txt
@@ -880,84 +910,83 @@ File with complete list of pins: tight_setup_hold_pins.txt
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 631
- Number of Nodes with overlaps = 107
- Number of Nodes with overlaps = 63
- Number of Nodes with overlaps = 37
- Number of Nodes with overlaps = 20
- Number of Nodes with overlaps = 11
- Number of Nodes with overlaps = 5
- Number of Nodes with overlaps = 3
- Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1074
+ Number of Nodes with overlaps = 253
+ Number of Nodes with overlaps = 152
+ Number of Nodes with overlaps = 66
+ Number of Nodes with overlaps = 34
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 7
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.716 | TNS=-6.918 | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.507 | TNS=-13.893| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 231daf55d
+Phase 4.1 Global Iteration 0 | Checksum: 1101b64e3
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:44 . Memory (MB): peak = 2690.867 ; gain = 75.098
+Time (s): cpu = 00:01:04 ; elapsed = 00:01:58 . Memory (MB): peak = 2739.531 ; gain = 122.301
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 35
- Number of Nodes with overlaps = 35
- Number of Nodes with overlaps = 23
- Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 25
+ Number of Nodes with overlaps = 15
  Number of Nodes with overlaps = 4
- Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.944 | TNS=-9.163 | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.660 | TNS=-14.192| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: ffb989f2
+Phase 4.2 Global Iteration 1 | Checksum: b51e5e7d
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 2690.867 ; gain = 75.098
-Phase 4 Rip-up And Reroute | Checksum: ffb989f2
+Time (s): cpu = 00:01:06 ; elapsed = 00:02:02 . Memory (MB): peak = 2739.531 ; gain = 122.301
+Phase 4 Rip-up And Reroute | Checksum: b51e5e7d
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 2690.867 ; gain = 75.098
+Time (s): cpu = 00:01:06 ; elapsed = 00:02:02 . Memory (MB): peak = 2739.531 ; gain = 122.301
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 1fa8a7f8f
+Phase 5.1.1 Update Timing | Checksum: 1183c6489
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 2690.867 ; gain = 75.098
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.716 | TNS=-6.918 | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:06 ; elapsed = 00:02:02 . Memory (MB): peak = 2739.531 ; gain = 122.301
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.507 | TNS=-13.893| WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: bbca1a68
+Phase 5.1 Delay CleanUp | Checksum: e8c5a43b
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 2690.867 ; gain = 75.098
+Time (s): cpu = 00:01:06 ; elapsed = 00:02:02 . Memory (MB): peak = 2739.531 ; gain = 122.301
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: bbca1a68
+Phase 5.2 Clock Skew Optimization | Checksum: e8c5a43b
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 2690.867 ; gain = 75.098
-Phase 5 Delay and Skew Optimization | Checksum: bbca1a68
+Time (s): cpu = 00:01:06 ; elapsed = 00:02:02 . Memory (MB): peak = 2739.531 ; gain = 122.301
+Phase 5 Delay and Skew Optimization | Checksum: e8c5a43b
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 2690.867 ; gain = 75.098
+Time (s): cpu = 00:01:06 ; elapsed = 00:02:02 . Memory (MB): peak = 2739.531 ; gain = 122.301
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: c558e380
+Phase 6.1.1 Update Timing | Checksum: 1433ccdfd
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 2690.867 ; gain = 75.098
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.712 | TNS=-6.840 | WHS=0.026  | THS=0.000  |
+Time (s): cpu = 00:01:06 ; elapsed = 00:02:03 . Memory (MB): peak = 2739.531 ; gain = 122.301
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.507 | TNS=-13.850| WHS=0.028  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 135daebcb
+Phase 6.1 Hold Fix Iter | Checksum: 11acc1f05
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 2690.867 ; gain = 75.098
-Phase 6 Post Hold Fix | Checksum: 135daebcb
+Time (s): cpu = 00:01:06 ; elapsed = 00:02:03 . Memory (MB): peak = 2739.531 ; gain = 122.301
+Phase 6 Post Hold Fix | Checksum: 11acc1f05
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 2690.867 ; gain = 75.098
+Time (s): cpu = 00:01:06 ; elapsed = 00:02:03 . Memory (MB): peak = 2739.531 ; gain = 122.301
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 2.37973 %
-  Global Horizontal Routing Utilization  = 2.62728 %
+  Global Vertical Routing Utilization    = 2.48569 %
+  Global Horizontal Routing Utilization  = 2.79867 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -968,10 +997,10 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 51.3514%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 54.955%, No Congested Regions.
 South Dir 1x1 Area, Max Cong = 52.2523%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 52.9412%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 69.1176%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 70.5882%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 57.3529%, No Congested Regions.
 
 ------------------------------
 Reporting congestion hotspots
@@ -993,44 +1022,44 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: 5cbfb86a
+Phase 7 Route finalize | Checksum: a8bf8d2e
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 2690.867 ; gain = 75.098
+Time (s): cpu = 00:01:06 ; elapsed = 00:02:03 . Memory (MB): peak = 2739.531 ; gain = 122.301
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 5cbfb86a
+Phase 8 Verifying routed nets | Checksum: a8bf8d2e
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 2690.867 ; gain = 75.098
+Time (s): cpu = 00:01:06 ; elapsed = 00:02:03 . Memory (MB): peak = 2739.531 ; gain = 122.301
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 6e06737e
+Phase 9 Depositing Routes | Checksum: 16c80670b
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 2690.867 ; gain = 75.098
+Time (s): cpu = 00:01:06 ; elapsed = 00:02:03 . Memory (MB): peak = 2739.531 ; gain = 122.301
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.712 | TNS=-6.840 | WHS=0.026  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-1.507 | TNS=-13.850| WHS=0.028  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 6e06737e
+Phase 10 Post Router Timing | Checksum: 16c80670b
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 2690.867 ; gain = 75.098
+Time (s): cpu = 00:01:06 ; elapsed = 00:02:04 . Memory (MB): peak = 2739.531 ; gain = 122.301
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 2690.867 ; gain = 75.098
+Time (s): cpu = 00:01:06 ; elapsed = 00:02:04 . Memory (MB): peak = 2739.531 ; gain = 122.301
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-299 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+328 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:50 . Memory (MB): peak = 2690.867 ; gain = 75.098
+route_design: Time (s): cpu = 00:01:07 ; elapsed = 00:02:05 . Memory (MB): peak = 2739.531 ; gain = 122.301
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.958 . Memory (MB): peak = 2692.051 ; gain = 1.184
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.755 . Memory (MB): peak = 2739.531 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/impl_1/SMASH_TOP_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file SMASH_TOP_drc_routed.rpt -pb SMASH_TOP_drc_routed.pb -rpx SMASH_TOP_drc_routed.rpx
 Command: report_drc -file SMASH_TOP_drc_routed.rpt -pb SMASH_TOP_drc_routed.pb -rpx SMASH_TOP_drc_routed.rpx
@@ -1052,7 +1081,7 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-311 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+340 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file SMASH_TOP_route_status.rpt -pb SMASH_TOP_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file SMASH_TOP_timing_summary_routed.rpt -pb SMASH_TOP_timing_summary_routed.pb -rpx SMASH_TOP_timing_summary_routed.rpx -warn_on_violation 
@@ -1126,5 +1155,5 @@ INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT dev
 INFO: [Common 17-83] Releasing license: Implementation
 14 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 3138.012 ; gain = 444.688
-INFO: [Common 17-206] Exiting Vivado at Sun Dec  3 17:30:16 2023...
+write_bitstream: Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 3136.961 ; gain = 397.430
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  3 19:08:31 2023...

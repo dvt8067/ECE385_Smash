@@ -61,6 +61,7 @@ module SMASH_TOP(
     logic [3:0] red, green, blue;
     logic reset_ah;
     logic Mario_Invert_Left;
+    logic Luigi_Invert_Left;
     logic [4:0] Mario_State_Out;
     logic [4:0] Luigi_State_Out;
     logic edge_below_mario;
@@ -71,6 +72,8 @@ module SMASH_TOP(
     logic [25:0]Luigi_Fall_Counter;
     logic [7:0] Mario_Priority_1, Luigi_Priority_1;
     logic punch_on_mario, punch_on_luigi;
+    logic Stop_Mario_Left, Stop_Mario_Right, Stop_Mario_Up, Stop_Mario_Down;
+    logic Stop_Luigi_Left, Stop_Luigi_Right, Stop_Luigi_Up, Stop_Luigi_Down;
     //logic [7:0] Mario_Priority_2;
     assign reset_ah = reset_rtl_0;
     
@@ -191,7 +194,8 @@ module SMASH_TOP(
         .Stage_Y_Max(Stage_Y_Max),
         .Stage_Y_Min(Stage_Y_Min),
         .jump_on_mario(jump_on_mario),
-        .Mario_Fall_Counter
+        .Mario_Fall_Counter,
+        .Stop_Mario_Left, .Stop_Mario_Right, .Stop_Mario_Up, .Stop_Mario_Down
     );
     Luigi  luigi_instance ( 
         .Reset(reset_ah), 
@@ -207,7 +211,9 @@ module SMASH_TOP(
         .LuigiS_Y(Luigisizesig_Y),
         .edge_below_luigi(edge_below_luigi),
         .jump_on_luigi(jump_on_luigi),
-        .Luigi_Fall_Counter(Luigi_Fall_Counter));
+        .Luigi_Fall_Counter(Luigi_Fall_Counter),
+        .Stop_Luigi_Left, .Stop_Luigi_Right, .Stop_Luigi_Up, .Stop_Luigi_Down
+        );
     
     //Color Mapper Module   
     color_mapper color_instance(
@@ -249,5 +255,19 @@ module SMASH_TOP(
         .Luigi_Priority_1(Luigi_Priority_1),
         .punch_on_luigi(punch_on_luigi)
     );
+    Game_Logic Game_Logic0(
+        .Mario_size_X(Mariosizesig_X),
+        .Mario_size_Y(Mariosizesig_Y),
+        .Mario_Invert_Left(Mario_Invert_Left),
+        .Luigi_Invert_Left(Luigi_Invert_Left),
+        .MarioX(Marioxsig),
+        .MarioY(Marioysig),
+        .LuigiX(Luigixsig), 
+        .LuigiY(Luigiysig), 
+        .Luigi_size_X(Luigisizesig_X), 
+        .Luigi_size_Y(Luigisizesig_Y),
+        .Stop_Mario_Left, .Stop_Mario_Right, .Stop_Mario_Up, .Stop_Mario_Down,
+        .Stop_Luigi_Left, .Stop_Luigi_Right, .Stop_Luigi_Up, .Stop_Luigi_Down
+);
     
 endmodule

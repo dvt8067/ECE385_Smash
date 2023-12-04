@@ -17,6 +17,7 @@
 module  Luigi ( input logic Reset, frame_clk,
 			   input logic [7:0] keycode,
          input logic [9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min,
+         input logic Stop_Luigi_Left, Stop_Luigi_Right, Stop_Luigi_Up, Stop_Luigi_Down,
                output logic [9:0] LuigiX, LuigiY, LuigiS_X, LuigiS_Y,
                output logic edge_below_luigi,
                output logic jump_on_luigi,
@@ -179,20 +180,20 @@ always_comb begin
               if(jump_on_luigi == 1'b0) begin
              // LuigiY <= LuigiY + 10'd1;
                  if(Luigi_Fall_Counter_  < 6)begin
-                    LuigiY <= LuigiY + 10'd1;
+                    LuigiY <= LuigiY + 10'd2;
     
                 end
                 else if(((Luigi_Fall_Counter_  >= 6) && (Luigi_Fall_Counter_  < 12)))  begin
-                    LuigiY <= LuigiY + 10'd2;
-                end
-                else if(((Luigi_Fall_Counter_  >= 12) && (Luigi_Fall_Counter_  < 18)))  begin
                     LuigiY <= LuigiY + 10'd3;
                 end
-                else if(((Luigi_Fall_Counter_  >= 18) && (Luigi_Fall_Counter_  < 24)))  begin
+                else if(((Luigi_Fall_Counter_  >= 12) && (Luigi_Fall_Counter_  < 18)))  begin
                     LuigiY <= LuigiY + 10'd4;
                 end
+                else if(((Luigi_Fall_Counter_  >= 18) && (Luigi_Fall_Counter_  < 24)))  begin
+                    LuigiY <= LuigiY + 10'd5;
+                end
                 else if(((Luigi_Fall_Counter_  >= 24) ))begin
-                  LuigiY <= LuigiY + 10'd5;
+                  LuigiY <= LuigiY + 10'd6;
                 end
                 
                 else begin
@@ -201,10 +202,10 @@ always_comb begin
               end 
               else begin
                 if(Luigi_Jump_Counter_  < 6)begin
-                    LuigiY <= LuigiY - 10'd5;
+                    LuigiY <= LuigiY - 10'd6;
                 end
                 else if(((Luigi_Jump_Counter_  >= 6) && (Luigi_Jump_Counter_  < 12)))begin
-                    LuigiY <= LuigiY - 10'd4;
+                    LuigiY <= LuigiY - 10'd5;
                 end
                 else if(((Luigi_Jump_Counter_  >= 12) && (Luigi_Jump_Counter_  < 18)))begin
                   LuigiY <= LuigiY - 10'd3;
@@ -274,15 +275,25 @@ always_comb begin
                     // Ball_X_Motion <= 10'd0;
                     end             
 				 if (keycode == 8'h50) begin
-          if(Luigi_Bottom_Edge_Y<Stage_Y_Min+2) begin
+          if(Luigi_Bottom_Edge_Y<Stage_Y_Min+1) begin
+            if(Stop_Luigi_Left == 0) begin
 				   LuigiX <= LuigiX - 10'd4;
+            end
+            else begin
+              LuigiX <= LuigiX;
+            end
           end
           else if(Luigi_Bottom_Edge_LX == Stage_X_Max || Luigi_Bottom_Edge_LX == Stage_X_Max+1
           || Luigi_Bottom_Edge_LX == Stage_X_Max+2 || Luigi_Bottom_Edge_LX == Stage_X_Max-1 || Luigi_Bottom_Edge_LX == Stage_X_Max-2)begin
             LuigiX <= LuigiX;
           end
           else begin
+            if(Stop_Luigi_Left == 0) begin
             LuigiX <= LuigiX - 10'd4;
+            end
+            else begin
+              LuigiX <= LuigiX;
+            end
           end
                     // if(BallX - BallS > Ball_X_Min) begin
 				 
@@ -292,15 +303,25 @@ always_comb begin
                     // Ball_Y_Motion <= 10'd0;
                     end 
 				 if (keycode == 8'h4f) begin
-          if(Luigi_Bottom_Edge_Y<Stage_Y_Min+2) begin
-				   LuigiX <= LuigiX + 10'd5;
+          if(Luigi_Bottom_Edge_Y<Stage_Y_Min+1) begin
+            if(Stop_Luigi_Right == 0) begin
+				   LuigiX <= LuigiX + 10'd4;
+            end
+            else begin
+              LuigiX <= LuigiX;
+            end
           end
           else if(Luigi_Bottom_Edge_RX == Stage_X_Min || Luigi_Bottom_Edge_RX == Stage_X_Min+1
           || Luigi_Bottom_Edge_RX == Stage_X_Min+2 || Luigi_Bottom_Edge_RX == Stage_X_Min-1 || Luigi_Bottom_Edge_RX == Stage_X_Min-2)begin
             LuigiX <= LuigiX;
           end
           else begin
-            LuigiX <= LuigiX + 10'd5;
+            if(Stop_Luigi_Right == 0) begin
+            LuigiX <= LuigiX + 10'd4;
+            end
+            else begin
+              LuigiX <= LuigiX;
+            end
           end
                     end                   
 				 

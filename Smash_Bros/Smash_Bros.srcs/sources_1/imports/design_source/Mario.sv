@@ -17,6 +17,7 @@
 module  Mario ( input logic Reset, frame_clk,
 			   input logic [7:0] keycode,
          input logic [9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min,
+         input logic Stop_Mario_Left, Stop_Mario_Right, Stop_Mario_Up, Stop_Mario_Down,
                output logic [9:0] MarioX, MarioY, MarioS_X, MarioS_Y,
                output logic edge_below_mario,
                output logic jump_on_mario,
@@ -178,20 +179,20 @@ module  Mario ( input logic Reset, frame_clk,
               if(jump_on_mario == 1'b0) begin
              // MarioY <= MarioY + 10'd1;
                  if(Mario_Fall_Counter_  < 6)begin
-                    MarioY <= MarioY + 10'd1;
+                    MarioY <= MarioY + 10'd2;
     
                 end
                 else if(((Mario_Fall_Counter_  >= 6) && (Mario_Fall_Counter_  < 12)))  begin
-                    MarioY <= MarioY + 10'd2;
-                end
-                else if(((Mario_Fall_Counter_  >= 12) && (Mario_Fall_Counter_  < 18)))  begin
                     MarioY <= MarioY + 10'd3;
                 end
-                else if(((Mario_Fall_Counter_  >= 18) && (Mario_Fall_Counter_  < 24)))  begin
+                else if(((Mario_Fall_Counter_  >= 12) && (Mario_Fall_Counter_  < 18)))  begin
                     MarioY <= MarioY + 10'd4;
                 end
+                else if(((Mario_Fall_Counter_  >= 18) && (Mario_Fall_Counter_  < 24)))  begin
+                    MarioY <= MarioY + 10'd5;
+                end
                 else if(((Mario_Fall_Counter_  >= 24) ))begin
-                  MarioY <= MarioY + 10'd5;
+                  MarioY <= MarioY + 10'd6;
                 end
                 
                 else begin
@@ -200,10 +201,10 @@ module  Mario ( input logic Reset, frame_clk,
               end 
               else begin
                 if(Mario_Jump_Counter_  < 6)begin
-                    MarioY <= MarioY - 10'd5;
+                    MarioY <= MarioY - 10'd6;
                 end
                 else if(((Mario_Jump_Counter_  >= 6) && (Mario_Jump_Counter_  < 12)))begin
-                    MarioY <= MarioY - 10'd4;
+                    MarioY <= MarioY - 10'd5;
                 end
                 else if(((Mario_Jump_Counter_  >= 12) && (Mario_Jump_Counter_  < 18)))begin
                   MarioY <= MarioY - 10'd3;
@@ -273,15 +274,25 @@ module  Mario ( input logic Reset, frame_clk,
                     // Ball_X_Motion <= 10'd0;
                     end             
 				 if (keycode == 8'h04) begin
-          if(Mario_Bottom_Edge_Y<Stage_Y_Min+2) begin
+          if(Mario_Bottom_Edge_Y<Stage_Y_Min+1) begin
+            if(Stop_Mario_Left == 0)begin
 				   MarioX <= MarioX - 10'd4;
+            end
+            else begin
+              MarioX <= MarioX;
+            end
           end
           else if(Mario_Bottom_Edge_LX == Stage_X_Max || Mario_Bottom_Edge_LX == Stage_X_Max+1
           || Mario_Bottom_Edge_LX == Stage_X_Max+2 || Mario_Bottom_Edge_LX == Stage_X_Max-1 || Mario_Bottom_Edge_LX == Stage_X_Max-2)begin
             MarioX <= MarioX;
           end
           else begin
+            if(Stop_Mario_Left == 0)begin
             MarioX <= MarioX - 10'd4;
+            end
+            else begin
+              MarioX<= MarioX;
+            end
           end
                     // if(BallX - BallS > Ball_X_Min) begin
 				 
@@ -291,15 +302,25 @@ module  Mario ( input logic Reset, frame_clk,
                     // Ball_Y_Motion <= 10'd0;
                     end 
 				 if (keycode == 8'h07) begin
-          if(Mario_Bottom_Edge_Y<Stage_Y_Min+2) begin
-				   MarioX <= MarioX + 10'd5;
+          if(Mario_Bottom_Edge_Y<Stage_Y_Min+1) begin
+            if(Stop_Mario_Right == 0) begin
+				   MarioX <= MarioX + 10'd4;
+            end
+            else begin
+              MarioX <= MarioX;
+            end
           end
           else if(Mario_Bottom_Edge_RX == Stage_X_Min || Mario_Bottom_Edge_RX == Stage_X_Min+1
           || Mario_Bottom_Edge_RX == Stage_X_Min+2 || Mario_Bottom_Edge_RX == Stage_X_Min-1 || Mario_Bottom_Edge_RX == Stage_X_Min-2)begin
             MarioX <= MarioX;
           end
           else begin
-            MarioX <= MarioX + 10'd5;
+            if(Stop_Mario_Right == 0) begin
+            MarioX <= MarioX + 10'd4;
+            end
+            else begin
+              MarioX <= MarioX;
+            end
           end
                     end                   
 				 
