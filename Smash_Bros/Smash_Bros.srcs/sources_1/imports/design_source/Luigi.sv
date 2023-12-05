@@ -121,7 +121,7 @@ always_comb begin
     always_comb begin
       jump_on_luigi = 0;
       //Luigi_Jump_Counter_Reset = 0;
-      if((Luigi_Jump_Counter <= Luigi_Jump_Delay) && (Luigi_Jump_Counter >= 1)) begin
+      if((Luigi_Jump_Counter <= Luigi_Jump_Delay) && (Luigi_Jump_Counter >= 1) && Stop_Luigi_Up == 0) begin
         jump_on_luigi = 1;
       end
       // if(Luigi_Jump_Counter> Luigi_Jump_Delay) begin
@@ -195,8 +195,8 @@ always_comb begin
                 else if(((Luigi_Fall_Counter_  >= 18) && (Luigi_Fall_Counter_  < 24)))  begin
                     LuigiY <= LuigiY + 10'd5;
                 end
-                else if(((Luigi_Fall_Counter_  >= 30) ))begin
-                  LuigiY <= LuigiY + 10'd7;
+                else if(((Luigi_Fall_Counter_  >= 24) ))begin
+                  LuigiY <= LuigiY + 10'd5;
                 end
                 
                 else begin

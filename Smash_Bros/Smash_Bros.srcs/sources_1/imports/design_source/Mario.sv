@@ -120,7 +120,7 @@ module  Mario ( input logic Reset, frame_clk,
     always_comb begin
       jump_on_mario = 0;
       //Mario_Jump_Counter_Reset = 0;
-      if((Mario_Jump_Counter <= Mario_Jump_Delay) && (Mario_Jump_Counter >= 1)) begin
+      if((Mario_Jump_Counter <= Mario_Jump_Delay) && (Mario_Jump_Counter >= 1) && Stop_Mario_Up == 0) begin
         jump_on_mario = 1;
       end
       // if(Mario_Jump_Counter> Mario_Jump_Delay) begin
@@ -194,8 +194,8 @@ module  Mario ( input logic Reset, frame_clk,
                 else if(((Mario_Fall_Counter_  >= 18) && (Mario_Fall_Counter_  < 24)))  begin
                     MarioY <= MarioY + 10'd5;
                 end
-                else if(((Mario_Fall_Counter_  >= 30) ))begin
-                  MarioY <= MarioY + 10'd7;
+                else if(((Mario_Fall_Counter_  >= 24) ))begin
+                  MarioY <= MarioY + 10'd5;
                 end
                 
                 else begin
@@ -204,7 +204,7 @@ module  Mario ( input logic Reset, frame_clk,
               end 
               else begin
                 if(Mario_Jump_Counter_  < 6)begin
-                    MarioY <= MarioY - 10'd6;
+                    MarioY <= MarioY - 10'd7;
                 end
                 else if(((Mario_Jump_Counter_  >= 6) && (Mario_Jump_Counter_  < 12)))begin
                     MarioY <= MarioY - 10'd5;
