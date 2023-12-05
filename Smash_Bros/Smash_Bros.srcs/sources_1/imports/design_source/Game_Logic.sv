@@ -59,6 +59,34 @@ if((( Luigi_Leftmost_X  == Mario_Rightmost_X - 3) ||(Luigi_Leftmost_X  == Mario_
         || (Luigi_Leftmost_X  == Mario_Rightmost_X + 4)) 
         && ((Luigi_Topmost_Y < Mario_Bottommost_Y) || Luigi_Bottommost_Y > Mario_Topmost_Y))begin
         Stop_Luigi_Left = 1'b1; 
-        end       
+        end   
+
+
+
+        if(((Mario_Topmost_Y == Luigi_Bottommost_Y - 4) || (Mario_Rightmost_X  == Luigi_Leftmost_X - 3) || (Mario_Rightmost_X  == Luigi_Leftmost_X - 2) || (Mario_Rightmost_X  == Luigi_Leftmost_X -1) || (Mario_Rightmost_X  == Luigi_Leftmost_X )
+        || (Mario_Rightmost_X  == Luigi_Leftmost_X + 1) || (Mario_Rightmost_X  == Luigi_Leftmost_X + 2) || (Mario_Rightmost_X  == Luigi_Leftmost_X + 3)) 
+        && ((Mario_Topmost_Y < Luigi_Bottommost_Y) || Mario_Bottommost_Y > Luigi_Topmost_Y)) begin
+        Stop_Mario_Up = 1'b1;
+        end
+if(( (Mario_Leftmost_X  == Luigi_Rightmost_X - 3) || (Mario_Leftmost_X  == Luigi_Rightmost_X - 2) || (Mario_Leftmost_X  == Luigi_Rightmost_X -1) || (Mario_Leftmost_X  == Luigi_Rightmost_X )
+        || (Mario_Leftmost_X  == Luigi_Rightmost_X + 1) || (Mario_Leftmost_X  == Luigi_Rightmost_X + 2) || (Mario_Leftmost_X  == Luigi_Rightmost_X + 3)
+        || (Mario_Leftmost_X  == Luigi_Rightmost_X + 4)) 
+        && ((Mario_Topmost_Y < Luigi_Bottommost_Y) || Mario_Bottommost_Y > Luigi_Topmost_Y)) begin
+        Stop_Mario_Down = 1'b1; 
+        end
+
+
+
+if(((Luigi_Rightmost_X  == Mario_Leftmost_X - 4) ||(Luigi_Rightmost_X  == Mario_Leftmost_X - 3) || (Luigi_Rightmost_X  == Mario_Leftmost_X - 2) || (Luigi_Rightmost_X  == Mario_Leftmost_X -1) || (Luigi_Rightmost_X  == Mario_Leftmost_X )
+        || (Luigi_Rightmost_X  == Mario_Leftmost_X + 1) || (Luigi_Rightmost_X  == Mario_Leftmost_X + 2)|| (Luigi_Rightmost_X  == Mario_Leftmost_X + 3)) 
+        && ((Luigi_Topmost_Y < Mario_Bottommost_Y) || Luigi_Bottommost_Y > Mario_Topmost_Y)) begin
+        Stop_Luigi_Right = 1'b1;
+        end 
+if((( Luigi_Leftmost_X  == Mario_Rightmost_X - 3) ||(Luigi_Leftmost_X  == Mario_Rightmost_X - 2) || (Luigi_Leftmost_X  == Mario_Rightmost_X -1) || (Luigi_Leftmost_X  == Mario_Rightmost_X )
+        || (Luigi_Leftmost_X  == Mario_Rightmost_X + 1) || (Luigi_Leftmost_X  == Mario_Rightmost_X + 2) || (Luigi_Leftmost_X  == Mario_Rightmost_X + 3)
+        || (Luigi_Leftmost_X  == Mario_Rightmost_X + 4)) 
+        && ((Luigi_Topmost_Y < Mario_Bottommost_Y) || Luigi_Bottommost_Y > Mario_Topmost_Y))begin
+        Stop_Luigi_Left = 1'b1; 
+        end      
 end
 endmodule

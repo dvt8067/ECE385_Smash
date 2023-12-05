@@ -25,7 +25,7 @@ module  Mario ( input logic Reset, frame_clk,
     
     logic [9:0] Mario_X_Motion, Mario_Y_Motion, Mario_Bottom_Edge_LX, Mario_Bottom_Edge_RX, Mario_Bottom_Edge_Y;
     logic [9:0] jumping_factor;
-     int Mario_Jump_Delay = 42;
+     int Mario_Jump_Delay = 30;
     //logic jump_counter
     //logic edge;
     parameter [9:0] Mario_X_Initial=320;  // Center position on the X axis
@@ -56,6 +56,9 @@ module  Mario ( input logic Reset, frame_clk,
         ||((Mario_Bottom_Edge_RX>Stage_X_Min)&&(Mario_Bottom_Edge_RX<Stage_X_Max)))begin
           edge_below_mario = 1'b1;
           end
+        else if (Stop_Mario_Down) begin
+          edge_below_mario = 1'b1;
+        end
       
         // else begin
         //   edge_below_mario = 0;
@@ -178,21 +181,21 @@ module  Mario ( input logic Reset, frame_clk,
           if(edge_below_mario == 1'b0 || jump_on_mario == 1'b1)begin
               if(jump_on_mario == 1'b0) begin
              // MarioY <= MarioY + 10'd1;
-                 if(Mario_Fall_Counter_  < 8)begin
-                    MarioY <= MarioY + 10'd2;
+                 if(Mario_Fall_Counter_  < 6)begin
+                    MarioY <= MarioY + 10'd1;
     
                 end
-                else if(((Mario_Fall_Counter_  >= 9) && (Mario_Fall_Counter_  < 16)))  begin
+                else if(((Mario_Fall_Counter_  >= 6) && (Mario_Fall_Counter_  < 12)))  begin
+                    MarioY <= MarioY + 10'd2;
+                end
+                else if(((Mario_Fall_Counter_  >= 12) && (Mario_Fall_Counter_  < 18)))  begin
                     MarioY <= MarioY + 10'd3;
                 end
-                else if(((Mario_Fall_Counter_  >= 17) && (Mario_Fall_Counter_  < 24)))  begin
-                    MarioY <= MarioY + 10'd4;
-                end
-                else if(((Mario_Fall_Counter_  >= 25) && (Mario_Fall_Counter_  < 31)))  begin
+                else if(((Mario_Fall_Counter_  >= 18) && (Mario_Fall_Counter_  < 24)))  begin
                     MarioY <= MarioY + 10'd5;
                 end
-                else if(((Mario_Fall_Counter_  >= 40) ))begin
-                  MarioY <= MarioY + 10'd6;
+                else if(((Mario_Fall_Counter_  >= 30) ))begin
+                  MarioY <= MarioY + 10'd7;
                 end
                 
                 else begin
@@ -200,19 +203,19 @@ module  Mario ( input logic Reset, frame_clk,
                 end
               end 
               else begin
-                if(Mario_Jump_Counter_  < 8)begin
+                if(Mario_Jump_Counter_  < 6)begin
                     MarioY <= MarioY - 10'd6;
                 end
-                else if(((Mario_Jump_Counter_  >= 9) && (Mario_Jump_Counter_  < 16)))begin
+                else if(((Mario_Jump_Counter_  >= 6) && (Mario_Jump_Counter_  < 12)))begin
                     MarioY <= MarioY - 10'd5;
                 end
-                else if(((Mario_Jump_Counter_  >= 17) && (Mario_Jump_Counter_  < 24)))begin
+                else if(((Mario_Jump_Counter_  >= 12) && (Mario_Jump_Counter_  < 18)))begin
                   MarioY <= MarioY - 10'd3;
                 end
-                else if(((Mario_Jump_Counter_  >= 25) && (Mario_Jump_Counter_  < 31)))begin
+                else if(((Mario_Jump_Counter_  >= 18) && (Mario_Jump_Counter_  < 24)))begin
                     MarioY <= MarioY - 10'd2;
                 end
-                else if(((Mario_Jump_Counter_  >= 32) && (Mario_Jump_Counter_  <= 40)))begin
+                else if(((Mario_Jump_Counter_  >= 24) && (Mario_Jump_Counter_  <= 30)))begin
                   MarioY <= MarioY - 10'd1;
                 end
                 else begin

@@ -25,7 +25,7 @@ module  Luigi ( input logic Reset, frame_clk,
     
     logic [9:0] Luigi_X_Motion, Luigi_Y_Motion, Luigi_Bottom_Edge_LX, Luigi_Bottom_Edge_RX, Luigi_Bottom_Edge_Y;
     logic [9:0] jumping_factor;
-     int Luigi_Jump_Delay = 40;
+     int Luigi_Jump_Delay = 30;
     //logic jump_counter
     //logic edge;
     parameter [9:0] Luigi_X_Initial=420;  // Center position on the X axis
@@ -57,6 +57,9 @@ always_comb begin
         ||((Luigi_Bottom_Edge_RX>Stage_X_Min)&&(Luigi_Bottom_Edge_RX<Stage_X_Max)))begin
           edge_below_luigi = 1'b1;
           end
+        else if(Stop_Luigi_Down == 1) begin
+          edge_below_luigi = 1'b1;
+        end
       
         // else begin
         //   edge_below_luigi = 0;
@@ -179,21 +182,21 @@ always_comb begin
           if(edge_below_luigi == 1'b0 || jump_on_luigi == 1'b1)begin
               if(jump_on_luigi == 1'b0) begin
              // LuigiY <= LuigiY + 10'd1;
-                 if(Luigi_Fall_Counter_  < 8)begin
-                    LuigiY <= LuigiY + 10'd2;
+                 if(Luigi_Fall_Counter_  < 6)begin
+                    LuigiY <= LuigiY + 10'd1;
     
                 end
-                else if(((Luigi_Fall_Counter_  >= 9) && (Luigi_Fall_Counter_  < 16)))  begin
+                else if(((Luigi_Fall_Counter_  >= 6) && (Luigi_Fall_Counter_  < 12)))  begin
+                    LuigiY <= LuigiY + 10'd2;
+                end
+                else if(((Luigi_Fall_Counter_  >= 12) && (Luigi_Fall_Counter_  < 18)))  begin
                     LuigiY <= LuigiY + 10'd3;
                 end
-                else if(((Luigi_Fall_Counter_  >= 17) && (Luigi_Fall_Counter_  < 24)))  begin
-                    LuigiY <= LuigiY + 10'd4;
-                end
-                else if(((Luigi_Fall_Counter_  >= 25) && (Luigi_Fall_Counter_  < 31)))  begin
+                else if(((Luigi_Fall_Counter_  >= 18) && (Luigi_Fall_Counter_  < 24)))  begin
                     LuigiY <= LuigiY + 10'd5;
                 end
-                else if(((Luigi_Fall_Counter_  >= 40) ))begin
-                  LuigiY <= LuigiY + 10'd6;
+                else if(((Luigi_Fall_Counter_  >= 30) ))begin
+                  LuigiY <= LuigiY + 10'd7;
                 end
                 
                 else begin
@@ -202,7 +205,7 @@ always_comb begin
               end 
               else begin
                 if(Luigi_Jump_Counter_  < 6)begin
-                    LuigiY <= LuigiY - 10'd6;
+                    LuigiY <= LuigiY - 10'd7;
                 end
                 else if(((Luigi_Jump_Counter_  >= 6) && (Luigi_Jump_Counter_  < 12)))begin
                     LuigiY <= LuigiY - 10'd5;
