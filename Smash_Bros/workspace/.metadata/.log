@@ -1183,3 +1183,529 @@ error cannot find a jtag device with node id $node_id}], Result: [null, ]. Thr
 
 !ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 15:12:30.622
 !MESSAGE XSCT command with result: [disconnect tcfchan#45], Result: [null, ]. Thread: Thread-1179
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:21.240
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.657
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.668
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.673
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.683
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.700
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.703
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.708
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.713
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.716
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.721
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.726
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.730
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:23.746
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#46]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.746
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.762
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.778
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.780
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.783
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.784
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.786
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.789
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.791
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.791
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.792
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.794
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.794
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.795
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.796
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.797
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2023-12-04 20:56:23.798
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:23.800
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:23.996
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887429230299A]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:23.998
+!MESSAGE XSCT Command: [version -server], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.002
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2022.2]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.002
+!MESSAGE XSCT Command: [version], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.004
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2022.2.0
+SW Build 0 on 2022-10-13-12:09:39
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.005
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.013
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887429230299A]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.013
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==1}], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.036
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.038
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.046
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887429230299A]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.047
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==1}], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.070
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.072
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.081
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887429230299A]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.082
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==1}], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.098
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.100
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.105
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887429230299A]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.105
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==1}], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.125
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.127
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.134
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887429230299A]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.135
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==1}], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.151
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.152
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "RealDigital Boo 887429230299A" && level == 0}], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.175
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "RealDigital Boo 887429230299A" && level == 0}], Result: [null, ]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.176
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.179
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.209
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.219
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887429230299A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.219
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.238
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.240
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.242
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#46]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.242
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.250
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887429230299A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.251
+!MESSAGE XSCT Command: [proc fetch_device_jtag_ctx { node_id } {
+foreach t [jtag ta -ta] {
+if {[dict get $t node_id] == $node_id} {
+return [dict get $t target_ctx]
+}
+}
+error cannot find a jtag device with node id $node_id}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.252
+!MESSAGE XSCT command with result: [proc fetch_device_jtag_ctx { node_id } {
+foreach t [jtag ta -ta] {
+if {[dict get $t node_id] == $node_id} {
+return [dict get $t target_ctx]
+}
+}
+error cannot find a jtag device with node id $node_id}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.253
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.261
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887429230299A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.262
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.283
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.284
+!MESSAGE XSCT Command: [fetch_device_jtag_ctx 2], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.287
+!MESSAGE XSCT command with result: [fetch_device_jtag_ctx 2], Result: [null, jsn1-0362f093-0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.289
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.383
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887429230299A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:24.384
+!MESSAGE XSCT Command: [fpga -file C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:25.705
+!MESSAGE XSCT command with result: [fpga -file C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/_ide/bitstream/SMASH_TOP.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:25.744
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:25.861
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:25.862
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa -regs], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:25.886
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/hw/SMASH_TOP.xsa -regs], Result: [null, SMASH_TOP_54]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:25.887
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:25.890
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:25.891
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:25.908
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:25.909
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:25.913
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:25.915
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:28.932
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:28.932
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:29.024
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:29.025
+!MESSAGE XSCT Command: [dow C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:29.177
+!MESSAGE XSCT command with result: [dow C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/Smash_Bros/Debug/Smash_Bros.elf], Result: [null, ]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:29.205
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:29.292
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:29.293
+!MESSAGE XSCT Command: [con], Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:29.305
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-266: Launching Debugger_Smash_Bros-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:29.325
+!MESSAGE XSCT Command: [disconnect tcfchan#46], Thread: Thread-1217
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-04 20:56:29.329
+!MESSAGE XSCT command with result: [disconnect tcfchan#46], Result: [null, ]. Thread: Thread-1217

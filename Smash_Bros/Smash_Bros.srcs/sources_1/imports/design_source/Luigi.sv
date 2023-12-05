@@ -25,7 +25,7 @@ module  Luigi ( input logic Reset, frame_clk,
     
     logic [9:0] Luigi_X_Motion, Luigi_Y_Motion, Luigi_Bottom_Edge_LX, Luigi_Bottom_Edge_RX, Luigi_Bottom_Edge_Y;
     logic [9:0] jumping_factor;
-     int Luigi_Jump_Delay = 30;
+     int Luigi_Jump_Delay = 40;
     //logic jump_counter
     //logic edge;
     parameter [9:0] Luigi_X_Initial=420;  // Center position on the X axis
@@ -179,20 +179,20 @@ always_comb begin
           if(edge_below_luigi == 1'b0 || jump_on_luigi == 1'b1)begin
               if(jump_on_luigi == 1'b0) begin
              // LuigiY <= LuigiY + 10'd1;
-                 if(Luigi_Fall_Counter_  < 6)begin
+                 if(Luigi_Fall_Counter_  < 8)begin
                     LuigiY <= LuigiY + 10'd2;
     
                 end
-                else if(((Luigi_Fall_Counter_  >= 6) && (Luigi_Fall_Counter_  < 12)))  begin
+                else if(((Luigi_Fall_Counter_  >= 9) && (Luigi_Fall_Counter_  < 16)))  begin
                     LuigiY <= LuigiY + 10'd3;
                 end
-                else if(((Luigi_Fall_Counter_  >= 12) && (Luigi_Fall_Counter_  < 18)))  begin
+                else if(((Luigi_Fall_Counter_  >= 17) && (Luigi_Fall_Counter_  < 24)))  begin
                     LuigiY <= LuigiY + 10'd4;
                 end
-                else if(((Luigi_Fall_Counter_  >= 18) && (Luigi_Fall_Counter_  < 24)))  begin
+                else if(((Luigi_Fall_Counter_  >= 25) && (Luigi_Fall_Counter_  < 31)))  begin
                     LuigiY <= LuigiY + 10'd5;
                 end
-                else if(((Luigi_Fall_Counter_  >= 24) ))begin
+                else if(((Luigi_Fall_Counter_  >= 40) ))begin
                   LuigiY <= LuigiY + 10'd6;
                 end
                 
