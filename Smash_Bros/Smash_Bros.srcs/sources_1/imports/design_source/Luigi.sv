@@ -18,7 +18,7 @@ module  Luigi ( input logic Reset, frame_clk,
 			   input logic [7:0] keycode,
          input logic [5:0] Luigi_Percent,
          input logic [9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min,
-         input logic Stop_Luigi_Left, Stop_Luigi_Right, Stop_Luigi_Up, Stop_Luigi_Down, Mario_Punch_Sucessful,
+         input logic Stop_Luigi_Left, Stop_Luigi_Right, Stop_Luigi_Up, Stop_Luigi_Down, Mario_Right_Punch_Sucessful, Mario_Left_Punch_Sucessful,
                output logic [9:0] LuigiX, LuigiY, LuigiS_X, LuigiS_Y,
                output logic edge_below_luigi,
                output logic jump_on_luigi,
@@ -58,6 +58,7 @@ always_comb begin
         ||((Luigi_Bottom_Edge_RX>Stage_X_Min)&&(Luigi_Bottom_Edge_RX<Stage_X_Max)))begin
           edge_below_luigi = 1'b1;
           end
+      end
         if(Stop_Luigi_Down == 1) begin
           edge_below_luigi = 1'b1;
         end
@@ -65,7 +66,6 @@ always_comb begin
         // else begin
         //   edge_below_luigi = 0;
         // end
-            end
             
   
   
@@ -180,9 +180,9 @@ always_comb begin
   
                 
           //     end
-        if(Mario_Punch_Sucessful)begin
-          LuigiX <= LuigiX + 2;
-        end
+        // if(Mario_Punch_Sucessful)begin
+        //   LuigiX <= LuigiX + 2;
+        // end
 
 
           if(edge_below_luigi == 1'b0 || jump_on_luigi == 1'b1)begin
@@ -261,9 +261,9 @@ always_comb begin
               //   // Luigi_Jump_Counter_Reset <= 1
 
 
-              
-              LuigiX <= LuigiX; // Continue to Reset LuigiX
-                    //     Ball_Y_Motion <= -10'd1;
+              if(Mario_Right_Punch_Sucessful != 1 && Mario_Left_Punch_Sucessful != 1) begin
+                LuigiX <= LuigiX; // Continue to Reset LuigiX
+              end
                     //     Ball_X_Motion <= 10'd0;
                     //     end
                     // Ball_X_Motion <= 10'd0;
@@ -277,12 +277,21 @@ always_comb begin
         //if(edge_below_luigi == 0 )
 				 if (keycode == 8'h16) begin
 				    // if(BallY + BallS <=Ball_Y_Max) begin
+              if(Mario_Right_Punch_Sucessful != 1 && Mario_Left_Punch_Sucessful != 1) begin
                   LuigiX <= LuigiX; // continue to reset LuigiX
+              end
                     //     Ball_Y_Motion <= 10'd1;
                     //     Ball_X_Motion <= 10'd0;
                     //     end
                     // Ball_X_Motion <= 10'd0;
-                    end             
+                    end  
+        if(Mario_Right_Punch_Sucessful == 1) begin
+          LuigiX <= LuigiX + 10'd20;
+        end 
+        else if(Mario_Left_Punch_Sucessful == 1) begin
+          LuigiX <= LuigiX - 10'd20;
+        end
+        else begin           
 				 if (keycode == 8'h50) begin
           if(Luigi_Bottom_Edge_Y<Stage_Y_Min+1) begin
             if(Stop_Luigi_Left == 0) begin
@@ -336,7 +345,7 @@ always_comb begin
 				 
 				//  BallY <= (BallY + Ball_Y_Motion);  // Update ball position
 				//  BallX <= (BallX + Ball_X_Motion);
-        if(keycode !=8'h4f &&keycode !=8'h50) begin
+        if(keycode !=8'h4f &&keycode !=8'h50 && Mario_Right_Punch_Sucessful != 1 && Mario_Left_Punch_Sucessful != 1) begin
         
         //&& keycode != 8'h16 && keycode != 8'h52) begin
             LuigiX<=LuigiX; ///  continue to reset LuigiX
@@ -346,6 +355,7 @@ always_comb begin
         //   LuigiY <= LuigiY - 10'd1;
         //  end
          end
+        end
          
       end
       

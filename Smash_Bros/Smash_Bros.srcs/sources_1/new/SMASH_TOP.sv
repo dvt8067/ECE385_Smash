@@ -76,7 +76,9 @@ module SMASH_TOP(
     logic Stop_Luigi_Left, Stop_Luigi_Right, Stop_Luigi_Up, Stop_Luigi_Down;
     logic Luigi_Movement_Lockout, Mario_Movement_Lockout;
     logic Mario_Right_Punch_Sucessful, Mario_Left_Punch_Sucessful, Luigi_Right_Punch_Sucessful, Luigi_Left_Punch_Sucessful;
-    logic [5:0] Mario_Percent, Luigi_Percent;
+    logic [6:0] Mario_Percent, Luigi_Percent;
+    logic [3:0] Mario_Percent_Plus, Luigi_Percent_Plus;
+    logic Top_Bottom_Test;
 
     //logic [7:0] Mario_Priority_2;
     assign reset_ah = reset_rtl_0;
@@ -251,7 +253,11 @@ module SMASH_TOP(
         .Stage_Y_Min(Stage_Y_Min),
         .Mario_Fall_Counter,
         .Luigi_Fall_Counter,
-        .Mario_Movement_Lockout
+        .Mario_Movement_Lockout(Top_Bottom_Test),
+        .Mario_Percent,
+        .Mario_Percent_Plus,
+        .Luigi_Percent,
+        .Luigi_Percent_Plus
     );
     Key_Hierarchy_Mario KHM0(
         .Full_Keycodes({keycode1_gpio[15:0], keycode0_gpio}),
@@ -293,6 +299,9 @@ module SMASH_TOP(
         .Luigi_Percent,
         .Luigi_Right_Punch_Sucessful,
         .Luigi_Left_Punch_Sucessful,
+        .Top_Bottom_Test,
+        .Luigi_Percent_Plus,
+        .Mario_Percent_Plus
 );
 
     

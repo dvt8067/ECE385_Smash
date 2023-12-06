@@ -23,6 +23,8 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
                        input logic Luigi_Invert_Left, Mario_Movement_Lockout,
                        input logic [25:0] Mario_Fall_Counter,
                        input logic [25:0] Luigi_Fall_Counter,
+                       input logic [6:0] Luigi_Percent, Mario_Percent,
+                       input logic [3:0] Mario_Percent_Plus, Luigi_Percent_Plus,
                        output logic [3:0]  Red, Green, Blue,
                        output logic[9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min);
 
@@ -42,7 +44,10 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
     logic [11:0] Palette_Output_Background;
     logic [18:0] Background_address;
     logic Background_on;
-    logic [7:0] Number_data;
+    logic [7:0] lowest_number_data, second_number_data, highest_number_data;
+    int    Lowest_Number; 
+    int Second_Number;
+    int Highest_Number;
     //logic [9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min;
 
 
@@ -141,11 +146,68 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
 		.Clk(Clk),
 		.data_Out(Palette_Index_Punching2_Mario)
     );
-    number_font_rom number_font_rom(.addr({Mario_Percent[3:0],DrawY[3:0]}), .data(Number_data));
+logic Index_Second, Index_Highest;
+logic Percent_Reset;
+always_ff @( posedge Clk)begin
+    if(~Percent_Reset)begin
+        if((Mario_Percent_Plus != 0) && ((Lowest_Number/10) < 1)) begin
+            Lowest_Number <= Lowest_Number + Mario_Percent_Plus;
+            Index_Second <= 0;
+        end 
+    else if((((Lowest_Number/10) >= 1) && ((Lowest_Number/10) < 2) ))begin
+        Lowest_Number <= 0;
+        Index_Second <= 1;
+    end
+    else begin
+        Lowest_Number <= Lowest_Number;
+        Index_Second <= 0;
 
-    Lowest_Number
-    Second_Number
-    Highest_Number
+    end 
+    end
+    else begin
+        Lowest_Number <= 0;
+        Index_Second <= 0;
+    end
+end
+always_ff @ ( posedge Clk)begin
+    if(~Percent_Reset) begin
+    if(Index_Second && ((Second_Number/10)<1)) begin
+    Second_Number <= Second_Number +1;
+    Index_Highest <= 0;
+    end
+    else if(((Lowest_Number/10) >= 1) && ((Lowest_Number/10) < 2) ) begin
+        Second_Number <= 0;
+        Index_Highest <= 1;
+    end
+    else begin
+        Second_Number <= Second_Number;
+        Index_Highest <= 0;
+    end
+    end
+    else begin
+        Second_Number <= 0;
+        Index_Highest <= 0;
+    end
+end
+always_ff @ ( posedge Clk)begin
+       if(~Percent_Reset) begin
+    if(Index_Highest) begin
+    Highest_Number <= Highest_Number +1;
+    end
+    else begin
+        Highest_Number <= Highest_Number;
+    end
+    end
+    else begin
+        Highest_Number <= 0;
+    end
+end
+
+    number_font_rom lowest_number_font_rom(.addr({Lowest_Number[3:0],DrawY[3:0]}), .data(lowest_number_data)); // Mario Percent May be able to be changed to lowest number
+    number_font_rom second_number_font_rom(.addr({Second_Number[3:0],DrawY[3:0]}), .data(second_number_data));
+   number_font_rom  highest_number_font_rom(.addr({Highest_Number[3:0],DrawY[3:0]}), .data(highest_number_data));
+
+    
     //REDOINK THIS KUD TI HAVE 0-7 PALETTE INDEXES
 
     always_comb begin
@@ -240,18 +302,18 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
 
     always_comb
     begin:RGB_Display
-    if(DrawX < 50 && DrawY < 50) begin
-        if(Mario_Movement_Lockout) begin
-            Red <= 4'hf;
-             Green <= 4'hf;
-             Blue <= 4'hf;
-        end
-    else begin
-            Red <= 4'h0;
-            Green <= 4'h0;
-            Blue <= 4'h0;
-    end
-    end else begin
+    // if(DrawX < 50 && DrawY < 50) begin
+    //     if(Mario_Movement_Lockout) begin
+    //         Red <= 4'hf;
+    //          Green <= 4'hf;
+    //          Blue <= 4'hf;
+    //     end
+    // else begin
+    //         Red <= 4'h0;
+    //         Green <= 4'h0;
+    //         Blue <= 4'h0;
+    // end
+    // end else begin
     //     else if(Mario_Fall_Counter < 20 && Mario_Fall_Counter >= 10) begin
     //         Red = 4'hB;
     //          Green = 4'hB;
@@ -299,5 +361,5 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
             Blue <= Palette_Output_Background[3:0];
         end
     end
-    end // need to comment this out when not testing
+    //end // need to comment this out when not testing
 endmodule

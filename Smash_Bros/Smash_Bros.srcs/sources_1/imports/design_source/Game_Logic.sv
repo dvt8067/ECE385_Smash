@@ -20,13 +20,16 @@ module Game_Logic
         output logic Stop_Luigi_Left, Stop_Luigi_Right, Stop_Luigi_Up, Stop_Luigi_Down,
         output logic Luigi_Movement_Lockout, Mario_Movement_Lockout,
         output logic [6:0] Mario_Percent, Luigi_Percent,
+        output logic [3:0] Mario_Percent_Plus, Luigi_Percent_Plus,
+        output logic Top_Bottom_Test,
         output logic Mario_Right_Punch_Sucessful, Mario_Left_Punch_Sucessful, Luigi_Right_Punch_Sucessful, Luigi_Left_Punch_Sucessful
 );
 // X line overalp section
 logic [9:0] Mario_Rightmost_X, Mario_Leftmost_X, Mario_Bottommost_Y, Mario_Topmost_Y;
+
 assign Mario_Rightmost_X = MarioX+Mario_size_X;
 assign Mario_Leftmost_X = MarioX-Mario_size_X;
-assign Luigi_Punch_Sucessful= 1'b0;
+
 //assign Mario_Bottommost_Y = MarioY+Mario_size_Y;
 //assign Mario_Topmost_Y = MarioY-Mario_size_Y;
 assign Mario_Bottommost_Y = MarioY+40;
@@ -45,42 +48,14 @@ logic Mario_Lockout_Tracker, Luigi_Lockout_Tracker;
 logic [5:0] Luigi_Lockout_Counter, Mario_Lockout_Counter;
 logic [5:0] Lockout_Delay;
 logic Mario_Lockout_Counter_Reset, Luigi_Lockout_Counter_Reset;
-assign Mario_Lockout_Counter_Reset = 1'b0;
-assign Luigi_Lockout_Counter_Reset = 1'b0;
-assign Luigi_Lockout_Tracker = 1'b0;
-assign Mario_Lockout_Tracker = 1'b0;
-assign Luigi_Movement_Lockout = 1'b0;
-assign Mario_Movement_Lockout = 1'b0;
-assign Lockout_Delay = 6'd30;
+always_comb begin
+
+Lockout_Delay = 6'd8;
+end
 
 logic Luigi_Lockout_Count, Mario_Lockout_Count;
 
 
-
- always_ff @ (posedge frame_clk) begin
-        if(Mario_Lockout_Counter_Reset)begin
-            Mario_Lockout_Counter <= 0;
-        end
-        else if(Mario_Lockout_Count)begin
-            Mario_Lockout_Counter <= Mario_Lockout_Counter + 1;
-        end
-        else begin 
-                Mario_Lockout_Counter <= Mario_Lockout_Counter;
-        end
- end
-
- 
- always_ff @ (posedge frame_clk) begin
-        if(Luigi_Lockout_Counter_Reset)begin
-            Luigi_Lockout_Counter <= 0;
-        end
-        else if(Luigi_Lockout_Count)begin
-            Luigi_Lockout_Counter <= Mario_Lockout_Counter + 1;
-        end
-        else begin 
-                Mario_Lockout_Counter <= Mario_Lockout_Counter;
-        end
- end
 always_comb begin
 Stop_Luigi_Down = 1'b0;
 Stop_Luigi_Up = 1'b0;
@@ -134,13 +109,17 @@ if((( Luigi_Leftmost_X  == Mario_Rightmost_X - 3) ||(Luigi_Leftmost_X  == Mario_
 //         || (Mario_Bottommost_Y == Luigi_Topmost_Y + 1) || (Mario_Bottommost_Y == Luigi_Topmost_Y + 2) || (Mario_Bottommost_Y == Luigi_Topmost_Y +3)
 //         || (Mario_Bottommost_Y == Luigi_Topmost_Y +4)) 
                 //Stop_Mario_Down = 1'b1;
-        if(Mario_Bottommost_Y + 1 < Luigi_Topmost_Y)
+                Top_Bottom_Test = 0;
+        if(Mario_Bottommost_Y + 3 > Luigi_Topmost_Y && Mario_Bottommost_Y + 1 < Luigi_Bottommost_Y)
         begin
+                
                 if((Mario_Rightmost_X >= Luigi_Leftmost_X) && (Mario_Rightmost_X <= Luigi_Rightmost_X)) begin
+                        Top_Bottom_Test=1;
                         Stop_Mario_Down = 1'b1;
                         Stop_Luigi_Up = 1'b1;
                 end
                 else if ((Mario_Leftmost_X >= Luigi_Leftmost_X) && (Mario_Leftmost_X <= Luigi_Rightmost_X)) begin
+                        Top_Bottom_Test=1;
                         Stop_Mario_Down = 1'b1;
                         Stop_Luigi_Up = 1'b1;
                 end
@@ -162,7 +141,8 @@ if((( Luigi_Leftmost_X  == Mario_Rightmost_X - 3) ||(Luigi_Leftmost_X  == Mario_
 // if((Luigi_Bottommost_Y == Mario_Topmost_Y - 4)||(Luigi_Bottommost_Y == Mario_Topmost_Y - 3)||(Luigi_Bottommost_Y == Mario_Topmost_Y - 2) || (Luigi_Bottommost_Y == Mario_Topmost_Y- 1) || (Luigi_Bottommost_Y == Mario_Topmost_Y )
 //         || (Mario_Bottommost_Y == Luigi_Topmost_Y + 1) || (Luigi_Bottommost_Y == Mario_Topmost_Y + 2)|| 
 //         (Luigi_Bottommost_Y == Mario_Topmost_Y + 3) || (Luigi_Bottommost_Y == Mario_Topmost_Y + 4)) begin
-        if(Luigi_Bottommost_Y + 1 < Mario_Topmost_Y) begin
+        if(Luigi_Bottommost_Y + 3 > Mario_Topmost_Y && Luigi_Bottommost_Y + 1 < Mario_Bottommost_Y) begin
+
                 //Stop_Luigi_Down = 1'b1;    
                 if((Luigi_Rightmost_X >= Mario_Leftmost_X) && (Luigi_Rightmost_X <= Mario_Rightmost_X)) begin
                     Stop_Luigi_Down = 1'b1;     
@@ -177,26 +157,41 @@ end
 // Hit Reg Logic
 
 always_comb begin
+Mario_Movement_Lockout = 1'b0;
   if(Mario_Lockout_Counter > Lockout_Delay)begin
         Mario_Lockout_Counter_Reset = 1'b1;
+        Mario_Movement_Lockout = 1'b0;
 
 end
 
-else if (Mario_Lockout_Counter <= Lockout_Delay) begin
+else if (Mario_Lockout_Counter <= Lockout_Delay && Mario_Lockout_Counter>0) begin
         Mario_Lockout_Counter_Reset = 1'b0;
         Mario_Movement_Lockout = 1'b1;
+end
+
+else begin
+        Mario_Movement_Lockout = 1'b0;
+        Mario_Lockout_Counter_Reset = 1'b0;
 end
 end
 
 always_comb begin
+Luigi_Movement_Lockout = 1'b0;
 if(Luigi_Lockout_Counter > Lockout_Delay)begin
         Luigi_Lockout_Counter_Reset = 1'b1;
+        Luigi_Movement_Lockout = 1'b0;
     
 end
 
-else if (Luigi_Lockout_Counter <= Lockout_Delay) begin
+else if (Luigi_Lockout_Counter <= Lockout_Delay && Luigi_Lockout_Counter>0) begin
         Luigi_Lockout_Counter_Reset = 1'b0;
+        Luigi_Movement_Lockout = 1'b1;
         
+end
+
+else begin
+        Luigi_Movement_Lockout = 1'b0;
+        Luigi_Lockout_Counter_Reset = 1'b0;
 end
 end
 
@@ -204,11 +199,11 @@ always_ff @ (posedge Clk)begin
         if (Mario_Lockout_Counter_Reset)begin
                 Mario_Lockout_Count <= 1'b0;
         end
-        else if (Mario_Punch_Sucessful) begin
+        else if (Luigi_Right_Punch_Sucessful==1 || Luigi_Left_Punch_Sucessful==1) begin
                 Mario_Lockout_Count <= 1'b1;
         end
         else begin 
-                Mario_Lockout_Count <= 1'b0;
+                Mario_Lockout_Count <= Mario_Lockout_Count;
         end
 
 end
@@ -217,15 +212,20 @@ always_ff @ (posedge Clk)begin
         if (Luigi_Lockout_Counter_Reset)begin
                 Luigi_Lockout_Count <= 1'b0;
         end
-        else if (Luigi_Punch_Sucessful) begin
+        else if (Mario_Right_Punch_Sucessful==1 || Mario_Left_Punch_Sucessful==1) begin
                 Luigi_Lockout_Count <= 1'b1;
         end
         else begin 
-                Luigi_Lockout_Count <= 1'b0;
+                Luigi_Lockout_Count <= Luigi_Lockout_Count;
         end
 
 end
 
+
+
+
+// Luigi_Lockout_Tracker = 1'b0;
+// Mario_Lockout_Tracker = 1'b0;
 
 always_comb begin
 // Mario_Punch_Sucessful = 1'b0;
@@ -238,45 +238,95 @@ always_comb begin
 // if(Luigi_Punch_Sucessful) begin
 // Luigi_Lockout_Count = 1'b1;
 // end
+Luigi_Right_Punch_Sucessful= 1'b0;
+Luigi_Left_Punch_Sucessful= 1'b0;
+Mario_Right_Punch_Sucessful= 1'b0;
+Mario_Left_Punch_Sucessful= 1'b0;
 
+if(Mario_State == 13)begin
+        if(Stop_Mario_Right)begin
+        Mario_Right_Punch_Sucessful = 1'b1;
+        end
+end
 
-if(Mario_State == 13 || Mario_State == 15)begin
-        if(Stop_Mario_Right || Stop_Mario_Left)begin
-        Mario_Punch_Sucessful = 1'b1;
+if(Mario_State == 15)begin
+        if(Stop_Mario_Left)begin
+        Mario_Left_Punch_Sucessful = 1'b1;
         end
 end
 
 
-if(Luigi_State == 13 || Luigi_State == 15)begin
-             if(Stop_Luigi_Right || Stop_Luigi_Left)begin
-        Luigi_Punch_Sucessful = 1'b1;
-        //Luigi_Movement_Lockout = 1'b1;
+if(Luigi_State == 13)begin
+        if(Stop_Luigi_Right)begin
+        Luigi_Right_Punch_Sucessful = 1'b1;
+        end
+end
+
+if(Luigi_State == 15)begin
+        if(Stop_Luigi_Left)begin
+        Luigi_Left_Punch_Sucessful = 1'b1;
         end
 end
 
 end
- always_ff @ (posedge Clk) begin
+
+
+ always_ff @ (posedge frame_clk) begin
         if(Mario_Percent > 100)begin
             Mario_Percent <= 0;
+            Mario_Percent_Plus <= 0;
         end
-        else if(Luigi_Punch_Sucessful)begin
+        else if(Luigi_Right_Punch_Sucessful==1 || Luigi_Left_Punch_Sucessful ==1)begin
            Mario_Percent <= Mario_Percent + 5;
+           Mario_Percent_Plus <= 5;
         end
         else begin 
                 Mario_Percent <= Mario_Percent;
+                Mario_Percent_Plus <= Mario_Percent_Plus;
         end
 
  end
  
- always_ff @ (posedge Clk) begin
+ always_ff @ (posedge frame_clk) begin
         if(Luigi_Percent > 100)begin
             Luigi_Percent <= 0;
+            Luigi_Percent_Plus <= 0;
         end
-        else if(Mario_Punch_Sucessful)begin
+        else if(Mario_Right_Punch_Sucessful==1 || Mario_Left_Punch_Sucessful==1)begin
            Luigi_Percent <= Luigi_Percent + 5;
+           Luigi_Percent_Plus <= 5;
         end
         else begin 
                 Luigi_Percent <= Luigi_Percent;
+                Luigi_Percent_Plus <= Mario_Percent_Plus;
+        end
+ end
+
+
+ 
+
+ always_ff @ (posedge frame_clk) begin
+        if(Mario_Lockout_Counter_Reset)begin
+            Mario_Lockout_Counter <= 0;
+        end
+        else if(Mario_Lockout_Count)begin
+            Mario_Lockout_Counter <= Mario_Lockout_Counter + 1;
+        end
+        else begin 
+                Mario_Lockout_Counter <= Mario_Lockout_Counter;
+        end
+ end
+
+ 
+ always_ff @ (posedge frame_clk) begin
+        if(Luigi_Lockout_Counter_Reset)begin
+            Luigi_Lockout_Counter <= 0;
+        end
+        else if(Luigi_Lockout_Count)begin
+            Luigi_Lockout_Counter <= Luigi_Lockout_Counter + 1;
+        end
+        else begin 
+                Luigi_Lockout_Counter <= Luigi_Lockout_Counter;
         end
  end
 

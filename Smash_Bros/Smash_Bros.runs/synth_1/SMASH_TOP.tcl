@@ -110,6 +110,7 @@ read_verilog -library xil_defaultlib -sv {
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Smash_Background.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/VGA_controller.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/hex.sv
+  C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/number_font_rom.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/ram.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv
 }

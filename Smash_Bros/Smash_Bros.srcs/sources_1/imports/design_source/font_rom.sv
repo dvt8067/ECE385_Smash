@@ -194,7 +194,7 @@ module number_font_rom ( input [10:0]	addr,
         8'b00000000, // d
         8'b00000000, // e
         8'b00000000, // f
-
+        };
 
 	assign data = ROM[addr];
 

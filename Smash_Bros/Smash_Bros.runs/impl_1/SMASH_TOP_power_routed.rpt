@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Tue Dec  5 22:00:11 2023
+| Date             : Wed Dec  6 17:37:30 2023
 | Host             : Amadeus running 64-bit major release  (build 9200)
 | Command          : report_power -file SMASH_TOP_power_routed.rpt -pb SMASH_TOP_power_summary_routed.pb -rpx SMASH_TOP_power_routed.rpx
 | Design           : SMASH_TOP
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.496        |
+| Total On-Chip Power (W)  | 0.484        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.419        |
+| Dynamic (W)              | 0.407        |
 | Device Static (W)        | 0.077        |
 | Effective TJA (C/W)      | 4.9          |
-| Max Ambient (C)          | 82.5         |
-| Junction Temperature (C) | 27.5         |
+| Max Ambient (C)          | 82.6         |
+| Junction Temperature (C) | 27.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,22 +53,22 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.016 |       12 |       --- |             --- |
-| Slice Logic              |     0.017 |     9251 |       --- |             --- |
-|   LUT as Logic           |     0.015 |     3873 |     32600 |           11.88 |
+| Slice Logic              |     0.011 |     8719 |       --- |             --- |
+|   LUT as Logic           |     0.010 |     3441 |     32600 |           10.56 |
 |   LUT as Distributed RAM |    <0.001 |      172 |      9600 |            1.79 |
-|   CARRY4                 |    <0.001 |      407 |      8150 |            4.99 |
-|   Register               |    <0.001 |     2840 |     65200 |            4.36 |
+|   CARRY4                 |    <0.001 |      318 |      8150 |            3.90 |
+|   Register               |    <0.001 |     2848 |     65200 |            4.37 |
 |   F7/F8 Muxes            |    <0.001 |       36 |     32600 |            0.11 |
 |   LUT as Shift Register  |    <0.001 |      112 |      9600 |            1.17 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   Others                 |     0.000 |      807 |       --- |             --- |
-| Signals                  |     0.020 |     6129 |       --- |             --- |
+| Signals                  |     0.013 |     5885 |       --- |             --- |
 | Block RAM                |     0.012 |     41.5 |        75 |           55.33 |
 | MMCM                     |     0.212 |        2 |         5 |           40.00 |
 | DSPs                     |     0.003 |        8 |       120 |            6.67 |
 | I/O                      |     0.139 |       42 |       210 |           20.00 |
 | Static Power             |     0.077 |          |           |                 |
-| Total                    |     0.496 |          |           |                 |
+| Total                    |     0.484 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.080 |       0.069 |      0.011 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.068 |       0.056 |      0.011 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.130 |       0.118 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.042 |       0.041 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
@@ -153,25 +153,23 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| SMASH_TOP                   |     0.419 |
+| SMASH_TOP                   |     0.407 |
 |   Luigi_State0              |     0.002 |
 |   Mario_State0              |     0.002 |
 |   clk_wiz                   |     0.106 |
 |     inst                    |     0.106 |
 |   color_instance            |     0.015 |
-|     Mario_Punching2_ROM     |     0.001 |
+|     Mario_Jumping_ROM       |     0.001 |
+|     Mario_Punching1_ROM     |     0.001 |
 |     Mario_Stationary_ROM    |     0.002 |
-|     Mario_Walking3_ROM      |     0.001 |
 |     Smash_Background0       |     0.006 |
-|   luigi_instance            |     0.008 |
-|   mario_instance            |     0.012 |
-|   mb_block_i                |     0.133 |
+|   luigi_instance            |     0.004 |
+|   mario_instance            |     0.004 |
+|   mb_block_i                |     0.132 |
 |     clk_wiz_1               |     0.106 |
 |       inst                  |     0.106 |
-|     gpio_usb_keycode        |     0.001 |
-|       U0                    |     0.001 |
-|     microblaze_0            |     0.014 |
-|       U0                    |     0.014 |
+|     microblaze_0            |     0.013 |
+|       U0                    |     0.013 |
 |     microblaze_0_axi_intc   |     0.001 |
 |       U0                    |     0.001 |
 |     microblaze_0_axi_periph |     0.001 |

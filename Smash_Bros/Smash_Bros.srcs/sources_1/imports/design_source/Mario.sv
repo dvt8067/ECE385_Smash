@@ -57,6 +57,7 @@ module  Mario ( input logic Reset, frame_clk,
         ||((Mario_Bottom_Edge_RX>Stage_X_Min)&&(Mario_Bottom_Edge_RX<Stage_X_Max)))begin
           edge_below_mario = 1'b1;
           end
+      end
         if (Stop_Mario_Down == 1) begin
           edge_below_mario = 1'b1;
         end
@@ -64,9 +65,9 @@ module  Mario ( input logic Reset, frame_clk,
         // else begin
         //   edge_below_mario = 0;
         // end
-            end
-            
-  
+          
+          
+      
   
   end
    
@@ -294,10 +295,10 @@ module  Mario ( input logic Reset, frame_clk,
                     // Ball_X_Motion <= 10'd0;
                     end             
         if(Luigi_Right_Punch_Sucessful == 1) begin
-          MarioX <= MarioX + 10'd4;
+          MarioX <= MarioX + 10'd20;
         end 
         else if(Luigi_Left_Punch_Sucessful == 1) begin
-          MarioX <= MarioX - 10'd4;
+          MarioX <= MarioX - 10'd20;
         end
         else begin
 				 if (keycode == 8'h04) begin
