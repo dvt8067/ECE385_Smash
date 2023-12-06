@@ -42,6 +42,7 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
     logic [11:0] Palette_Output_Background;
     logic [18:0] Background_address;
     logic Background_on;
+    logic [7:0] Number_data;
     //logic [9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min;
 
 
@@ -140,6 +141,11 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
 		.Clk(Clk),
 		.data_Out(Palette_Index_Punching2_Mario)
     );
+    number_font_rom number_font_rom(.addr({Mario_Percent[3:0],DrawY[3:0]}), .data(Number_data));
+
+    Lowest_Number
+    Second_Number
+    Highest_Number
     //REDOINK THIS KUD TI HAVE 0-7 PALETTE INDEXES
 
     always_comb begin
@@ -236,14 +242,14 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
     begin:RGB_Display
     if(DrawX < 50 && DrawY < 50) begin
         if(Mario_Movement_Lockout) begin
-            Red = 4'hf;
-             Green = 4'hf;
-             Blue = 4'hf;
+            Red <= 4'hf;
+             Green <= 4'hf;
+             Blue <= 4'hf;
         end
     else begin
-            Red = 4'h0;
-            Green = 4'h0;
-            Blue = 4'h0;
+            Red <= 4'h0;
+            Green <= 4'h0;
+            Blue <= 4'h0;
     end
     end else begin
     //     else if(Mario_Fall_Counter < 20 && Mario_Fall_Counter >= 10) begin
@@ -265,20 +271,20 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
     // end
     // else begin /// need to comment this out when not testing
         if(Mario_on && (Palette_Output_Mario != 12'h808)) begin
-             Red = Palette_Output_Mario[11:8];
-             Green = Palette_Output_Mario[7:4];
-             Blue = Palette_Output_Mario[3:0];
+             Red <= Palette_Output_Mario[11:8];
+             Green <= Palette_Output_Mario[7:4];
+             Blue <= Palette_Output_Mario[3:0];
              //on_background = 0;
         end
         else if(Luigi_on && (Palette_Output_Luigi != 12'h808)) begin
-             Red = Palette_Output_Luigi[11:8];
-             Green = Palette_Output_Luigi[7:4];
-             Blue = Palette_Output_Luigi[3:0];
+             Red <= Palette_Output_Luigi[11:8];
+             Green <= Palette_Output_Luigi[7:4];
+             Blue <= Palette_Output_Luigi[3:0];
         end
         else if ((DrawY>Stage_Y_Min) && (DrawY<Stage_Y_Max)&& (DrawX<Stage_X_Max) && (DrawX>Stage_X_Min)) begin
-            Red = 4'hf;
-            Green = 4'h7;
-            Blue = 4'h0;
+            Red <= 4'hf;
+            Green <= 4'h7;
+            Blue <= 4'h0;
             //on_background = 0;
         end
 
@@ -288,9 +294,9 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
             // Green = 4'hf; // PUT THE BACKGROUND COLOR OUTPUT HERE
             // Blue = 4'hf; // SWITCH TO THE COMMENTED VERSION BELOW ONCE NEW PALETTE IS MADE
 
-            Red = Palette_Output_Background[11:8]; 
-            Green = Palette_Output_Background[7:4];
-            Blue = Palette_Output_Background[3:0];
+            Red <= Palette_Output_Background[11:8]; 
+            Green <= Palette_Output_Background[7:4];
+            Blue <= Palette_Output_Background[3:0];
         end
     end
     end // need to comment this out when not testing

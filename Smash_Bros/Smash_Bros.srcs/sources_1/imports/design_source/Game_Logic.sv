@@ -26,6 +26,7 @@ module Game_Logic
 logic [9:0] Mario_Rightmost_X, Mario_Leftmost_X, Mario_Bottommost_Y, Mario_Topmost_Y;
 assign Mario_Rightmost_X = MarioX+Mario_size_X;
 assign Mario_Leftmost_X = MarioX-Mario_size_X;
+assign Luigi_Punch_Sucessful= 1'b0;
 //assign Mario_Bottommost_Y = MarioY+Mario_size_Y;
 //assign Mario_Topmost_Y = MarioY-Mario_size_Y;
 assign Mario_Bottommost_Y = MarioY+40;
@@ -175,6 +176,7 @@ end
 
 else if (Mario_Lockout_Counter <= Lockout_Delay) begin
         Mario_Lockout_Counter_Reset = 1'b0;
+        Mario_Movement_Lockout = 1'b1;
 end
 end
 

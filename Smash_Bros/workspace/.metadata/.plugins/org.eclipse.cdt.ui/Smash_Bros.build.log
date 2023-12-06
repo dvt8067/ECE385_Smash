@@ -1,13 +1,13 @@
-21:05:47 **** Build of configuration Debug for project Smash_Bros ****
+22:02:28 **** Build of configuration Debug for project Smash_Bros ****
 make all 
 'Building file: ../src/lw_usb/HID.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lw_usb/HID.o" -IC:/Users/Git_Smash/ECE385_Smash/Smash_Bros/workspace/SMASH_TOP/export/SMASH_TOP/sw/SMASH_TOP/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lw_usb/HID.d" -MT"src/lw_usb/HID.o" -o "src/lw_usb/HID.o" "../src/lw_usb/HID.c"
-'Finished building: ../src/lw_usb/HID.c'
 ../src/lw_usb/HID.c:9:1: warning: braces around scalar initializer
     9 | HID_DEVICE hid_device = { { 0 } };
       | ^~~~~~~~~~
 ../src/lw_usb/HID.c:9:1: note: (near initialization for 'hid_device.addr')
+'Finished building: ../src/lw_usb/HID.c'
 ' '
 'Building file: ../src/lw_usb/MAX3421E.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -83,5 +83,5 @@ mb-size Smash_Bros.elf  |tee "Smash_Bros.elf.size"
 'Finished building: Smash_Bros.elf.size'
 ' '
 
-21:05:50 Build Finished (took 3s.142ms)
+22:02:31 Build Finished (took 2s.566ms)
 

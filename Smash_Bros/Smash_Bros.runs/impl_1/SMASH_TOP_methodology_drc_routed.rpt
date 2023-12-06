@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Tue Dec  5 21:26:18 2023
+| Date         : Tue Dec  5 22:00:08 2023
 | Host         : Amadeus running 64-bit major release  (build 9200)
 | Command      : report_methodology -file SMASH_TOP_methodology_drc_routed.rpt -pb SMASH_TOP_methodology_drc_routed.pb -rpx SMASH_TOP_methodology_drc_routed.rpx
 | Design       : SMASH_TOP
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 184
+             Violations found: 183
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
@@ -35,8 +35,10 @@ Table of Contents
 | DPIR-1    | Warning          | Asynchronous driver check                          | 21         |
 | LUTAR-1   | Warning          | LUT drives async reset alert                       | 4          |
 | TIMING-9  | Warning          | Unknown CDC Logic                                  | 1          |
-| TIMING-16 | Warning          | Large setup violation                              | 7          |
+| TIMING-16 | Warning          | Large setup violation                              | 4          |
 | TIMING-18 | Warning          | Missing input or output delay                      | 33         |
+| TIMING-20 | Warning          | Non-clocked latch                                  | 1          |
+| LATCH-1   | Advisory         | Existing latches in the design                     | 1          |
 +-----------+------------------+----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -775,37 +777,22 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.116 ns between color_instance/Mario_Walking2_ROM/data_Out_reg/CLKARDCLK (clocked by Clk) and vga_to_hdmi/inst/srldly_0/srl[36].srl16_i_srlopt/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.074 ns between color_instance/Smash_Background0/data_Out_reg_0_1/CLKARDCLK (clocked by Clk) and vga_to_hdmi/inst/srldly_0/srl[28].srl16_i_srlopt/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -1.194 ns between color_instance/Smash_Background0/data_Out_reg_2_2/CLKARDCLK (clocked by Clk) and vga_to_hdmi/inst/srldly_0/srl[29].srl16_i_srlopt/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.082 ns between color_instance/Smash_Background0/data_Out_reg_6_2/CLKARDCLK (clocked by Clk) and vga_to_hdmi/inst/srldly_0/srl[36].srl16_i/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -1.229 ns between color_instance/Mario_Walking2_ROM/data_Out_reg/CLKARDCLK (clocked by Clk) and vga_to_hdmi/inst/srldly_0/srl[37].srl16_i_srlopt/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.334 ns between color_instance/Smash_Background0/data_Out_reg_6_2/CLKARDCLK (clocked by Clk) and vga_to_hdmi/inst/srldly_0/srl[22].srl16_i_srlopt/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -1.241 ns between color_instance/Mario_Walking2_ROM/data_Out_reg/CLKARDCLK (clocked by Clk) and vga_to_hdmi/inst/srldly_0/srl[22].srl16_i_srlopt/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#5 Warning
-Large setup violation  
-There is a large setup violation of -1.251 ns between color_instance/Mario_Walking2_ROM/data_Out_reg/CLKARDCLK (clocked by Clk) and vga_to_hdmi/inst/srldly_0/srl[28].srl16_i/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#6 Warning
-Large setup violation  
-There is a large setup violation of -1.261 ns between color_instance/Mario_Walking2_ROM/data_Out_reg/CLKARDCLK (clocked by Clk) and vga_to_hdmi/inst/srldly_0/srl[23].srl16_i_srlopt/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#7 Warning
-Large setup violation  
-There is a large setup violation of -1.283 ns between color_instance/Smash_Background0/data_Out_reg_2_2/CLKARDCLK (clocked by Clk) and vga_to_hdmi/inst/srldly_0/srl[30].srl16_i_srlopt/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.342 ns between color_instance/Smash_Background0/data_Out_reg_6_2/CLKARDCLK (clocked by Clk) and vga_to_hdmi/inst/srldly_0/srl[30].srl16_i_srlopt/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
@@ -971,6 +958,16 @@ Related violations: <none>
 TIMING-18#33 Warning
 Missing input or output delay  
 An output delay is missing on usb_spi_ss relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch Game_Logic0/Luigi_Punch_Sucessful_reg cannot be properly analyzed as its control pin Game_Logic0/Luigi_Punch_Sucessful_reg/G is not reached by a timing clock
+Related violations: <none>
+
+LATCH-1#1 Advisory
+Existing latches in the design  
+There are 1 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 
