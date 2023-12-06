@@ -4,6 +4,7 @@ module Key_Hierarchy_Mario
 		input logic [47:0] Full_Keycodes,
 		input logic edge_below_mario,
 		input logic punch_on_mario,
+		input logic Mario_Movement_Lockout,
 
 		output logic [7:0] Mario_Priority_1
 );
@@ -54,6 +55,10 @@ end
 		Mario_Priority_1 = 8'h04;
 	end
 	else begin
+		Mario_Priority_1 = 8'h00;
+	end
+
+	if(Mario_Movement_Lockout == 1)begin
 		Mario_Priority_1 = 8'h00;
 	end
 	//Now for Mario_Priority_2

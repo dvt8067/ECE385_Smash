@@ -57,7 +57,7 @@ always_comb begin
         ||((Luigi_Bottom_Edge_RX>Stage_X_Min)&&(Luigi_Bottom_Edge_RX<Stage_X_Max)))begin
           edge_below_luigi = 1'b1;
           end
-        else if(Stop_Luigi_Down == 1) begin
+        if(Stop_Luigi_Down == 1) begin
           edge_below_luigi = 1'b1;
         end
       

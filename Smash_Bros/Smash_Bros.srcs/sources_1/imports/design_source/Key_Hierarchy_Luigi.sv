@@ -4,6 +4,7 @@ module Key_Hierarchy_Luigi
 		input logic [47:0] Full_Keycodes,
 		input logic edge_below_luigi,
 		input logic punch_on_luigi,
+		input logic Luigi_Movement_Lockout,
 		
 
 		output logic [7:0] Luigi_Priority_1
@@ -55,6 +56,10 @@ end
 		Luigi_Priority_1 = 8'h50;
 	end
 	else begin
+		Luigi_Priority_1 = 8'h00;
+	end
+
+	if(Luigi_Movement_Lockout == 1) begin
 		Luigi_Priority_1 = 8'h00;
 	end
 	//Now for Luigi_Priority_2

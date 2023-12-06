@@ -56,7 +56,7 @@ module  Mario ( input logic Reset, frame_clk,
         ||((Mario_Bottom_Edge_RX>Stage_X_Min)&&(Mario_Bottom_Edge_RX<Stage_X_Max)))begin
           edge_below_mario = 1'b1;
           end
-        else if (Stop_Mario_Down) begin
+        if (Stop_Mario_Down == 1) begin
           edge_below_mario = 1'b1;
         end
       

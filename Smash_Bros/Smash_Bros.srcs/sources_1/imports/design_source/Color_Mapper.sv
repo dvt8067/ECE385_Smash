@@ -20,7 +20,7 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
                        input logic [4:0] Mario_State_Out,
                        input logic [4:0] Luigi_State_Out,
                        input logic Mario_Invert_Left,
-                       input logic Luigi_Invert_Left,
+                       input logic Luigi_Invert_Left Mario_Movement_Lockout,
                        input logic [25:0] Mario_Fall_Counter,
                        input logic [25:0] Luigi_Fall_Counter,
                        output logic [3:0]  Red, Green, Blue,
@@ -234,12 +234,18 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
 
     always_comb
     begin:RGB_Display
-    // if(DrawX < 50 && DrawY < 50) begin
-    //     if(Mario_Fall_Counter < 10) begin
-    //         Red = 4'hf;
-    //          Green = 4'hf;
-    //          Blue = 4'hf;
-    //     end
+    if(DrawX < 50 && DrawY < 50) begin
+        if(Mario_Movement_Lockout) begin
+            Red = 4'hf;
+             Green = 4'hf;
+             Blue = 4'hf;
+        end
+    else begin
+            Red = 4'h0;
+            Green = 4'h0;
+            Blue = 4'h0;
+    end
+    end
     //     else if(Mario_Fall_Counter < 20 && Mario_Fall_Counter >= 10) begin
     //         Red = 4'hB;
     //          Green = 4'hB;
