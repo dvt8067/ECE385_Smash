@@ -18,7 +18,7 @@ module  Mario ( input logic Reset, frame_clk,
 			   input logic [7:0] keycode,
          input logic [5:0] Mario_Percent,
          input logic [9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min,
-         input logic Stop_Mario_Left, Stop_Mario_Right, Stop_Mario_Up, Stop_Mario_Down, Luigi_Punch_Sucessful,
+         input logic Stop_Mario_Left, Stop_Mario_Right, Stop_Mario_Up, Stop_Mario_Down, Luigi_Right_Punch_Sucessful, Luigi_Left_Punch_Sucessful,
                output logic [9:0] MarioX, MarioY, MarioS_X, MarioS_Y,
                output logic edge_below_mario,
                output logic jump_on_mario,
@@ -267,7 +267,7 @@ module  Mario ( input logic Reset, frame_clk,
               //   // Mario_Jump_Counter_Reset <= 1
 
 
-              if(Luigi_Punch_Sucessful != 1) begin
+              if(Luigi_Right_Punch_Sucessful != 1 && Luigi_Left_Punch_Sucessful != 1) begin
                 MarioX <= MarioX;
               end
                // Continue to Reset MarioX
@@ -285,7 +285,7 @@ module  Mario ( input logic Reset, frame_clk,
         //if(edge_below_mario == 0 )
 				 if (keycode == 8'h16) begin
 				    // if(BallY + BallS <=Ball_Y_Max) begin
-              if(Luigi_Punch_Sucessful != 1) begin
+              if(Luigi_Right_Punch_Sucessful != 1 && Luigi_Left_Punch_Sucessful != 1) begin
                   MarioX <= MarioX; // continue to reset marioX
               end
                     //     Ball_Y_Motion <= 10'd1;
@@ -293,9 +293,13 @@ module  Mario ( input logic Reset, frame_clk,
                     //     end
                     // Ball_X_Motion <= 10'd0;
                     end             
-        if(Luigi_Punch_Sucessful == 1) begin
-          MarioX <= MarioX + 10'd2;
-        end else begin
+        if(Luigi_Right_Punch_Sucessful == 1) begin
+          MarioX <= MarioX + 10'd4;
+        end 
+        else if(Luigi_Left_Punch_Sucessful == 1) begin
+          MarioX <= MarioX - 10'd4;
+        end
+        else begin
 				 if (keycode == 8'h04) begin
           if(Mario_Bottom_Edge_Y<Stage_Y_Min+1) begin
             if(Stop_Mario_Left == 0)begin
@@ -349,7 +353,7 @@ module  Mario ( input logic Reset, frame_clk,
 				 
 				//  BallY <= (BallY + Ball_Y_Motion);  // Update ball position
 				//  BallX <= (BallX + Ball_X_Motion);
-        if(keycode !=8'h07 &&keycode !=8'h04 && Luigi_Punch_Sucessful != 1) begin
+        if(keycode !=8'h07 &&keycode !=8'h04 && Luigi_Right_Punch_Sucessful != 1 && Luigi_Left_Punch_Sucessful != 1) begin
         
         //&& keycode != 8'h16 && keycode != 8'h1A) begin
             MarioX<=MarioX; ///  continue to reset MarioX

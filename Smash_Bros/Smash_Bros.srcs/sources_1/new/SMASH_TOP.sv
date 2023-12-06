@@ -74,7 +74,8 @@ module SMASH_TOP(
     logic punch_on_mario, punch_on_luigi;
     logic Stop_Mario_Left, Stop_Mario_Right, Stop_Mario_Up, Stop_Mario_Down;
     logic Stop_Luigi_Left, Stop_Luigi_Right, Stop_Luigi_Up, Stop_Luigi_Down;
-    logic Luigi_Movement_Lockout, Mario_Movement_Lockout, Mario_Punch_Sucessful, Luigi_Punch_Sucessful;
+    logic Luigi_Movement_Lockout, Mario_Movement_Lockout;
+    logic Mario_Right_Punch_Sucessful, Mario_Left_Punch_Sucessful, Luigi_Right_Punch_Sucessful, Luigi_Left_Punch_Sucessful;
     logic [5:0] Mario_Percent, Luigi_Percent;
 
     //logic [7:0] Mario_Priority_2;
@@ -200,7 +201,8 @@ module SMASH_TOP(
         .Mario_Fall_Counter,
         .Stop_Mario_Left, .Stop_Mario_Right, .Stop_Mario_Up, .Stop_Mario_Down,
         .Mario_Percent,
-        .Luigi_Punch_Sucessful
+        .Luigi_Right_Punch_Sucessful,
+        .Luigi_Left_Punch_Sucessful
     );
     Luigi  luigi_instance ( 
         .Reset(reset_ah), 
@@ -219,7 +221,8 @@ module SMASH_TOP(
         .Luigi_Fall_Counter(Luigi_Fall_Counter),
         .Stop_Luigi_Left, .Stop_Luigi_Right, .Stop_Luigi_Up, .Stop_Luigi_Down,
         .Luigi_Percent,
-        .Mario_Punch_Sucessful
+        .Mario_Right_Punch_Sucessful,
+        .Mario_Left_Punch_Sucessful
         );
     
     //Color Mapper Module   
@@ -285,9 +288,11 @@ module SMASH_TOP(
         .Luigi_Movement_Lockout, 
         .Mario_Movement_Lockout,
         .Mario_Percent,
-        .Mario_Punch_Sucessful,
+        .Mario_Right_Punch_Sucessful,
+        .Mario_Left_Punch_Sucessful,
         .Luigi_Percent,
-        .Luigi_Punch_Sucessful
+        .Luigi_Right_Punch_Sucessful,
+        .Luigi_Left_Punch_Sucessful,
 );
 
     
