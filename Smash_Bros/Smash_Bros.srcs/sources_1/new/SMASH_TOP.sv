@@ -74,7 +74,9 @@ module SMASH_TOP(
     logic punch_on_mario, punch_on_luigi;
     logic Stop_Mario_Left, Stop_Mario_Right, Stop_Mario_Up, Stop_Mario_Down;
     logic Stop_Luigi_Left, Stop_Luigi_Right, Stop_Luigi_Up, Stop_Luigi_Down;
-    logic Luigi_Movement_Lockout, Mario_Movement_Lockout;
+    logic Luigi_Movement_Lockout, Mario_Movement_Lockout, Mario_Punch_Sucessful, Luigi_Punch_Sucessful;
+    logic [5:0] Mario_Percent, Luigi_Percent;
+
     //logic [7:0] Mario_Priority_2;
     assign reset_ah = reset_rtl_0;
     
@@ -196,7 +198,9 @@ module SMASH_TOP(
         .Stage_Y_Min(Stage_Y_Min),
         .jump_on_mario(jump_on_mario),
         .Mario_Fall_Counter,
-        .Stop_Mario_Left, .Stop_Mario_Right, .Stop_Mario_Up, .Stop_Mario_Down
+        .Stop_Mario_Left, .Stop_Mario_Right, .Stop_Mario_Up, .Stop_Mario_Down,
+        .Mario_Percent,
+        .Luigi_Punch_Sucessful
     );
     Luigi  luigi_instance ( 
         .Reset(reset_ah), 
@@ -213,7 +217,9 @@ module SMASH_TOP(
         .edge_below_luigi(edge_below_luigi),
         .jump_on_luigi(jump_on_luigi),
         .Luigi_Fall_Counter(Luigi_Fall_Counter),
-        .Stop_Luigi_Left, .Stop_Luigi_Right, .Stop_Luigi_Up, .Stop_Luigi_Down
+        .Stop_Luigi_Left, .Stop_Luigi_Right, .Stop_Luigi_Up, .Stop_Luigi_Down,
+        .Luigi_Percent,
+        .Mario_Punch_Sucessful
         );
     
     //Color Mapper Module   
@@ -242,7 +248,7 @@ module SMASH_TOP(
         .Stage_Y_Min(Stage_Y_Min),
         .Mario_Fall_Counter,
         .Luigi_Fall_Counter,
-        .Mario_Movement_Lockout,
+        .Mario_Movement_Lockout
     );
     Key_Hierarchy_Mario KHM0(
         .Full_Keycodes({keycode1_gpio[15:0], keycode0_gpio}),
@@ -277,7 +283,12 @@ module SMASH_TOP(
         .Clk,
         .frame_clk(vsync),
         .Luigi_Movement_Lockout, 
-        .Mario_Movement_Lockout
+        .Mario_Movement_Lockout,
+        .Mario_Percent,
+        .Mario_Punch_Sucessful,
+        .Luigi_Percent,
+        .Luigi_Punch_Sucessful
 );
+
     
 endmodule

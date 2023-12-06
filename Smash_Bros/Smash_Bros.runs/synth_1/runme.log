@@ -10,7 +10,7 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source SMASH_TOP.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1001.043 ; gain = 116.836
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1001.176 ; gain = 117.340
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/IPrepo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
@@ -26,10 +26,12 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 27256
+INFO: [Synth 8-7075] Helper process launched with PID 20308
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'Mario_Punch_Sucessful' is not allowed [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Game_Logic.sv:55]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'Luigi_Punch_Sucessful' is not allowed [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Game_Logic.sv:55]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1843.203 ; gain = 409.070
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1847.332 ; gain = 408.477
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'SMASH_TOP' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv:24]
 INFO: [Synth 8-6157] synthesizing module 'HexDriver' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/hex.sv:1]
@@ -43,22 +45,22 @@ INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/Git_Smash/ECE
 INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/hex.sv:11]
 INFO: [Synth 8-6155] done synthesizing module 'HexDriver' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/hex.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'mb_ball' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:936]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_axi_uartlite_0_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_axi_uartlite_0_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_clk_wiz_1_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_clk_wiz_1_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_axi_gpio_0_1' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_axi_gpio_0_1' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_axi_gpio_0_2' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_axi_gpio_0_2' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_axi_gpio_0_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_axi_gpio_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_axi_gpio_0_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_axi_gpio_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_mdm_1_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_mdm_1_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_microblaze_0_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_microblaze_0_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_microblaze_0_axi_intc_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_microblaze_0_axi_intc_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_axi_uartlite_0_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_axi_uartlite_0_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_clk_wiz_1_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_clk_wiz_1_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_axi_gpio_0_1' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_axi_gpio_0_1' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_axi_gpio_0_2' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_axi_gpio_0_2' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_axi_gpio_0_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_axi_gpio_0_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_mdm_1_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_mdm_1_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_microblaze_0_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_microblaze_0_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_microblaze_0_axi_intc_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_microblaze_0_axi_intc_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_microblaze_0_axi_intc_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'mb_ball_microblaze_0_axi_periph_0' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:1602]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_16FT3F1' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_16FT3F1' (0#1) [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:12]
@@ -76,46 +78,46 @@ INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_HOT4ZP' [c:/Users/Git
 INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_HOT4ZP' (0#1) [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:804]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_8TKQHD' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:2926]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_8TKQHD' (0#1) [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:2926]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_xbar_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_xbar_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_xbar_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_xbar_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_xbar_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_xbar_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'mb_ball_xbar_0' is unconnected for instance 'xbar' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:2651]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'mb_ball_xbar_0' is unconnected for instance 'xbar' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:2651]
 WARNING: [Synth 8-7023] instance 'xbar' of module 'mb_ball_xbar_0' has 40 connections declared, but only 38 given [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:2651]
 INFO: [Synth 8-6155] done synthesizing module 'mb_ball_microblaze_0_axi_periph_0' (0#1) [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:1602]
 INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_GMYH4D' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:2692]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_dlmb_bram_if_cntlr_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_dlmb_v10_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_dlmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_dlmb_v10_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_dlmb_bram_if_cntlr_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_dlmb_v10_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_dlmb_v10_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_dlmb_v10_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_ball_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:2838]
 WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'mb_ball_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:2838]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_ilmb_bram_if_cntlr_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_ilmb_v10_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_ilmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_ilmb_v10_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_ilmb_bram_if_cntlr_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_ilmb_v10_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_ilmb_v10_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_ilmb_v10_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_ball_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:2884]
 WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'mb_ball_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:2884]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_lmb_bram_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_lmb_bram_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_lmb_bram_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_lmb_bram_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_lmb_bram_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_lmb_bram_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'rsta_busy' of module 'mb_ball_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:2909]
 WARNING: [Synth 8-7071] port 'rstb_busy' of module 'mb_ball_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:2909]
 WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'mb_ball_lmb_bram_0' has 16 connections declared, but only 14 given [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:2909]
 INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_GMYH4D' (0#1) [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:2692]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_rst_clk_wiz_1_100M_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_rst_clk_wiz_1_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_rst_clk_wiz_1_100M_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_rst_clk_wiz_1_100M_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_rst_clk_wiz_1_100M_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_rst_clk_wiz_1_100M_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'mb_ball_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:1532]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'mb_ball_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:1532]
 WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'mb_ball_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:1532]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_axi_quad_spi_0_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_axi_quad_spi_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_axi_quad_spi_0_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_axi_quad_spi_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_axi_quad_spi_0_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_axi_quad_spi_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_axi_quad_spi_0_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_axi_quad_spi_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'io0_t' of module 'mb_ball_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:1541]
 WARNING: [Synth 8-7071] port 'io1_o' of module 'mb_ball_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:1541]
 WARNING: [Synth 8-7071] port 'io1_t' of module 'mb_ball_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:1541]
 WARNING: [Synth 8-7071] port 'sck_t' of module 'mb_ball_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:1541]
 WARNING: [Synth 8-7071] port 'ss_t' of module 'mb_ball_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:1541]
 WARNING: [Synth 8-7023] instance 'spi_usb' of module 'mb_ball_axi_quad_spi_0_0' has 33 connections declared, but only 28 given [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:1541]
-INFO: [Synth 8-6157] synthesizing module 'mb_ball_axi_timer_0_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_axi_timer_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_ball_axi_timer_0_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/mb_ball_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_ball_axi_timer_0_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_ball_axi_timer_0_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/mb_ball_axi_timer_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'generateout0' of module 'mb_ball_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:1570]
 WARNING: [Synth 8-7071] port 'generateout1' of module 'mb_ball_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:1570]
 WARNING: [Synth 8-7071] port 'pwm0' of module 'mb_ball_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:1570]
@@ -125,19 +127,19 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/Gi
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'mb_ball_xlconcat_0_0' (0#1) [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/ip/mb_ball_xlconcat_0_0/synth/mb_ball_xlconcat_0_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'mb_ball' (0#1) [c:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.gen/sources_1/bd/mb_ball/synth/mb_ball.v:936]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/VGA_controller.sv:26]
 INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/VGA_controller.sv:26]
-WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv:124]
-WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv:124]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/hdmi_tx_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-51492-Amadeus/realtime/hdmi_tx_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv:126]
+WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv:126]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/.Xil/Vivado-8124-Amadeus/realtime/hdmi_tx_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'Mario_State' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario_State.sv:21]
 INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario_State.sv:96]
 INFO: [Synth 8-6155] done synthesizing module 'Mario_State' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario_State.sv:21]
-WARNING: [Synth 8-7071] port 'jump_on_mario' of module 'Mario_State' is unconnected for instance 'Mario_State0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv:163]
-WARNING: [Synth 8-7023] instance 'Mario_State0' of module 'Mario_State' has 8 connections declared, but only 7 given [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv:163]
+WARNING: [Synth 8-7071] port 'jump_on_mario' of module 'Mario_State' is unconnected for instance 'Mario_State0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv:165]
+WARNING: [Synth 8-7023] instance 'Mario_State0' of module 'Mario_State' has 8 connections declared, but only 7 given [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv:165]
 INFO: [Synth 8-6157] synthesizing module 'Luigi_State' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Luigi_State.sv:21]
 INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Luigi_State.sv:96]
 INFO: [Synth 8-6155] done synthesizing module 'Luigi_State' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Luigi_State.sv:21]
@@ -184,25 +186,37 @@ INFO: [Synth 8-6157] synthesizing module 'Key_Hierarchy_Luigi' [C:/Users/Git_Sma
 INFO: [Synth 8-6155] done synthesizing module 'Key_Hierarchy_Luigi' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Key_Hierarchy_Luigi.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'Game_Logic' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Game_Logic.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'Game_Logic' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Game_Logic.sv:1]
-WARNING: [Synth 8-7071] port 'Clk' of module 'Game_Logic' is unconnected for instance 'Game_Logic0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv:261]
-WARNING: [Synth 8-7071] port 'frame_clk' of module 'Game_Logic' is unconnected for instance 'Game_Logic0' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv:261]
-WARNING: [Synth 8-7023] instance 'Game_Logic0' of module 'Game_Logic' has 24 connections declared, but only 22 given [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv:261]
+WARNING: [Synth 8-689] width (6) of port connection 'Mario_Percent' does not match port width (7) of module 'Game_Logic' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv:287]
+WARNING: [Synth 8-689] width (6) of port connection 'Luigi_Percent' does not match port width (7) of module 'Game_Logic' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv:289]
 INFO: [Synth 8-6155] done synthesizing module 'SMASH_TOP' (0#1) [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/new/SMASH_TOP.sv:24]
-WARNING: [Synth 8-7137] Register Mario_Jump_Counter_Tracker_reg in module Mario has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario.sv:239]
-WARNING: [Synth 8-7137] Register Luigi_Jump_Counter_Tracker_reg in module Luigi has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Luigi.sv:240]
+WARNING: [Synth 8-7137] Register Mario_Jump_Counter_Tracker_reg in module Mario has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Mario.sv:249]
+WARNING: [Synth 8-7137] Register Luigi_Jump_Counter_Tracker_reg in module Luigi has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Luigi.sv:246]
+WARNING: [Synth 8-6014] Unused sequential element Mario_Lockout_Count_reg was removed.  [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Game_Logic.sv:195]
+WARNING: [Synth 8-6014] Unused sequential element Luigi_Lockout_Count_reg was removed.  [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Game_Logic.sv:208]
+WARNING: [Synth 8-87] always_comb on 'Mario_Punch_Sucessful_reg' did not result in combinational logic [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Game_Logic.sv:235]
+WARNING: [Synth 8-87] always_comb on 'Luigi_Punch_Sucessful_reg' did not result in combinational logic [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Game_Logic.sv:242]
+WARNING: [Synth 8-7129] Port Mario_size_Y[9] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mario_size_Y[8] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mario_size_Y[7] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mario_size_Y[6] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mario_size_Y[5] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mario_size_Y[4] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mario_size_Y[3] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mario_size_Y[2] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mario_size_Y[1] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mario_size_Y[0] in module Game_Logic is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Mario_Invert_Left in module Game_Logic is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Luigi_Invert_Left in module Game_Logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mario_State[4] in module Game_Logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mario_State[3] in module Game_Logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mario_State[2] in module Game_Logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mario_State[1] in module Game_Logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Mario_State[0] in module Game_Logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Luigi_State[4] in module Game_Logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Luigi_State[3] in module Game_Logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Luigi_State[2] in module Game_Logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Luigi_State[1] in module Game_Logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Luigi_State[0] in module Game_Logic is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Clk in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_size_Y[9] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_size_Y[8] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_size_Y[7] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_size_Y[6] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_size_Y[5] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_size_Y[4] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_size_Y[3] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_size_Y[2] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_size_Y[1] in module Game_Logic is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_size_Y[0] in module Game_Logic is either unconnected or has no load
 WARNING: [Synth 8-7129] Port frame_clk in module Game_Logic is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Mario_Fall_Counter[25] in module color_mapper is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Mario_Fall_Counter[24] in module color_mapper is either unconnected or has no load
@@ -256,6 +270,18 @@ WARNING: [Synth 8-7129] Port Luigi_Fall_Counter[3] in module color_mapper is eit
 WARNING: [Synth 8-7129] Port Luigi_Fall_Counter[2] in module color_mapper is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Luigi_Fall_Counter[1] in module color_mapper is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Luigi_Fall_Counter[0] in module color_mapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_Percent[5] in module Luigi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_Percent[4] in module Luigi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_Percent[3] in module Luigi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_Percent[2] in module Luigi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_Percent[1] in module Luigi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Luigi_Percent[0] in module Luigi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mario_Percent[5] in module Mario is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mario_Percent[4] in module Mario is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mario_Percent[3] in module Mario is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mario_Percent[2] in module Mario is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mario_Percent[1] in module Mario is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Mario_Percent[0] in module Mario is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
@@ -269,41 +295,20 @@ WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_4_xlconcat is eithe
 WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 2224.125 ; gain = 789.992
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 2229.715 ; gain = 790.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 2224.125 ; gain = 789.992
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 2229.715 ; gain = 790.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 2224.125 ; gain = 789.992
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 2229.715 ; gain = 790.859
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.107 . Memory (MB): peak = 2224.125 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 2229.715 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -356,25 +361,25 @@ Parsing XDC File [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/syn
 Finished Parsing XDC File [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2284.133 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2310.438 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 2284.133 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 2310.438 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/spi_usb' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 2284.246 ; gain = 850.113
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 2311.203 ; gain = 872.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 2284.246 ; gain = 850.113
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 2311.203 ; gain = 872.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -420,12 +425,12 @@ Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/xlconcat_0. (constrain
 Applied set_property KEEP_HIERARCHY = SOFT for clk_wiz. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for vga_to_hdmi. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 2284.246 ; gain = 850.113
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 2311.203 ; gain = 872.348
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'Mario_State'
 INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'Luigi_State'
-DSP Debug: swapped A/B pins for adder 0000023B3EDE70F0
-DSP Debug: swapped A/B pins for adder 0000023B3EDE6BB0
+DSP Debug: swapped A/B pins for adder 000001E512CF3230
+DSP Debug: swapped A/B pins for adder 000001E512CF2BD0
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -468,24 +473,26 @@ INFO: [Synth 8-3354] encoded FSM with state register 'State_reg' using encoding 
          Luigi_Jump_Left |                 1000000000000000 |                            01011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'State_reg' using encoding 'one-hot' in module 'Luigi_State'
+WARNING: [Synth 8-327] inferring latch for variable 'Luigi_Punch_Sucessful_reg' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Game_Logic.sv:242]
+WARNING: [Synth 8-327] inferring latch for variable 'Mario_Punch_Sucessful_reg' [C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Game_Logic.sv:235]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:46 . Memory (MB): peak = 2451.414 ; gain = 1017.281
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:49 . Memory (MB): peak = 2449.832 ; gain = 1010.977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 22    
+	   2 Input   32 Bit       Adders := 38    
 	   2 Input   13 Bit       Adders := 2     
 	   3 Input   13 Bit       Adders := 4     
-	   2 Input   11 Bit       Adders := 26    
-	   2 Input   10 Bit       Adders := 20    
-	   3 Input   10 Bit       Adders := 8     
-	   2 Input    7 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 41    
+	   2 Input   10 Bit       Adders := 22    
+	   3 Input   10 Bit       Adders := 6     
+	   2 Input    7 Bit       Adders := 4     
 +---Registers : 
 	               10 Bit    Registers := 6     
-	                7 Bit    Registers := 2     
+	                7 Bit    Registers := 4     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 7     
 	                1 Bit    Registers := 6     
@@ -503,12 +510,15 @@ Detailed RTL Component Info :
 	   7 Input    5 Bit        Muxes := 1     
 	   5 Input    4 Bit        Muxes := 2     
 	   6 Input    4 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 11    
+	   2 Input    4 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 2     
 	   2 Input    3 Bit        Muxes := 6     
-	   2 Input    1 Bit        Muxes := 22    
-	   5 Input    1 Bit        Muxes := 6     
-	   3 Input    1 Bit        Muxes := 4     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 24    
+	   5 Input    1 Bit        Muxes := 7     
+	   3 Input    1 Bit        Muxes := 2     
 	  16 Input    1 Bit        Muxes := 14    
+	   4 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -541,9 +551,10 @@ DSP Report: Generating DSP Background_address, operation Mode is: C+A*(B:0x280).
 DSP Report: operator Background_address is absorbed into DSP Background_address.
 DSP Report: operator Background_address0 is absorbed into DSP Background_address.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_State_reg[8]) is unused and will be removed from module Mario_State.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_State_reg[8]) is unused and will be removed from module Luigi_State.
+WARNING: [Synth 8-3332] Sequential element (Luigi_Punch_Sucessful_reg) is unused and will be removed from module Game_Logic.
+WARNING: [Synth 8-3332] Sequential element (Mario_Punch_Sucessful_reg) is unused and will be removed from module Game_Logic.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:01:04 . Memory (MB): peak = 2490.844 ; gain = 1056.711
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:01:12 . Memory (MB): peak = 2481.254 ; gain = 1042.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -585,13 +596,13 @@ Start Applying XDC Timing Constraints
 WARNING: [Synth 8-565] redefining clock 'Clk'
 WARNING: [Synth 8-565] redefining clock 'Clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:01:17 . Memory (MB): peak = 2490.844 ; gain = 1056.711
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:01:25 . Memory (MB): peak = 2481.254 ; gain = 1042.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:01:20 . Memory (MB): peak = 2498.941 ; gain = 1064.809
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:01:28 . Memory (MB): peak = 2510.488 ; gain = 1071.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -619,7 +630,7 @@ INFO: [Synth 8-7052] The timing for the instance color_instance/Mario_Walking2_R
 INFO: [Synth 8-7052] The timing for the instance color_instance/Mario_Walking1_ROM/data_Out_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance color_instance/Mario_Stationary_ROM/data_Out_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:01:21 . Memory (MB): peak = 2498.941 ; gain = 1064.809
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:01:30 . Memory (MB): peak = 2510.488 ; gain = 1071.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -637,37 +648,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:01:27 . Memory (MB): peak = 2498.941 ; gain = 1064.809
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:01:36 . Memory (MB): peak = 2510.488 ; gain = 1071.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:01:27 . Memory (MB): peak = 2498.941 ; gain = 1064.809
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:01:36 . Memory (MB): peak = 2510.488 ; gain = 1071.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:01:27 . Memory (MB): peak = 2498.941 ; gain = 1064.809
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:01:37 . Memory (MB): peak = 2510.488 ; gain = 1071.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:27 . Memory (MB): peak = 2498.941 ; gain = 1064.809
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:01:37 . Memory (MB): peak = 2510.488 ; gain = 1071.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:01:27 . Memory (MB): peak = 2498.941 ; gain = 1064.809
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:01:37 . Memory (MB): peak = 2510.488 ; gain = 1071.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:01:27 . Memory (MB): peak = 2498.941 ; gain = 1064.809
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:01:37 . Memory (MB): peak = 2510.488 ; gain = 1071.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -732,45 +743,45 @@ Report Cell Usage:
 |18    |mb_ball_rst_clk_wiz_1_100M    |     1|
 |19    |mb_ball_xbar                  |     1|
 |20    |BUFG                          |     1|
-|21    |CARRY4                        |   228|
+|21    |CARRY4                        |   331|
 |22    |DSP48E1                       |     5|
-|23    |LUT1                          |   109|
-|24    |LUT2                          |   411|
-|25    |LUT3                          |    84|
-|26    |LUT4                          |   194|
-|27    |LUT5                          |   158|
-|28    |LUT6                          |   255|
+|23    |LUT1                          |    94|
+|24    |LUT2                          |   463|
+|25    |LUT3                          |   211|
+|26    |LUT4                          |   339|
+|27    |LUT5                          |   309|
+|28    |LUT6                          |   520|
 |29    |RAMB18E1                      |     7|
 |36    |RAMB36E1                      |    30|
-|58    |FDCE                          |    46|
+|58    |FDCE                          |    48|
 |59    |FDPE                          |    12|
-|60    |FDRE                          |   213|
+|60    |FDRE                          |   233|
 |61    |FDSE                          |     2|
 |62    |IBUF                          |     4|
 |63    |OBUF                          |    29|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:01:27 . Memory (MB): peak = 2498.941 ; gain = 1064.809
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:01:37 . Memory (MB): peak = 2510.488 ; gain = 1071.633
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 87 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:01:23 . Memory (MB): peak = 2498.941 ; gain = 1004.688
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:01:28 . Memory (MB): peak = 2498.941 ; gain = 1064.809
+Synthesis finished with 0 errors, 0 critical warnings and 111 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:01:32 . Memory (MB): peak = 2510.488 ; gain = 990.145
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:01:37 . Memory (MB): peak = 2510.488 ; gain = 1071.633
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 2507.938 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 270 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 2510.488 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 373 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2511.598 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2510.488 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 361a3d29
+Synth Design complete, checksum: 43002bcd
 INFO: [Common 17-83] Releasing license: Synthesis
-181 Infos, 141 Warnings, 0 Critical Warnings and 0 Errors encountered.
+181 Infos, 149 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:01:36 . Memory (MB): peak = 2511.598 ; gain = 1449.949
+synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:01:45 . Memory (MB): peak = 2510.488 ; gain = 1446.875
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.runs/synth_1/SMASH_TOP.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file SMASH_TOP_utilization_synth.rpt -pb SMASH_TOP_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Dec  5 18:51:56 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  5 21:17:00 2023...

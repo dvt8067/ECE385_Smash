@@ -16,8 +16,9 @@
 
 module  Mario ( input logic Reset, frame_clk,
 			   input logic [7:0] keycode,
+         input logic [5:0] Mario_Percent,
          input logic [9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min,
-         input logic Stop_Mario_Left, Stop_Mario_Right, Stop_Mario_Up, Stop_Mario_Down,
+         input logic Stop_Mario_Left, Stop_Mario_Right, Stop_Mario_Up, Stop_Mario_Down, Luigi_Punch_Sucessful,
                output logic [9:0] MarioX, MarioY, MarioS_X, MarioS_Y,
                output logic edge_below_mario,
                output logic jump_on_mario,
@@ -178,6 +179,15 @@ module  Mario ( input logic Reset, frame_clk,
   
                 
           //     end
+        // if(Luigi_Punch_Sucessful)begin
+        //   MarioX <= MarioX + 2;
+        // end
+
+
+
+
+
+
           if(edge_below_mario == 1'b0 || jump_on_mario == 1'b1)begin
               if(jump_on_mario == 1'b0) begin
              // MarioY <= MarioY + 10'd1;
@@ -233,6 +243,9 @@ module  Mario ( input logic Reset, frame_clk,
 				//Mario_Y_Motion <= Mario_Y_Motion;  // Ball is somewhere in the middle, don't bounce, just keep moving
 					  
 				 //modify to control ball motion with the keycode
+         if(Luigi_Punch_Sucessful == 1) begin
+          MarioX <= Mario+2;
+         end
 				 if (keycode == 8'h1A) begin
 				    // if(BallY - BallS > Ball_Y_Min) begin
               if(edge_below_mario == 1) begin
@@ -329,7 +342,7 @@ module  Mario ( input logic Reset, frame_clk,
 				 
 				//  BallY <= (BallY + Ball_Y_Motion);  // Update ball position
 				//  BallX <= (BallX + Ball_X_Motion);
-        if(keycode !=8'h07 &&keycode !=8'h04) begin
+        if(keycode !=8'h07 &&keycode !=8'h04 && Luigi_Punch_Sucessful != 1) begin
         
         //&& keycode != 8'h16 && keycode != 8'h1A) begin
             MarioX<=MarioX; ///  continue to reset MarioX

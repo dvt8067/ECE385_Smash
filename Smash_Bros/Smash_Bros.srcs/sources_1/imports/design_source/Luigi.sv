@@ -16,8 +16,9 @@
 
 module  Luigi ( input logic Reset, frame_clk,
 			   input logic [7:0] keycode,
+         input logic [5:0] Luigi_Percent,
          input logic [9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min,
-         input logic Stop_Luigi_Left, Stop_Luigi_Right, Stop_Luigi_Up, Stop_Luigi_Down,
+         input logic Stop_Luigi_Left, Stop_Luigi_Right, Stop_Luigi_Up, Stop_Luigi_Down, Mario_Punch_Sucessful,
                output logic [9:0] LuigiX, LuigiY, LuigiS_X, LuigiS_Y,
                output logic edge_below_luigi,
                output logic jump_on_luigi,
@@ -179,6 +180,11 @@ always_comb begin
   
                 
           //     end
+        if(Mario_Punch_Sucessful)begin
+          LuigiX <= LuigiX + 2;
+        end
+
+
           if(edge_below_luigi == 1'b0 || jump_on_luigi == 1'b1)begin
               if(jump_on_luigi == 1'b0) begin
              // LuigiY <= LuigiY + 10'd1;
