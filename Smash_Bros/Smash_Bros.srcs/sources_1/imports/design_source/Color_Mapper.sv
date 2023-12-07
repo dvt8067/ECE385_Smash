@@ -148,6 +148,15 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
     );
 logic Index_Second, Index_Highest;
 logic Percent_Reset;
+
+always_comb begin
+if(Mario_Percent > 100)begin
+    Percent_Reset = 1'b1;
+end
+else begin
+    Percent_Reset = 1'b0;
+end
+end
 always_ff @( posedge Clk)begin
     if(~Percent_Reset)begin
         if((Mario_Percent_Plus != 0) && ((Lowest_Number/10) < 1)) begin
@@ -203,9 +212,9 @@ always_ff @ ( posedge Clk)begin
     end
 end
 
-    number_font_rom lowest_number_font_rom(.addr({Lowest_Number[3:0],DrawY[3:0]}), .data(lowest_number_data)); // Mario Percent May be able to be changed to lowest number
-    number_font_rom second_number_font_rom(.addr({Second_Number[3:0],DrawY[3:0]}), .data(second_number_data));
-   number_font_rom  highest_number_font_rom(.addr({Highest_Number[3:0],DrawY[3:0]}), .data(highest_number_data));
+    number_font_rom lowest_number_font_rom(.addr({0,DrawY[3:0]}), .data(lowest_number_data)); // Lowest_Number[3:0]// Mario Percent May be able to be changed to lowest number
+    number_font_rom second_number_font_rom(.addr({0,DrawY[3:0]}), .data(second_number_data));// Second_Number[3:0]
+   number_font_rom  highest_number_font_rom(.addr({0,DrawY[3:0]}), .data(highest_number_data)); //Highest_Number[3:0]
 
     
     //REDOINK THIS KUD TI HAVE 0-7 PALETTE INDEXES
@@ -302,7 +311,7 @@ end
 
     always_comb
     begin:RGB_Display
-    // if(DrawX < 50 && DrawY < 50) begin
+    //if(DrawX < 50 && DrawY < 50) begin
     //     if(Mario_Movement_Lockout) begin
     //         Red <= 4'hf;
     //          Green <= 4'hf;
@@ -349,6 +358,51 @@ end
             Blue <= 4'h0;
             //on_background = 0;
         end
+
+        // else if(DrawY<16 && DrawX>=64 && DrawX <88)begin
+        //     if(DrawX>=64 && DrawX<72)begin
+        //        if (highest_number_data[DrawX[2:0]] == 1)begin
+        //             Red <= 4'hf;
+        //             Green <= 4'hf;
+        //             Blue <= 4'hf;
+        //        end
+        //        else begin
+                
+        //         Red <= Palette_Output_Background[11:8]; 
+        //         Green <= Palette_Output_Background[7:4];
+        //         Blue <= Palette_Output_Background[3:0];
+        //        end
+        //      end
+
+        //     if(DrawX>=72 && DrawX<80)begin
+        //             if (second_number_data[DrawX[2:0]] == 1)begin
+        //             Red <= 4'hf;
+        //             Green <= 4'hf;
+        //             Blue <= 4'hf;
+        //        end
+        //        else begin
+                
+        //         Red <= Palette_Output_Background[11:8]; 
+        //         Green <= Palette_Output_Background[7:4];
+        //         Blue <= Palette_Output_Background[3:0];
+        //        end
+               
+        //     end
+
+        //     if(DrawX>=80 && DrawX<88)begin
+        //                        if (lowest_number_data[DrawX[2:0]] == 1)begin
+        //             Red <= 4'hf;
+        //             Green <= 4'hf;
+        //             Blue <= 4'hf;
+        //        end
+        //        else begin
+                
+        //         Red <= Palette_Output_Background[11:8]; 
+        //         Green <= Palette_Output_Background[7:4];
+        //         Blue <= Palette_Output_Background[3:0];
+        //        end
+        //     end
+        // end
 
         else begin
             //on_background = 1;

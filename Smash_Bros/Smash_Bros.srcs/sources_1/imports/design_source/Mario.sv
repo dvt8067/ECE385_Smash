@@ -16,7 +16,7 @@
 
 module  Mario ( input logic Reset, frame_clk,
 			   input logic [7:0] keycode,
-         input logic [5:0] Mario_Percent,
+         input logic [6:0] Mario_Percent,
          input logic [9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min,
          input logic Stop_Mario_Left, Stop_Mario_Right, Stop_Mario_Up, Stop_Mario_Down, Luigi_Right_Punch_Sucessful, Luigi_Left_Punch_Sucessful,
                output logic [9:0] MarioX, MarioY, MarioS_X, MarioS_Y,
@@ -26,6 +26,8 @@ module  Mario ( input logic Reset, frame_clk,
     
     logic [9:0] Mario_X_Motion, Mario_Y_Motion, Mario_Bottom_Edge_LX, Mario_Bottom_Edge_RX, Mario_Bottom_Edge_Y;
     logic [9:0] jumping_factor;
+    logic Mario_Yeet_Right;
+    logic Mario_Yeet_Left;
      int Mario_Jump_Delay = 30;
     //logic jump_counter
     //logic edge;
@@ -140,54 +142,41 @@ module  Mario ( input logic Reset, frame_clk,
 			//Mario_X_Motion <= 10'd0; //Mario_X_Step;
 			MarioY <= Mario_Y_Initial;
 			MarioX <= Mario_X_Initial;
+      Mario_Yeet_Left <=0;
+      Mario_Yeet_Right<=0;
         end
            
         else 
         begin 
+          if(MarioX > 640 || MarioY > 480) begin
+            MarioX <= MarioX;
+            MarioY <= MarioY;
+          end
+          else begin
 				
-				//  else 
-          // if(edge_below_mario == 1'b0 || jump_on_mario == 1'b1)begin
-          //     if(jump_on_mario == 1'b0) begin
-          //    // MarioY <= MarioY + 10'd1;
-          //        if((Mario_Fall_Counter_/jumping_factor) <1)begin
-          //           MarioY <= MarioY + 10'd2;
-    
-          //       end
-          //       else if((Mario_Fall_Counter_/jumping_factor) >=1  && (Mario_Fall_Counter_/jumping_factor) <2)begin
-          //           MarioY <= MarioY + 10'd3;
-          //       end
-          //       else if((Mario_Fall_Counter_/jumping_factor) >=2 )begin
-          //         MarioY <= MarioY + 10'd5;
-          //       end
-          //       else begin
-          //         MarioY <= MarioY + 10'd15;
-          //       end
-          //     end 
-          //     else begin
-          //       if((Mario_Jump_Counter_/jumping_factor) <1)begin
-          //           MarioY <= MarioY - 10'd5;
-    
-          //       end
-          //       else if((Mario_Jump_Counter_/jumping_factor) >=1  && (Mario_Jump_Counter_/jumping_factor) <2)begin
-          //           MarioY <= MarioY - 10'd3;
-          //       end
-          //       else if((Mario_Jump_Counter_/jumping_factor) >=2 && (Mario_Jump_Counter_/jumping_factor) <=3)begin
-          //         MarioY <= MarioY - 10'd2;
-          //       end
-          //       else begin
-          //         MarioY <= MarioY + 10'd15;
-          //       end
-  
+			
+
+        if(Mario_Percent >= 99) begin
+            if(Luigi_Left_Punch_Sucessful ==1 || Mario_Yeet_Left==1) begin
+              MarioX <= MarioX - 50;
+              MarioY <= MarioY - 50;
+              Mario_Yeet_Left <=1;
+            end
+            //else if begin
+             else if(Luigi_Right_Punch_Sucessful==1 || Mario_Yeet_Right==1) begin
+                  MarioX <= MarioX + 50;
+                  MarioY <= MarioY + 50;
+                  Mario_Yeet_Right <=1;
+                  
+                end
                 
-          //     end
-        // if(Luigi_Punch_Sucessful)begin
-        //   MarioX <= MarioX + 2;
-        // end
-
-
-
-
-
+            //end
+            else begin
+              MarioX <= MarioX;
+              MarioY <= MarioY;
+            end
+        end
+        else begin
 
           if(edge_below_mario == 1'b0 || jump_on_mario == 1'b1)begin
               if(jump_on_mario == 1'b0) begin
@@ -365,7 +354,9 @@ module  Mario ( input logic Reset, frame_clk,
         //  end
         end
          end
+          end
          
       end
+    end
       
 endmodule

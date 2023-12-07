@@ -16,7 +16,7 @@
 
 module  Luigi ( input logic Reset, frame_clk,
 			   input logic [7:0] keycode,
-         input logic [5:0] Luigi_Percent,
+         input logic [6:0] Luigi_Percent,
          input logic [9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min,
          input logic Stop_Luigi_Left, Stop_Luigi_Right, Stop_Luigi_Up, Stop_Luigi_Down, Mario_Right_Punch_Sucessful, Mario_Left_Punch_Sucessful,
                output logic [9:0] LuigiX, LuigiY, LuigiS_X, LuigiS_Y,
@@ -26,6 +26,8 @@ module  Luigi ( input logic Reset, frame_clk,
     
     logic [9:0] Luigi_X_Motion, Luigi_Y_Motion, Luigi_Bottom_Edge_LX, Luigi_Bottom_Edge_RX, Luigi_Bottom_Edge_Y;
     logic [9:0] jumping_factor;
+    logic Luigi_Yeet_Left;
+    logic Luigi_Yeet_Right;
      int Luigi_Jump_Delay = 30;
     //logic jump_counter
     //logic edge;
@@ -140,51 +142,38 @@ always_comb begin
 			//Luigi_X_Motion <= 10'd0; //Luigi_X_Step;
 			LuigiY <= Luigi_Y_Initial;
 			LuigiX <= Luigi_X_Initial;
+      Luigi_Yeet_Left <=0;
+      Luigi_Yeet_Right <=0;
         end
            
         else 
         begin 
-				
-				//  else 
-          // if(edge_below_luigi == 1'b0 || jump_on_luigi == 1'b1)begin
-          //     if(jump_on_luigi == 1'b0) begin
-          //    // LuigiY <= LuigiY + 10'd1;
-          //        if((Luigi_Fall_Counter_/jumping_factor) <1)begin
-          //           LuigiY <= LuigiY + 10'd2;
-    
-          //       end
-          //       else if((Luigi_Fall_Counter_/jumping_factor) >=1  && (Luigi_Fall_Counter_/jumping_factor) <2)begin
-          //           LuigiY <= LuigiY + 10'd3;
-          //       end
-          //       else if((Luigi_Fall_Counter_/jumping_factor) >=2 )begin
-          //         LuigiY <= LuigiY + 10'd5;
-          //       end
-          //       else begin
-          //         LuigiY <= LuigiY + 10'd15;
-          //       end
-          //     end 
-          //     else begin
-          //       if((Luigi_Jump_Counter_/jumping_factor) <1)begin
-          //           LuigiY <= LuigiY - 10'd5;
-    
-          //       end
-          //       else if((Luigi_Jump_Counter_/jumping_factor) >=1  && (Luigi_Jump_Counter_/jumping_factor) <2)begin
-          //           LuigiY <= LuigiY - 10'd3;
-          //       end
-          //       else if((Luigi_Jump_Counter_/jumping_factor) >=2 && (Luigi_Jump_Counter_/jumping_factor) <=3)begin
-          //         LuigiY <= LuigiY - 10'd2;
-          //       end
-          //       else begin
-          //         LuigiY <= LuigiY + 10'd15;
-          //       end
-  
+				if(LuigiX > 640 || LuigiY > 480) begin
+            LuigiX <= LuigiX;
+            LuigiY <= LuigiY;
+        end
+				else begin
+       if(Luigi_Percent >= 99) begin
+            if(Mario_Left_Punch_Sucessful ==1 || Luigi_Yeet_Right==1) begin
+              LuigiX <= LuigiX - 50;
+              LuigiY <= LuigiY;
+              Luigi_Yeet_Left <=1;
+            end
+            //else if (Mario_Right_Punch_Sucessful==1)begin
+            else  if(Mario_Right_Punch_Sucessful==1 || Luigi_Yeet_Right==1) begin
+                  LuigiX <= LuigiX + 50;
+                  LuigiY <= LuigiY;
+                  Luigi_Yeet_Right <= 1;
+                end
                 
-          //     end
-        // if(Mario_Punch_Sucessful)begin
-        //   LuigiX <= LuigiX + 2;
-        // end
-
-
+            
+            else begin
+              LuigiX <= LuigiX;
+              LuigiY <= LuigiY;
+            end
+       end
+      
+        else begin
           if(edge_below_luigi == 1'b0 || jump_on_luigi == 1'b1)begin
               if(jump_on_luigi == 1'b0) begin
              // LuigiY <= LuigiY + 10'd1;
@@ -355,6 +344,8 @@ always_comb begin
         //   LuigiY <= LuigiY - 10'd1;
         //  end
          end
+        end
+        end
         end
          
       end

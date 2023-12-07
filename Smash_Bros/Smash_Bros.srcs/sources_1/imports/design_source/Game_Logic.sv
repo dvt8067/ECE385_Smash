@@ -272,7 +272,7 @@ end
 
 
  always_ff @ (posedge frame_clk) begin
-        if(Mario_Percent > 100)begin
+        if(Mario_Percent > 125)begin
             Mario_Percent <= 0;
             Mario_Percent_Plus <= 0;
         end
@@ -288,7 +288,7 @@ end
  end
  
  always_ff @ (posedge frame_clk) begin
-        if(Luigi_Percent > 100)begin
+        if(Luigi_Percent > 125)begin
             Luigi_Percent <= 0;
             Luigi_Percent_Plus <= 0;
         end
