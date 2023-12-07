@@ -49,11 +49,11 @@ module Luigi_State (   input logic  Clk,
 			State <= Next_State;
 	end
    
-	int Luigi_Walk_Delay = 4666667;
+	int Luigi_Walk_Delay = 2333334 ;//4666667;
     logic Luigi_Walk_Counter_Tracker;
     logic Luigi_Walk_Counter_Reset;
     logic [22:0] Luigi_Walk_Counter;
-    int Luigi_Punch_Delay = 25000000;
+    int Luigi_Punch_Delay = 12500000; //25 000 000;
     logic Luigi_Punch_Counter_Tracker;
     logic Luigi_Punch_Counter_Reset;
     logic [25:0] Luigi_Punch_Counter;

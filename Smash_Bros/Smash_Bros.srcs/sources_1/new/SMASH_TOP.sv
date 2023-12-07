@@ -53,8 +53,8 @@ module SMASH_TOP(
     logic[9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min;
     
     logic [31:0] keycode0_gpio, keycode1_gpio;
-    logic clk_25MHz, clk_125MHz, clk, clk_100MHz;
-    logic locked;
+    logic clk_25MHz, clk_125MHz, clk, clk_100MHz, clk_50MHz;
+    logic locked, locked1;
     logic [9:0] drawX, drawY, Marioxsig, Marioysig, Mariosizesig_X, Mariosizesig_Y;
     logic [9:0] Luigixsig, Luigiysig, Luigisizesig_X, Luigisizesig_Y;
     logic hsync, vsync, vde;
@@ -146,6 +146,15 @@ end
         .locked(locked),
         .clk_in1(Clk)
     );
+
+    
+        clk_wiz_1 clk_wiz1 (
+        .clk_out1(clk_50MHz),
+        .reset(reset_ah),
+        .locked(locked1),
+        .clk_in1(Clk)
+        );
+
     
     //VGA Sync signal generator
     vga_controller vga (
@@ -188,7 +197,7 @@ end
     );
 
     Mario_State Mario_State0(
-        .Clk(Clk), 
+        .Clk(clk_50MHz), 
 		.Reset(reset_ah),
         .keycode(Mario_Priority_1),
         .edge_below_mario(edge_below_mario),
@@ -197,7 +206,7 @@ end
         .punch_on_mario(punch_on_mario)
 				);
     Luigi_State Luigi_State0 (
-                .Clk(Clk), 
+                .Clk(clk_50MHz), 
                 .Reset(reset_ah),
                 .keycode(Luigi_Priority_1),
                 .edge_below_luigi(edge_below_luigi),
@@ -268,7 +277,7 @@ end
         .Red(red),
         .Green(green),
         .Blue(blue),
-        .Clk,
+        .Clk(clk_50MHz),
         .Stage_X_Max(Stage_X_Max), 
         .Stage_X_Min(Stage_X_Min), 
         .Stage_Y_Max(Stage_Y_Max), 
@@ -311,7 +320,7 @@ end
         .Stop_Luigi_Left, .Stop_Luigi_Right, .Stop_Luigi_Up, .Stop_Luigi_Down,
         .Mario_State(Mario_State_Out),
         .Luigi_State(Luigi_State_Out),
-        .Clk,
+        .Clk(clk_50MHz),
         .frame_clk(vsync),
         .Luigi_Movement_Lockout, 
         .Mario_Movement_Lockout,
