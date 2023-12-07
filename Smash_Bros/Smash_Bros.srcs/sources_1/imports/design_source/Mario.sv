@@ -31,7 +31,7 @@ module  Mario ( input logic Reset, frame_clk,
      int Mario_Jump_Delay = 30;
     //logic jump_counter
     //logic edge;
-    parameter [9:0] Mario_X_Initial=320;  // Center position on the X axis
+    parameter [9:0] Mario_X_Initial=213;  // Center position on the X axis
     parameter [9:0] Mario_Y_Initial=100;  // Center position on the Y axis
     //parameter [9:0] Mario_X_Min=0;       // Leftmost point on the X axis
     //parameter [9:0] Mario_X_Max=639;     // Rightmost point on the X axis
@@ -148,7 +148,7 @@ module  Mario ( input logic Reset, frame_clk,
            
         else 
         begin 
-          if(MarioX > 640 || MarioY > 480) begin
+          if(MarioX > 672 || MarioY > 522) begin
             MarioX <= MarioX;
             MarioY <= MarioY;
           end
@@ -165,7 +165,7 @@ module  Mario ( input logic Reset, frame_clk,
             //else if begin
              else if(Luigi_Right_Punch_Sucessful==1 || Mario_Yeet_Right==1) begin
                   MarioX <= MarioX + 50;
-                  MarioY <= MarioY + 50;
+                  MarioY <= MarioY - 50;
                   Mario_Yeet_Right <=1;
                   
                 end

@@ -311,36 +311,136 @@ end
 
     always_comb
     begin:RGB_Display
-    //if(DrawX < 50 && DrawY < 50) begin
-    //     if(Mario_Movement_Lockout) begin
-    //         Red <= 4'hf;
-    //          Green <= 4'hf;
-    //          Blue <= 4'hf;
-    //     end
-    // else begin
-    //         Red <= 4'h0;
-    //         Green <= 4'h0;
-    //         Blue <= 4'h0;
-    // end
-    // end else begin
-    //     else if(Mario_Fall_Counter < 20 && Mario_Fall_Counter >= 10) begin
-    //         Red = 4'hB;
-    //          Green = 4'hB;
-    //          Blue = 4'hB;
-    //     end
-    //     else if(Mario_Fall_Counter < 30 && Mario_Fall_Counter >=20) begin
-    //         Red = 4'h7;
-    //          Green = 4'h7;
-    //          Blue = 4'h7;
-    //     end
+    if(DrawX < 200 && DrawY < 30) begin
+        if(DrawX<50) begin
+            if(Mario_Percent >20) begin
+                Red <= 4'hf;
+                Green <= 4'h0;
+                Blue <= 4'h0;
+            end
+
+            
+            else begin
+                Red <= 4'hf;
+                Green <= 4'hf;
+                Blue <= 4'hf;
+            end
+        end
+        else if(DrawX >= 50 && DrawX <100) begin
+            if(Mario_Percent >40) begin
+                Red <= 4'hf;
+                Green <= 4'h0;
+                Blue <= 4'h0;
+            end
+
+            
+            else begin
+                Red <= 4'hf;
+                Green <= 4'hf;
+                Blue <= 4'hf;
+            end            
+        end
+        else if(DrawX >=100 && DrawX<150)begin
+            if(Mario_Percent >60) begin
+                Red <= 4'hf;
+                Green <= 4'h0;
+                Blue <= 4'h0;
+            end
+
+            
+            else begin
+                Red <= 4'hf;
+                Green <= 4'hf;
+                Blue <= 4'hf;
+            end 
+        end
+        else if (DrawX >= 150 && DrawX < 200)begin
+            if(Mario_Percent >80) begin
+                Red <= 4'hf;
+                Green <= 4'h0;
+                Blue <= 4'h0;
+            end
+            else begin
+                Red <= 4'hf;
+                Green <= 4'hf;
+                Blue <= 4'hf;
+            end 
+        end
+        else begin
+            Red <= 4'h0;
+                Green <= 4'h0;
+                Blue <= 4'hf;
+        end
+    end
+    //end 
+    else if(DrawX > 440 && DrawY <30) begin
+          if(DrawX<490) begin
+            if(Luigi_Percent >20) begin
+                Red <= 4'hf;
+                Green <= 4'h0;
+                Blue <= 4'h0;
+            end
+
+            
+            else begin
+                Red <= 4'hf;
+                Green <= 4'hf;
+                Blue <= 4'hf;
+            end
+        end
+        else if(DrawX >= 490 && DrawX <540) begin
+            if(Luigi_Percent >40) begin
+                Red <= 4'hf;
+                Green <= 4'h0;
+                Blue <= 4'h0;
+            end
+
+            
+            else begin
+                Red <= 4'hf;
+                Green <= 4'hf;
+                Blue <= 4'hf;
+            end            
+        end
+        else if(DrawX >=540 && DrawX<590)begin
+            if(Luigi_Percent >60) begin
+                Red <= 4'hf;
+                Green <= 4'h0;
+                Blue <= 4'h0;
+            end
+
+            
+            else begin
+                Red <= 4'hf;
+                Green <= 4'hf;
+                Blue <= 4'hf;
+            end 
+        end
+        else if (DrawX >= 590 && DrawX < 640)begin
+            if(Luigi_Percent >80) begin
+                Red <= 4'hf;
+                Green <= 4'h0;
+                Blue <= 4'h0;
+            end
+            else begin
+                Red <= 4'hf;
+                Green <= 4'hf;
+                Blue <= 4'hf;
+            end 
+        end
+        else begin
+            Red <= 4'h0;
+                Green <= 4'h0;
+                Blue <= 4'hf;
+        end
+      
+
+      
+    end
+    else begin
         
-    //      else if(Mario_Fall_Counter > 30 ) begin
-    //         Red = 4'h0;
-    //          Green = 4'h0;
-    //          Blue = 4'h0;
-    //     end
-    // end
-    // else begin /// need to comment this out when not testing
+    //end
+    //else begin /// need to comment this out when not testing
         if(Mario_on && (Palette_Output_Mario != 12'h808)) begin
              Red <= Palette_Output_Mario[11:8];
              Green <= Palette_Output_Mario[7:4];
@@ -415,5 +515,6 @@ end
             Blue <= Palette_Output_Background[3:0];
         end
     end
-    //end // need to comment this out when not testing
+    end // need to comment this out when not testing
+    //end
 endmodule

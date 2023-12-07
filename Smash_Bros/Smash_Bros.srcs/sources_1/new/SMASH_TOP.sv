@@ -82,8 +82,30 @@ module SMASH_TOP(
 
     //logic [7:0] Mario_Priority_2;
     assign reset_ah = reset_rtl_0;
+    logic reset_mario;
+    logic reset_luigi;
+always_comb begin
+    reset_mario = 0;
+    reset_luigi = 0;
+    if (keycode0_gpio[7:0] == 8'h3c) begin 
+        reset_mario = 1;
+        reset_luigi = 1;
+    end
+    else begin
+    reset_mario = 0;
+    reset_luigi = 0;
+    end   
     
-    
+end
+// always_comb begin
+//     reset_luigi = 0;
+//     if (keycode0_gpio[7:0] == 8'h0f) begin 
+//         reset_luigi = 1;
+//     end
+//     else begin
+//     reset_luigi = 0;
+//     end   
+// end
     //Keycode HEX drivers
     HexDriver HexA (
         .clk(Clk),
@@ -187,7 +209,7 @@ module SMASH_TOP(
     );
     //Mario Module
     Mario mario_instance(
-        .Reset(reset_ah),
+        .Reset(reset_mario),
         .frame_clk(vsync),                    //Figure out what this should be so that the Mario will move
         .keycode(Mario_Priority_1),    //Notice: only one keycode connected to Mario by default
         .edge_below_mario(edge_below_mario),
@@ -207,7 +229,7 @@ module SMASH_TOP(
         .Luigi_Left_Punch_Sucessful
     );
     Luigi  luigi_instance ( 
-        .Reset(reset_ah), 
+        .Reset(reset_luigi), 
         .frame_clk(vsync),
 		.keycode(Luigi_Priority_1),
         .Stage_X_Max(Stage_X_Max), 
@@ -301,7 +323,8 @@ module SMASH_TOP(
         .Luigi_Left_Punch_Sucessful,
         .Top_Bottom_Test,
         .Luigi_Percent_Plus,
-        .Mario_Percent_Plus
+        .Mario_Percent_Plus,
+        .Reset_Percent(reset_mario)
 );
 
     

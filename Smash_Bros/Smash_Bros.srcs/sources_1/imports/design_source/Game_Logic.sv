@@ -15,6 +15,8 @@ module Game_Logic
         input logic [4:0]Luigi_State,
         input logic Clk,
         input logic frame_clk,
+          input logic Reset_Percent,
+      
 
         output logic Stop_Mario_Left, Stop_Mario_Right, Stop_Mario_Up, Stop_Mario_Down,
         output logic Stop_Luigi_Left, Stop_Luigi_Right, Stop_Luigi_Up, Stop_Luigi_Down,
@@ -50,7 +52,7 @@ logic [5:0] Lockout_Delay;
 logic Mario_Lockout_Counter_Reset, Luigi_Lockout_Counter_Reset;
 always_comb begin
 
-Lockout_Delay = 6'd8;
+Lockout_Delay = 6'd4;
 end
 
 logic Luigi_Lockout_Count, Mario_Lockout_Count;
@@ -272,13 +274,13 @@ end
 
 
  always_ff @ (posedge frame_clk) begin
-        if(Mario_Percent > 125)begin
+        if(Mario_Percent > 125 || Reset_Percent)begin
             Mario_Percent <= 0;
             Mario_Percent_Plus <= 0;
         end
         else if(Luigi_Right_Punch_Sucessful==1 || Luigi_Left_Punch_Sucessful ==1)begin
-           Mario_Percent <= Mario_Percent + 5;
-           Mario_Percent_Plus <= 5;
+           Mario_Percent <= Mario_Percent + 6;
+           Mario_Percent_Plus <= 6;
         end
         else begin 
                 Mario_Percent <= Mario_Percent;
@@ -288,13 +290,13 @@ end
  end
  
  always_ff @ (posedge frame_clk) begin
-        if(Luigi_Percent > 125)begin
+        if(Luigi_Percent > 125 || Reset_Percent)begin
             Luigi_Percent <= 0;
             Luigi_Percent_Plus <= 0;
         end
         else if(Mario_Right_Punch_Sucessful==1 || Mario_Left_Punch_Sucessful==1)begin
-           Luigi_Percent <= Luigi_Percent + 5;
-           Luigi_Percent_Plus <= 5;
+           Luigi_Percent <= Luigi_Percent + 6;
+           Luigi_Percent_Plus <= 6;
         end
         else begin 
                 Luigi_Percent <= Luigi_Percent;

@@ -31,7 +31,7 @@ module  Luigi ( input logic Reset, frame_clk,
      int Luigi_Jump_Delay = 30;
     //logic jump_counter
     //logic edge;
-    parameter [9:0] Luigi_X_Initial=420;  // Center position on the X axis
+    parameter [9:0] Luigi_X_Initial=427;  // Center position on the X axis
     parameter [9:0] Luigi_Y_Initial=100;  // Center position on the Y axis
     //parameter [9:0] Luigi_X_Min=0;       // Leftmost point on the X axis
     //parameter [9:0] Luigi_X_Max=639;     // Rightmost point on the X axis
@@ -148,21 +148,21 @@ always_comb begin
            
         else 
         begin 
-				if(LuigiX > 640 || LuigiY > 480) begin
+				if(LuigiX > 672 || LuigiY > 522) begin
             LuigiX <= LuigiX;
             LuigiY <= LuigiY;
         end
 				else begin
        if(Luigi_Percent >= 99) begin
-            if(Mario_Left_Punch_Sucessful ==1 || Luigi_Yeet_Right==1) begin
+            if(Mario_Left_Punch_Sucessful ==1 || Luigi_Yeet_Left==1) begin
               LuigiX <= LuigiX - 50;
-              LuigiY <= LuigiY;
+              LuigiY <= LuigiY - 50;
               Luigi_Yeet_Left <=1;
             end
             //else if (Mario_Right_Punch_Sucessful==1)begin
             else  if(Mario_Right_Punch_Sucessful==1 || Luigi_Yeet_Right==1) begin
                   LuigiX <= LuigiX + 50;
-                  LuigiY <= LuigiY;
+                  LuigiY <= LuigiY - 50;
                   Luigi_Yeet_Right <= 1;
                 end
                 

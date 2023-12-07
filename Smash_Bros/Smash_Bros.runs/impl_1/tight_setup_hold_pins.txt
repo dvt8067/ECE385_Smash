@@ -1,85 +1,10 @@
-+====================+==============================+==================================================================+
-| Launch Setup Clock | Launch Hold Clock            | Pin                                                              |
-+====================+==============================+==================================================================+
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching1_ROM/data_Out_reg/ADDRARDADDR[12]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[12] |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking1_ROM/data_Out_reg/ADDRARDADDR[12]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching2_ROM/data_Out_reg/ADDRARDADDR[12]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Jumping_ROM/data_Out_reg/ADDRARDADDR[12]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking2_ROM/data_Out_reg/ADDRARDADDR[12]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking3_ROM/data_Out_reg/ADDRARDADDR[12]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking1_ROM/data_Out_reg/ADDRARDADDR[3]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[3]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching1_ROM/data_Out_reg/ADDRARDADDR[3]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking2_ROM/data_Out_reg/ADDRARDADDR[3]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking3_ROM/data_Out_reg/ADDRARDADDR[3]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Jumping_ROM/data_Out_reg/ADDRARDADDR[3]     |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching2_ROM/data_Out_reg/ADDRARDADDR[3]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking1_ROM/data_Out_reg/ADDRARDADDR[2]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching1_ROM/data_Out_reg/ADDRARDADDR[9]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[9]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking1_ROM/data_Out_reg/ADDRARDADDR[9]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking1_ROM/data_Out_reg/ADDRARDADDR[5]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching1_ROM/data_Out_reg/ADDRARDADDR[2]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[2]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking1_ROM/data_Out_reg/ADDRARDADDR[13]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking1_ROM/data_Out_reg/ADDRARDADDR[10]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[13] |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching1_ROM/data_Out_reg/ADDRARDADDR[13]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking1_ROM/data_Out_reg/ADDRARDADDR[4]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking2_ROM/data_Out_reg/ADDRARDADDR[2]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking3_ROM/data_Out_reg/ADDRARDADDR[2]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching1_ROM/data_Out_reg/ADDRARDADDR[5]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[5]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking1_ROM/data_Out_reg/ADDRARDADDR[6]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching2_ROM/data_Out_reg/ADDRARDADDR[2]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Jumping_ROM/data_Out_reg/ADDRARDADDR[2]     |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching1_ROM/data_Out_reg/ADDRARDADDR[7]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[7]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching2_ROM/data_Out_reg/ADDRARDADDR[13]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Jumping_ROM/data_Out_reg/ADDRARDADDR[13]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking1_ROM/data_Out_reg/ADDRARDADDR[7]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking1_ROM/data_Out_reg/ADDRARDADDR[11]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking2_ROM/data_Out_reg/ADDRARDADDR[13]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking3_ROM/data_Out_reg/ADDRARDADDR[13]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching2_ROM/data_Out_reg/ADDRARDADDR[5]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Jumping_ROM/data_Out_reg/ADDRARDADDR[5]     |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking1_ROM/data_Out_reg/ADDRARDADDR[8]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking2_ROM/data_Out_reg/ADDRARDADDR[5]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking3_ROM/data_Out_reg/ADDRARDADDR[5]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching1_ROM/data_Out_reg/ADDRARDADDR[10]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[10] |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Jumping_ROM/data_Out_reg/ADDRARDADDR[4]     |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching2_ROM/data_Out_reg/ADDRARDADDR[4]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking2_ROM/data_Out_reg/ADDRARDADDR[8]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking3_ROM/data_Out_reg/ADDRARDADDR[8]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching1_ROM/data_Out_reg/ADDRARDADDR[6]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[6]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[8]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching1_ROM/data_Out_reg/ADDRARDADDR[8]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching2_ROM/data_Out_reg/ADDRARDADDR[9]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Jumping_ROM/data_Out_reg/ADDRARDADDR[9]     |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Jumping_ROM/data_Out_reg/ADDRARDADDR[10]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching2_ROM/data_Out_reg/ADDRARDADDR[10]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking2_ROM/data_Out_reg/ADDRARDADDR[9]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking3_ROM/data_Out_reg/ADDRARDADDR[9]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking2_ROM/data_Out_reg/ADDRARDADDR[10]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking3_ROM/data_Out_reg/ADDRARDADDR[10]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[4]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching1_ROM/data_Out_reg/ADDRARDADDR[4]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking2_ROM/data_Out_reg/ADDRARDADDR[4]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking3_ROM/data_Out_reg/ADDRARDADDR[4]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking2_ROM/data_Out_reg/ADDRARDADDR[6]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking3_ROM/data_Out_reg/ADDRARDADDR[6]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Jumping_ROM/data_Out_reg/ADDRARDADDR[11]    |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching2_ROM/data_Out_reg/ADDRARDADDR[11]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching1_ROM/data_Out_reg/ADDRARDADDR[11]  |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Stationary_ROM/data_Out_reg/ADDRARDADDR[11] |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching2_ROM/data_Out_reg/ADDRARDADDR[8]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Jumping_ROM/data_Out_reg/ADDRARDADDR[8]     |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Punching2_ROM/data_Out_reg/ADDRARDADDR[6]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Jumping_ROM/data_Out_reg/ADDRARDADDR[6]     |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking2_ROM/data_Out_reg/ADDRARDADDR[11]   |
-| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0           | color_instance/Mario_Walking3_ROM/data_Out_reg/ADDRARDADDR[11]   |
-| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Luigi_State0/FSM_onehot_State_reg[13]/D                          |
-+--------------------+------------------------------+------------------------------------------------------------------+
++====================+==============================+=========================================+
+| Launch Setup Clock | Launch Hold Clock            | Pin                                     |
++====================+==============================+=========================================+
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Luigi_State0/FSM_onehot_State_reg[0]/D  |
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Luigi_State0/FSM_onehot_State_reg[4]/D  |
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Luigi_State0/FSM_onehot_State_reg[10]/D |
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Luigi_State0/FSM_onehot_State_reg[14]/D |
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Luigi_State0/FSM_onehot_State_reg[15]/D |
+| Clk                | clk_out1_mb_ball_clk_wiz_1_0 | Luigi_State0/FSM_onehot_State_reg[13]/D |
++--------------------+------------------------------+-----------------------------------------+
