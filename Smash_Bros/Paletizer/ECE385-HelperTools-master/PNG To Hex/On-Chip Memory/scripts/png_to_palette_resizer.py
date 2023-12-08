@@ -12,9 +12,10 @@ filename = input("What's the image name? ")
 new_w, new_h = map(int, input("What's the new height x width? Like 28 28. ").split(' '))
 palette_hex = [
 '0x800080',
-'0xD70000', 
-'0xF7AC00',
-'0x6D6600',
+'0xffffff'
+# '0xD70000',
+# '0xF7AC00',
+# '0x6D6600',
 # '0x6F86FF',
 # "0x01A594",
 # "0xE8E9FE",
