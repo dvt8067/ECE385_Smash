@@ -39,15 +39,18 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
     logic [1:0] Palette_Index_Mario;
     logic [1:0] Palette_Index_Luigi;
     logic [2:0] Palette_Index_Background;
-    logic [11:0] Palette_Output_Mario;
+    logic [11:0] Palette_Output_Score_Luigi, Palette_Output_Mario,Palette_Output_Score, Palette_Output_Score20, Palette_Output_Score40, Palette_Output_Score60, Palette_Output_Score80, Palette_Output_Score100;
     logic [11:0] Palette_Output_Luigi;
     logic [11:0] Palette_Output_Background;
     logic [18:0] Background_address;
+    logic [11:0] Mario_Score_Adress, Luigi_Score_Adress;
     logic Background_on;
     logic [7:0] lowest_number_data, second_number_data, highest_number_data;
+    logic Palette_Index_Score, Palette_Index_Score0, Palette_Index_Score20, Palette_Index_Score40, Palette_Index_Score60, Palette_Index_Score80, Palette_Index_Score100;
+     logic LPalette_Index_Score, LPalette_Index_Score0, LPalette_Index_Score20, LPalette_Index_Score40, LPalette_Index_Score60, LPalette_Index_Score80, LPalette_Index_Score100;
     int    Lowest_Number; 
     int Second_Number;
-    int Highest_Number;
+    int Highest_Number; 
     //logic [9:0] Stage_X_Max, Stage_X_Min, Stage_Y_Max, Stage_Y_Min;
 
 
@@ -106,6 +109,12 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
     end
     end
 
+    always_comb begin
+        Mario_Score_Adress = ( DrawX-200) +(DrawY*75);
+        Luigi_Score_Adress = (DrawX- 365) +(DrawY*75);
+
+    end
+
     Mario_Stationary_RAM Mario_Stationary_ROM (
 		.read_address(Character_address),
 		.Clk(Clk),
@@ -128,6 +137,21 @@ module  color_mapper ( input  logic [9:0] MarioX, MarioY, DrawX, DrawY, Mario_si
 		.data_Out(Palette_Index_Walking3_Mario)
     );
     Smash_Background Smash_Background0(.read_address(Background_address), .Clk, .data_Out(Palette_Index_Background));
+   
+    zero_health_ROM zero_health_ROM(.read_address(Mario_Score_Adress),.Clk, .data_Out(Palette_Index_Score0));
+   twenty_health_ROM twenty_health_ROM(.read_address(Mario_Score_Adress),.Clk, .data_Out(Palette_Index_Score20));
+   forty_health_ROM forty_health_ROM(.read_address(Mario_Score_Adress),.Clk, .data_Out(Palette_Index_Score40));
+  sixty_health_ROM sixty_health_ROM(.read_address(Mario_Score_Adress),.Clk, .data_Out(Palette_Index_Score60));
+   eighty_health_ROM eighty_health_ROM(.read_address(Mario_Score_Adress),.Clk, .data_Out(Palette_Index_Score80));
+    one_hundred_health_ROM one_hundred_health_ROM(.read_address(Mario_Score_Adress),.Clk, .data_Out(Palette_Index_Score100));
+
+    zero_health_ROM Lzero_health_ROM(.read_address(Luigi_Score_Adress),.Clk, .data_Out(LPalette_Index_Score0));
+   twenty_health_ROM Ltwenty_health_ROM(.read_address(Luigi_Score_Adress),.Clk, .data_Out(LPalette_Index_Score20));
+   forty_health_ROM Lforty_health_ROM(.read_address(Luigi_Score_Adress),.Clk, .data_Out(LPalette_Index_Score40));
+  sixty_health_ROM Lsixty_health_ROM(.read_address(Luigi_Score_Adress),.Clk, .data_Out(LPalette_Index_Score60));
+  eighty_health_ROM Leighty_health_ROM(.read_address(Luigi_Score_Adress),.Clk, .data_Out(LPalette_Index_Score80));
+    one_hundred_health_ROM Lone_hundred_health_ROM(.read_address(Luigi_Score_Adress),.Clk, .data_Out(LPalette_Index_Score100));
+
 
     Mario_Jumping_RAM1 Mario_Jumping_ROM (
 		.read_address(Character_address),
@@ -277,12 +301,75 @@ end
         end
     end
     //end
-    
+
+    always_comb begin
+        Palette_Index_Score = 0; 
+        if(Mario_Percent<20)begin
+        Palette_Index_Score  = Palette_Index_Score0;
+        end
+
+        if(Mario_Percent>=20 && Mario_Percent<40)begin
+        Palette_Index_Score  = Palette_Index_Score20;
+        end
+
+        if(Mario_Percent>=40 && Mario_Percent<60)begin
+        Palette_Index_Score  = Palette_Index_Score40;
+        end
+
+        if(Mario_Percent>=60 && Mario_Percent<80)begin
+        Palette_Index_Score  = Palette_Index_Score60;
+        end
+
+        if(Mario_Percent>=80 && Mario_Percent<100)begin
+        Palette_Index_Score  = Palette_Index_Score80;
+        end
+
+        if(Mario_Percent>100)begin
+        Palette_Index_Score  = Palette_Index_Score100;
+        end
+        else begin
+            Palette_Index_Score = Palette_Index_Score;
+        end
+    end
+
+        always_comb begin 
+        LPalette_Index_Score = 0; 
+        if(Luigi_Percent<20)begin
+        LPalette_Index_Score  = LPalette_Index_Score0;
+        end
+
+        if(Luigi_Percent>=20 && Luigi_Percent<40)begin
+        LPalette_Index_Score  = LPalette_Index_Score20;
+        end
+
+        if(Luigi_Percent>=40 && Luigi_Percent<60)begin
+        LPalette_Index_Score  = LPalette_Index_Score40;
+        end
+
+        if(Luigi_Percent>=60 && Luigi_Percent<80)begin
+        LPalette_Index_Score  = LPalette_Index_Score60;
+        end
+
+        if(Luigi_Percent>=80 && Luigi_Percent<100)begin
+        LPalette_Index_Score  = LPalette_Index_Score80;
+        end
+
+        if(Luigi_Percent>100)begin
+        LPalette_Index_Score  = Palette_Index_Score100;
+        end
+        else begin
+            LPalette_Index_Score = LPalette_Index_Score;
+        end
+    end
     Palette_Mario Palette_Mario0(.addr(Palette_Index_Mario), .data(Palette_Output_Mario));
 
     Palette_Luigi Palette_Luigi0(.addr(Palette_Index_Luigi), .data(Palette_Output_Luigi)); // NEED TO CHANGE THIS MODULE TO LUIGI COLORS AFTER
     // NEED TO CREATE A NEW PALETTE FOR ONLY BACKGROUND AND PUT IT HERE
     Palette_Background(.addr(Palette_Index_Background), .data(Palette_Output_Background));
+
+    Palette_Score Palette_Score0(.addr(Palette_Index_Score), .data(Palette_Output_Score));
+    Palette_Score Palette_Score1(.addr( LPalette_Index_Score), .data(Palette_Output_Score_Luigi));
+
 
     always_comb
     begin:Mario_on_proc
@@ -437,6 +524,18 @@ end
 
       
     end
+    else if((DrawX>=200 && DrawX<275) && DrawY <30) begin
+             Red <= Palette_Output_Score[11:8]; 
+            Green <= Palette_Output_Score[7:4];
+            Blue <= Palette_Output_Score[3:0];
+    end
+
+    else if((DrawX>=365 && DrawX<440) && DrawY <30) begin
+             Red <= Palette_Output_Score_Luigi[11:8]; 
+            Green <= Palette_Output_Score_Luigi[7:4];
+            Blue <= Palette_Output_Score_Luigi[3:0];
+    end
+
     else begin
         
     //end

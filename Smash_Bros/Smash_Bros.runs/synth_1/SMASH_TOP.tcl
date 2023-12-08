@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -89,6 +90,12 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
+  C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/0health_ROM.sv
+  C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/100health_ROM.sv
+  C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/20health_ROM.sv
+  C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/40health_ROM.sv
+  C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/60health_ROM.sv
+  C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/80health_ROM.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Color_Mapper.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Game_Logic.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Key_Heirarchy_Mario.sv
@@ -106,6 +113,7 @@ read_verilog -library xil_defaultlib -sv {
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Palette_Background.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Palette_Luigi.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Palette_Mario.sv
+  C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Palette_Score.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/Smash_Background.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/VGA_controller.sv
   C:/Users/Git_Smash/ECE385_Smash/Smash_Bros/Smash_Bros.srcs/sources_1/imports/design_source/hex.sv

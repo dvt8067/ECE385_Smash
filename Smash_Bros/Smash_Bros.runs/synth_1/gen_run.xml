@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1702010214" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/SMASH_TOP.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1702061764" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/SMASH_TOP.dcp">
   <File Type="PA-TCL" Name="SMASH_TOP.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="SMASH_TOP_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="SMASH_TOP_reports.tcl"/>
@@ -15,6 +15,48 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../ehoon2/Desktop/ECE385/Lab6.2/Lab6.2/Lab6.2.srcs/sources_1/bd/mb_ball/mb_ball.bd"/>
         <Attr Name="ImportTime" Val="1699407374"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design_source/0health_ROM.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design_source/100health_ROM.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design_source/20health_ROM.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design_source/40health_ROM.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design_source/60health_ROM.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/design_source/80health_ROM.sv">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -141,6 +183,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/design_source/Palette_Score.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/design_source/Smash_Background.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -196,6 +245,12 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/design_source/smash_bros_background_2_final.txt"/>
+    <File Path="$PPRDIR/Paletizer/ECE385-HelperTools-master/PNG To Hex/On-Chip Memory/sprite_bytes/100_health_image.txt"/>
+    <File Path="$PPRDIR/Paletizer/ECE385-HelperTools-master/PNG To Hex/On-Chip Memory/sprite_bytes/40_health_image.txt"/>
+    <File Path="$PPRDIR/Paletizer/ECE385-HelperTools-master/PNG To Hex/On-Chip Memory/sprite_bytes/20_health_image.txt"/>
+    <File Path="$PPRDIR/Paletizer/ECE385-HelperTools-master/PNG To Hex/On-Chip Memory/sprite_bytes/60_health_image.txt"/>
+    <File Path="$PPRDIR/Paletizer/ECE385-HelperTools-master/PNG To Hex/On-Chip Memory/sprite_bytes/0_health_image.txt"/>
+    <File Path="$PPRDIR/Paletizer/ECE385-HelperTools-master/PNG To Hex/On-Chip Memory/sprite_bytes/80_health_image.txt"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="SMASH_TOP"/>
