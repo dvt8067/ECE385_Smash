@@ -156,14 +156,13 @@ module  Mario ( input logic Reset, frame_clk,
 				
 			
 
-        if(Mario_Percent >= 99) begin
-            if(Luigi_Left_Punch_Sucessful ==1 || Mario_Yeet_Left==1) begin
+        if(Mario_Percent >= 99 && (Luigi_Left_Punch_Sucessful ==1 || Mario_Yeet_Left==1)) begin
               MarioX <= MarioX - 50;
               MarioY <= MarioY - 50;
               Mario_Yeet_Left <=1;
             end
             //else if begin
-             else if(Luigi_Right_Punch_Sucessful==1 || Mario_Yeet_Right==1) begin
+             else if(Mario_Percent >= 99 && (Luigi_Right_Punch_Sucessful==1 || Mario_Yeet_Right==1)) begin
                   MarioX <= MarioX + 50;
                   MarioY <= MarioY - 50;
                   Mario_Yeet_Right <=1;
@@ -171,11 +170,11 @@ module  Mario ( input logic Reset, frame_clk,
                 end
                 
             //end
-            else begin
-              MarioX <= MarioX;
-              MarioY <= MarioY;
-            end
-        end
+        //     else begin
+        //       MarioX <= MarioX;
+        //       MarioY <= MarioY;
+        //     end
+        // end
         else begin
 
           if(edge_below_mario == 1'b0 || jump_on_mario == 1'b1)begin

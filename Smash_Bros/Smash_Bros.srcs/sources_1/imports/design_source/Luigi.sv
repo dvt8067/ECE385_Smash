@@ -153,25 +153,24 @@ always_comb begin
             LuigiY <= LuigiY;
         end
 				else begin
-       if(Luigi_Percent >= 99) begin
-            if(Mario_Left_Punch_Sucessful ==1 || Luigi_Yeet_Left==1) begin
+       if(Luigi_Percent >= 99 && (Mario_Left_Punch_Sucessful ==1 || Luigi_Yeet_Left==1)) begin
               LuigiX <= LuigiX - 50;
               LuigiY <= LuigiY - 50;
               Luigi_Yeet_Left <=1;
             end
             //else if (Mario_Right_Punch_Sucessful==1)begin
-            else  if(Mario_Right_Punch_Sucessful==1 || Luigi_Yeet_Right==1) begin
+            else  if(Luigi_Percent >= 99 && (Mario_Right_Punch_Sucessful==1 || Luigi_Yeet_Right==1)) begin
                   LuigiX <= LuigiX + 50;
                   LuigiY <= LuigiY - 50;
                   Luigi_Yeet_Right <= 1;
                 end
                 
             
-            else begin
-              LuigiX <= LuigiX;
-              LuigiY <= LuigiY;
-            end
-       end
+            // else begin
+            //   LuigiX <= LuigiX;
+            //   LuigiY <= LuigiY;
+            // end
+       //end
       
         else begin
           if(edge_below_luigi == 1'b0 || jump_on_luigi == 1'b1)begin
