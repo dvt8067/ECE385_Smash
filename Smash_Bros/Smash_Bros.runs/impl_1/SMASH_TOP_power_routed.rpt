@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Thu Dec  7 17:45:10 2023
+| Date             : Thu Dec  7 22:45:08 2023
 | Host             : Amadeus running 64-bit major release  (build 9200)
 | Command          : report_power -file SMASH_TOP_power_routed.rpt -pb SMASH_TOP_power_summary_routed.pb -rpx SMASH_TOP_power_routed.rpx
 | Design           : SMASH_TOP
@@ -52,9 +52,9 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.015 |       15 |       --- |             --- |
-| Slice Logic              |     0.010 |     8946 |       --- |             --- |
-|   LUT as Logic           |     0.008 |     3574 |     32600 |           10.96 |
+| Clocks                   |     0.016 |       15 |       --- |             --- |
+| Slice Logic              |     0.008 |     8953 |       --- |             --- |
+|   LUT as Logic           |     0.007 |     3580 |     32600 |           10.98 |
 |   LUT as Distributed RAM |    <0.001 |      172 |      9600 |            1.79 |
 |   CARRY4                 |    <0.001 |      346 |      8150 |            4.25 |
 |   Register               |    <0.001 |     2853 |     65200 |            4.38 |
@@ -62,7 +62,7 @@ Table of Contents
 |   LUT as Shift Register  |    <0.001 |      112 |      9600 |            1.17 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   Others                 |     0.000 |      808 |       --- |             --- |
-| Signals                  |     0.010 |     6048 |       --- |             --- |
+| Signals                  |     0.010 |     6043 |       --- |             --- |
 | Block RAM                |     0.006 |     41.5 |        75 |           55.33 |
 | MMCM                     |     0.318 |        3 |         5 |           60.00 |
 | DSPs                     |     0.003 |        8 |       120 |            6.67 |
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.057 |       0.046 |      0.012 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.057 |       0.045 |      0.012 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.189 |       0.176 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.042 |       0.041 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
@@ -162,9 +162,9 @@ Table of Contents
 |     inst                    |     0.106 |
 |   color_instance            |     0.008 |
 |     Smash_Background0       |     0.003 |
-|   luigi_instance            |     0.003 |
-|   mario_instance            |     0.003 |
-|   mb_block_i                |     0.131 |
+|   luigi_instance            |     0.002 |
+|   mario_instance            |     0.002 |
+|   mb_block_i                |     0.132 |
 |     clk_wiz_1               |     0.106 |
 |       inst                  |     0.106 |
 |     microblaze_0            |     0.013 |
